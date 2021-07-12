@@ -1,0 +1,136 @@
+site_name: NSI au Lycée Henri Avril
+
+
+nav:
+  - 'Accueil': 'index.md'
+  - 'Représenter de données':
+    -  'Listes et chaines de caractère ' : 'Structure/listes_piles_files.md'
+    - 'Arbres' : 'Structure/arbres.md'
+    - 'Les graphes' : 'Structure/graphes.md'
+  - 'Tables de données':
+    -  'Modèle relationnel': 'BDD/modele_relationnel.md'
+    -  'Langage SQL ' : 'BDD/langageSQL.md'
+    -  'Projet SQL ' : 'BDD/projet_SQL.md'
+  - 'Programmation':
+    -  'Démarrer en programmation' : 'Programmation/demarrer.md'
+    -  'Tkinter' : 'Programmation/tkinter.md'
+    -  'Conditions et boucles' : 'Programmation/boucle.md'
+    -  'Fonctions et speifications' : 'Programmation/fonction.md'
+    -  'Lire et Ecrire dans un fichier' : 'Programmation/lire_ecrire.md'
+  - 'Algorithmie':
+    -  "Introduction à l'algorithmie" : 'algorithmie/intro_algo.md'
+    -  'Algorithmes de tris' : 'algorithmie/tris.md'
+    -  'K plus proches voisins' : 'algorithmie/knn.md'
+    -  'Algorithme glouton' : 'algorithmie/glouton.md'
+    -  'Compléxité' : 'algorithmie/complexite.md' 
+  - 'Architecture et OS' : 
+    - 'Réseaux et internet' : 
+      -  "Qu'est-ce qu'un réseau" : 'archi/reseaux/reseau.md'
+      -  "Protocole TCP/IP" : "archi/reseaux/TCP_IP.md"
+      -  "Sécurisation" : 'archi/reseaux/securisation.md'
+    - "Architecture  Systèmes d'exploitation" : 'archi/OS/vonneuman.md'
+  - 'IHM' : 
+    - 'Javascript' :       
+      - "Exercices d'application Javascript" : 'IHM/javascript/exo_js.md' 
+      - 'Programmation evenementielle' : 'IHM/javascript/programmation_evenementielle.md' 
+      - 'Les formulaires' : 'IHM/javascript/formulaire.md'
+    - 'HTML et CSS' : 
+      - 'HTML' : 'IHM/html/html.md'
+      - 'CSS' : 'IHM/html/css.md'
+
+
+
+
+  
+  
+theme:
+  name: material
+  font: false
+  language: fr
+  features:
+    - navigation.instant
+    - navigation.tabs
+    - navigation.expand
+    - navigation.top
+    - toc.integrate
+    - header.autohide
+
+  palette:
+    # Light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/toggle-switch-off-outline
+        name: Mode sombre
+
+    # Dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: blue
+      accent: blue
+      toggle:
+        icon: material/toggle-switch
+        name: Mode clair
+
+
+markdown_extensions:
+  - attr_list
+  - pymdownx.superfences
+  - admonition
+  - meta
+  - abbr
+  - def_list
+  - footnotes
+  - pymdownx.caret
+  - pymdownx.mark
+  - pymdownx.tilde
+  - pymdownx.snippets
+  - pymdownx.details
+  - pymdownx.tasklist:            # Cases à cocher  - [ ]  et - [x]
+        custom_checkbox:    false   #   avec cases d'origine
+        clickable_checkbox: true    #   et cliquables.
+  - pymdownx.highlight:
+      linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.tabbed
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+  - pymdownx.arithmatex:
+      generic: true
+  - toc:
+      permalink: ⚓︎
+      toc_depth: 3
+
+
+
+plugins:
+  - search
+  - macros
+#  - markdownmermaid
+  - pdf-export:
+      verbose: true
+      media_type: print
+      enabled_if_env: ENABLE_PDF_EXPORT
+      theme_handler_path: theme-handler.py
+
+extra:
+  local: D:/Murie/Documents/Muriel/GitHub/site_1NSI
+  github : https://mbachelier1.github.io/site_1NSI
+extra_javascript:
+  - javascripts/extra.js
+  - javascripts/prism.js
+  - javascripts/config.js
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+  - https://unpkg.com/mermaid@8.9.2/dist/mermaid.min.js
+  - javascripts/mermaid.js
+
+extra_css:
+  - stylesheets/extra.css
+  - stylesheets/prism.css
