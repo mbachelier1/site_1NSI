@@ -6,25 +6,34 @@
 Voici les différentes parties du programme 
 
 ##Repésenter les données  
-[Programmation Orientée Objet](Structure/POO.html){ .md-button} [Listes piles et files](Structure/Listes_piles_files.html){ .md-button} [Les arbres binaires](Structure/arbres.html){ .md-button} [Les graphes](Structure/graphes.html){ .md-button }    
 
 
 ##Table de données  
 
 ##Réseaux et internet
-
+[Réseau](archi/reseau/reseau.html){ .md-button} [Protocole TCP IP](archi/reseau/TCP_IP.html){ .md-button} [Sécurisation](archi/reseau/securisation.html){ .md-button}
 ##Modèle d'architecture et système d'exploitation
-[Modèle de von Neumann et OS](archi/OS/vonneuman.html){ .md-button}  [Langage machine](archi/langage_machine.html){ .md-button}    
-
-[Logique combinatoire](archi/logique_combinatoire.html){ .md-button}  [Utilisation de Linux](archi/linux.html){ .md-button} 
+###Architecture
+[Modèle de von Neumann et OS](archi/OS/vonneuman.html){ .md-button} [Utilisation de Linux](archi/linux.html){ .md-button} 
+###Echanger avec la machine
+[Langage machine](archi/langage_machine.html){ .md-button} [Logique combinatoire](archi/logique_combinatoire.html){ .md-button}  
 
 ##Programmation
 
+
 ##IHM
+###HTML et CSS
+[HTML](IHM/html/html.html){ .md-button} [CSS](IHM/html/css.html){ .md-button}
+###javascript
+[Découverte de javascript](IHM/javascript/exo_js.html){ .md-button} [Programmation évènementielle](IHM/javascript/programmation_evenementielle.html){ .md-button} [Les formulaires](IHM/javascript/formulaire.html){ .md-button}
+
+###Php
+[protocole HTTP](IHM/PHP/Protocole_HTTP.html){ .md-button} [PHP](IHM/PHP/TP_php.html){ .md-button}
 
 
 
 ##Algorithmie
+[Introduction à l'algorithmie](Algorithmie/intro_algo.html){ .md-button} 
 
 [Algorithmes de tris](Algorithmie/tris.html){ .md-button}  [K plus proches voisins](Algorithmie/kppv.html){ .md-button }   
 

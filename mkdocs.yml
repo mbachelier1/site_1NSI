@@ -4,13 +4,9 @@ site_name: NSI au Lycée Henri Avril
 nav:
   - 'Accueil': 'index.md'
   - 'Représenter de données':
-    -  'Listes et chaines de caractère ' : 'Structure/listes_piles_files.md'
-    - 'Arbres' : 'Structure/arbres.md'
-    - 'Les graphes' : 'Structure/graphes.md'
+    -  'représenter les entiers' : 'representation/base_numeration.md'
   - 'Tables de données':
-    -  'Modèle relationnel': 'BDD/modele_relationnel.md'
-    -  'Langage SQL ' : 'BDD/langageSQL.md'
-    -  'Projet SQL ' : 'BDD/projet_SQL.md'
+    -  'Traitement de données en table' : 'table_donnees/traitement_donnees.md'
   - 'Programmation':
     -  'Démarrer en programmation' : 'Programmation/demarrer.md'
     -  'Tkinter' : 'Programmation/tkinter.md'
@@ -19,10 +15,10 @@ nav:
     -  'Lire et Ecrire dans un fichier' : 'Programmation/lire_ecrire.md'
   - 'Algorithmie':
     -  "Introduction à l'algorithmie" : 'algorithmie/intro_algo.md'
+    -  'Compléxité' : 'algorithmie/complexite.md' 
     -  'Algorithmes de tris' : 'algorithmie/tris.md'
     -  'K plus proches voisins' : 'algorithmie/knn.md'
     -  'Algorithme glouton' : 'algorithmie/glouton.md'
-    -  'Compléxité' : 'algorithmie/complexite.md' 
   - 'Architecture et OS' : 
     - 'Réseaux et internet' : 
       -  "Qu'est-ce qu'un réseau" : 'archi/reseaux/reseau.md'
@@ -30,13 +26,17 @@ nav:
       -  "Sécurisation" : 'archi/reseaux/securisation.md'
     - "Architecture  Systèmes d'exploitation" : 'archi/OS/vonneuman.md'
   - 'IHM' : 
+    - 'HTML et CSS' : 
+      - 'HTML' : 'IHM/html/html.md'
+      - 'CSS' : 'IHM/html/css.md'    
     - 'Javascript' :       
       - "Exercices d'application Javascript" : 'IHM/javascript/exo_js.md' 
       - 'Programmation evenementielle' : 'IHM/javascript/programmation_evenementielle.md' 
       - 'Les formulaires' : 'IHM/javascript/formulaire.md'
-    - 'HTML et CSS' : 
-      - 'HTML' : 'IHM/html/html.md'
-      - 'CSS' : 'IHM/html/css.md'
+    - 'Protocole HTTP et PHP' : 
+      - "Protocole HTTP" : 'IHM/php/Protocole_HTTP.md'
+      - "TP PHP" : 'IHM/PHP/TP_php.md'
+
 
 
 
