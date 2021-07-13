@@ -14,7 +14,7 @@
     
     
       
-        <title>Exo js - NSI au Lycée Henri Avril</title>
+        <title>Traitement de données en table - NSI au Lycée Henri Avril</title>
       
     
     
@@ -64,7 +64,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#exercices-dapplication-de-javascript" class="md-skip">
+        <a href="#traitement-de-donnees-en-tables" class="md-skip">
           Aller au contenu
         </a>
       
@@ -94,7 +94,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Exo js
+              Traitement de données en table
             
           </span>
         </div>
@@ -199,13 +199,15 @@
         
   
   
+    
+  
 
 
   
   
   
     <li class="md-tabs__item">
-      <a href="../table_donnees/traitement_donnees.html" class="md-tabs__link">
+      <a href="traitement_donnees.html" class="md-tabs__link md-tabs__link--active">
         Tables de données
       </a>
     </li>
@@ -281,7 +283,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="html/html.html" class="md-tabs__link">
+      <a href="../IHM/html/html.html" class="md-tabs__link">
         IHM
       </a>
     </li>
@@ -386,12 +388,14 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" data-md-state="indeterminate" type="checkbox" id="__nav_3" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" checked>
       
       <label class="md-nav__link" for="__nav_3">
         Tables de données
@@ -407,11 +411,153 @@
             
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../table_donnees/traitement_donnees.html" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Traitement de données en table
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="traitement_donnees.html" class="md-nav__link md-nav__link--active">
         Traitement de données en table
       </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#activite-introduction" class="md-nav__link">
+    Activité introduction
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#definitions" class="md-nav__link">
+    Définitions
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#caracteristiques-des-donnees" class="md-nav__link">
+    Caractéristiques des données
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#utilite" class="md-nav__link">
+    Utilité
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bibliotheque-pandas" class="md-nav__link">
+    Bibliothèque Pandas
+  </a>
+  
+    <nav class="md-nav" aria-label="Bibliothèque Pandas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#creer-dataframe" class="md-nav__link">
+    Créer Dataframe
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#affichage-et-tris" class="md-nav__link">
+    Affichage et tris
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#grouper-et-compter-les-valeurs-correspondant-a-une-certaine-donnee" class="md-nav__link">
+    Grouper et compter les valeurs correspondant à une certaine donnée
+  </a>
+  
+    <nav class="md-nav" aria-label="Grouper et compter les valeurs correspondant à une certaine donnée">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#groupby" class="md-nav__link">
+    Groupby
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#operations" class="md-nav__link">
+    Opérations
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ajouter-une-colonne-calculee" class="md-nav__link">
+    Ajouter une colonne calculée :
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#jointure" class="md-nav__link">
+    Jointure
+  </a>
+  
+    <nav class="md-nav" aria-label="Jointure">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#documentation" class="md-nav__link">
+    Documentation
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -757,7 +903,7 @@
   
   
     <li class="md-nav__item">
-      <a href="html/html.html" class="md-nav__link">
+      <a href="../IHM/html/html.html" class="md-nav__link">
         HTML
       </a>
     </li>
@@ -769,7 +915,7 @@
   
   
     <li class="md-nav__item">
-      <a href="html/css.html" class="md-nav__link">
+      <a href="../IHM/html/css.html" class="md-nav__link">
         CSS
       </a>
     </li>
@@ -808,7 +954,7 @@
   
   
     <li class="md-nav__item">
-      <a href="javascript/exo_js.html" class="md-nav__link">
+      <a href="../IHM/javascript/exo_js.html" class="md-nav__link">
         Exercices d'application Javascript
       </a>
     </li>
@@ -820,7 +966,7 @@
   
   
     <li class="md-nav__item">
-      <a href="javascript/programmation_evenementielle.html" class="md-nav__link">
+      <a href="../IHM/javascript/programmation_evenementielle.html" class="md-nav__link">
         Programmation evenementielle
       </a>
     </li>
@@ -832,7 +978,7 @@
   
   
     <li class="md-nav__item">
-      <a href="javascript/formulaire.html" class="md-nav__link">
+      <a href="../IHM/javascript/formulaire.html" class="md-nav__link">
         Les formulaires
       </a>
     </li>
@@ -871,7 +1017,7 @@
   
   
     <li class="md-nav__item">
-      <a href="php/Protocole_HTTP.html" class="md-nav__link">
+      <a href="../IHM/php/Protocole_HTTP.html" class="md-nav__link">
         Protocole HTTP
       </a>
     </li>
@@ -883,7 +1029,7 @@
   
   
     <li class="md-nav__item">
-      <a href="PHP/TP_php.md" class="md-nav__link">
+      <a href="../IHM/PHP/TP_php.md" class="md-nav__link">
         TP PHP
       </a>
     </li>
@@ -915,256 +1061,122 @@
               
                 
                 
-                <h1 id="exercices-dapplication-de-javascript">Exercices d'application de <code>Javascript</code><a class="headerlink" href="#exercices-dapplication-de-javascript" title="Permanent link">⚓︎</a></h1>
-<h2 id="bac-a-sable">Bac à sable<a class="headerlink" href="#bac-a-sable" title="Permanent link">⚓︎</a></h2>
-<p>Pour faire des tests rapides sans enregistrer, on peut utiliser un "Bac à sable".</p>
-<p><a class="md-button" href="http://jsbin.com/wuqevezoku/edit?html,js,console">Bac à sable</a></p>
-<h2 id="utilisation-de-la-console">Utilisation de la console<a class="headerlink" href="#utilisation-de-la-console" title="Permanent link">⚓︎</a></h2>
-<p>Voici un code <code>html</code> contenant du <code>javascript</code>.</p>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10
-11
-12</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Ma Page avec un JS inclus<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
-      <span class="p">&lt;</span><span class="nt">script</span> <span class="na">language</span><span class="o">=</span><span class="s">&quot;JavaScript&quot;</span><span class="p">&gt;</span>
-        <span class="nx">alert</span><span class="p">(</span><span class="s2">&quot;JavaScript est maintenant inclus dans mon fichier et ce </span>
-<span class="s2">        message s&#39;affiche dans une fenêtre d&#39;alerte&quot;</span><span class="p">);</span>
-      <span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
-  <span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
-<span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Page avec JavaScript inclus dans mon code HTML<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
-<span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
-<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+                <h1 id="traitement-de-donnees-en-tables">Traitement de données en tables<a class="headerlink" href="#traitement-de-donnees-en-tables" title="Permanent link">⚓︎</a></h1>
+<h2 id="activite-introduction">Activité introduction<a class="headerlink" href="#activite-introduction" title="Permanent link">⚓︎</a></h2>
+<h2 id="definitions">Définitions<a class="headerlink" href="#definitions" title="Permanent link">⚓︎</a></h2>
+<blockquote>
+<p>Base de données : ensemble d’informations structurées<br />
+Descripteur : champ prenant une certaine valeur (donnée) par ex Nom, Prenom, …<br />
+Collection: ensemble de données partageant les mêmes descripteurs par ex contacts partagent tous les descripteurs nom et prenom.  </p>
+</blockquote>
+<h2 id="caracteristiques-des-donnees">Caractéristiques des données<a class="headerlink" href="#caracteristiques-des-donnees" title="Permanent link">⚓︎</a></h2>
+<p>Les données peuvent être de tout type : nombre, entier, chaine de caractère, booléen, …   </p>
+<div id="center">
+        <img alt="table de données" src="img/table.PNG">
+</div>
+
+<p>La collection est l’ensemble des films répertoriés, les descripteurs sont ID (entier), nom (chaine de caractères), genre (chaine de caractères), Durée (entier), Date de sortie (chaine de caractères), Réalisateur (chaine de caractères) et Acteurs (chaine de caractères).
+Les données peuvent être obligatoires (nom du film par exemple) ou facultative (durée du film). C’est le créateur de la BDD qui le définit.
+Un des champs doit être UNIQUE pour qu’il n’y ait pas de confusion, en général c’est un identifiant nommé ID. Il est auto incrémenté quand on ajouter des éléments dans la BDD.  </p>
+<h2 id="utilite">Utilité<a class="headerlink" href="#utilite" title="Permanent link">⚓︎</a></h2>
+<p>Une BDD sert à structurer les données et les trouver facilement. Elle permet de croiser les données avec une autre base et de stocker les informations sur un support permanant.<br />
+Elles permettent de faire des traitements statistiques et adapter les comportements en fonction des résultats (pub ciblée par exemple).  </p>
+<h2 id="bibliotheque-pandas">Bibliothèque Pandas<a class="headerlink" href="#bibliotheque-pandas" title="Permanent link">⚓︎</a></h2>
+<h3 id="creer-dataframe">Créer Dataframe<a class="headerlink" href="#creer-dataframe" title="Permanent link">⚓︎</a></h3>
+<p><img align="left" alt="Dataframe" src="img/dataframe.PNG" /></p>
+<p>On crée un Dataframe à partir d’un tableau existant :</p>
+<div class="admonition cite">
+<p class="admonition-title">Code</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">ar</span> <span class="o">=</span> <span class="p">[[</span><span class="mf">1.1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mf">3.3</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span> <span class="p">[</span><span class="mf">2.7</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mf">5.4</span><span class="p">,</span> <span class="mi">7</span><span class="p">],</span> <span class="p">[</span><span class="mf">5.3</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mf">1.5</span><span class="p">,</span> <span class="mi">15</span><span class="p">]]</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">ar</span><span class="p">,</span> <span class="n">index</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;a1&#39;</span><span class="p">,</span> <span class="s1">&#39;a2&#39;</span><span class="p">,</span> <span class="s1">&#39;a3&#39;</span><span class="p">],</span> <span class="n">columns</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;A&#39;</span><span class="p">,</span> <span class="s1">&#39;B&#39;</span><span class="p">,</span> <span class="s1">&#39;C&#39;</span><span class="p">,</span> <span class="s1">&#39;D’])</span>
 </code></pre></div>
 </td></tr></table>
-<div class="admonition faq">
-<p class="admonition-title">A faire</p>
-<p><strong>1.</strong> Copier et tester ce code dans une page html que vous ouvrirez dans un navigateur.<br />
-<strong>2.</strong> Que fait la fonction <code>alert</code> ? </p>
 </div>
-<p>Pour faire afficher les messages dans la console (F12 puis console), on utilise la fonction <code>console.log(a)</code> pour afficher la valeur de a par exmple. Cela evite la fenêtre popUp pour des vérifications en cours de code.  </p>
-<div class="admonition faq">
-<p class="admonition-title">A faire</p>
-<p><strong>3.</strong> Modifier le code pour que le message s'affiche dans la console.  </p>
-</div>
-<h2 id="variables-et-interaction-utilisateur">Variables et interaction utilisateur<a class="headerlink" href="#variables-et-interaction-utilisateur" title="Permanent link">⚓︎</a></h2>
-<h3 id="syntaxe-du-javascript">Syntaxe du Javascript<a class="headerlink" href="#syntaxe-du-javascript" title="Permanent link">⚓︎</a></h3>
-<ul>
-<li>Les variables doivent être déclarées grâce au mot clé var.  </li>
-<li>Tout comme en python, les chaînes de caractères sont entourées de guillemets.  </li>
-<li>Les instructions simples sont terminées par un point-virgule: ;   </li>
-<li>Les blocs d'instructions sont entourés d'accolades {}  </li>
-<li>Les commentaires sont notés précédés de deux barres obliques: //.  </li>
-<li>Les variables et fonctions sont écrites en camelCase(L'espace est remplacé par -une majuscule).  </li>
-<li>L'indentation des blocs d'instruction n'est pas obligatoire comme en Python, mais souhaitable pour plus de lisibilité du code.  </li>
-</ul>
-<h3 id="exemple">Exemple<a class="headerlink" href="#exemple" title="Permanent link">⚓︎</a></h3>
-<p>Tester ceci :<br />
+<p>Ou à partir de rien </p>
+<div class="admonition cite">
+<p class="admonition-title">code</p>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
-3
-4</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kd">var</span> <span class="nx">tonNom</span> <span class="o">=</span><span class="s1">&#39;Nom&#39;</span><span class="p">;</span>
-<span class="kd">var</span> <span class="nx">tonPrenom</span> <span class="o">=</span><span class="s1">&#39;Prenom&#39;</span><span class="p">;</span>
-<span class="kd">var</span> <span class="nx">toi</span><span class="o">=</span><span class="nx">tonNom</span><span class="o">+</span><span class="s1">&#39; &#39;</span><span class="o">+</span><span class="nx">tonPrenom</span><span class="p">;</span>
-<span class="nx">alert</span><span class="p">(</span><span class="nx">toi</span><span class="p">);</span>
-</code></pre></div>
-</td></tr></table></p>
-<p>Puis ceci :<br />
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
-2
-3
-4
-5
-6
-7</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kd">var</span> <span class="nx">tonNom</span> <span class="o">=</span><span class="nx">prompt</span><span class="p">(</span><span class="s1">&#39;quel est ton nom?&#39;</span><span class="p">);</span>
-<span class="kd">var</span> <span class="nx">tonPrenom</span> <span class="o">=</span><span class="nx">prompt</span><span class="p">(</span><span class="s1">&#39;quel est ton prénom?&#39;</span><span class="p">);</span>
-<span class="kd">var</span> <span class="nx">toi</span><span class="o">=</span><span class="nx">tonNom</span><span class="o">+</span><span class="s1">&#39; &#39;</span><span class="o">+</span><span class="nx">tonPrenom</span><span class="p">;</span>
-<span class="k">if</span> <span class="nx">tonNom</span><span class="o">==</span><span class="s1">&#39;Einstein&#39;</span><span class="p">{</span>  
-  <span class="nx">alert</span><span class="p">(</span><span class="nx">toi</span><span class="o">+</span> <span class="s1">&#39;:tu est un génie!&#39;</span><span class="p">);}</span>
-<span class="k">else</span> <span class="p">{</span>
-  <span class="nx">alert</span><span class="p">(</span><span class="nx">toi</span><span class="o">+</span> <span class="s1">&#39;:tu est juste un être humain&#39;</span><span class="p">);}</span> 
-</code></pre></div>
-</td></tr></table></p>
-<h2 id="fonctions-et-calcul">Fonctions et calcul :<a class="headerlink" href="#fonctions-et-calcul" title="Permanent link">⚓︎</a></h2>
-<p>Pour créer une fonction, on utilise la syntaxe ci-dessous :<br />
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
-2
-3</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kd">function</span> <span class="nx">carre</span><span class="p">(</span><span class="nx">nombre</span><span class="p">){</span>
-  <span class="k">return</span> <span class="nx">nombre</span><span class="o">*</span><span class="nx">nombre</span>
-<span class="p">}</span>
+3</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">df</span><span class="o">=</span><span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">([{</span><span class="s1">&#39;A&#39;</span><span class="p">:</span> <span class="mf">1.1</span><span class="p">,</span> <span class="s1">&#39;B&#39;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="s1">&#39;C&#39;</span><span class="p">:</span> <span class="mf">3.3</span><span class="p">,</span> <span class="s1">&#39;D&#39;</span><span class="p">:</span> <span class="mi">4</span><span class="p">},</span>    
+<span class="p">{</span><span class="s1">&#39;A&#39;</span><span class="p">:</span> <span class="mf">2.7</span><span class="p">,</span> <span class="s1">&#39;B&#39;</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span> <span class="s1">&#39;C&#39;</span><span class="p">:</span> <span class="mf">5.4</span><span class="p">,</span> <span class="s1">&#39;D&#39;</span><span class="p">:</span> <span class="mi">7</span><span class="p">},</span>    
+<span class="p">{</span><span class="s1">&#39;A&#39;</span><span class="p">:</span> <span class="mf">5.3</span><span class="p">,</span> <span class="s1">&#39;B&#39;</span><span class="p">:</span> <span class="mi">9</span><span class="p">,</span> <span class="s1">&#39;C&#39;</span><span class="p">:</span> <span class="mf">1.5</span><span class="p">,</span> <span class="s1">&#39;D&#39;</span><span class="p">:</span> <span class="mi">15</span><span class="p">}])</span>
 </code></pre></div>
 </td></tr></table>
-Pour exécuter la fonction :<br />
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
-2
-3</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kd">var</span> <span class="nx">c</span>
-<span class="nx">c</span><span class="o">=</span><span class="nx">carre</span><span class="p">(</span><span class="mf">4</span><span class="p">)</span>
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">c</span><span class="p">)</span>
+</div>
+<p>Il faudra importer la bibliothèque pandas : <code>import pandas as pd</code><br />
+Importer à partir d’un fichier csv :<br />
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">df</span> <span class="o">=</span> <span class="n">pandas</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;myFile.csv’, delimiter=&quot;,&quot;, encoding=’utf’)</span>
 </code></pre></div>
 </td></tr></table></p>
 <div class="admonition note">
-<p class="admonition-title">Remarque</p>
-<p>La notion de porté de variable est valable aussi en Javascript. Pour déclarer une variable qui ne sera valable que dans un bloc ou une fonction on peut utiliser le mot-clé <code>let</code> au lieu de <code>var</code>. </p>
+<p class="admonition-title">remarque</p>
+<p>vérifier si le délimiteur est une virgule ou un point virgule. </p>
 </div>
-<div class="admonition faq">
-<p class="admonition-title">A faire</p>
-<p><strong>4.</strong> Ecrire une fonction qui calcule l'aire du disque dont le rayon est donné par l'utilisateur.</p>
-<details class="note"><summary>Une petite aide?</summary><p>Il faudra commener par utiliser une fonction permettant de rentrer une valeur par l'utilisateur. Puis créer la fonction qui renvoie le calcul et enfin un affichage du résultat. (note : <code>Math.PI</code> permet d'obtenir la valeur de pi. ).</p>
-</details>
-</div>
-<h2 id="les-boucles-et-les-conditions">Les boucles et les conditions<a class="headerlink" href="#les-boucles-et-les-conditions" title="Permanent link">⚓︎</a></h2>
-<p>Pour chacune des syntaxes données ci-dessous, tester l'exemple donné et créer quelques lignes pour vous entrainer.<br />
-Vous pouvez si vous êtes à l'aise tester les instructions proposées en dessous.  </p>
-<h3 id="syntaxe-des-conditions">Syntaxe des conditions<a class="headerlink" href="#syntaxe-des-conditions" title="Permanent link">⚓︎</a></h3>
-<p><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
-2
-3
-4
-5
-6</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kd">var</span> <span class="nx">result</span><span class="p">;</span>
-<span class="kd">var</span> <span class="nx">a</span><span class="o">=-</span><span class="mf">5</span>
-<span class="k">if</span> <span class="p">(</span><span class="nx">a</span><span class="o">&gt;</span><span class="mf">0</span><span class="p">)</span> <span class="p">{</span>
-  <span class="nx">result</span><span class="o">=</span><span class="s1">&#39;positive&#39;</span><span class="p">;</span>
-<span class="p">}</span> <span class="k">else</span> <span class="p">{</span><span class="nx">result</span><span class="o">=</span><span class="s1">&#39;Not positive&#39;</span><span class="p">;}</span>
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">result</span><span class="p">);</span>
+<h3 id="affichage-et-tris">Affichage et tris<a class="headerlink" href="#affichage-et-tris" title="Permanent link">⚓︎</a></h3>
+<p>Pour afficher des colonnes, on utilise :<br />
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="p">[[</span><span class="s1">&#39;A&#39;</span><span class="p">,</span><span class="s1">&#39;B&#39;</span><span class="p">]])</span>  <span class="n">ou</span> <span class="nb">print</span> <span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;A&#39;</span><span class="p">])</span>
 </code></pre></div>
 </td></tr></table>
-Plus d'exemples <a href="https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Statements/if...else">par ici</a><br />
-Il existe aussi la fonction <code>SWITCH</code> dans le cas où il y a plusieurs conditions. Aller voir  <a href="https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Statements/switch">par ici</a>.  </p>
-<h3 id="syntaxe-de-la-for">Syntaxe de la for<a class="headerlink" href="#syntaxe-de-la-for" title="Permanent link">⚓︎</a></h3>
-<p><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
-2
-3
-4
-5</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kd">var</span> <span class="nx">str</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">;</span>
-<span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">i</span><span class="o">=</span><span class="mf">0</span><span class="p">;</span><span class="nx">i</span><span class="o">&lt;</span><span class="mf">9</span><span class="p">;</span><span class="nx">i</span><span class="o">++</span><span class="p">){</span>
-  <span class="nx">str</span><span class="o">=</span><span class="nx">str</span><span class="o">+</span><span class="nx">i</span>
-<span class="p">}</span>
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">str</span><span class="p">);</span>
+<img align="left" alt="Affichage" src="img/tris.PNG" />
+<code>head()</code>, <code>tail ()</code> : affichent les  premières ou dernières lignes (nombre de lignes en argument  par default)
+<code>describe()</code>: infos statistiques sur le jeu de données Encore plus avec include='all' en paramètre.</p>
+<p><strong>Trier en fonction d'une valeur :</strong>
+<img align="left" alt="Affichage" src="img/tri2.PNG" />
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">df</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="s1">&#39;A&#39;</span><span class="p">,</span> <span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 </code></pre></div>
 </td></tr></table>
-<code>for ... in</code> et <code>for...of</code> peuvent être également utiles.  </p>
-<h3 id="syntaxe-de-la-boucle-while">Syntaxe de la boucle while<a class="headerlink" href="#syntaxe-de-la-boucle-while" title="Permanent link">⚓︎</a></h3>
-<p><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
-2
-3
-4
-5</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kd">var</span> <span class="nx">n</span><span class="o">=</span><span class="mf">0</span><span class="p">;</span>
-<span class="k">while</span> <span class="p">(</span><span class="nx">n</span><span class="o">&lt;</span><span class="mf">3</span><span class="p">){</span>
-  <span class="nx">n</span><span class="o">++</span><span class="p">;</span>
-<span class="p">}</span>
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">n</span><span class="p">);</span>
+Affiche le tableau trié en function des valeurs de A décroisssante. Utilisation du slice pour n'avoir que certaines lignes.</p>
+<p><strong>Affichage conditionnel (affiche les valeurs de B quand celle de A est supérieure à 2 :</strong> 
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">df</span><span class="p">[</span><span class="s1">&#39;B&#39;</span><span class="p">][</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;A&#39;</span><span class="p">]</span><span class="o">&gt;</span><span class="mi">2</span><span class="p">]</span> 
 </code></pre></div>
 </td></tr></table>
-Voir aussi <code>do...while</code>.<br />
-D'autres instructions <a href="https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Statements">ici</a>.  </p>
-<h3 id="applications">Applications<a class="headerlink" href="#applications" title="Permanent link">⚓︎</a></h3>
-<div class="admonition faq">
-<p class="admonition-title">A faire</p>
-<p><strong>5.</strong> Ecrire un script en utilisant une boucle for qui demande à l'utilisateur le nombre de frères et soeurs qu'il possède. Puis le programme demande les prénoms de chacun.<br />
-<strong>6.</strong> Ecrire un script qui calcule l'altitude de chute d'un parachutiste à chaque seconde. On estime qu'il descend à une vitesse de 15m/s en partant de l'altitude de 1000m. On supposera qu'il s'arrete au sol.<br />
-<strong>7.</strong> Réaliser le script qui demande l'age de l'utilisateur et lui renvoie le commentaire correspondant.  </p>
-</div>
-<table>
-<thead>
-<tr>
-<th align="center">Tranche d'âge</th>
-<th align="center">Commentaires</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="center">de 1 à 17 ans</td>
-<td align="center">Vous n'êtes pas encore majeur</td>
-</tr>
-<tr>
-<td align="center">de 18 à 49 ans</td>
-<td align="center">Vous êtes majeur mais pas sénior</td>
-</tr>
-<tr>
-<td align="center">de 50 à 59 ans</td>
-<td align="center">Vous êtes sénior mais pas encore retraité</td>
-</tr>
-<tr>
-<td align="center">De 60 à 120 ans</td>
-<td align="center">vous etes retraité profites de votre temps libre</td>
-</tr>
-</tbody>
-</table>
-<h2 id="ou-inserer-le-code-javascript">Où insérer le code <code>Javascript</code>?<a class="headerlink" href="#ou-inserer-le-code-javascript" title="Permanent link">⚓︎</a></h2>
-<p>Cela dépend de ce dont vous avez besoin.  </p>
-<p><strong>Pour une ou quelques lignes de code</strong><br />
-Dans le code <code>html</code> entouré des balises <code>&lt;script&gt;</code> et <code>&lt;/script&gt;</code> .<br />
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Ceci est ma super page<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>et voici un petit paragraphe pour occuper l&#39;espace.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
-      <span class="nx">alert</span><span class="p">(</span><span class="s2">&quot;Bonjour tout le monde&quot;</span><span class="p">);</span> 
-    <span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>et voici un autre paragraphe pour occuper l&#39;espace.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
-  <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
-<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
-</code></pre></div>
-</td></tr></table>
-ou<br />
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10
-11
-12
-13
-14
-15</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code> <span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>
-      Ceci est une page de test de javascript
-    <span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>et voici un petit paragraphe pour occuper l&#39;espace.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
-
-    <span class="p">&lt;</span><span class="nt">script</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;text/javascript&quot;</span><span class="p">&gt;</span>
-      <span class="kd">var</span> <span class="nx">a</span> <span class="o">=</span> <span class="mf">1</span><span class="p">;</span>
-      <span class="k">if</span> <span class="p">(</span><span class="nx">a</span> <span class="o">==</span> <span class="mf">1</span><span class="p">)</span> <span class="p">{</span>
-        <span class="nx">alert</span><span class="p">(</span><span class="s2">&quot;ceci est n&#39;importe quoi&quot;</span><span class="p">);</span>
-      <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
-        <span class="nx">alert</span><span class="p">(</span><span class="s2">&quot;c&#39;est mieux&quot;</span><span class="p">);</span>
-      <span class="p">}</span>
-    <span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
-  <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+Affiche les valeurs de A différentes qui apparaissent.  </p>
+<div class="admonition note">
+<p class="admonition-title">remarque</p>
+<p>On peut aussi utiliser <code>numpy</code>.
+<img align="left" alt="numpy" src="img/numpy.PNG" />
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">numpy</span>
+<span class="n">numpy</span><span class="o">.</span><span class="n">unique</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;A&#39;</span><span class="p">])</span>
 </code></pre></div>
 </td></tr></table></p>
-<p><strong>Pour un code plus long</strong><br />
-On crée un fichier <code>.js</code> séparé et on y fait référence dans le code <code>html</code> .</p>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code> <span class="p">&lt;</span><span class="nt">script</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;text/javascript&quot;</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;monfichier.js&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</div>
+<p>La méthode <code>len</code> permet de connaitre de nombre de valeurs différentes de A.</p>
+<h2 id="grouper-et-compter-les-valeurs-correspondant-a-une-certaine-donnee">Grouper et compter les valeurs correspondant à une certaine donnée<a class="headerlink" href="#grouper-et-compter-les-valeurs-correspondant-a-une-certaine-donnee" title="Permanent link">⚓︎</a></h2>
+<h3 id="groupby">Groupby<a class="headerlink" href="#groupby" title="Permanent link">⚓︎</a></h3>
+<p><img align="left" alt="code" src="img/groupby_code.PNG" />
+<img align="right" alt="resultat" src="img/groupby.PNG" /></p>
+<h3 id="operations">Opérations<a class="headerlink" href="#operations" title="Permanent link">⚓︎</a></h3>
+<p><code>df.shape</code> : affiche le nombre de lignes et de colonnes  </p>
+<p>Identifier et supprimer les doublons :
+<img align="left" alt="code" src="img/operation_code.PNG" />
+<img align="right" alt="resultat" src="img/supp_doublon.PNG" />    <br />
+<br/><br/><br/><br/><br/>
+On peut choisir de garder le premier, le dernier</p>
+<p><strong>Calculs divers :</strong>
+<img align="left" alt="calcul de moyenne" src="img/moyenne.PNG" /></p>
+<ul>
+<li><code>mean()</code></li>
+<li><code>count()</code></li>
+<li><code>min()</code></li>
+<li><code>max()</code></li>
+</ul>
+<h3 id="ajouter-une-colonne-calculee">Ajouter une colonne calculée :<a class="headerlink" href="#ajouter-une-colonne-calculee" title="Permanent link">⚓︎</a></h3>
+<p><img align="left" alt="code" src="img/ajouter_code.PNG" />
+<img align="right" alt="resultat" src="img/ajouter_res.PNG" />  </p>
+<p><br/><br/><br/><br/><br/></p>
+<h2 id="jointure">Jointure<a class="headerlink" href="#jointure" title="Permanent link">⚓︎</a></h2>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">tab</span> <span class="o">=</span> <span class="n">ages</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">professions</span><span class="p">,</span> <span class="n">left_on</span><span class="o">=</span><span class="s2">&quot;noms&quot;</span><span class="p">,</span> <span class="n">right_on</span><span class="o">=</span><span class="s2">&quot;noms&quot;</span><span class="p">)</span>
 </code></pre></div>
 </td></tr></table>
-<p>Il peut même y avoir plusieurs fichiers <code>.js</code> attaché à une page <code>html</code>.  </p>
-<h2 id="mise-en-place-du-code-proprement">Mise en place du code PROPREMENT<a class="headerlink" href="#mise-en-place-du-code-proprement" title="Permanent link">⚓︎</a></h2>
-<p>Créer trois fichier dans votre éditeur de texte et séparer les codes <code>html</code>, <code>css</code> et <code>javascript</code> du premier exercice puis vérifier que tout fonctionne.</p>
+<div class="admonition note">
+<p class="admonition-title">Remarque</p>
+<p>En inversant ages et professions on obtient une inversions des colonnes dans le résultat</p>
+</div>
+<h3 id="documentation">Documentation<a class="headerlink" href="#documentation" title="Permanent link">⚓︎</a></h3>
+<p><a href="https://moncoachdata.com/blog/guide-bibliotheque-pandas/">https://moncoachdata.com/blog/guide-bibliotheque-pandas/</a><br />
+<a href="http://www.python-simple.com/python-pandas/panda-intro.php">http://www.python-simple.com/python-pandas/panda-intro.php</a></p>
                 
               
               
@@ -1184,6 +1196,41 @@ On crée un fichier <code>.js</code> séparé et on y fait référence dans le c
       
         
 <footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="../representation/base_numeration.html" class="md-footer__link md-footer__link--prev" aria-label="Précédent: représenter les entiers" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Précédent
+              </span>
+              représenter les entiers
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../algorithmie/intro_algo.html" class="md-footer__link md-footer__link--next" aria-label="Suivant: Introduction à l&#39;algorithmie" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Suivant
+              </span>
+              Introduction à l'algorithmie
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
