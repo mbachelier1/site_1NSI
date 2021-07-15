@@ -10,7 +10,7 @@
       
       
       <link rel="icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.2.1, mkdocs-material-7.1.8">
+      <meta name="generator" content="mkdocs-1.2.1, mkdocs-material-7.1.10">
     
     
       
@@ -18,7 +18,7 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.ca7ac06f.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.1fe995fd.min.css">
       
         
         <link rel="stylesheet" href="../assets/stylesheets/palette.f1a3b89f.min.css">
@@ -922,13 +922,13 @@
 <div class="admonition faq">
 <p class="admonition-title">Parcours d'un tableau</p>
 <p>Lorsqu'on parcourt un tableau pour lire toutes les valeurs, combien d'actions fait-on si on a 20 éléments dans le tableau ?
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
-2
-3
-4</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nv">tab</span> <span class="o">←</span> <span class="kt">tableau </span><span class="nv">de</span> <span class="mi">20</span> <span class="nv">valeurs</span>
-<span class="k">Pour </span><span class="nv">i</span> <span class="nv">allant</span> <span class="nv">de</span> <span class="mi">0</span> <span class="k">à </span><span class="mi">19</span> <span class="p">:</span>
-    <span class="nv">afficher</span> <span class="nv">tab</span><span class="o">[</span><span class="nv">i</span><span class="o">]</span>
-<span class="k">fin pour</span>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>tab ← tableau de 20 valeurs
+Pour i allant de 0 à 19 :
+    afficher tab[i]
+fin pour
 </code></pre></div>
 </td></tr></table></p>
 <p><div id="text">
@@ -953,17 +953,17 @@
 </div>
 <h3 id="et-si-on-en-fait-plus">Et si on en fait plus?<a class="headerlink" href="#et-si-on-en-fait-plus" title="Permanent link">⚓︎</a></h3>
 <p>Pour chaque valeur du tableau, on additionne la valeur courante avec la suivante.
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
-2
-3
-4
-5
-6</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nv">tab</span> <span class="o">←</span> <span class="kt">tableau </span><span class="nv">de</span> <span class="mi">20</span> <span class="nv">valeurs</span>
-<span class="k">pour </span><span class="nv">i</span> <span class="nv">allant</span> <span class="nv">de</span> <span class="mi">0</span> <span class="k">à </span><span class="mi">18</span> <span class="p">:</span>
-    <span class="nb">lire </span><span class="nv">tab</span><span class="o">[</span><span class="nv">i</span><span class="o">]</span>
-    <span class="nb">lire </span><span class="nv">tab</span><span class="o">[</span><span class="nv">i</span><span class="o">+</span><span class="mi">1</span><span class="o">]</span>
-    <span class="nv">afficher</span> <span class="p">(</span><span class="nv">tab</span><span class="o">[</span><span class="nv">i</span><span class="o">]+</span><span class="nv">tab</span><span class="o">[</span><span class="nv">i</span><span class="o">+</span><span class="mi">1</span><span class="o">]</span><span class="p">)</span>
-<span class="k">fin pour</span>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>tab ← tableau de 20 valeurs
+pour i allant de 0 à 18 :
+    lire tab[i]
+    lire tab[i+1]
+    afficher (tab[i]+tab[i+1])
+fin pour
 </code></pre></div>
 </td></tr></table>
 A chaque case (sauf pour la dernière) on effectue ici 3 étapes.<br />
@@ -989,13 +989,13 @@ Une complexité de l'ordre <strong>O(nlog(n))</strong> est dite quasi-linéaire.
 <div class="admonition faq">
 <p class="admonition-title">Calcul de la moyenne d'un tableau</p>
 <p>Voici un algorithme. Quel est le type de complexité pour l'exécuter?
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
-2
-3
-4</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="err">➦</span> <span class="nv">initialiser</span> <span class="nv">total</span> <span class="k">à </span><span class="mi">0</span>
-<span class="err">➦</span> <span class="k">pour </span><span class="nv">tous</span> <span class="nv">les</span> <span class="nv">éléments</span> <span class="nv">de</span> <span class="nv">la</span> <span class="nv">Liste</span>
-    <span class="err">➦</span> <span class="nv">additionner</span> <span class="nv">l</span><span class="s1">&#39;élément à total</span>
-<span class="s1">➦ diviser le total par le nombre d&#39;</span><span class="nv">éléments</span> 
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>➦ initialiser total à 0
+➦ pour tous les éléments de la Liste
+    ➦ additionner l&#39;élément à total
+➦ diviser le total par le nombre d&#39;éléments 
 </code></pre></div>
 </td></tr></table>
 <form id="test1">
@@ -1011,15 +1011,15 @@ Une complexité de l'ordre <strong>O(nlog(n))</strong> est dite quasi-linéaire.
 <p class="admonition-title">Recherche de maximum</p>
 <p>Quelle est la complexité de cet algorithme ?<br />
 <em>La réponse attendue est un seul mot</em><br />
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
-2
-3
-4
-5</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="err">➦</span> <span class="nv">initialiser</span> <span class="nv">maximum</span> <span class="k">à </span><span class="nv">l</span><span class="s1">&#39;élément 0 de la liste</span>
-<span class="s1">➦ pour tous les éléments de la Liste à partir du 2nd</span>
-<span class="s1">    ➦ si l&#39;</span><span class="nv">élément</span> <span class="nv">est</span> <span class="nv">plus</span> <span class="nv">grand</span> <span class="nv">que</span> <span class="nv">maximum</span>
-        <span class="err">➦</span> <span class="nv">mettre</span> <span class="nv">maximum</span> <span class="k">à </span><span class="nv">la</span> <span class="nv">valeur</span> <span class="nv">de</span> <span class="nv">élément</span>
-<span class="err">➦</span> <span class="nv">afficher</span> <span class="nv">maximum</span>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>➦ initialiser maximum à l&#39;élément 0 de la liste
+➦ pour tous les éléments de la Liste à partir du 2nd
+    ➦ si l&#39;élément est plus grand que maximum
+        ➦ mettre maximum à la valeur de élément
+➦ afficher maximum
 </code></pre></div>
 </td></tr></table></p>
 <p><form>
@@ -1033,41 +1033,41 @@ affectation de la variable maximum et l'affichage du max correspondent aux deux 
 <div class="admonition faq">
 <p class="admonition-title">Comparer deux algorithmes</p>
 <p>On cherche à comparer les deux algorithmes :
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10
-11
-12
-13
-14
-15
-16
-17
-18</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="c">## Algorithme 1</span>
-<span class="err">➦</span> <span class="nv">Soit</span> <span class="nv">T</span> <span class="nv">la</span> <span class="nv">valeur</span> <span class="k">à </span><span class="nv">trouver</span>
-<span class="err">➦</span> <span class="nv">initialiser</span> <span class="nv">trouve</span> <span class="k">à </span><span class="no">Faux</span>
-<span class="err">➦</span> <span class="k">pour </span><span class="nv">tous</span> <span class="nv">les</span> <span class="nv">éléments</span> <span class="nv">de</span> <span class="nv">la</span> <span class="nv">Liste</span>
-    <span class="err">➦</span> <span class="k">si </span><span class="nv">l</span><span class="err">&#39;</span><span class="nv">élément</span> <span class="o">=</span> <span class="nv">T</span>
-        <span class="err">➦</span><span class="nv">trouve</span> <span class="o">=</span> <span class="no">Vrai</span>
-<span class="err">➦</span> <span class="nv">afficher</span> <span class="nv">trouve</span>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>## Algorithme 1
+➦ Soit T la valeur à trouver
+➦ initialiser trouve à Faux
+➦ pour tous les éléments de la Liste
+    ➦ si l&#39;élément = T
+        ➦trouve = Vrai
+➦ afficher trouve
 
-<span class="c">## Algorithme 2</span>
-<span class="err">➦</span> <span class="nv">soit</span> <span class="nv">T</span> <span class="nv">la</span> <span class="nv">valeur</span> <span class="k">à </span><span class="nv">trouver</span>
-<span class="err">➦</span> <span class="nv">soit</span> <span class="nv">L</span> <span class="nv">la</span> <span class="nv">longueur</span> <span class="nv">de</span> <span class="nv">la</span> <span class="nv">liste</span>
-<span class="err">➦</span> <span class="nv">initialiser</span> <span class="nv">trouve</span> <span class="k">à </span><span class="no">Faux</span>
-<span class="err">➦</span> <span class="nv">initialiser</span> <span class="nv">i</span> <span class="k">à </span><span class="mi">0</span>
-<span class="err">➦</span> <span class="k">tant que </span><span class="nv">i</span> <span class="o">&lt;</span> <span class="nv">L</span> <span class="o">et</span> <span class="nv">élément</span> <span class="nv">i</span> <span class="nv">de</span> <span class="nv">liste</span> <span class="nv">pas</span> <span class="nv">égal</span> <span class="k">à </span><span class="nv">T</span>
-    <span class="err">➦</span> <span class="nv">incrémenter</span> <span class="nv">i</span>
-<span class="err">➦</span> <span class="k">si </span><span class="nv">i</span> <span class="o">&lt;</span> <span class="nv">L</span> <span class="k">alors</span>
-    <span class="err">➦</span> <span class="nv">trouve</span><span class="o">=</span><span class="nv">True</span>
-<span class="err">➦</span> <span class="nv">affiche</span> <span class="nv">trouve</span>
+## Algorithme 2
+➦ soit T la valeur à trouver
+➦ soit L la longueur de la liste
+➦ initialiser trouve à Faux
+➦ initialiser i à 0
+➦ tant que i &lt; L et élément i de liste pas égal à T
+    ➦ incrémenter i
+➦ si i &lt; L alors
+    ➦ trouve=True
+➦ affiche trouve
 </code></pre></div>
 </td></tr></table>
 Pour une liste de 20 éléments :</p>
@@ -1119,18 +1119,18 @@ Tout part du nombre de seconde (microsecondes même) qui se sont écoulées depu
 <p>Déjà probablement utilisé en sciences physiques, le module matplotlib permet de tracer des graphiques.<br />
 L'idée ici est de comparer les complexités selon la taille du tableau.<br />
 Voici comment tracer un graphique avec deux séries de valeurs (abscisses et ordonnées) :<br />
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10
-11
-12</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="c1">#importation du module</span>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="c1">#importation du module</span>
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 
 <span class="c1">#liste des valeurs d&#39;abscisses</span>
@@ -1145,22 +1145,22 @@ Voici comment tracer un graphique avec deux séries de valeurs (abscisses et ord
 </code></pre></div>
 </td></tr></table></p>
 <p>Pour tracer plusieurs graphiques sur la même fenêtre :</p>
-<p><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10
-11
-12
-13
-14
-15
-16</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<p><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 
 <span class="n">x</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span>
 <span class="n">y</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span>
@@ -1179,21 +1179,21 @@ Voici comment tracer un graphique avec deux séries de valeurs (abscisses et ord
 </code></pre></div>
 </td></tr></table>
 Voici quelques propriétés des fenêtres graphiques (mais il y en a plein d'autres RTFM)
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10
-11
-12
-13
-14
-15</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 
 <span class="n">x</span> <span class="o">=</span> <span class="p">[</span><span class="mf">0.25</span><span class="p">,</span> <span class="mf">0.25</span><span class="p">,</span> <span class="mf">1.25</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mf">0.25</span><span class="p">,</span> <span class="mf">0.6</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.6</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.25</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.5</span><span class="p">,</span> <span class="o">-</span><span class="mf">1.25</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.25</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.25</span><span class="p">,</span> <span class="mf">0.25</span><span class="p">]</span>
 <span class="n">y</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mf">1.5</span><span class="p">,</span> <span class="mf">1.5</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mf">1.5</span> <span class="p">,</span> <span class="mf">1.5</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span>
@@ -1342,8 +1342,9 @@ function affiche1(){
           </div>
         </div>
         
-          <a href="#" class="md-top md-icon" title="Back to top" data-md-component="top" data-md-state="hidden">
+          <a href="#" class="md-top md-icon" data-md-component="top" data-md-state="hidden">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"/></svg>
+            Back to top
           </a>
         
       </main>
@@ -1370,10 +1371,10 @@ function affiche1(){
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.tabs", "navigation.expand", "navigation.top", "toc.integrate", "header.autohide"], "translations": {"clipboard.copy": "Copier dans le presse-papier", "clipboard.copied": "Copi\u00e9 dans le presse-papier", "search.config.lang": "fr", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Rechercher", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../assets/javascripts/workers/search.b0710199.min.js", "version": null}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.tabs", "navigation.expand", "navigation.top", "toc.integrate", "header.autohide"], "translations": {"clipboard.copy": "Copier dans le presse-papier", "clipboard.copied": "Copi\u00e9 dans le presse-papier", "search.config.lang": "fr", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Rechercher", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../assets/javascripts/workers/search.477d984a.min.js", "version": null}</script>
     
     
-      <script src="../assets/javascripts/bundle.76f349be.min.js"></script>
+      <script src="../assets/javascripts/bundle.ddd52ceb.min.js"></script>
       
         <script src="../javascripts/extra.js"></script>
       
