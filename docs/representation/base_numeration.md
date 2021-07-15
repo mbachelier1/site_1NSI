@@ -10,6 +10,12 @@ Bases utilisées en informatique : base 2 et base 16
 	(0100110)2 = 0 x 26 + 1 x 25 + 0 x 24 + 0 x 23 + 1 x 22 + 1 x 21 + 0 x 20
 	(345)16 = 3 x 162 + 4 x 161 + 5 x 160
 
+##Principe d'une base
+![compteur](img/compteur.jpg){align=right width=30%}
+Une fois atteint le dernier chiffre possible, on ajoute le premier chiffre à gauche et on recommence.
+
+4 chiffres → 104 valeurs possibles (de 0 à 9999) 
+
 ##Le binaire
 Pour transférer les données sans ambiguïté (0 absence de signal 1 réception d’un signal).
 ![conversion binaire decimal](img/conv_dec_bin.PNG){align=left}
