@@ -9,7 +9,7 @@
 ##Caractéristiques des données
 Les données peuvent être de tout type : nombre, entier, chaine de caractère, booléen, …   
 <div id="center">
-		<img alt="table de données" src="img/table.PNG">
+		<img alt="table de données" src="img/table.png">
 </div>
 
 La collection est l’ensemble des films répertoriés, les descripteurs sont ID (entier), nom (chaine de caractères), genre (chaine de caractères), Durée (entier), Date de sortie (chaine de caractères), Réalisateur (chaine de caractères) et Acteurs (chaine de caractères).
@@ -25,7 +25,7 @@ Elles permettent de faire des traitements statistiques et adapter les comporteme
 ##Bibliothèque Pandas
 
 ###Créer Dataframe
-![Dataframe](img/dataframe.PNG){align=left}
+![Dataframe](img/dataframe.png){align=left}
 
 On crée un Dataframe à partir d’un tableau existant :
 
@@ -61,13 +61,13 @@ Pour afficher des colonnes, on utilise :
 ```python
 print(df[['A','B']])  ou print (df['A'])
 ```
-![Affichage](img/tris.PNG){align=left}
+![Affichage](img/tris.png){align=left}
 `head()`, `tail ()` : affichent les  premières ou dernières lignes (nombre de lignes en argument  par default)
 `describe()`: infos statistiques sur le jeu de données Encore plus avec include='all' en paramètre.
 
 
 **Trier en fonction d'une valeur :**
-![Affichage](img/tri2.PNG){align=left}
+![Affichage](img/tri2.png){align=left}
 ```python
 df.sort_values(by='A', ascending=False)
 ```
@@ -81,7 +81,7 @@ Affiche les valeurs de A différentes qui apparaissent.
 
 !!! note "remarque"
 	On peut aussi utiliser `numpy`.
-	![numpy](img/numpy.PNG){align=left}
+	![numpy](img/numpy.png){align=left}
 	```python
 	import numpy
 	numpy.unique(df['A'])
@@ -91,21 +91,21 @@ La méthode `len` permet de connaitre de nombre de valeurs différentes de A.
 
 ##Grouper et compter les valeurs correspondant à une certaine donnée
 ###Groupby
-![code](img/groupby_code.PNG){align=left}
-![resultat](img/groupby.PNG){align=right}
+![code](img/groupby_code.png){align=left}
+![resultat](img/groupby.png){align=right}
 
 ###Opérations
 
 `df.shape` : affiche le nombre de lignes et de colonnes  
 
 Identifier et supprimer les doublons :
-![code](img/operation_code.PNG){align=left}
-![resultat](img/supp_doublon.PNG){align=right}      
+![code](img/operation_code.png){align=left}
+![resultat](img/supp_doublon.png){align=right}      
 <br/><br/><br/><br/><br/>
 On peut choisir de garder le premier, le dernier
 
 **Calculs divers :**
-![calcul de moyenne](img/moyenne.PNG){align=left}
+![calcul de moyenne](img/moyenne.png){align=left}
 
 -	`mean()`
 -	`count()`
@@ -114,8 +114,8 @@ On peut choisir de garder le premier, le dernier
 
 
 ###Ajouter une colonne calculée :
-![code](img/ajouter_code.PNG){align=left}
-![resultat](img/ajouter_res.PNG){align=right}  
+![code](img/ajouter_code.png){align=left}
+![resultat](img/ajouter_res.png){align=right}  
 
 <br/><br/><br/><br/><br/>
 
