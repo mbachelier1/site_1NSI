@@ -10,7 +10,7 @@
       
       
       <link rel="icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.2.1, mkdocs-material-7.1.10">
+      <meta name="generator" content="mkdocs-1.2.1, mkdocs-material-7.1.8">
     
     
       
@@ -18,7 +18,7 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.1fe995fd.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.ca7ac06f.min.css">
       
         
         <link rel="stylesheet" href="../assets/stylesheets/palette.f1a3b89f.min.css">
@@ -371,6 +371,30 @@
     <li class="md-nav__item">
       <a href="../representation/base_numeration.html" class="md-nav__link">
         représenter les entiers
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../representation/reels_flottants.html" class="md-nav__link">
+        représenter les reeles et les flottants
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../representation/codage_texte.html" class="md-nav__link">
+        représenter le texte
       </a>
     </li>
   
@@ -1072,7 +1096,7 @@ Collection: ensemble de données partageant les mêmes descripteurs par ex conta
 <h2 id="caracteristiques-des-donnees">Caractéristiques des données<a class="headerlink" href="#caracteristiques-des-donnees" title="Permanent link">⚓︎</a></h2>
 <p>Les données peuvent être de tout type : nombre, entier, chaine de caractère, booléen, …   </p>
 <div id="center">
-        <img alt="table de données" src="img/table.PNG">
+        <img alt="table de données" src="img/table.png">
 </div>
 
 <p>La collection est l’ensemble des films répertoriés, les descripteurs sont ID (entier), nom (chaine de caractères), genre (chaine de caractères), Durée (entier), Date de sortie (chaine de caractères), Réalisateur (chaine de caractères) et Acteurs (chaine de caractères).
@@ -1083,12 +1107,12 @@ Un des champs doit être UNIQUE pour qu’il n’y ait pas de confusion, en gén
 Elles permettent de faire des traitements statistiques et adapter les comportements en fonction des résultats (pub ciblée par exemple).  </p>
 <h2 id="bibliotheque-pandas">Bibliothèque Pandas<a class="headerlink" href="#bibliotheque-pandas" title="Permanent link">⚓︎</a></h2>
 <h3 id="creer-dataframe">Créer Dataframe<a class="headerlink" href="#creer-dataframe" title="Permanent link">⚓︎</a></h3>
-<p><img align="left" alt="Dataframe" src="img/dataframe.PNG" /></p>
+<p><img align="left" alt="Dataframe" src="img/dataframe.png" /></p>
 <p>On crée un Dataframe à partir d’un tableau existant :</p>
 <div class="admonition cite">
 <p class="admonition-title">Code</p>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">ar</span> <span class="o">=</span> <span class="p">[[</span><span class="mf">1.1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mf">3.3</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span> <span class="p">[</span><span class="mf">2.7</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mf">5.4</span><span class="p">,</span> <span class="mi">7</span><span class="p">],</span> <span class="p">[</span><span class="mf">5.3</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mf">1.5</span><span class="p">,</span> <span class="mi">15</span><span class="p">]]</span>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">ar</span> <span class="o">=</span> <span class="p">[[</span><span class="mf">1.1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mf">3.3</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span> <span class="p">[</span><span class="mf">2.7</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mf">5.4</span><span class="p">,</span> <span class="mi">7</span><span class="p">],</span> <span class="p">[</span><span class="mf">5.3</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mf">1.5</span><span class="p">,</span> <span class="mi">15</span><span class="p">]]</span>
 <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">ar</span><span class="p">,</span> <span class="n">index</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;a1&#39;</span><span class="p">,</span> <span class="s1">&#39;a2&#39;</span><span class="p">,</span> <span class="s1">&#39;a3&#39;</span><span class="p">],</span> <span class="n">columns</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;A&#39;</span><span class="p">,</span> <span class="s1">&#39;B&#39;</span><span class="p">,</span> <span class="s1">&#39;C&#39;</span><span class="p">,</span> <span class="s1">&#39;D’])</span>
 </code></pre></div>
 </td></tr></table>
@@ -1096,9 +1120,9 @@ Elles permettent de faire des traitements statistiques et adapter les comporteme
 <p>Ou à partir de rien </p>
 <div class="admonition cite">
 <p class="admonition-title">code</p>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">df</span><span class="o">=</span><span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">([{</span><span class="s1">&#39;A&#39;</span><span class="p">:</span> <span class="mf">1.1</span><span class="p">,</span> <span class="s1">&#39;B&#39;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="s1">&#39;C&#39;</span><span class="p">:</span> <span class="mf">3.3</span><span class="p">,</span> <span class="s1">&#39;D&#39;</span><span class="p">:</span> <span class="mi">4</span><span class="p">},</span>    
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">df</span><span class="o">=</span><span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">([{</span><span class="s1">&#39;A&#39;</span><span class="p">:</span> <span class="mf">1.1</span><span class="p">,</span> <span class="s1">&#39;B&#39;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="s1">&#39;C&#39;</span><span class="p">:</span> <span class="mf">3.3</span><span class="p">,</span> <span class="s1">&#39;D&#39;</span><span class="p">:</span> <span class="mi">4</span><span class="p">},</span>    
 <span class="p">{</span><span class="s1">&#39;A&#39;</span><span class="p">:</span> <span class="mf">2.7</span><span class="p">,</span> <span class="s1">&#39;B&#39;</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span> <span class="s1">&#39;C&#39;</span><span class="p">:</span> <span class="mf">5.4</span><span class="p">,</span> <span class="s1">&#39;D&#39;</span><span class="p">:</span> <span class="mi">7</span><span class="p">},</span>    
 <span class="p">{</span><span class="s1">&#39;A&#39;</span><span class="p">:</span> <span class="mf">5.3</span><span class="p">,</span> <span class="s1">&#39;B&#39;</span><span class="p">:</span> <span class="mi">9</span><span class="p">,</span> <span class="s1">&#39;C&#39;</span><span class="p">:</span> <span class="mf">1.5</span><span class="p">,</span> <span class="s1">&#39;D&#39;</span><span class="p">:</span> <span class="mi">15</span><span class="p">}])</span>
 </code></pre></div>
@@ -1106,7 +1130,7 @@ Elles permettent de faire des traitements statistiques et adapter les comporteme
 </div>
 <p>Il faudra importer la bibliothèque pandas : <code>import pandas as pd</code><br />
 Importer à partir d’un fichier csv :<br />
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">df</span> <span class="o">=</span> <span class="n">pandas</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;myFile.csv’, delimiter=&quot;,&quot;, encoding=’utf’)</span>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">df</span> <span class="o">=</span> <span class="n">pandas</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;myFile.csv’, delimiter=&quot;,&quot;, encoding=’utf’)</span>
 </code></pre></div>
 </td></tr></table></p>
 <div class="admonition note">
@@ -1115,29 +1139,29 @@ Importer à partir d’un fichier csv :<br />
 </div>
 <h3 id="affichage-et-tris">Affichage et tris<a class="headerlink" href="#affichage-et-tris" title="Permanent link">⚓︎</a></h3>
 <p>Pour afficher des colonnes, on utilise :<br />
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="p">[[</span><span class="s1">&#39;A&#39;</span><span class="p">,</span><span class="s1">&#39;B&#39;</span><span class="p">]])</span>  <span class="n">ou</span> <span class="nb">print</span> <span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;A&#39;</span><span class="p">])</span>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="p">[[</span><span class="s1">&#39;A&#39;</span><span class="p">,</span><span class="s1">&#39;B&#39;</span><span class="p">]])</span>  <span class="n">ou</span> <span class="nb">print</span> <span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;A&#39;</span><span class="p">])</span>
 </code></pre></div>
 </td></tr></table>
-<img align="left" alt="Affichage" src="img/tris.PNG" />
+<img align="left" alt="Affichage" src="img/tris.png" />
 <code>head()</code>, <code>tail ()</code> : affichent les  premières ou dernières lignes (nombre de lignes en argument  par default)
 <code>describe()</code>: infos statistiques sur le jeu de données Encore plus avec include='all' en paramètre.</p>
 <p><strong>Trier en fonction d'une valeur :</strong>
-<img align="left" alt="Affichage" src="img/tri2.PNG" />
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">df</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="s1">&#39;A&#39;</span><span class="p">,</span> <span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<img align="left" alt="Affichage" src="img/tri2.png" />
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">df</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="s1">&#39;A&#39;</span><span class="p">,</span> <span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 </code></pre></div>
 </td></tr></table>
 Affiche le tableau trié en function des valeurs de A décroisssante. Utilisation du slice pour n'avoir que certaines lignes.</p>
 <p><strong>Affichage conditionnel (affiche les valeurs de B quand celle de A est supérieure à 2 :</strong> 
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">df</span><span class="p">[</span><span class="s1">&#39;B&#39;</span><span class="p">][</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;A&#39;</span><span class="p">]</span><span class="o">&gt;</span><span class="mi">2</span><span class="p">]</span> 
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">df</span><span class="p">[</span><span class="s1">&#39;B&#39;</span><span class="p">][</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;A&#39;</span><span class="p">]</span><span class="o">&gt;</span><span class="mi">2</span><span class="p">]</span> 
 </code></pre></div>
 </td></tr></table>
 Affiche les valeurs de A différentes qui apparaissent.  </p>
 <div class="admonition note">
 <p class="admonition-title">remarque</p>
 <p>On peut aussi utiliser <code>numpy</code>.
-<img align="left" alt="numpy" src="img/numpy.PNG" />
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">numpy</span>
+<img align="left" alt="numpy" src="img/numpy.png" />
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">numpy</span>
 <span class="n">numpy</span><span class="o">.</span><span class="n">unique</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;A&#39;</span><span class="p">])</span>
 </code></pre></div>
 </td></tr></table></p>
@@ -1145,17 +1169,17 @@ Affiche les valeurs de A différentes qui apparaissent.  </p>
 <p>La méthode <code>len</code> permet de connaitre de nombre de valeurs différentes de A.</p>
 <h2 id="grouper-et-compter-les-valeurs-correspondant-a-une-certaine-donnee">Grouper et compter les valeurs correspondant à une certaine donnée<a class="headerlink" href="#grouper-et-compter-les-valeurs-correspondant-a-une-certaine-donnee" title="Permanent link">⚓︎</a></h2>
 <h3 id="groupby">Groupby<a class="headerlink" href="#groupby" title="Permanent link">⚓︎</a></h3>
-<p><img align="left" alt="code" src="img/groupby_code.PNG" />
-<img align="right" alt="resultat" src="img/groupby.PNG" /></p>
+<p><img align="left" alt="code" src="img/groupby_code.png" />
+<img align="right" alt="resultat" src="img/groupby.png" /></p>
 <h3 id="operations">Opérations<a class="headerlink" href="#operations" title="Permanent link">⚓︎</a></h3>
 <p><code>df.shape</code> : affiche le nombre de lignes et de colonnes  </p>
 <p>Identifier et supprimer les doublons :
-<img align="left" alt="code" src="img/operation_code.PNG" />
-<img align="right" alt="resultat" src="img/supp_doublon.PNG" />    <br />
+<img align="left" alt="code" src="img/operation_code.png" />
+<img align="right" alt="resultat" src="img/supp_doublon.png" />    <br />
 <br/><br/><br/><br/><br/>
 On peut choisir de garder le premier, le dernier</p>
 <p><strong>Calculs divers :</strong>
-<img align="left" alt="calcul de moyenne" src="img/moyenne.PNG" /></p>
+<img align="left" alt="calcul de moyenne" src="img/moyenne.png" /></p>
 <ul>
 <li><code>mean()</code></li>
 <li><code>count()</code></li>
@@ -1163,11 +1187,11 @@ On peut choisir de garder le premier, le dernier</p>
 <li><code>max()</code></li>
 </ul>
 <h3 id="ajouter-une-colonne-calculee">Ajouter une colonne calculée :<a class="headerlink" href="#ajouter-une-colonne-calculee" title="Permanent link">⚓︎</a></h3>
-<p><img align="left" alt="code" src="img/ajouter_code.PNG" />
-<img align="right" alt="resultat" src="img/ajouter_res.PNG" />  </p>
+<p><img align="left" alt="code" src="img/ajouter_code.png" />
+<img align="right" alt="resultat" src="img/ajouter_res.png" />  </p>
 <p><br/><br/><br/><br/><br/></p>
 <h2 id="jointure">Jointure<a class="headerlink" href="#jointure" title="Permanent link">⚓︎</a></h2>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">tab</span> <span class="o">=</span> <span class="n">ages</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">professions</span><span class="p">,</span> <span class="n">left_on</span><span class="o">=</span><span class="s2">&quot;noms&quot;</span><span class="p">,</span> <span class="n">right_on</span><span class="o">=</span><span class="s2">&quot;noms&quot;</span><span class="p">)</span>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">tab</span> <span class="o">=</span> <span class="n">ages</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">professions</span><span class="p">,</span> <span class="n">left_on</span><span class="o">=</span><span class="s2">&quot;noms&quot;</span><span class="p">,</span> <span class="n">right_on</span><span class="o">=</span><span class="s2">&quot;noms&quot;</span><span class="p">)</span>
 </code></pre></div>
 </td></tr></table>
 <div class="admonition note">
@@ -1188,9 +1212,8 @@ On peut choisir de garder le premier, le dernier</p>
           </div>
         </div>
         
-          <a href="#" class="md-top md-icon" data-md-component="top" data-md-state="hidden">
+          <a href="#" class="md-top md-icon" title="Back to top" data-md-component="top" data-md-state="hidden">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"/></svg>
-            Back to top
           </a>
         
       </main>
@@ -1201,7 +1224,7 @@ On peut choisir de garder le premier, le dernier</p>
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
         
-        <a href="../representation/base_numeration.html" class="md-footer__link md-footer__link--prev" aria-label="Précédent: représenter les entiers" rel="prev">
+        <a href="../representation/codage_texte.html" class="md-footer__link md-footer__link--prev" aria-label="Précédent: représenter le texte" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -1210,7 +1233,7 @@ On peut choisir de garder le premier, le dernier</p>
               <span class="md-footer__direction">
                 Précédent
               </span>
-              représenter les entiers
+              représenter le texte
             </div>
           </div>
         </a>
@@ -1252,10 +1275,10 @@ On peut choisir de garder le premier, le dernier</p>
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.tabs", "navigation.expand", "navigation.top", "toc.integrate", "header.autohide"], "translations": {"clipboard.copy": "Copier dans le presse-papier", "clipboard.copied": "Copi\u00e9 dans le presse-papier", "search.config.lang": "fr", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Rechercher", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../assets/javascripts/workers/search.477d984a.min.js", "version": null}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.tabs", "navigation.expand", "navigation.top", "toc.integrate", "header.autohide"], "translations": {"clipboard.copy": "Copier dans le presse-papier", "clipboard.copied": "Copi\u00e9 dans le presse-papier", "search.config.lang": "fr", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Rechercher", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../assets/javascripts/workers/search.b0710199.min.js", "version": null}</script>
     
     
-      <script src="../assets/javascripts/bundle.ddd52ceb.min.js"></script>
+      <script src="../assets/javascripts/bundle.76f349be.min.js"></script>
       
         <script src="../javascripts/extra.js"></script>
       
