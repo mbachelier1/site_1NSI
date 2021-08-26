@@ -6,9 +6,10 @@
 Voici les différentes parties du programme 
 
 ##Repésenter les données  
-
+[Représenter les entiers](representation/base_numeration.html){ .md-button} [Représenter les reels et flottants](representation/reels_flottants.html){ .md-button} [Représenter le texte](representation/codage_texte.html){ .md-button}
 
 ##Table de données  
+[Traitement de données en table](table_donnees/traitement_donnees.html){ .md-button}
 
 ##Réseaux et internet
 [Réseau](archi/reseau/reseau.html){ .md-button} [Protocole TCP IP](archi/reseau/TCP_IP.html){ .md-button} [Sécurisation](archi/reseau/securisation.html){ .md-button}
