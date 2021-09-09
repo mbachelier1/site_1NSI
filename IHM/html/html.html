@@ -10,7 +10,7 @@
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.2.1, mkdocs-material-7.1.8">
+      <meta name="generator" content="mkdocs-1.2.1, mkdocs-material-7.1.10">
     
     
       
@@ -18,7 +18,7 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.ca7ac06f.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.1fe995fd.min.css">
       
         
         <link rel="stylesheet" href="../../assets/stylesheets/palette.f1a3b89f.min.css">
@@ -1043,7 +1043,7 @@ Chaque balise est écrite ente les symboles &lt; et &gt;, et doit être refermé
 (Certaines sont auto-fermantes comme <code>&lt;br/&gt;</code>, <code>&lt;img/&gt;</code>, <code>&lt;meta/&gt;</code>).  </p>
 <div class="admonition example">
 <p class="admonition-title">Par exemple :</p>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>blablabla<span class="p">&lt;</span><span class="nt">strong</span><span class="p">&gt;</span>youpi<span class="p">&lt;/</span><span class="nt">strong</span><span class="p">&gt;</span>blablabla, va écrire&quot; youpi&quot; en gras.
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>blablabla<span class="p">&lt;</span><span class="nt">strong</span><span class="p">&gt;</span>youpi<span class="p">&lt;/</span><span class="nt">strong</span><span class="p">&gt;</span>blablabla, va écrire&quot; youpi&quot; en gras.
 </code></pre></div>
 </td></tr></table>
 </div>
@@ -1058,12 +1058,12 @@ Chaque balise est écrite ente les symboles &lt; et &gt;, et doit être refermé
 <p>Elle est délimitée par les balises <code>&lt;head&gt;</code> et<code>&lt;/head&gt;</code> </p>
 <div class="admonition example">
 <p class="admonition-title">Voici un exemple :</p>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
-2
-3
-4
-5
-6</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span> 
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span> 
     <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span> Page Web de la spécialité NSI <span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span> 
     <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;author&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;Cligniez-Djebali&quot;</span> <span class="p">/&gt;</span> 
     <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset </span><span class="o">=</span> <span class="s">&quot;utf-8&quot;</span> <span class="p">/&gt;</span>  
@@ -1085,23 +1085,23 @@ Pour l’écrire on utilise un simple éditeur de texte (par exemple sublime tex
 Il est plus lisible pour la présentation, d'utiliser l'indentation comme en python. Ainsi on risque moins de se tromper dans les balises imbriquées.  </p>
 <div class="admonition important">
 <p class="admonition-title">Fichier à créér</p>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10
-11
-12
-13
-14
-15
-16
-17</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="cp">&lt;!DOCTYPE html &gt;</span> 
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="cp">&lt;!DOCTYPE html &gt;</span> 
 
 <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span> 
   <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span> Page test de la spécialité NSI <span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span> 
@@ -1128,14 +1128,14 @@ La page est très dépouillée ! On apprendra plus tard à mettre des couleurs, 
 <p>L’intérêt essentiel des pages web est l'utilisation des liens. Les balises sont <code>&lt;a&gt;</code> et <code>&lt;/a&gt;</code>.  </p>
 <div class="admonition info">
 <p class="admonition-title">Un lien peut être absolu : </p>
-<p><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;http://www.google.fr&quot;</span><span class="p">&gt;</span>Moteur de recherche<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+<p><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;http://www.google.fr&quot;</span><span class="p">&gt;</span>Moteur de recherche<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
 </code></pre></div>
 </td></tr></table>
 affiche " Moteur de recherche " et lorsqu'on clique dessus, envoie sur <a href="www.google.fr">www.google.fr</a>; </p>
 </div>
 <div class="admonition info">
 <p class="admonition-title">Un lien peut être relatif : </p>
-<p><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;python.html&quot;</span><span class="p">&gt;</span>Ma page de programmation<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+<p><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;python.html&quot;</span><span class="p">&gt;</span>Ma page de programmation<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
 </code></pre></div>
 </td></tr></table>
 affiche " Ma page de programmation " et lorsqu'on clique dessus envoie sur la page python.html qui doit être dans le même dossier que la page qui contient le lien.     </p>
@@ -1143,7 +1143,7 @@ affiche " Ma page de programmation " et lorsqu'on clique dessus envoie sur la pa
 <p>On peut changer de dossier en écrivant par exemple: </p>
 <div class="admonition example">
 <p class="admonition-title">exemple</p>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;documents/python.html&quot;</span><span class="p">&gt;</span> 
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;documents/python.html&quot;</span><span class="p">&gt;</span> 
 </code></pre></div>
 </td></tr></table>
 </div>
@@ -1151,11 +1151,11 @@ affiche " Ma page de programmation " et lorsqu'on clique dessus envoie sur la pa
 <div class="admonition method">
 <p class="admonition-title">creer une ancre</p>
 <p>Créer une ancre
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">a</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;toto&quot;</span><span class="p">&gt;</span>On veut aller ici<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>    
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">a</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;toto&quot;</span><span class="p">&gt;</span>On veut aller ici<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>    
 </code></pre></div>
 </td></tr></table>
 Puis créer le lien avec : 
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;ma_page.html#toto&quot;</span><span class="p">&gt;</span>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;ma_page.html#toto&quot;</span><span class="p">&gt;</span>
 </code></pre></div>
 </td></tr></table></p>
 </div>
@@ -1163,11 +1163,11 @@ Puis créer le lien avec :
 <p>On dispose de 2 types de listes. Les listes à puces délimitées par les balises <code>&lt;ul&gt;</code> et <code>&lt;/ul&gt;</code> et les listes numérotées délimitées par <code>&lt;ol&gt;</code> et <code>&lt;/ol&gt;</code>. Chaque élément de la liste est alors délimité par <code>&lt;li&gt;</code> et <code>&lt;/li&gt;</code> :</p>
 <div class="admonition method">
 <p class="admonition-title">Créer une liste</p>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
-2
-3
-4
-5</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">ul</span> <span class="p">&gt;</span>Voici une liste de choses :
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">ul</span> <span class="p">&gt;</span>Voici une liste de choses :
     <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span> 1er élément <span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
     <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span> 2eme élément <span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
     <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span> 3eme élément <span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
@@ -1179,7 +1179,7 @@ Puis créer le lien avec :
 <p>On insère une image par la balise auto-fermante : </p>
 <div class="admonition example">
 <p class="admonition-title">exemple</p>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;images/mon_image.jpg&quot;</span> <span class="p">/&gt;</span>    
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;images/mon_image.jpg&quot;</span> <span class="p">/&gt;</span>    
 </code></pre></div>
 </td></tr></table>
 </div>
@@ -1187,38 +1187,38 @@ Puis créer le lien avec :
 <p>ou si l'image est ailleurs, avec son adresse absolue : </p>
 <div class="admonition example">
 <p class="admonition-title">exemple</p>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot; https://i2.wp.com/beebom.com/wp-content/uploads/2016/01/Reverse-Image-Search-Engines-Apps-And-Its-Uses-2016.jpg?w=640&amp;ssl=1 &quot;</span> <span class="p">/&gt;</span>    
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot; https://i2.wp.com/beebom.com/wp-content/uploads/2016/01/Reverse-Image-Search-Engines-Apps-And-Its-Uses-2016.jpg?w=640&amp;ssl=1 &quot;</span> <span class="p">/&gt;</span>    
 </code></pre></div>
 </td></tr></table>
 </div>
 <p>Il est souhaitable (indispensable pour respecter W3C) d'ajouter un texte alternatif, en cas de problème de chargement, pour les non-voyants, … 
  !!! example "exemple"
-    <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;robot.jpg&quot;</span> <span class="na">alt</span><span class="o">=</span><span class="s">&quot;photo du robot Thymio 2&quot;</span><span class="p">/&gt;</span>    
+    <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;robot.jpg&quot;</span> <span class="na">alt</span><span class="o">=</span><span class="s">&quot;photo du robot Thymio 2&quot;</span><span class="p">/&gt;</span>    
 </code></pre></div>
 </td></tr></table></p>
 <h2 id="les-tableaux">Les tableaux<a class="headerlink" href="#les-tableaux" title="Permanent link">⚓︎</a></h2>
 <p>On peut insérer un tableau par les balises. <code>&lt;tr&gt;</code> est la balise de ligne, <code>&lt;td&gt;</code> est la balise de cellule. 
 !!! method 'Créer un tableau'
-    <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10
-11
-12
-13
-14
-15
-16
-17
-18
-19
-20</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">table</span><span class="p">&gt;</span>
+    <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">table</span><span class="p">&gt;</span>
     <span class="p">&lt;</span><span class="nt">thead</span><span class="p">&gt;</span>
         <span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;</span>
             <span class="p">&lt;</span><span class="nt">th</span><span class="p">&gt;</span>1ere colone<span class="p">&lt;/</span><span class="nt">th</span><span class="p">&gt;</span>
@@ -1243,12 +1243,12 @@ Puis créer le lien avec :
 <div class="admonition caution">
 <p class="admonition-title">important</p>
 <p>on peut fusionner des cellules notamment dans le <code>header</code> : 
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
-2
-3
-4
-5
-6</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">table</span><span class="p">&gt;</span>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">table</span><span class="p">&gt;</span>
     <span class="p">&lt;</span><span class="nt">thead</span><span class="p">&gt;</span>
         <span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;</span>
             <span class="p">&lt;</span><span class="nt">th</span> <span class="na">colspan</span><span class="o">=</span><span class="s">&quot;3&quot;</span><span class="p">&gt;</span>The table header<span class="p">&lt;/</span><span class="nt">th</span><span class="p">&gt;</span>
@@ -1280,8 +1280,9 @@ Attention, c'est parfois du lourd car il y a des codes javascript , du style css
           </div>
         </div>
         
-          <a href="#" class="md-top md-icon" title="Back to top" data-md-component="top" data-md-state="hidden">
+          <a href="#" class="md-top md-icon" data-md-component="top" data-md-state="hidden">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"/></svg>
+            Back to top
           </a>
         
       </main>
@@ -1343,10 +1344,10 @@ Attention, c'est parfois du lourd car il y a des codes javascript , du style css
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.tabs", "navigation.expand", "navigation.top", "toc.integrate", "header.autohide"], "translations": {"clipboard.copy": "Copier dans le presse-papier", "clipboard.copied": "Copi\u00e9 dans le presse-papier", "search.config.lang": "fr", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Rechercher", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.b0710199.min.js", "version": null}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.tabs", "navigation.expand", "navigation.top", "toc.integrate", "header.autohide"], "translations": {"clipboard.copy": "Copier dans le presse-papier", "clipboard.copied": "Copi\u00e9 dans le presse-papier", "search.config.lang": "fr", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Rechercher", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.477d984a.min.js", "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.76f349be.min.js"></script>
+      <script src="../../assets/javascripts/bundle.ddd52ceb.min.js"></script>
       
         <script src="../../javascripts/extra.js"></script>
       
