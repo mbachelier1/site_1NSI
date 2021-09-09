@@ -202,7 +202,7 @@ Mais on peut aussi utiliser d'autres variables pour affecter une valeur à une a
     <div id="messageText4"></div>
     <div id="correctionText4" style="display:none;"> <p> L'algorithme 1, la variable A contient 3 et la variable B contient 4.
 	l'algorithme 2, la variable A contient 2, la variable B contient 3 et la variable C contient 1.
-	l'algorithme 3, la variable A contient 8, la variable B contient 11 et la variable C contient 7.</p></div>
+	l'algorithme 3, la variable A contient 8, la variable B contient 4 et la variable C contient 7.</p></div>
 
 
 
@@ -323,7 +323,7 @@ Toutes les instructions qui ont été vue peuvent être traduites en langage de 
 
 ##Affections de variables
 En python, les variables sont créées au moment où on leur affecte une valeur. Il n'est pas utile de les déclarer préalablement comme dans la plupart des langages.  
-![affecter des variables en python](img/trad_affectation.png)  
+![affecter des variables en python](img/trad_affect.png)  
 
 
 ##Entrées et sorties  
@@ -448,7 +448,7 @@ function reactionText4(){
 		msg='bravo';
 		style='style="color:green;"';
 		}
-	else if (reponse41.value ==='3' || reponse42.value ==='4' || reponse43.value ==='2' || reponse44.value ==='3' || reponse45.value ==='1' || reponse46.value ==='8' || reponse47.value ==='11' || reponse48.value ==='7'){
+	else if (reponse41.value ==='3' || reponse42.value ==='4' || reponse43.value ==='2' || reponse44.value ==='3' || reponse45.value ==='1' || reponse46.value ==='8' || reponse47.value ==='4' || reponse48.value ==='7'){
 			msg='Réponse partiellement correcte!';
 			style='style="color:orange;"';
 		}
