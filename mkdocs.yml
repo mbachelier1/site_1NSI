@@ -5,7 +5,7 @@ nav:
   - 'Accueil': 'index.md'
   - 'Représenter de données':
     -  'représenter les entiers' : 'representation/base_numeration.md'
-    -  'représenter les reeles et les flottants' : 'representation/reels_flottants.md'
+    -  'représenter les réels et les flottants' : 'representation/reels_flottants.md'
     -  'représenter le texte' : 'representation/codage_texte.md'
   - 'Tables de données':
     -  'Traitement de données en table' : 'table_donnees/traitement_donnees.md'

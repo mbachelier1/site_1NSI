@@ -12,7 +12,7 @@ Voici les différentes parties du programme
 [Traitement de données en table](table_donnees/traitement_donnees.html){ .md-button}
 
 ##Réseaux et internet
-[Réseau](archi/reseau/reseau.html){ .md-button} [Protocole TCP IP](archi/reseau/TCP_IP.html){ .md-button} [Sécurisation](archi/reseau/securisation.html){ .md-button}
+[Réseau](archi/reseaux/reseau.html){ .md-button} [Protocole TCP IP](archi/reseaux/TCP_IP.html){ .md-button} [Sécurisation](archi/reseaux/securisation.html){ .md-button}
 ##Modèle d'architecture et système d'exploitation
 ###Architecture
 [Modèle de von Neumann et OS](archi/OS/vonneuman.html){ .md-button} [Utilisation de Linux](archi/linux.html){ .md-button} 
@@ -34,10 +34,10 @@ Voici les différentes parties du programme
 
 
 ##Algorithmie
-[Introduction à l'algorithmie](Algorithmie/intro_algo.html){ .md-button} 
+[Introduction à l'algorithmie](algorithmie/intro_algo.html){ .md-button} 
 
-[Algorithmes de tris](Algorithmie/tris.html){ .md-button}  [K plus proches voisins](Algorithmie/kppv.html){ .md-button }   
+[Algorithmes de tris](algorithmie/tris.html){ .md-button}  [K plus proches voisins](Algorithmie/kppv.html){ .md-button }   
 
-[Algorithmes glouton](Algorithmie/glouton.html){ .md-button }   
+[Algorithmes glouton](algorithmie/glouton.html){ .md-button }   
 
 

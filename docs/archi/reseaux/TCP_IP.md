@@ -201,6 +201,15 @@ et passe le relais à la couche du dessus.
         - [ ] pour aller plus vite 
         - [ ] pour savoir toujours à qui les données sont envoyées 
 
+    Pourquoi les données sont encapsulées ?
+    === "propositions" 
+        - [ ] pour savoir toujours d'où viennent les données 
+        - [ ] Pour simplifier le renvoi en cas de perte  
+        - [ ] pour plus de sécurité 
+        - [ ] pour aller plus vite 
+        - [ ] pour savoir toujours à qui les données sont envoyées 
+
+
 ## Le matériel
 
 ### Couche physique
@@ -238,14 +247,14 @@ et passe le relais à la couche du dessus.
 
 ??? note "Concentrateur"
 
-    ![hub](../img/hub.png){width=50%}
+    ![hub](../img/hub.png){width=50% align=left}
     Le **concentrateur** (*hub*) est moins utilisé de nos jours. C'est une version « multiprise » du répéteur : quand il reçoit 
     un signal sur un des ses branchements, il les recopie sur tous les autres branchements sans se soucier de l'éventuel 
     destinataire du signal.
 
 ??? note "Carte réseau"
 
-    ![rezo](../img/carte_reseau.jpg){width=50%}
+    ![rezo](../img/carte_reseau.PNG){width=50% align=right}
     Que ce soit une clé USB Wi-Fi ou une carte réseau interne, c'est la même chose : ce composant est indispensable pour 
     connecter un ordinateur à un réseau.
     

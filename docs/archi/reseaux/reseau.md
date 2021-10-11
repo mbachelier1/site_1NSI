@@ -61,7 +61,7 @@ Vous avez sans doute déjà compris que le 8 signifie que les 8 premiers bits (l
 En fait, il est possible d'avoir autre chose que /8, /16 ou /24 (on peut par exemple trouver /10 ou /17...), mais ces cas font intervenir la notion de masque de sous-réseau qui n'est pas au programme de NSI. 
 
 !!! faq "Questions"
-    Vous répondrez aux questions dans le questionnaires moodle associé.  
+    Vous répondrez aux questions dans le questionnaires pronote associé.  
     1. Déterminer l'adresse réseau  partir de l'Ip suivante 147.12.1.24/16.  
     2. Déterminer l'adresse réseau  partir de l'Ip suivante 192.168.2.45/24.  
     3. Déterminer l'adresse réseau à partir de l'IP suivante 5.23.65.87/8.  
@@ -70,6 +70,7 @@ En fait, il est possible d'avoir autre chose que /8, /16 ou /24 (on peut par exe
         - [ ] adresse IP de A : 24.2.8.127/8 ; adresse IP de B : 24.23.5.52/8  
         - [ ] adresse IP de A : 193.28.7.2/24 ; adresse IP de B : 193.28.8.3/24   
         - [ ] adresse IP de A : 172.23.4.7/16 ; adresse IP de B : 172.23.5.8/16     
+
 
  
 
@@ -110,6 +111,9 @@ suffisante, mais si je cherche à envoyer du courrier au 24 rue des oliviers san
 
     Pour pallier le problème, une norme IP version 6, plus performante, sur 128 bits au lieu de 32, a vu le jour mais 
     peine encore à s'imposer.
+
+!!! question "Petit calcul"
+    Compte tenu de ce qui est dit plus haut, combien d'adresses IP différetes peut fournir la norme IPv6 ?
 
 Voici les plages d'IP et d'IP privées selon les classes :
 
@@ -166,3 +170,6 @@ de 256 machines à connecter donc on va choisir une IP publique de classe C :
 Utilise l'invite de commande de ton système d'exploitation (touche ++win++ et taper `cmd` pour Windows, Terminal sous
 MacOS) et trouve l'IP de ton ordinateur, le masque de sous-réseau et l'adresse de la passerelle. 
 
+!!! question "question"
+    5. Combien de machines peut-on trouver au maximum dans un réseau d'adresse réseau 192.168.2.0/24 ?
+    6. Combien de machines peut-on trouver au maximum dans un réseau d'adresse réseau 176.24.0.0/16 ?

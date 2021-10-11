@@ -25,7 +25,7 @@ Ce protocole permet d'éviter la perte de trames dans les cas suivants :
 
 ### Perte de trame du côté de A
 
-A envoie la première trame et celle-ci se perd, au bout du temps imparti, ne reçoit rien.
+A envoie la première trame et celle-ci se perd, au bout du temps imparti, B ne reçoit rien.
 
 ![bit2](../img/bit_alterne_2.svg) 
 

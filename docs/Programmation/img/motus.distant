@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sc:item xmlns:sc="http://www.utc.fr/ics/scenari/v3/core">
+	<cp:remoteVideo xmlns:cp="canope.fr:canoprof" xmlns:sp="http://www.utc.fr/ics/scenari/v3/primitive">
+		<cp:videoM/>
+		<sc:location>https://youtu.be/KCssi-LlT34?t=204</sc:location>
+	</cp:remoteVideo>
+</sc:item>

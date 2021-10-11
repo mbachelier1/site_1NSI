@@ -1,16 +1,33 @@
-#Le modèle d'architecture de Von Neumann et les systèmes d'exploitaion
-##Un peu d'histoire...
-###Les précurseurs
+# Le modèle d'architecture de Von Neumann et les systèmes d'exploitaion
+## Un peu d'histoire...
+### Le premier ordinateur
+<div><img align="right" class="inl" src="../src/images/eniac.png" alt='Eniac' title='ENIAC'></div>
+
+L’ENIAC — Electronic Numerical Integrator and Computer — fut construit aux Etats Unis pendant la première guerre mondiale. Sous la direction de John Mauchly et J. Presper Eckert, ce calcultateur uiversel était destiné à effectuer des calculs de valeurs des tables de tirs d'artillerie. La machine était programmable par câblage, c'est-à-dire que pour chaque problème donné à résoudre, il fallait passer de longues heures à câbler la machine.
+L'ENIAC pesait 27 tonnes et occupait une sirface de 170m² dans les sous-sols de la Moore School of Electrical Engineering de l'université de Pennsylvanie. Le temps moyen entre deux pannes était de 2 jours.   
+L'ENIAC n'avait pas de mamoire, au sens actuel du terme, mais seulement 20 accumulateur pouvant chacun contenir un nombre de 10 chiffres. Les calculs aithmétiques (additions, soustraction, multiplication) étaient possibles à raison de 5000 opérations par seconde. Les entrées-sorties, se faisainet au moyen de cartes perforées.  
+
+
+
+### Les précurseurs
+
 <div>
 		<img class="inl" align="right" src="../src/images/turing.png" alt='Alan Turing' title="Alan Turing">  
 </div>
-Les travaux du mathématicien anglais Alan Turing (1912-1954) à la fin des années 30 ont été fondateurs de l’informatique ; Alan Turing est connu pour son rôle pendant la Seconde Guerre Mondiale dans le déchiffrement des messages de la machine Enigma de l’armée allemande. Il travaille en particulier sur les concepts de programmation et d’intelligence artificielle.
-<div>		<img  align="left" class="inl" src="../src/images/von neumann.png" alt='John Von Neumann' title="John Von Neumann"></div>
-Ces travaux ont inspiré un mathématicien et physicien hongrois naturalisé américain : John Von Neumann (1903-1957). Il énonce en 1945 les principes d’architecture d’un ordinateur.
-Les ordinateurs actuels fonctionnent encore sous ce principe, que l’on appelle donc l’architecture de Von Neumann.
-<div>	<img align="right" class="inl" src="../src/images/shannon.png" alt='Claude Shannon' title='Claude Shannon'></div>
+Les travaux du mathématicien anglais Alan Turing (1912-1954) à la fin des années 30 ont été fondateurs de l’informatique . Alan Turing est connu pour son rôle pendant la Seconde Guerre Mondiale dans le déchiffrement des messages de la machine Enigma de l’armée allemande. Il travaille en particulier sur les concepts de programmation et d’intelligence artificielle.
+ <div>		<img  align="left" class="inl" src="../src/images/von neumann.png" alt='John Von Neumann' title="John Von Neumann"></div>
+ 
+Le mathématicien John Von Neumann (1903-1957), inspiré par Turing, reprend les idées de Eckert et Mauchly en y ajoutant le concept de machine universelle introduit par Alaln Turing en 1937. Cette nouvelle architecture est révolutionnaire, munie d'un processeur et de dispositifs d'entrées-sorties, elle permet d'enregistrer des données au cours de l'exécution d'un programme enregistré dans sa **mémoire physique**. Ce qui rend le modèle de Von Neumann si novateur est le fait de pouvoir stocker les données et le programme dans la même mémoire. 
+ <div>	<img align="right" class="inl" src="../src/images/shannon.png" alt='Claude Shannon' title='Claude Shannon'></div>
+En 1948, Turiing conçoit la programmation de la *Manchester Small-Scale Experimentale Machine*, surnommée Manchester baby, première machien au monde fondée sur l'architecture de Von Neumann. Le 21 juin 1948, Tom Kilburn écrit et enregistre dans la mémoire de la machine le premier programme de l'histoire. Il s'agissait de calculer le plus grand facteur premier de 2<sup>18</sup> : 52 minutes et 2 millions d'instructions exécutées plus tard, la machine donne la réponse : 131 072.  
+Plus de 70 ans après son invention, les concepts du modèle d'architecture de Von Neumann sont toujours présents dans les ordinateurs modernes.
+
+
 Claude Shannon (1916-2001) ingénieur américain en électricité et mathématicien, apporte une théorie de l’information et de la communication dans les mêmes années. Il est l’un des premiers a utiliser le mot "bit".  
-		
+
+
+
+
 !!! important "Vocabulaire"
 
 	- le mot anglais "computer" vient du latin computare qui signifie compter.  
@@ -32,21 +49,18 @@ Son origine est une demande d’IBM, qui voulait un nom français plus parlant q
 
 
 
-###Le premier ordinateur
-<div><img align="right" class="inl" src="../src/images/eniac.png" alt='Eniac' title='ENIAC'></div>
 
-L’ENIAC — Electronic Numerical Integrator and Computer — fut le premier calculateur entièrement électronique ayant les mêmes capacités qu’une machine de Turing, aux limites physiques près. Il fut opérationnel à la fin de l’année 1945. 
-Il avait des dimensions imposantes : plus de 20 m de long, 2,50 m de haut, 30 tonnes. Comportant 18 000 tubes électroniques, il consommait 150 kilowatts. 
-Les données étaient lues sur cartes perforées. Pour programmer une application (initialement, le calcul de tables de tir pour l’artillerie), il fallait faire un plan des connexions nécessaires, puis procéder au câblage physique, un travail long, fastidieux, et sujet aux erreurs. La détection et la correction des fautes étaient également laborieuses. Avec la fiabilité réduite des tubes électroniques, ce mode de programmation constituait le grand point faible du projet. 
-Bien conscients de cette faiblesse, ses concepteurs ont commencé dès 1944 à réfléchir à l’étape suivante, avant même la mise en service de l’ENIAC.
 
 !!! faq "questions"
-	1. Quel est l'âpport principal de Turing?  
-	2. Quel est l'apport principal de Von Neumann?  
+    1.Un ordinateur bas de gamme, aujourd'hui, a une fréquence de processeur 2GHz.  
+	Combien d'opérations par seconde peut-il faire?  
+	2.Relever dans le texte le nom de trois machines programmables.  
+	3.Citer quelques avantages et inconvénients de l'ENIAC.  
+	4.Quels sont les deux éléments novateurs de l'architecture de Von Neumann?  
 
 
 
-##Architecture de Von Neumann
+## Architecture de Von Neumann
 <div>
 <img align="right" class="inl" src="../src/images/archi VN.png" alt='Modele de Von Neumann' title="Modele de Von Neumann"></div>
 L’architecture de von Neumann est un modèle structurel d’ordinateur dans lequel une unité de stockage (mémoire) unique sert à conserver à la fois les instructions et les données demandées ou produites par le calcul. Les ordinateurs actuels sont tous basés sur des versions améliorées de cette architecture.  
@@ -72,66 +86,54 @@ L’architecture de von Neumann est un modèle structurel d’ordinateur dans le
 	- La seconde innovation, la plus fondamentale, est l’idée du programme enregistré : les instructions, au lieu d’être codées sur un support externe (ruban, cartes, tableau de connexions), sont enregistrées dans la mémoire selon un codage conventionnel. Un emplacement de mémoire peut contenir indifféremment des instructions et des données, et une conséquence majeure est qu’un programme peut être traité comme une donnée par d’autres programmes. Cette idée, présente en germe dans la machine de Turing, trouvait ici sa concrétisation.  
 
 !!! faq "Questions"
-	5.En faisant éventuellement une recherche complémentaire, comment étaient apportés le programme informatique avant sa présence dans l'unité de mémoire?  
-	6.Quelle est la différence entre mémoire volatile et permanente?   
-	7.Résumer en quelques lignes ce que fait le processeur?  
-	8.Quelle est la différence entre un processeur monoprocessus et multiprocessus?
+	5.En faisant éventuellement une recherche complémentaire, comment étaient apportés le programme informatique avant sa présence dans l'unité de mémoire?   
+	6.Résumer en quelques lignes ce que fait le processeur?  
+	7.Quelle est la différence entre un processeur monoprocessus et multiprocessus?
 
-##Composants d'une machine
-###Vue d'ensemble
+## Composants d'une machine
+![Schéma d'un ordinateur personnel](../img/schema_PC.PNG){align=left width=50%}
+![liste des composants](../img/liste_PC.PNG){align=float width=50%}
+
+### Vue d'ensemble
 Dans cette partie, nous considérerons une machine informatique au sens large : ordinateur de bureau, ordinateur portable, smartphone, tablette …  
 Physiquement une machine informatique est constituée de plusieurs éléments :
 
 -	Une carte mère avec un microprocesseur, une carte graphique, des barrettes mémoires, une carte réseau, des ports (=prises)…  
 -	Des périphériques qui peuvent être internes ou externes : disques durs, écran, clavier ...  
 
-###Les mémoires
+  
 
-Il y a des mémoires de plusieurs types :
 
--	La "mémoire morte" , en anglais ROM (Read Only Memory). Mémoire de toute petite capacité accessible uniquement en lecture et modifiée une fois pour toute à la fabrication de l’ordinateur. C’est une mémoire non volatile contenant juste le nécessaire pour faire démarrer l’ordinateur.  
--	La "mémoire vive", en anglais RAM (Random Access Memory). Mémoire de capacité moyenne (quelques Go) est une mémoire volatile, c’est à dire que son contenu s’efface lorsque l’on éteint l’ordinateur. Elle stocke les données et les programmes durant l’exécution par le processeur.  
--	La "mémoire de masse" : tout système permettant d’effectuer des sauvegardes, mémoire donc non volatile, stocke les données et les programmes.  
+
+### Les mémoires
+
+Les mémoires d'un ordinateur peuvent être permanente ou volatile. Cette dernière s'efface au moment de la coupre de l'alimetation électrique. Les donées peuvent être remplacées lors de l'éxécution de programmes.
+
+La mémoire d'une machine permet de stocker les données. Elle est exprimée en Mo, Go, To (téraoctets). Il y en a de plusieurs types :
+
+-	La "mémoire morte" , en anglais ROM (Read Only Memory). Mémoire persistante de quelques Mégaoctets contenant juste le nécessaire pour faire démarrer l’ordinateur. Son contenu est fixé lors de la fabrication de la machine et n'est pas prévue pour être modifié. 
+-	La "mémoire vive", en anglais RAM (Random Access Memory). Mémoire de capacité moyenne (4 à 32Go dans les ordinateurs personnels). Mémoire dans laquelles sont enregistrées les informations traitées par la machine. 
+-	La "mémoire de masse" : Mémoire qui peut être lue et écrite par la machine. Sa grande capacité permet d'y enregistrer une grande quantité de données, C'est le cas des disques durs SSD, cartes SD ou clé USB.
+-	La "mémoire cache", Mémoire qui a pour rôle d'accélérer l'accès aux informations de la mémoire vive. Elle contient des informations fréquemment utilisées par le processeur ou es prochaines dont il aura besoin. Elle a une capacité d'une dizaine de mégaoctets 
 
 !!! faq "questions"
-	9.Citer des exemples de mémoires de masse.  
-	10.Donner des exemples de périphériques avec lesquels le processeur peut etre amené à communiquer.   
+	8.Pour chaque type de mémoire, dire si elle est volatile ou permanente.  
+	9.Classer les mémoires citées de la plus rapide à la moins rapide.  
+	10.Citer des exemples de mémoires de masse.   
 
-###Pour aller plus loin ...
+### Les périphériques
+
+En plus des ressousrces matérielles, le système doit interagir avec l'utilisateur via des périphériques.  
+- Les périphériques d'entrée servent à donner des informations ou des données au système
+- Les périphériques de sortie servent à faire sortir les informations du système
+- Les périphériques d'entrée/sortie permettent aussi bien de lire et écrire des données
+
+!!! questions "questions"
+	11.Parmi la liste des périphériques cités dans le schéma des composants d'un ordinateur, classer les selon leur type (entree, sortie ou etrée/sortie).
+	12.Ajoutez en un maximum d'autres de votre connaissance.  
+
+---
+### Pour aller plus loin ...
 <div id="center">
 <iframe  width="560" height="315" src="https://www.youtube.com/embed/c9pL_3tTW2c" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
 
-
-----
-## Les systèmes d'exploitation
-
-###A quoi sert un OS ?
-Visionner la vidéo ci-dessous :
-<div id="center">
-<a href="https://youtu.be/4OhUDAtmAUo"><img src="https://framabook.org/wordpress/wp-content/uploads/2015/07/Framabook7couv450x300.jpg" alt="Histoire des OS"></a></div>
-			
-!!! faq "Questions"
-	1.Que signifie OS?
-	2.Citer les OS que vous connaissez.
-	3.Quels sont les services rendus par un OS?
-
-
-###Histoire de UNIX
-<div id="center">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/Za6vGTLp-wg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
-Le système UNIX est un système dit "propriétaire" (certaines personnes disent "privateur"), c'est-à-dire un système non libre. Mais plus généralement, qu'est-ce qu'un logiciel libre ?
-D'après Wikipédia : "Un logiciel libre est un logiciel dont l'utilisation, l'étude, la modification et la duplication par autrui en vue de sa diffusion sont permises, techniquement et légalement, ceci afin de garantir certaines libertés induites, dont le contrôle du programme par l'utilisateur et la possibilité de partage entre individus". Le système UNIX ne respecte pas ces droits (par exemple le code source d'UNIX n'est pas disponible, l'étude d'UNIX est donc impossible), UNIX est donc un système "propriétaire" (le contraire de "libre"). Attention qui dit logiciel libre ne veut pas forcement dire logiciel gratuit (même si c'est souvent le cas), la confusion entre "libre" et "gratuit" vient de l'anglais puisque "free" veut à la fois dire "libre", mais aussi gratuit.   
-
-!!! faq "Questions"
-		4.Citer des logiciels libres que vous connaissez.</br>
-		5.Parmis les OS cités dans la première partie, lesquels sont libres? Lesquels sont gratuits?.</br></p>
-
-###Et les autres
-<div id="center">
-		<iframe width="560" height="315" src="https://www.youtube.com/embed/IquNF_DXcF8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
-Microsoft a été créée par Bill Gates et Paul Allen en 1975. Microsoft est surtout connue pour son système d'exploitation Windows. Windows est un système d'exploitation "propriétaire", la première version de Windows date 1983, mais à cette date Windows n'est qu'un ajout sur un autre système d'exploitation nommé MS-DOS. Aujourd'hui Windows reste le système d'exploitation le plus utilisé au monde sur les ordinateurs grand public.  
-Enfin pour terminer, quelques mots sur le système d'exploitation des ordinateurs de marque Apple : tous les ordinateurs d'Apple sont livrés avec le système d'exploitation macOS. Ce système macOS est un système d'exploitation UNIX, c'est donc un système d'exploitation propriétaire.  
-
-!!! faq "Question"
-		6.Où retrouve-t-on presque systématiquement un OS linux?
-	
