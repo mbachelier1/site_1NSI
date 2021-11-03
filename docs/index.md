@@ -15,12 +15,16 @@ Voici les différentes parties du programme
 [Réseau](archi/reseaux/reseau.html){ .md-button} [Protocole TCP IP](archi/reseaux/TCP_IP.html){ .md-button} [Sécurisation](archi/reseaux/securisation.html){ .md-button}
 ##Modèle d'architecture et système d'exploitation
 ###Architecture
-[Modèle de von Neumann et OS](archi/OS/vonneuman.html){ .md-button} [Utilisation de Linux](archi/linux.html){ .md-button} 
+[Modèle de von Neumann](archi/OS/vonneuman.html){ .md-button} [Les systèmes d'exploitation](archi/OS/OS.html){ .md-button} 
 ###Echanger avec la machine
-[Langage machine](archi/langage_machine.html){ .md-button} [Logique combinatoire](archi/logique_combinatoire.html){ .md-button}  
+[Logique combinatoire](archi/OS/logique_combinatoire.html){ .md-button}   [Assembleur](archi/OS/assembleur.html){ .md-button} 
 
 ##Programmation
-
+[Bien démarrer en programmation](Programmation/demarrer.html){ .md-button} [Conditions et boucles](Programmation/boucle.html){ .md-button}  
+</br>
+[Fonctions](Programmation/fonction.html){ .md-button}  
+</br>
+[Tkinter](Programmation/tkinter.html){ .md-button} 
 
 ##IHM
 ###HTML et CSS
@@ -34,7 +38,10 @@ Voici les différentes parties du programme
 
 
 ##Algorithmie
+
 [Introduction à l'algorithmie](algorithmie/intro_algo.html){ .md-button} 
+
+[Complexité](Programmation/complexite.html){ .md-button}  
 
 [Algorithmes de tris](algorithmie/tris.html){ .md-button}  [K plus proches voisins](Algorithmie/kppv.html){ .md-button }   
 

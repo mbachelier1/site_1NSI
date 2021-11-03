@@ -147,7 +147,7 @@ L'option `side` peut accepter les valeurs `TOP, BOTTOM, LEFT ou RIGHT`, pour « 
 Les options `padx` et `pady` permettent de réserver un petit espace autour du widget. Cet espace est exprimé en nombre de pixels : `padx` réserve un espace à gauche et à droite du widget, `pady` réserve un espace au- dessus et au-dessous du widget.  
 Prenez le temps d'essayer de bien comprendre ce programme.  
 
-### Exercices :
+### **Exercices** :
 Écrire une application qui dessine un damier (carrés 'navy' sur fond blanc), ainsi que des pions rouges qui apparaissent au hasard lorsque que l'on clique sur un bouton dans un premier temps, on se contentera du damier).  
 Le canevas devra avoir une dimension de 300*300. Les carrés devront avoir un côté égal à 30.
 Les pions devront avoir un rayon égal à 10.
@@ -180,12 +180,306 @@ chaine.pack()
 fenetre.mainloop()
 
 ```
-![calculatrice](img/res calculatrice.JPG)
 on obtient : 
+![calculatrice](img/res_calculatrice.JPG)
+Au début du script, on importe le module math pour que la calculatrice puisse disposer de toutes les fonctions mathématiques et scientifiques usuelles : sinus, cosinus, racine carrée, etc.  
+La fonction `evaluer()` sera la commande exécutée par le programme lorsque l'utilisateur actionnera la touche Return.  
+Cette fonction utilise la méthode `configure( )` du widget chaine, pour modifier son attribut text.  
+`eval( )` évalue (fait le calcul) la chaîne de caractères.  
+`str( )` transforme une expression numérique en chaîne de caractères.  
+`get( )` est une méthode qui permet d'extraire du widget entree la chaîne de caractères qui lui a été fournie par l'utilisateur.  
+entree est un widget de la « classe »` Entry`. Afin que ce widget puisse transmettre au programme l'expression que l'utilisateur y aura encodée, il faut lui associer un événement à l'aide de la méthode `bind() `(bind signifie « lier » en anglais).  
+`entree.bind("<Return>", evaluer)` signifie : « lier l'événement 'pression sur la touche `<Return>`' à l'objet entree, le gestionnaire de cet événement étant la fonction evaluer ».  
+L'argument event fourni à la fonction évaluer est obligatoire dès que l'on utilise la méthode `bind()`.  
+
 ## Détection du clic de souris
+Écrire, sauvegarder et exécuter le script suivant :
+```python
+from tkinter import*
+# Détection et positionnement d'un clic de souris dans une fenêtre :
+
+def pointeur(event):
+    chaine.configure(text="Clic détecté en X = "+str(event.x)+", Y = "+str(event.y))
+    can.create_oval(event.x-2,event.y-2,event.x+2,event.y+2,outline='red',width=1)
+fen=Tk()
+can=Canvas(fen, width=200, height=150, bg="light yellow")
+can.bind("<Button-1>", pointeur)
+can.pack()
+chaine=Label(fen)
+chaine.pack()
+fen.mainloop()
+```
+On obtient :  
+![détection du clic d souris](img/res clic souris.JPG) 
+Le script fait apparaître une fenêtre contenant un cadre (frame) rectangulaire de couleur jaune pâle.  
+La méthode `bind()` du widget cadre associe l'événement clic à l'aide du premier bouton de la souris> au gestionnaire d'événement « pointeur ».    
+Ce gestionnaire d'événement peut utiliser les attributs x et y de l'objet event généré automatiquement par Python, pour construire la chaîne de caractères qu' affichera la position de la souris au moment du clic.
+
+### **Exercices** :
+Modifier le script ci-dessus de manière à faire apparaître un petit cercle rouge à l'endroit où l'utilisateur a effectué son clic (il faut d'abord remplacer le widget Frame par un widget Canvas).  
+![détection du clic d souris](img/re clic souris cercle rouge.JPG)  
 
 ## Widgets et positionnement dans le Canevas
+### Classe de widget(windows+gadget)
+
+Il existe 15 classes de base pour les widgets Tkinter :
+`Button` : Un bouton classi
+`Canvas`: Un espace pour disposer divers éléments graphiques. Ce widget peut être utilisé pour dessiner, créer des éditeurs graphiques, et aussi pour implémenter des widgets personnalisés.  
+`Checkbutton` : Une « case à cocher » qui peut prendre deux états distincts (la case est cochée ou non). Un clic sur ce widget provoque le changement d'état.  
+`Entry` : Un champ d'entrée, dans lequel l'utilisateur du programme pourra insérer un texte quelconque à partir du clavier.  
+`Frame` : Une surface rectangulaire dans la fenêtre, où l'on peut disposer d'autres widgets. Cette surface peut être colorée. Elle peut aussi être décorée d'une bordure.  
+`Label `: Un texte (ou libellé) quelconque (éventuellement une image).  
+`Listbox` : Une liste de choix proposés à l'utilisateur, généralement présentés dans une sorte de boîte. On peut également configurer la Listbox de telle manière qu'elle se comporte comme une série de « boutons radio » ou de cases à cocher.  
+`Menu` : Un menu. Ce peut être un menu déroulant attaché à la barre de titre, ou bien un menu « pop up » apparaissant n'importe où à la suite d'un clic.
+`Menubutton` : Un bouton-menu, à utiliser pour implémenter des menus déroulants.  
+`Message` : Permet d'afficher un texte. Ce widget est une variante du widget Label, qui permet d'adapter automatiquement le texte affiché à une certaine taille ou à un certain rapport largeur/hauteur.  
+`Radiobutton` : Représente (par un point noir dans un petit cercle) une des valeurs d'une variable qui peut en posséder plusieurs. Cliquer sur un « bouton radio » donne la valeur correspondante à la variable, et "vide" tous les autres boutons radio associés à la même variable.  
+`Scale` : Vous permet de faire varier de manière très visuelle la valeur d'une variable, en déplaçant un curseur le long d'une règle.  
+`Scrollbar` : « ascenseur » ou « barre de défilement » que vous pouvez utiliser en association avec les autres widgets : Canvas, Entry, Listbox, Text.  
+`Text `: Affichage de texte formaté. Permet aussi à l'utilisateur d'éditer le texte affiché. Des images peuvent également être insérées.  
+`Toplevel` : Une fenêtre affichée séparément, « par-dessus ».  
+Ces classes de widgets intègrent chacune un grand nombre de méthodes. On peut aussi leur associer (lier) des événements, comme déjà vu dans les pages précédentes. Tous ces widgets peuvent être positionnés dans les fenêtres à l'aide de trois méthodes différentes : la méthode `grid( )`, la méthode `pack( )` et d'autres encore...  
+
+[Liste des méthodes communes à tous les widgets](http://tkinter.fdex.eu/doc/uwm.html)
+
+
+### Méthode grid() pour le positionnement des widgets
+
+Recopier, sauvegarder et exécuter le script suivant :  
+```python
+from tkinter import*
+
+fen1=Tk()
+txt1=Label(fen1, text='Premier champ : ')
+txt2=Label(fen1, text='Second : ')
+entr1=Entry(fen1, bg='white')
+entr2=Entry(fen1, bg='white')
+
+txt1.grid(row=0)
+txt2.grid(row=1)
+entr1.grid(row=0, column=1)
+entr2.grid(row=1, column=1)
+
+fen1.mainloop()
+```
+![méthode grid](img/ex grid.JPG) 
+La méthode `grid()` considère la fenêtre comme un tableau, avec des lignes (row) et des colonnes (column).  
+Il est possible d'aligner les widgets avec l'option `sticky` qui peut prendre l'une des quatre valeurs N, S, E, W (les quatre points cardinaux en anglais).  
+
+### **Exercices :**
+1. Remplacer les deux premières instructions` grid( ) `du script par :   
+`txt1.grid(row=0, sticky=E)  
+  txt2.grid(row=1, sticky=E)`  
+
+2. Le but de cet exercice est d'obtenir la fenêtre ci-dessous :   
+![méthode grid](img/res grid.JPG) 
+voici le fichier image à utiliser (cliquer sur le lien pour télécharger) [Image anneaux](img/AnOlympiques.gif) 
+Le programme comportera entre autres, les parties suivantes :  
+![Aide](img/anneau aide.JPG)
+Tkinter ne permet pas d'insérer directement une image dans une fenêtre. Il faut d'abord installer un canevas, et ensuite positionner l'image dans celui-ci, grâce à l'instruction `item=can1.create_image(160, 80, image=anneaux)`.
+
+Les deux premiers arguments transmis `(160,80)` indiquent les coordonnées x et y du canevas où il faut placer le centre de l'image (ici, l'image sera donc centrée dans le canevas).  
+
+L'instruction `rowspan=3` indique que le canevas pourra « s'étaler » sur trois lignes. padx et pady indiquent la dimension de l'espace à réserver autour du canevas.  
 
 ## Animations : déplacer les objets
+### Modifier les propriétés d'un objet (animation)
+Recopier, sauvegarder et exécuter le script suivant :  
+```python
+from tkinter import*
+# Procédure générale de déplacement :
+def avance(gd, hb):
+    global x1, y1
+    x1, y1 = x1+gd, y1+hb
+    can1.coords(oval1, x1, y1, x1+30, y1+30)
+# Gestionnaire d'événements :
+def depl_gauche():
+    avance(-10, 0)
+def depl_droite():
+    avance(10, 0)
+def depl_haut():
+    avance(0, -10)
+def depl_bas():
+    avance(0, 10)
+
+##### Programme principal #####
+
+# Les variables suivantes seront utilisées de manière globale :
+x1, y1 = 10, 10     # coordonnées initiales
+
+# Création du widget "maître" :
+fen1 =Tk()
+fen1.title("Exercice d'animation avec Tkinter")
+
+# Création des widgets "esclaves"
+can1 =Canvas(fen1,bg='dark gray',height=300,width=300)
+oval1=can1.create_oval(x1,y1,x1+30,y1+30,width=2,fill='red')
+can1.pack(side=LEFT)
+Button(fen1,text='Quitter',command=fen1.quit).pack(side=BOTTOM)
+Button(fen1,text='Gauche',command=depl_gauche).pack()
+Button(fen1,text='Droite',command=depl_droite).pack()
+Button(fen1,text='Haut',command=depl_haut).pack()
+Button(fen1,text='Bas',command=depl_bas).pack()
+
+# Démarrage du réceptionnaire d'événement :
+fen1.mainloop()
+fen1.destroy()
+```
+La fonction `avance( )` redéfinit les coordonnées de l'objet « cercle coloré » (`oval1`) à chaque fois que l'on clique sur un des boutons. Ce qui provoque son animation.  
+Les boutons ont été définis de manière plus compact (pas d'utilisation de variables).  
+
+### **Exercices :**
+1. Modifier le programme précédent de manière à ce que le cercle oval1 se place à l'endroit où l'on clique avec la souris.
+
+2. Écrire un programme qui fasse apparaître une fenêtre avec un canevas (100*150). Dans ce canevas, placer un petit cercle (de rayon 15) censé représenter une balle. Sous le canevas, placer un bouton. Chaque fois que l'on clique sur le bouton, la balle doit avancer d'une petite distance (10) vers la droite, jusqu'à ce qu'elle atteigne l'extrémité du canevas. Si l'on continue à cliquer, la balle doit alors revenir en arrière jusqu'à l'autre extrémité, et ainsi de suite. 
+
+3. Écrire un programme qui fasse la conversion des degrés Celsius vers les degrés Fahrenheit en tapant la touche Return, et vice-versa. On utilisera la formule : TF =TC ×1,8+32 .  
+Vous aurez besoin de la méthode `get( )` du widget `Entry` (voir la calculatrice), ainsi que des méthodes `delete(0,END)` pour effacer un champ du début à la fin,  et `insert(0,text)` pour insérer le texte text à partir du début du champ.  
+![Convertisseur température](img/convert.JPG)
+
+### Animations automatiques
+Recopier, sauvegarder et exécuter le script suivant :  
+```python
+from tkinter import*
+
+# définition des gestionnaires d'événements
+def move():
+    "déplacement de la balle"
+    global x1, y1, dx, dy, flag
+    x1, y1 = x1+dx, y1+dy
+    if x1>210 :
+        x1, dx, dy = 210, 0, 15
+    if y1>210:
+        y1, dx, dy = 210, -15, 0
+    if  x1<10:
+        x1, dx, dy = 10, 0, -15
+    if y1<10:
+        y1, dx, dy = 10, 15, 0
+    can1.coords(oval1,x1,y1,x1+30,y1+30)
+    if flag>0:
+        fen1.after(50,move)     # boucler après 50 millisecondes
+def stop_it():
+    "arrêt de l'animation"
+    global flag
+    flag=0
+def start_it():
+    "démarrage de l'application"
+    global flag
+    if flag==0:        # pour ne lancer qu'une seule boucle
+        flag=1
+        move()
+
+##### Programme principal #####
+# Les variables suivantes sont utilisées de manière globale :
+x1, y1 = 10, 10     # coordonnées initiales
+dx, dy = 15, 0      # 'pas' du déplacement
+flag=0              # commutateur
+# Création du widget "parent" :
+fen1=Tk()
+fen1.title("Exercice d'animation avec Tkinter")
+# Création des widgets "enfants" :
+can1=Canvas(fen1,bg='dark gray',height=250,width=250)
+can1.pack(side=LEFT,padx=5,pady=5)
+oval1=can1.create_oval(x1,y1,x1+30,y1+30, width=2,fill='red')
+bou1=Button(fen1,text='Quitter',width=8,command=fen1.quit)
+bou1.pack(side=BOTTOM)
+bou2=Button(fen1,text='Démarrer',width=8,command=start_it)
+bou2.pack()
+bou3=Button(fen1,text='Arrêter',width=8,command=stop_it)
+bou3.pack()
+
+# Démarrage du réceptionnaire d'événements :
+fen1.mainloop()
+fen1.destroy()
+```
+La méthode `after()` déclenche l'appel d'une fonction après qu'un certain laps de temps se soit écoulé (temps en millisecondes).  
+Ici la méthode `after( )` se trouve dans la fonction `move( )`. Elle appelle la fonction `move( )` elle-même. Cette technique de programmation très puissante est appelée « récursivité » : la fonction s'appelle elle-même. Attention, pour que le programme ne boucle pas indéfiniment, il faut mettre en place un moyen pour l'interrompre.  
+À chaque itération de la boucle, le contenu de la variable `flag` est testé (instruction if). Si le contenu de la variable `flag` est à 0, alors le bouclage ne s'effectue plus et l'animation s'arrête.  
+Un premier clic sur « Démarrer » assigne une valeur non nulle à la variable `flag`, puis provoque immédiatement un appel de la fonction `move()`. Celle-ci s'exécute et continue à s'appeler elle-même toutes les 50 millisecondes, tant que` flag` ne revient pas à 0. Si l'on continue à cliquer sur le bouton
+« Démarrer », la fonction move() ne peut plus être appelée tant que flag vaut 1. On évite ainsi le démarrage de plusieurs boucles concurrentes.  
+Le bouton « Arrêter » remet `flag` à 0 et la boucle s'interrompt.  
+
+### **Exercices :**
+
+Dans la fonction `start_it( )`, supprimer l'instruction `if flag==0`: (et l'indentation des deux lignes suivantes). Cliquer plusieurs fois sur le bouton « Démarrer ». Observer ce qui se passe Modifier le programme de telle façon que la balle change de couleur à chaque « virage ».  
+Vous aurez besoin de l'instruction : `can1.itemconfigure(oval1,fill='green')`   
 
 ## Minis projets
+!!! danger "Travaux de groupe"
+    Les groupes sont imposés, vous rendrez un seul projet et aurez tous la même note.
+
+    - DISCUTEZ ENTRE VOUS !!
+    - Répartissez vous le travail en vous mettant d'accord à l'avance sur le nom des fonctions, des variables, des fichiers, ...
+    - Prévoyez à l'avance, qui fait quoi, où vous vous arrêtez
+    - Lister TOUTES les fonctionnalités du programme
+    - Ne travaillez pas à plusieurs en parallèle sur le même fichier
+
+### **PacMan**
+Vous allez réaliser une version simplifiée de PacMan.  
+Voici une petite [démonstration](https://www.google.fr/logos/2010/pacman10-i.html).  
+
+!!! info "Les objectifs minimums"
+
+    - créer un rond jaune (30px de diametre) que l'on peut déplacer avec des flèches dans un canevas de 900 par 300.  
+    - Placer 10 rectangles blancs (fantomes de 1px de large et 20 de haut) de façon aléatoire.   
+    - Placer 50 pac-gommes (cercles noirs de rayon 5 px) de façon aléatoire.  
+    - Quand pac-man touche une pac-gomme, elle disparait et le score augment de 1  
+    - Quand pac-man touche un fantome, il perd une vie et revient à l'emplacement du début (sans remettre les pac-gomme déjà mangées et sans réinitialiser le score)  
+    - Le jeu se termine lorsque Pac-man a mangé toutes les pac-gomme ou qu'il a perdu 3 vies
+
+!! info "Niveau intermédiaire :"
+
+    Faire déplacer les fantômes de façon aléatoire et les faire rebondir sur les bords
+
+!!! info "Niveau avancé :"
+
+    - Placer tout ce petit monde dans un labyrinthe.  
+    - Ajouter de la musique  
+    ...  
+
+
+Au minimum vous devez obtenir ceci :
+![pacMan](img/pacman.PNG)  
+
+??? caution "Conseils"
+    Les fantômes peuvent être gérés par une liste.  
+    Utiliser les morceaux de code vus en activité.  
+    Attention aux nombreux codes que vous trouverez sur internet que vous ne sauriez ni expliquer ni utiliser (notamment ceux réalisés en programmation orienté objet).  
+    Faites simple mais efficace
+
+### **Répertoire téléphonique**
+Vous allez créer une interface permettant de gérer un répertoire téléphonique.  
+Il faudra, dans un premier temps, créer en programmation classique la création et la modification du répertoire.  
+Ensuite, créer une interface graphique permettant d'utiliser le répertoire.  
+Voici les fichiers nécessaires à la réalisation du projet.  
+L'interface devra contenir les boutons AJOUTER, SUPPRIMER, RECHERCHER, QUITTER (qui devra enregistrer les modifications dans le fichier texte)  
+La fonction d'affichage peut se faire par défaut (comme sur votre smartphone) ou par action sur un bouton AFFICHER.  
+Le [Le document de fonctionnement du répèrtoire téléphonique](img/Le_repertoire_telephonique.pdf) , [L'exemple sur les départements](img/dep.txt) , [Enregistrer un dictionnaire](img/enregistrer_dico.py), [récupérer un dictionnaire](img/recuperer_dico.py), [répertoire à compléter](img/repertoire_a_completer.py) ,
+Vous pouvez aller voir par [ici](https://portail-public.fr/ux-ergonomie/application-mobile/) pour tenir compte de l'ergonomie de votre interface.  
+
+!!! caution "conseil"
+    Prévoir de faire une version qui fonctionne sans interface (l'interface sera plus facile à créer ensuite en appelant le fichier existant).
+
+### **Motus**
+Vous ne connaissez pas ?
+<iframe width="560" height="315" src="https://www.youtube.com/embed/KCssi-LlT34" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+!!! info "Objectifs minimums"
+
+    - utiliser le fichier [dico propre](img/dico_propre.txt) qui contient une très grande liste de mots et charger son contenu dans une liste (vérifier en affichant les 10 premiers mots par exemple)   
+    - Nettoyer la liste pour n'obtenir que les mots de 6 lettres
+    - Faire afficher la première lettre et les cases vides
+    - une fois un mot proposé par le joueur on détermine (comme dans la vidéo) les lettres bien placées et mal placées
+    - L'utilisateur, s'il trouve le mot cumule un certain nombre de points : 6 points s'il trouve à la premiere, 5 à la deuxième, ...
+    - L'utilisateur peut jouer 5 fois.
+
+!!! info "Niveau avancé"
+
+   - Conserver le nom du joueur et le score dans un fichier extérieur (txt ou csv au choix)  
+   - Faire afficher le nom du joueur ayant enregistré le meilleur score 
+
+![Motus](img/motus.PNG)  
+
+
+!!! caution "Conseil"
+    Prévoir de faire une version qui fonctionne sans interface (l'interface sera plus facile à créer ensuite en appelant le fichier existant).

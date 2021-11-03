@@ -11,22 +11,26 @@ nav:
     -  'Traitement de données en table' : 'table_donnees/traitement_donnees.md'
   - 'Programmation':
     -  'Démarrer en programmation' : 'Programmation/demarrer.md'
-    -  'Tkinter' : 'Programmation/tkinter.md'
     -  'Conditions et boucles' : 'Programmation/boucle.md'
-    -  'Fonctions et speifications' : 'Programmation/fonction.md'
+    -  'Fonctions et spécifications' : 'Programmation/fonction.md'
     -  'Lire et Ecrire dans un fichier' : 'Programmation/lire_ecrire.md'
+    -  'Interface graphique : Tkinter' : 'Programmation/tkinter.md'
+
   - 'Algorithmie':
     -  "Introduction à l'algorithmie" : 'algorithmie/intro_algo.md'
     -  'Compléxité' : 'algorithmie/complexite.md' 
     -  'Algorithmes de tris' : 'algorithmie/tris.md'
     -  'K plus proches voisins' : 'algorithmie/knn.md'
     -  'Algorithme glouton' : 'algorithmie/glouton.md'
+  - 'Réseaux et internet' : 
+    -  "Qu'est-ce qu'un réseau" : 'archi/reseaux/reseau.md'
+    -  "Protocole TCP/IP" : "archi/reseaux/TCP_IP.md"
+    -  "Sécurisation" : 'archi/reseaux/securisation.md'  
   - 'Architecture et OS' : 
-    - 'Réseaux et internet' : 
-      -  "Qu'est-ce qu'un réseau" : 'archi/reseaux/reseau.md'
-      -  "Protocole TCP/IP" : "archi/reseaux/TCP_IP.md"
-      -  "Sécurisation" : 'archi/reseaux/securisation.md'
-    - "Architecture  Systèmes d'exploitation" : 'archi/OS/vonneuman.md'
+    - "Architecture  matérielle" : 'archi/OS/vonneuman.md'
+    - "Systèmes d'exploitation" : 'archi/OS/OS.md'
+    - "Logique combinatoire" : 'archi/OS/logique_combinatoire.md'
+    - "Assembleur" : 'archi/OS/assembleur.md'
   - 'IHM' : 
     - 'HTML et CSS' : 
       - 'HTML' : 'IHM/html/html.md'
