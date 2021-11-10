@@ -1095,7 +1095,7 @@
                 
                 <h1 id="fonctions-et-specifications">Fonctions et spécifications<a class="headerlink" href="#fonctions-et-specifications" title="Permanent link">⚓︎</a></h1>
 <h2 id="creer-une-fonction">Créer une fonction<a class="headerlink" href="#creer-une-fonction" title="Permanent link">⚓︎</a></h2>
-<p>Pour ne pas répéter plusieurs fois la même série de calculs dans un programme, on peut définir une fonction qui à chaque fois qu'on l'éxécutera, répètea les instrucions qu'elle contient.  </p>
+<p>Pour ne pas répéter plusieurs fois la même série de calculs dans un programme, on peut définir une fonction qui à chaque fois qu'on l'éxécutera, répètera les instrucions qu'elle contient.  </p>
 <div class="admonition example">
 <p class="admonition-title">Le prof d'EPS</p>
 <p>Pour ne pas répéter plusieurs fois les consignes de courses, un prof d'EPS définit la fonction <em>courir_sur(distance,eleve)</em> distance pourra changer de valeur en fonction des élèves (100m, 200m ou 400m).</p>
@@ -1110,7 +1110,42 @@
 <p>Une fois la fonction définie le prof n'a plus qu'à dire à certains élèves <em>courir_sur(100m,Juliette)</em> ou <em>courir_sur(200m,Arthur)</em> sans avoir à répéter les consignes.<br />
 La valeur de distace et le nom de l'élève sont appelés <code>paramètre</code> ou <code>argument</code>de la fonction, et la valeur retournée (le temps) dépend à la fois du paramètre distance mais aussi de l'élève.</p>
 </div>
-<p>En python pour définir une fonction on utilise le mot clé <code>def</code> suivi du nom de la fonction et des paramètres. Pour la valeur calculée on utilisera le mot clé <code>return</code>. </p>
+<div class="admonition caution">
+<p class="admonition-title">Attention</p>
+<p>Si le professeur explique la fonction aux élèves mais que jamais il ne l'utilise, personne ne courra. Il faut <code>appeler</code>la fonction pour qu'elle s'éxécute.</p>
+</div>
+<p>Une fonction en informatique est une portion de code réalisant un tâche bien précise et qui pourra être utilisée une ou plusieurs fois dans la suite du programme.</p>
+<p>Les fonctions informatiques acquièrent tout leur potentiel avec :</p>
+<p>•   une entrée, qui regroupe des variables qui servent de paramètres  </p>
+<p>•    une sortie , qui est un résultat renvoyé par la fonction (et qui souvent dépendra des paramètres d’entrée).<br />
+En python pour définir une fonction on utilise le mot clé <code>def</code> suivi du nom de la fonction et des paramètres. Pour la valeur calculée on utilisera le mot clé <code>return</code>. </p>
+<div class="admonition example">
+<p class="admonition-title">Exemple</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">calcule_cube</span><span class="p">(</span><span class="n">a</span><span class="p">):</span>
+    <span class="n">cube</span><span class="o">=</span><span class="n">a</span><span class="o">*</span><span class="n">a</span><span class="o">*</span><span class="n">a</span>
+    <span class="k">return</span> <span class="n">cube</span>
+</code></pre></div>
+</td></tr></table>
+<p>Cette fonction calcule le cube d’un nombre, par exemple calcule_cube(2) n’affiche rien mais envoie la valeur 8 .</p>
+<p><strong>Remarque:</strong> ce code "ne fait rien", il définit une fonction seulement... tant qu'elle n'est pas utilisée, rien ne se passe</p>
+<p>Si on ajoute dans le code les lignes ci-desous, alors la fonction est utilisée et elle calcule le cube de 2 puis la somme 3<sup>3+4</sup>3`.</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3
+4
+5</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="n">calcule_cube</span><span class="p">(</span><span class="mi">2</span><span class="p">))</span>
+<span class="n">x</span><span class="o">=</span><span class="mi">3</span>
+<span class="n">y</span><span class="o">=</span><span class="mi">4</span>
+<span class="n">z</span><span class="o">=</span><span class="n">calcule_cube</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="o">+</span><span class="n">calcule_cube</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">z</span><span class="p">)</span>
+</code></pre></div>
+</td></tr></table>
+</div>
+<p>De façon générale, la strucutre à respectée est celle-ci :
+<img alt="structure fonction" src="img/fonction.PNG" /></p>
+<p>Et sous forme de code : 
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
  2
  3
@@ -1131,14 +1166,35 @@ La valeur de distace et le nom de l'élève sont appelés <code>paramètre</code
 <span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
 </code></pre></div>
-</td></tr></table>
-<div class="admonition caution">
-<p class="admonition-title">Attention</p>
-<p>Si le professeur explique la fonction aux élèves mais que jamais il ne l'utilise, personne ne courra. Il faut <code>appeler</code>la fonction pour qu'elle s'éxécute.</p>
-</div>
+</td></tr></table></p>
 <div class="admonition note">
 <p class="admonition-title">Remarque</p>
 <p>on peut exécuter la fonction avec un <code>print(ma_fonction(2,3))</code> qui affichera le résultat mais ne le retiendra pas. Si on écrit simplement <code>ma_fonction(2,3)</code> la fonction sera exécutée mais le résultat ne sera pas affiché ni mémorisé.</p>
+</div>
+<p>Une fonction peut avoir plusieurs paramètres et renvoyer plusieurs résultats :
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3
+4
+5
+6
+7</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">somme_produit</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">):</span>
+  <span class="sd">&quot;&quot;&quot;Calcule la somme et le produit de deux nombres&quot;&quot;&quot;</span>
+  <span class="n">s</span><span class="o">=</span><span class="n">a</span><span class="o">+</span><span class="n">b</span>
+  <span class="n">p</span><span class="o">=</span><span class="n">a</span><span class="o">*</span><span class="n">b</span>
+  <span class="k">return</span> <span class="n">s</span><span class="p">,</span><span class="n">p</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">somme_produit</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span><span class="mi">7</span><span class="p">))</span>
+</code></pre></div>
+</td></tr></table></p>
+<div class="admonition note">
+<p class="admonition-title">Remarques</p>
+<p>•   Il peut y avoir plusieurs paramètres en entrée.</p>
+<p>•   Il peut y avoir plusieurs résultats en sortie.</p>
+<p>•   Très important! Il ne faut pas confondre afficher et renvoyer une valeur. L’affichage (par la commande print() ) affiche juste quelque chose à l’écran. </p>
+<p>La plupart des fonctions n’affichent rien, mais renvoient une valeur (ou plusieurs).  </p>
+<p>C’est beaucoup plus utile car cette valeur peut être utilisée ailleurs dans le programme.</p>
+<p>•   Dès que le programme rencontre l’instruction return , la fonction s’arrête et renvoie le résultat. Il peut y avoir plusieurs fois l’instruction return dans une fonction mais une seule sera exécutée. On peut aussi ne pas mettre d’instruction return si la fonction ne renvoie rien.</p>
 </div>
 <h2 id="fonction-sans-valeur-de-retour-etou-sans-arguments">Fonction sans valeur de retour et/ou sans arguments<a class="headerlink" href="#fonction-sans-valeur-de-retour-etou-sans-arguments" title="Permanent link">⚓︎</a></h2>
 <p>Une fonction qui ne renvoie pas de valeur est appelée <strong>procédure</strong> elle a une simple fonction d'affichage. </p>
