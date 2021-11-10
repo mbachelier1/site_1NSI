@@ -1,6 +1,6 @@
 # Fonctions et spécifications
 ## Créer une fonction
-Pour ne pas répéter plusieurs fois la même série de calculs dans un programme, on peut définir une fonction qui à chaque fois qu'on l'éxécutera, répètea les instrucions qu'elle contient.  
+Pour ne pas répéter plusieurs fois la même série de calculs dans un programme, on peut définir une fonction qui à chaque fois qu'on l'éxécutera, répètera les instrucions qu'elle contient.  
 
 !!! example "Le prof d'EPS"
 	Pour ne pas répéter plusieurs fois les consignes de courses, un prof d'EPS définit la fonction *courir_sur(distance,eleve)* distance pourra changer de valeur en fonction des élèves (100m, 200m ou 400m).
@@ -16,9 +16,44 @@ Pour ne pas répéter plusieurs fois la même série de calculs dans un programm
 	Une fois la fonction définie le prof n'a plus qu'à dire à certains élèves *courir_sur(100m,Juliette)* ou *courir_sur(200m,Arthur)* sans avoir à répéter les consignes.  
 	La valeur de distace et le nom de l'élève sont appelés `paramètre` ou `argument`de la fonction, et la valeur retournée (le temps) dépend à la fois du paramètre distance mais aussi de l'élève.
 
+!!! caution "Attention"
+	Si le professeur explique la fonction aux élèves mais que jamais il ne l'utilise, personne ne courra. Il faut `appeler`la fonction pour qu'elle s'éxécute.
 
+Une fonction en informatique est une portion de code réalisant un tâche bien précise et qui pourra être utilisée une ou plusieurs fois dans la suite du programme.
+
+
+Les fonctions informatiques acquièrent tout leur potentiel avec :
+
+•	une entrée, qui regroupe des variables qui servent de paramètres  
+
+•	 une sortie , qui est un résultat renvoyé par la fonction (et qui souvent dépendra des paramètres d’entrée).  
 En python pour définir une fonction on utilise le mot clé `def` suivi du nom de la fonction et des paramètres. Pour la valeur calculée on utilisera le mot clé `return`. 
 
+!!! example "Exemple"
+
+	```python
+	def calcule_cube(a):
+		cube=a*a*a
+		return cube
+	```
+		
+  	Cette fonction calcule le cube d’un nombre, par exemple calcule_cube(2) n’affiche rien mais envoie la valeur 8 .
+
+	**Remarque:** ce code "ne fait rien", il définit une fonction seulement... tant qu'elle n'est pas utilisée, rien ne se passe
+
+	Si on ajoute dans le code les lignes ci-desous, alors la fonction est utilisée et elle calcule le cube de 2 puis la somme 3^3+4^3`.
+
+	```python
+	print(calcule_cube(2))
+	x=3
+	y=4
+	z=calcule_cube(x)+calcule_cube(y)
+	print(z)
+	```
+De façon générale, la strucutre à respectée est celle-ci :
+![structure fonction](img/fonction.PNG)
+
+Et sous forme de code : 
 ```python
 def ma_fonction(arg1,arg2): 
 # ma_fonction va utiliser deux arguments arg1 et arg2 qui pourront avoir des valeurs différetes à chauqe appel
@@ -31,11 +66,36 @@ b=ma_fonction('coucou','toi') #b prend la valeur du résultat soit 'coucoutoi'
 print(a)
 print(b)
 ```
-!!! caution "Attention"
-	Si le professeur explique la fonction aux élèves mais que jamais il ne l'utilise, personne ne courra. Il faut `appeler`la fonction pour qu'elle s'éxécute.
+
 
 !!! note "Remarque"
 	on peut exécuter la fonction avec un `print(ma_fonction(2,3))` qui affichera le résultat mais ne le retiendra pas. Si on écrit simplement `ma_fonction(2,3)` la fonction sera exécutée mais le résultat ne sera pas affiché ni mémorisé.
+
+Une fonction peut avoir plusieurs paramètres et renvoyer plusieurs résultats :
+```python
+def somme_produit(a,b):
+  """Calcule la somme et le produit de deux nombres"""
+  s=a+b
+  p=a*b
+  return s,p
+
+print(somme_produit(6,7))
+```
+
+!!! note "Remarques"
+
+	•	Il peut y avoir plusieurs paramètres en entrée.
+
+	•	Il peut y avoir plusieurs résultats en sortie.
+
+	•	Très important! Il ne faut pas confondre afficher et renvoyer une valeur. L’affichage (par la commande print() ) affiche juste quelque chose à l’écran. 
+
+	La plupart des fonctions n’affichent rien, mais renvoient une valeur (ou plusieurs).  
+
+	C’est beaucoup plus utile car cette valeur peut être utilisée ailleurs dans le programme.
+
+	•	Dès que le programme rencontre l’instruction return , la fonction s’arrête et renvoie le résultat. Il peut y avoir plusieurs fois l’instruction return dans une fonction mais une seule sera exécutée. On peut aussi ne pas mettre d’instruction return si la fonction ne renvoie rien.
+
 
 ## Fonction sans valeur de retour et/ou sans arguments
 Une fonction qui ne renvoie pas de valeur est appelée **procédure** elle a une simple fonction d'affichage. 
