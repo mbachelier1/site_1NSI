@@ -22,6 +22,14 @@ h1
 }
 
 
+.md-typeset .admonition {
+    font-size: 0.8rem;
+}
+
+.md-typeset details {
+    font-size: 0.8rem;
+}
+
 .def{
 	font-style : italic;
 	text-indent:40px;
