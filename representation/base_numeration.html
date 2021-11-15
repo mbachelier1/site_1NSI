@@ -479,6 +479,30 @@
   
 
           
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="listes_chaines.html" class="md-nav__link">
+        Types construits : Listes et chaines de caractères
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="tuples_dico.html" class="md-nav__link">
+        Types construits : tuples e dictionaires
+      </a>
+    </li>
+  
+
+          
         </ul>
       </nav>
     </li>
@@ -1067,9 +1091,9 @@ Base usuelle : base 10<br />
 Bases utilisées en informatique : base 2 et base 16  </p>
 <div class="admonition example">
 <p class="admonition-title">Exemple d’écriture :</p>
-<p>(345)10 = 3 x 102 +4 x 101 + 5 x 100
-(0100110)2 = 0 x 26 + 1 x 25 + 0 x 24 + 0 x 23 + 1 x 22 + 1 x 21 + 0 x 20
-(345)16 = 3 x 162 + 4 x 161 + 5 x 160</p>
+<p>(345)10 = 3 x 102 +4 x 101 + 5 x 100<br />
+(0100110)2 = 0 x 26 + 1 x 25 + 0 x 24 + 0 x 23 + 1 x 22 + 1 x 21 + 0 x 20<br />
+(345)16 = 3 x 162 + 4 x 161 + 5 x 160  </p>
 </div>
 <h2 id="principe-dune-base">Principe d'une base<a class="headerlink" href="#principe-dune-base" title="Permanent link">⚓︎</a></h2>
 <p><img align="right" alt="compteur" src="img/compteur.jpg" width="30%" />
@@ -1087,21 +1111,24 @@ Le premier bit est le bit de poids fort (MSB) le dernier est le bit de poids fai
 <p>Sert surtout à coder les couleurs.</p>
 <div class="admonition note">
 <p class="admonition-title">base 16</p>
-<p>Les chiffres sont 0,1,2,3,4,5,6,7,8,9,A,B,C,D,E et F
+<p>Les chiffres sont 0,1,2,3,4,5,6,7,8,9,A,B,C,D,E et F<br />
 Où A = 10, B = 11, C = 12, D = 13, E = 14, F = 15</p>
 </div>
 <div class="admonition method">
 <p class="admonition-title">passer de Hexadécimal en décimal :</p>
 <p>(34F5)16 = 3 x 163 + 4 x 162 + 15x161 + 5x160 =
-= 3 x 4096 + 4 x 256 + 15 x 16 + 5 x 1 = (13557)<sub>10</sub></p>
+s3 x 4096 + 4 x 256 + 15 x 16 + 5 x 1 = (13557)<sub>10</sub></p>
 </div>
 <div class="admonition method">
 <p class="admonition-title">passer de Décimal en Hexadécimal :</p>
-<p>(811)10 = (32B)<sub>16</sub>
-Convertir chaque paquet : 0011 0010 1011<br />
-                            3   2    11 = B<br />
-Grouper par paquet de 4 bits : 0011 0010 1011<br />
-Convertir d’abord en binaire : (811)<sub>10</sub> = (1100101011)<sub>2</sub>  </p>
+<p>Convertir d’abord en binaire : (811)<sub>10</sub> = (1100101011)<sub>2</sub> <br />
+Grouper par paquet de 4 bits : 0011 0010 1011 <br />
+Convertir chaque paquet : <br />
+0011 0010 1011<br />
+0011<sub>2</sub> = 3     <br />
+0010<sub>2</sub> =2   <br />
+1011<sub>2</sub> = 11 = B <br />
+(811)<sub>10</sub> = (32B)<sub>16</sub>  </p>
 </div>
 <h2 id="capacites-de-stockage">Capacités de stockage<a class="headerlink" href="#capacites-de-stockage" title="Permanent link">⚓︎</a></h2>
 <p>Pour donner des informations sur les capacités de stockage par exemple, on utilise le kibi-octet, le mibi-octet et le gibi-octet proches du kilo, méga et giga octets.<br />
@@ -1110,7 +1137,7 @@ Convertir d’abord en binaire : (811)<sub>10</sub> = (1100101011)<sub>2</sub>  
 1Gibi-octet = 1 073 741 824 octets  </p>
 <div class="admonition note">
 <p class="admonition-title">nb</p>
-<p>les constructeurs profitent parfois de la confusion possible entre ko et kio pour surévaluer les capacités de leurs produits. Par exemple un disque vendu pour 80Go peut faire environ 72Gio alors que le constructeur devraient donner les infos en Gio.</p>
+<p>Les constructeurs profitent parfois de la confusion possible entre ko et kio pour surévaluer les capacités de leurs produits. Par exemple un disque vendu pour 80Go peut faire environ 72Gio alors que le constructeur devraient donner les infos en Gio.</p>
 </div>
                 
               
