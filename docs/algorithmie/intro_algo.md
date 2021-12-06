@@ -30,7 +30,7 @@ Les consignes sont précises et si une seule étape n'est pas réalisée comme d
 
 >Un algorithme est une suite d'instruction précises et sans ambiguïté permettant de résoudre un problème à partir de certaines données.
 
-###Algorithmes de la vie quotidienne
+### Algorithmes de la vie quotidienne
 
 !!! faq "Ma journée"
 	Mettre dans l'ordre les étapes à suivre pour aller au travail.  
@@ -151,7 +151,7 @@ Les consignes sont précises et si une seule étape n'est pas réalisée comme d
 	=== "Vérifier"
 		Il calcule l'aire dans disque de rayon R.
 
-###Conventions
+### Conventions
 Lorsqu'on écrit un algorithme, on prendra soin de commencer par le nommer, de lister les variables qu'il utilise puis de mettre les instructions encadrées par les mots DEBUT et FIN :   
 ```pseudocode
 	Algo Aire du disque :
@@ -163,7 +163,7 @@ Lorsqu'on écrit un algorithme, on prendra soin de commencer par le nommer, de l
 	Fin
 ```
 
-##Variables et affectation
+## Variables et affectation
 Une variable correspond à un emplacement en mémoire de l'ordinateur.  
 On peut la représenter par une boite qui aurait un nom et qui contiendrait une valeur.  
 ![affectation de variables](img/variable.png){width=50%}
@@ -338,7 +338,9 @@ On peut affecter à une variable, les informations entrées par l'utilisateur. T
 <iframe src="https://trinket.io/embed/python3/8409cc04bc" width="100%" height="356" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
 
 
-
+<p style="text-align: center; color:gray; font-size: 10px;">
+Création MB. (ré)utilisation et modification libre mais non commerciale CC-BY-NC
+</p>
 <!-------------------------javascript--------------------------------->
 <script>
 function reactionQCU1(){

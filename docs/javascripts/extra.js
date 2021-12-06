@@ -1,5 +1,6 @@
-
-<script>function reactionText1(){
+/*
+<script>
+function reactionText1(){
 	var msg;
 	var reponse=document.getElementById("reponse1");
 	if (reponse.value ==='20'){
@@ -35,5 +36,6 @@ style='style="color:green;"';
 else {msg='mauvaise reponse';
 style='style="color:red;"';}
 document.getElementById("messageQCU1").innerHTML='<p '+style+'>'+msg+'</p>';
-}</script>
-	
+}
+</script>
+	*/
