@@ -1,0 +1,1 @@
+L’algorithme de k plus proches voisins ne nécessite pas de phase d’apprentissage à proprement parler, il faut juste stocker le jeu dedonnées d’apprentissage.

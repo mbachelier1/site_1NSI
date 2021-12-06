@@ -1,0 +1,1807 @@
+
+<!doctype html>
+<html lang="fr" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.2.1, mkdocs-material-7.1.8">
+    
+    
+      
+        <title>K plus proches voisins - NSI au Lycée Henri Avril</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.ca7ac06f.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.f1a3b89f.min.css">
+        
+      
+    
+    
+    
+      
+    
+    
+    
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
+      <link rel="stylesheet" href="../stylesheets/prism.css">
+    
+    
+      
+
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <script>function __prefix(e){return new URL("..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+    
+      <script>var palette=__get("__palette");if(null!==palette&&"object"==typeof palette.color)for(var key in palette.color)document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#algorithme-des-k-plus-proches-voisins" class="md-skip">
+          Aller au contenu
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../index.html" title="NSI au Lycée Henri Avril" class="md-header__button md-logo" aria-label="NSI au Lycée Henri Avril" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            NSI au Lycée Henri Avril
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              K plus proches voisins
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Mode sombre"  type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="Mode sombre" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7 10a2 2 0 0 1 2 2 2 2 0 0 1-2 2 2 2 0 0 1-2-2 2 2 0 0 1 2-2m10-3a5 5 0 0 1 5 5 5 5 0 0 1-5 5H7a5 5 0 0 1-5-5 5 5 0 0 1 5-5h10M7 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3h10a3 3 0 0 0 3-3 3 3 0 0 0-3-3H7z"/></svg>
+            </label>
+          
+        
+          
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="blue" data-md-color-accent="blue"  aria-label="Mode clair"  type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="Mode clair" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3z"/></svg>
+            </label>
+          
+        
+      </form>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Rechercher" placeholder="Rechercher" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../index.html" class="md-tabs__link">
+      Accueil
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../representation/base_numeration.html" class="md-tabs__link">
+        Représenter de données
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../table_donnees/traitement_donnees.html" class="md-tabs__link">
+        Tables de données
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../Programmation/demarrer.html" class="md-tabs__link">
+        Programmation
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="intro_algo.html" class="md-tabs__link md-tabs__link--active">
+        Algorithmie
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../archi/reseaux/reseau.html" class="md-tabs__link">
+        Réseaux et internet
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../archi/OS/vonneuman.html" class="md-tabs__link">
+        Architecture et OS
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../IHM/html/html.html" class="md-tabs__link">
+        IHM
+      </a>
+    </li>
+  
+
+  
+
+      
+    </ul>
+  </div>
+</nav>
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../index.html" title="NSI au Lycée Henri Avril" class="md-nav__button md-logo" aria-label="NSI au Lycée Henri Avril" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    NSI au Lycée Henri Avril
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../index.html" class="md-nav__link">
+        Accueil
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" data-md-state="indeterminate" type="checkbox" id="__nav_2" checked>
+      
+      <label class="md-nav__link" for="__nav_2">
+        Représenter de données
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Représenter de données" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Représenter de données
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../representation/base_numeration.html" class="md-nav__link">
+        représenter les entiers
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../representation/reels_flottants.html" class="md-nav__link">
+        représenter les réels et les flottants
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../representation/codage_texte.html" class="md-nav__link">
+        représenter le texte
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../representation/listes_chaines.html" class="md-nav__link">
+        Types construits : Listes et chaines de caractères
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../representation/tuples_dico.html" class="md-nav__link">
+        Types construits : tuples e dictionaires
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" data-md-state="indeterminate" type="checkbox" id="__nav_3" checked>
+      
+      <label class="md-nav__link" for="__nav_3">
+        Tables de données
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Tables de données" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Tables de données
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../table_donnees/traitement_donnees.html" class="md-nav__link">
+        Traitement de données en table
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" data-md-state="indeterminate" type="checkbox" id="__nav_4" checked>
+      
+      <label class="md-nav__link" for="__nav_4">
+        Programmation
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Programmation" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Programmation
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Programmation/demarrer.html" class="md-nav__link">
+        Démarrer en programmation
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Programmation/boucle.html" class="md-nav__link">
+        Conditions et boucles
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Programmation/fonction.html" class="md-nav__link">
+        Fonctions et spécifications
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Programmation/lire_ecrire.md" class="md-nav__link">
+        Lire et Ecrire dans un fichier
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Programmation/tkinter.html" class="md-nav__link">
+        Interface graphique : Tkinter
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" checked>
+      
+      <label class="md-nav__link" for="__nav_5">
+        Algorithmie
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Algorithmie" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Algorithmie
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="intro_algo.html" class="md-nav__link">
+        Introduction à l'algorithmie
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="complexite.html" class="md-nav__link">
+        Compléxité
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="tris.html" class="md-nav__link">
+        Algorithmes de tris
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          K plus proches voisins
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="knn.html" class="md-nav__link md-nav__link--active">
+        K plus proches voisins
+      </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#quest-ce-que-le-machine-learning-algorithme-dapprentissage" class="md-nav__link">
+    Qu'est-ce que le machine learning (algorithme d'apprentissage) ?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#algorithme-des-kppv-ou-knn-k-nearest-neighbors" class="md-nav__link">
+    Algorithme des kppv (ou Knn K nearest neighbors)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#la-metrique" class="md-nav__link">
+    La métrique
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conclusion" class="md-nav__link">
+    Conclusion
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lalgorithme" class="md-nav__link">
+    L'algorithme
+  </a>
+  
+    <nav class="md-nav" aria-label="L'algorithme">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#apprentissage" class="md-nav__link">
+    Apprentissage :
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#utilisation" class="md-nav__link">
+    Utilisation :
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tp-detection-de-la-langue-dun-texte" class="md-nav__link">
+    TP : détection de la langue d'un texte
+  </a>
+  
+    <nav class="md-nav" aria-label="TP : détection de la langue d'un texte">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#rendu" class="md-nav__link">
+    Rendu :
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="glouton.md" class="md-nav__link">
+        Algorithme glouton
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" data-md-state="indeterminate" type="checkbox" id="__nav_6" checked>
+      
+      <label class="md-nav__link" for="__nav_6">
+        Réseaux et internet
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Réseaux et internet" data-md-level="1">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          Réseaux et internet
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../archi/reseaux/reseau.html" class="md-nav__link">
+        Qu'est-ce qu'un réseau
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../archi/reseaux/TCP_IP.html" class="md-nav__link">
+        Protocole TCP/IP
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../archi/reseaux/securisation.html" class="md-nav__link">
+        Sécurisation
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" data-md-state="indeterminate" type="checkbox" id="__nav_7" checked>
+      
+      <label class="md-nav__link" for="__nav_7">
+        Architecture et OS
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Architecture et OS" data-md-level="1">
+        <label class="md-nav__title" for="__nav_7">
+          <span class="md-nav__icon md-icon"></span>
+          Architecture et OS
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../archi/OS/vonneuman.html" class="md-nav__link">
+        Architecture  matérielle
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../archi/OS/OS.html" class="md-nav__link">
+        Systèmes d'exploitation
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../archi/OS/logique_combinatoire.html" class="md-nav__link">
+        Logique combinatoire
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../archi/OS/assembleur.html" class="md-nav__link">
+        Assembleur
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8" data-md-state="indeterminate" type="checkbox" id="__nav_8" checked>
+      
+      <label class="md-nav__link" for="__nav_8">
+        IHM
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="IHM" data-md-level="1">
+        <label class="md-nav__title" for="__nav_8">
+          <span class="md-nav__icon md-icon"></span>
+          IHM
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8_1" data-md-state="indeterminate" type="checkbox" id="__nav_8_1" checked>
+      
+      <label class="md-nav__link" for="__nav_8_1">
+        HTML et CSS
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="HTML et CSS" data-md-level="2">
+        <label class="md-nav__title" for="__nav_8_1">
+          <span class="md-nav__icon md-icon"></span>
+          HTML et CSS
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../IHM/html/html.html" class="md-nav__link">
+        HTML
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../IHM/html/css.html" class="md-nav__link">
+        CSS
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8_2" data-md-state="indeterminate" type="checkbox" id="__nav_8_2" checked>
+      
+      <label class="md-nav__link" for="__nav_8_2">
+        Javascript
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Javascript" data-md-level="2">
+        <label class="md-nav__title" for="__nav_8_2">
+          <span class="md-nav__icon md-icon"></span>
+          Javascript
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../IHM/javascript/exo_js.html" class="md-nav__link">
+        Exercices d'application Javascript
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../IHM/javascript/programmation_evenementielle.html" class="md-nav__link">
+        Programmation evenementielle
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../IHM/javascript/formulaire.html" class="md-nav__link">
+        Les formulaires
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8_3" data-md-state="indeterminate" type="checkbox" id="__nav_8_3" checked>
+      
+      <label class="md-nav__link" for="__nav_8_3">
+        Protocole HTTP et PHP
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Protocole HTTP et PHP" data-md-level="2">
+        <label class="md-nav__title" for="__nav_8_3">
+          <span class="md-nav__icon md-icon"></span>
+          Protocole HTTP et PHP
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../IHM/php/Protocole_HTTP.html" class="md-nav__link">
+        Protocole HTTP
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../IHM/PHP/TP_php.md" class="md-nav__link">
+        TP PHP
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="algorithme-des-k-plus-proches-voisins">Algorithme des k plus proches voisins<a class="headerlink" href="#algorithme-des-k-plus-proches-voisins" title="Permanent link">⚓︎</a></h1>
+<h2 id="quest-ce-que-le-machine-learning-algorithme-dapprentissage">Qu'est-ce que le machine learning (algorithme d'apprentissage) ?<a class="headerlink" href="#quest-ce-que-le-machine-learning-algorithme-dapprentissage" title="Permanent link">⚓︎</a></h2>
+<p>Visionner cette conférence jusque au moins 17min30s</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/OEJX-q6UOag" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<p>Dans l'exemple de la vidéo, l'objectif est de reconnaître une clémentine d'une orange en mesurant simplement son diamètre.  </p>
+<p>Si tous les voisins sont des clémentines ou des oranges, la prédiction est assez simple. Cependant en cas de "cas limite" il faut faire un choix sr la détermination. Est-on au-dessus ou en-dessous de la moyenne ? Quel est le fruit le plus proche ?  </p>
+<p>Autre solution, que sont les 3 ou 5 plus proches voisins ?  </p>
+<p><img alt="clémetine ou Orange?" src="img/clemOrange.png" /></p>
+<div class="admonition faq">
+<p class="admonition-title">Causalité ou corrélation?</p>
+<p>La causalité entre deux données établit une relation de <input style="border : solid 1px; border-radius : 2px;" type="text" name="reponse" maxlenght="15" id="reponse1" autocomplete="off"> à <input style="border : solid 1px; border-radius : 2px;" type="text" name="reponse" maxlenght="15" id="reponse2" autocomplete="off">. Alors que la corrélation se contente de faire le <input style="border : solid 1px; border-radius : 2px;" type="text" name="reponse" maxlenght="15" id="reponse3" autocomplete="off">entre deux données.</p>
+<p><input type='button' style="margin:5px; padding:5px;  background-color : lightblue; border : solid 2px blue; border-radius : 5px;" id="BoutonValider" onclick="reactionText1()" value="Vérifier"> <input type='button' style="display: none;" id="boutoncorrection" onclick="affiche1()" value="Correction"> 
+<div style="font-weight: bold;" id="messageText1"></div></p>
+<p><div id="correction1" style='display: none;'><p>La causalité entre deux données établit une relation de cause à effets. Alors que la corrélation se contente de faire le lien entre deux données.
+</p></div></p>
+</div>
+<div class="admonition faq">
+<p class="admonition-title">Apprentissage</p>
+<p>Dans quel ordre se fait l'apprentissage?
+<div>
+    <form name="f">
+        étape 1 :
+        <select id="liste1">
+            <option value="nonChoix" selected> ... </option>
+            <option value="preidction"> Prédiction</option>
+            <option value="validation"> Validation </option>
+            <option value="entrainement"> Entrainement</option>
+        </select><br>
+        étape 2 :
+        <select id="liste2">
+            <option value="nonChoix" selected> ... </option>
+            <option value="preidction"> Prédiction</option>
+            <option value="validation"> Validation </option>
+            <option value="entrainement"> Entrainement</option>
+        </select><br>
+        étape 3 :
+        <select id="liste3">
+            <option value="nonChoix" selected> ... </option>
+            <option value="preidction"> Prédiction</option>
+            <option value="validation"> Validation </option>
+            <option value="entrainement"> Entrainement</option>
+        </select><br>
+            <input type='button' style="margin:5px; padding:5px;  background-color : lightblue; border : solid 2px blue; border-radius : 5px;" id="BoutonValider" onclick="reactionListe2()" value="Vérifier">
+            <input id="bouAffListe2" type="button" onclick="AfficheListe2()" value="Correction" style="display:none;"><br>
+    </form>
+    <div id="messageListe2"></div>
+    <div id="correctionListe2" style="display:none;"> <p> Dans l'ordre, on s'entraine, on valide avec des tests puis on l'utilise pour les prédictions.</p></div>
+</div></p>
+</div>
+<h2 id="algorithme-des-kppv-ou-knn-k-nearest-neighbors">Algorithme des kppv (ou Knn K nearest neighbors)<a class="headerlink" href="#algorithme-des-kppv-ou-knn-k-nearest-neighbors" title="Permanent link">⚓︎</a></h2>
+<p>Dans le cas précédent, il n'y a qu'un seul paramètre d'entrée (le diamètre). Dans le cas de l'étude de papillon, par exemple, on classe les mâles et es femelles en les caractérisant par leur largeur et leur longueur.  </p>
+<p>Voici la répartitions des données :<br />
+<img alt="entrainement papillons" src="img/papillon_train.png" />
+On utilise ensuite des données de papillons, dont on souhaite identifier le sexe.<br />
+1er cas : pas de doute les données le font se trouver au milieu des femelles. On peut prévoir que celui-ci est une femelle.<br />
+<img alt="prediction" src="img/papillo_pred1.png" />
+2e cas : L'hésitation est permise. On n'est pas sur de le classer correctement.<br />
+<img alt="prediction" src="img/papillon_pred2.png" /></p>
+<p>On utilise alors l'algorithme des k plus proches voisins. On observe sur K voisins combien sont des mâles et combien sont des femelles.</p>
+<p>Sur le document ci-dessous, en cliquant sur cercle (cercle centre-point) chercher à déterminer que sont les plus proches voisins et répondez à la question  :<br />
+<a href="https://www.geogebra.org/m/zhbhycsh" ><img src="img/geogebra_2.png"></a></p>
+<div class="admonition faq">
+<p class="admonition-title">Choix du nombre de voisins</p>
+<p><div>
+        <form name="f">
+            Si k = 1 ce papillon est :
+            <select id="liste31">
+                <option value="nonChoix" selected> ... </option>
+                <option value="male"> Un male</option>
+                <option value="femelle"> Une femelle </option>
+                <option value="indetermine"> On ne peut pas savoir </option>
+            </select><br>
+           Si k = 3 ce papillon est :
+            <select id="liste32">
+                <option value="nonChoix" selected> ... </option>
+                <option value="male"> Un male</option>
+                <option value="femelle"> Une femelle </option>
+                <option value="indetermine"> On ne peut pas savoir </option>
+            </select><br>
+            Si k = 5 ce papillon est :
+            <select id="liste33">
+                <option value="nonChoix" selected> ... </option>
+                <option value="male"> Un male</option>
+                <option value="femelle"> Une femelle </option>
+                <option value="indetermine"> On ne peut pas savoir </option>
+            </select><br>
+            Si k = 6 ce papillon est :
+            <select id="liste34">
+                <option value="nonChoix" selected> ... </option>
+                <option value="male"> Un male</option>
+                <option value="femelle"> Une femelle </option>
+                <option value="indetermine"> On ne peut pas savoir </option>
+            </select><br>
+                <input type='button' style="margin:5px; padding:5px;  background-color : lightblue; border : solid 2px blue; border-radius : 5px;" id="BoutonValider" onclick="reactionListe3()" value="Vérifier">
+                <input id="bouAffListe3" type="button" onclick="AfficheListe3()" value="Correction" style="display:none;"><br>
+        </form>
+        <div id="messageListe3"></div>
+        <div id="correctionListe3" style="display:none;"> <p> Si k= 1 on a une majotrité de mâle on suppose donc que c'est un mâle.<br>
+            Si k=3 une majorité de voisins sont des femmelles, on suppose donc que c'est une femelle.<br>
+            Si k=5 une majorité de voisins sont des mâles, on suppose donc que c'est un mâle.<br>
+            Si k=6 on a une égalité entre les mâles et les femmelles on ne peut pas conclure.</p></div>
+</div></p>
+</div>
+<div class="admonition faq">
+<p class="admonition-title">Nombre de voisins</p>
+<p>On attend ici une réponse en un mot uniquement.<br />
+Pourquoi choisit on entre 1, 3, 5, ... pour le nombre de plus proches voisins ? Qu'est ce que ces valeurs ont de particulier ?<br />
+Elles sont ...<form>
+    <input style="border:  solid 1px;border-radius:3px;" type="text" id="reponse4" maxlenght="15" id="reponse" autocomplete="off">
+    <input type='button' style="margin:5px; padding:5px;  background-color : lightblue; border : solid 2px blue; border-radius : 5px;" id="BoutonValider4" onclick="reactionText4()" value="Vérifier">
+    <input id="bouAffText4" type="button" onclick="AfficheText4()" value="Correction" style="display:none;"><br>
+</form>
+    <div id="messageText4"></div>
+    <div id="correctionText4" style="display:none;"> <p> Les valeurs sont impaires. Si on choisit un nombre pair, en cas d'égalité, le programme sera incapable de choisir entre les deux catégories.
+</p></div></p>
+</div>
+<div class="admonition faq">
+<p class="admonition-title">grand jeu de données</p>
+<p>L'avantage d'utiliser un grand jeu de données est que la prédiction est plus <input style="border : solid 1px; border-radius : 2px;" type="text" name="reponse" maxlenght="15" id="reponse51" autocomplete="off"> mais que l'apprentissage est plus <input style="border : solid 1px; border-radius : 2px;" type="text" name="reponse" maxlenght="15" id="reponse52" autocomplete="off">.<br>
+<input type='button' style="margin:5px; padding:5px;  background-color : lightblue; border : solid 2px blue; border-radius : 5px;" id="BoutonValider" onclick="reactionText5()" value="Vérifier"> <input type='button' style="display: none;" id="boutoncorrection5" onclick="affiche5()" value="Correction">
+<div style="font-weight: bold;" id="messageText5"></div>
+<div id="correction5" style='display: none;'><p>Plus le jeu de données est grand plus la prédiction est fiable mais plus l'apprentissage est long.
+</p></div></p>
+</div>
+<h2 id="la-metrique">La métrique<a class="headerlink" href="#la-metrique" title="Permanent link">⚓︎</a></h2>
+<p>La métrique est la "distance" que l'on se fixe. Dans le cas précédent, la métrique est
+<img alt="metrique" src="img/metrique.png" />
+Dans l'exemple ci-dessous, on a classer des maisons, selon si les enfants sont scolarisés dans l'école bleue ou dans l'école verte. Une nouvelle maison a été construite.<br />
+<img alt="ecole" src="img/ecole1.png" /></p>
+<div class="admonition faq">
+<p class="admonition-title">Choisir l'école</p>
+<p><div>
+            <form name="f">
+                Dans le cas ou la métrique est a distance à vol d'oiseau, en choisissant k =5, les enfants iront dans l'école 
+                <select id="liste61">
+                    <option value="nonChoix" selected> ... </option>
+                    <option value="bleue"> bleue</option>
+                    <option value="verte"> verte </option>
+                </select><br>
+               On décide cette fois que le quadrillage représente les routes. La maison 1 est à 4 de distance de la maison à classer. En utilisant, comme nouvelle métrique la distance sur le quadrillage et k =7, les enfants iront dans l'école :
+                <select id="liste62">
+                    <option value="nonChoix" selected> ... </option>
+                    <option value="bleue"> bleue</option>
+                    <option value="verte"> verte </option>
+                </select><br>
+            <input type='button' style="margin:5px; padding:5px;  background-color : lightblue; border : solid 2px blue; border-radius : 5px;" id="BoutonValider" onclick="reactionListe6()" value="Vérifier">
+              <input id="bouAffListe6" type="button" onclick="AfficheListe6()" value="Correction" style="display:none;"><br>
+            </form>
+            <div id="messageListe6"></div>
+            <div id="correctionListe6" style="display:none;"> <p> A vol d'oiseau, les enfants iront dans l'école bleue et avec le quadrillage dans la verte.</p></div>
+</div></p>
+</div>
+<h2 id="conclusion">Conclusion<a class="headerlink" href="#conclusion" title="Permanent link">⚓︎</a></h2>
+<p>L'algorithme des k plus proches voisins est un des plus simples algorithmes d'apprentissage.  </p>
+<p>Malgré sa simplicité, pour qu'il puisse contribuer à des prévisions correctes, il faut avoir un jeu de données important (d'où l'enjeu des données personnelles dont les GAFAM sont si gourmandes).  </p>
+<p>Le principe étant de disposer d'un jeu d'apprentissage et d'un jeu de test (un ensemble de données sur lesquelles ont connaît la réponse et on évalue la fiabilité de la prédiction). Le travail de mise au point (choix de k ici est fondamental).  </p>
+<h2 id="lalgorithme">L'algorithme<a class="headerlink" href="#lalgorithme" title="Permanent link">⚓︎</a></h2>
+<h3 id="apprentissage">Apprentissage :<a class="headerlink" href="#apprentissage" title="Permanent link">⚓︎</a></h3>
+<p>A partir d'un jeu de données importants, extraire la métrique.<br />
+associer la valeur de la métrique à une catégorie.  </p>
+<h3 id="utilisation">Utilisation :<a class="headerlink" href="#utilisation" title="Permanent link">⚓︎</a></h3>
+<p>Entrer une valeur de métrique et un nombre de voisins k<br />
+Chercher dans le tableau d'apprentissage les k valeurs les plus proches de la métrique d'entrée<br />
+extraire les catégories correspondantes<br />
+chercher le nombre d’occurrences de chaque catégories<br />
+Renvoyer la catégorie ayant le plus grand nombre d’occurrences  </p>
+<h2 id="tp-detection-de-la-langue-dun-texte">TP : détection de la langue d'un texte<a class="headerlink" href="#tp-detection-de-la-langue-dun-texte" title="Permanent link">⚓︎</a></h2>
+<p>Dans un texte, on constate que la fréquence d'apparition des lettres de l'alphabet est différente selon la langue. En effet, en anglais par exemple, les H sont beaucoup plus fréquents que en français et à l'inverse, le français utilise plus de U.  </p>
+<p>Nous allons utiliser un texte anglais et un texte français pour tracer la fréquence d’apparition des U en fonction de celle des H pour étudier la répartition.</p>
+<p>Marche suivre :</p>
+<ul>
+<li>Chaque phrase des textes d'apprentissage possède une fréquence de U et de H que l'on associera dans une liste [freqU,freqH]  </li>
+<li>On crée une liste combinant les fréquences dans les textes d'apprentissage et la langue associée.  </li>
+<li>On compare les distances des fréquences entre le texte inconnu et les textes d'apprentissage.  </li>
+<li>On en extrait les plus courtes pour déterminer la langue.  </li>
+<li>On utilisera le fichier knn.py pour écrire les fonctions et le fichier main.py pour appeler les fonction et traiter les textes.</li>
+</ul>
+<p>Détail des fonctions à écrire :<a href="img/projet%20KPPV.pdf">projet KPPV</a></p>
+<p>Codes à compléter :</p>
+<div class="admonition important">
+<p class="admonition-title">knn.py</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">math</span> <span class="kn">import</span> <span class="n">sqrt</span>
+<span class="k">def</span> <span class="nf">distance</span><span class="p">(</span><span class="n">freq1</span><span class="p">,</span><span class="n">freq2</span><span class="p">)</span> <span class="p">:</span>
+    <span class="sd">&#39;&#39;&#39;test distance:</span>
+<span class="sd">    &gt;&gt;&gt; distance((6,4),(2,1))</span>
+<span class="sd">    5.0</span>
+<span class="sd">    &gt;&gt;&gt; distance((5,3),(3,3))</span>
+<span class="sd">    2.0</span>
+<span class="sd">    &#39;&#39;&#39;</span>
+    <span class="c1">#...</span>
+    <span class="k">return</span> <span class="c1">#...</span>
+
+<span class="k">def</span> <span class="nf">compteFreq</span><span class="p">(</span><span class="n">texte</span><span class="p">)</span> <span class="p">:</span>
+    <span class="sd">&#39;&#39;&#39; test compteFreq :</span>
+<span class="sd">    &gt;&gt;&gt; compteFreq(&#39;uuuhhhhhhie.usdksvzep.huumd&#39;)</span>
+<span class="sd">    [[0.25, 0.5], [0.1, 0.0], [0.4, 0.2]]&#39;&#39;&#39;</span>
+    <span class="c1">#...</span>
+    <span class="k">return</span> <span class="c1">#...</span>
+
+<span class="k">def</span> <span class="nf">Liste_distance</span><span class="p">(</span><span class="n">freq_inc</span><span class="p">,</span><span class="n">L</span><span class="p">):</span>
+    <span class="sd">&#39;&#39;&#39;freq_inc est un tuple de fréquences d&#39;appartion de U et de H, L est la liste contenant toutes</span>
+<span class="sd">    les couples de fréquence et la langue associée L=[((0.5,0.2),&quot;A&quot;),((0.3,0.4),&quot;F&quot;), ...]. La fonction calcule la distance entre freq_inc</span>
+<span class="sd">    chaque element de L et les place dans une nouvelle liste D en y ajoutant la langue correspondant</span>
+<span class="sd">    test Liste_distance:</span>
+<span class="sd">    &gt;&gt;&gt; Liste_distance((0.2,0,1),(((0.5,0.2),&quot;A&quot;),((0.3,0.4),&quot;F&quot;)))</span>
+<span class="sd">    [[0.36055512754639896, &#39;A&#39;], [0.4123105625617661, &#39;F&#39;]]</span>
+<span class="sd">    &#39;&#39;&#39;</span>
+    <span class="n">D</span><span class="o">=</span><span class="p">[]</span>
+    <span class="c1">#...</span>
+    <span class="k">return</span> <span class="n">D</span>
+
+<span class="c1">#jeu d&#39;apprentissage</span>
+<span class="k">def</span> <span class="nf">apprentissage</span><span class="p">(</span><span class="n">L1</span><span class="p">,</span><span class="n">L2</span><span class="p">)</span> <span class="p">:</span>
+    <span class="sd">&#39;&#39;&#39;test apprentissage</span>
+<span class="sd">    &gt;&gt;&gt; apprentissage([[0.5, 0.0], [0.2, 0.1], [0.2, 0.4]],[[0.25, 0.5], [0.1, 0.0], [0.4, 0.2]])</span>
+<span class="sd">    [[[0.5, 0.0], &#39;A&#39;], [[0.2, 0.1], &#39;A&#39;], [[0.2, 0.4], &#39;A&#39;], [[0.25, 0.5], &#39;F&#39;], [[0.1, 0.0], &#39;F&#39;], [[0.4, 0.2], &#39;F&#39;]]&#39;&#39;&#39;</span>
+    <span class="n">jeuA</span><span class="o">=</span><span class="p">[]</span>
+    <span class="k">for</span> <span class="n">elt</span> <span class="ow">in</span> <span class="n">L1</span> <span class="p">:</span>
+        <span class="c1">#...</span>
+    <span class="k">for</span> <span class="n">elt</span> <span class="ow">in</span> <span class="n">L2</span> <span class="p">:</span>
+        <span class="c1">#...</span>
+    <span class="k">return</span> <span class="c1">#...</span>
+
+<span class="k">def</span> <span class="nf">prediction</span><span class="p">(</span><span class="n">liste</span><span class="p">,</span><span class="n">k</span><span class="p">):</span>
+    <span class="sd">&#39;&#39;&#39;test prediction:</span>
+<span class="sd">    &gt;&gt;&gt; prediction([[[0.5, 0.0], &#39;A&#39;], [[0.2, 0.1], &#39;A&#39;], [[0.2, 0.4], &#39;A&#39;], [[0.25, 0.5], &#39;F&#39;], [[0.1, 0.0], &#39;F&#39;], [[0.4, 0.2], &#39;F&#39;]],3)</span>
+<span class="sd">    &#39;phrase en anglais&#39;</span>
+<span class="sd">    &#39;&#39;&#39;</span>
+    <span class="n">liste</span><span class="o">.</span><span class="n">sort</span><span class="p">()</span>
+    <span class="n">liste_reduite</span><span class="o">=</span><span class="c1">#ne garder que les elements de la liste qui nous interessent</span>
+    <span class="n">nbA</span><span class="o">=</span><span class="c1">#compte le nombre de A</span>
+    <span class="n">nbF</span><span class="o">=</span><span class="c1">#compte le nombre de F</span>
+    <span class="k">if</span> <span class="n">nbA</span><span class="o">&lt;</span><span class="n">nbF</span> <span class="p">:</span>
+    <span class="c1">#...</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="kn">import</span> <span class="nn">doctest</span>
+    <span class="n">doctest</span><span class="o">.</span><span class="n">testmod</span><span class="p">()</span>
+</code></pre></div>
+</td></tr></table>
+</div>
+<div class="admonition important">
+<p class="admonition-title">main.py</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">knn</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+
+<span class="c1">#Liste des fréquences dans les phrases du texte en français</span>
+<span class="n">monfichier</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;cleves.txat&quot;</span><span class="p">,</span> <span class="s2">&quot;r&quot;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s2">&quot;utf-8&quot;</span><span class="p">)</span>
+<span class="n">texteF</span> <span class="o">=</span> <span class="n">monfichier</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+<span class="n">monfichier</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+
+<span class="n">Lfr</span><span class="o">=</span><span class="n">compteFreq</span><span class="p">(</span><span class="n">texteF</span><span class="p">)</span>
+
+<span class="c1">#Liste des fréquences dans les phrases du texte en français</span>
+<span class="n">monfichier</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;pride.txt&quot;</span><span class="p">,</span> <span class="s2">&quot;r&quot;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s2">&quot;utf-8&quot;</span><span class="p">)</span>
+<span class="n">texteA</span> <span class="o">=</span> <span class="n">monfichier</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+<span class="n">monfichier</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+
+<span class="n">Lang</span><span class="o">=</span><span class="n">compteFreq</span><span class="p">(</span><span class="n">texteA</span><span class="p">)</span>
+
+<span class="c1">#Liste des fréquences dans la phrase inconnue &quot;inconnu.txt</span>
+<span class="c1">#...</span>
+
+<span class="c1">#Liste des distances :</span>
+<span class="c1"># créer une liste cumule les fréquences d&#39;appatiton des lettres U et H et la langue à partir des listes Lang et Lfr</span>
+<span class="c1">#puis calculer les distances entre le texte inconnu et les textes d&#39;apprentissage</span>
+<span class="n">listeD</span><span class="o">=...</span>
+
+<span class="c1">#Faire afficher le résultat de la prédiction et vérifier avec la représentation graphique</span>
+<span class="c1">#tester avec les 3 textes inconnus</span>
+
+
+<span class="sd">&quot;&quot;&quot;Complément Pour représenter les données&quot;&quot;&quot;</span>
+<span class="c1"># Données de type 1</span>
+<span class="n">liste_x_1</span><span class="o">=</span><span class="p">[</span><span class="mi">100</span><span class="o">*</span><span class="n">elt</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="k">for</span> <span class="n">elt</span> <span class="ow">in</span> <span class="n">Lang</span><span class="p">]</span>
+<span class="n">liste_y_1</span><span class="o">=</span><span class="p">[</span><span class="mi">100</span><span class="o">*</span><span class="n">elt</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="k">for</span> <span class="n">elt</span> <span class="ow">in</span> <span class="n">Lang</span><span class="p">]</span>
+
+<span class="c1"># Données de type 2</span>
+<span class="n">liste_x_2</span><span class="o">=</span><span class="p">[</span><span class="mi">100</span><span class="o">*</span><span class="n">elt</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="k">for</span> <span class="n">elt</span> <span class="ow">in</span> <span class="n">Lfr</span><span class="p">]</span>
+<span class="n">liste_y_2</span><span class="o">=</span><span class="p">[</span><span class="mi">100</span><span class="o">*</span><span class="n">elt</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="k">for</span> <span class="n">elt</span> <span class="ow">in</span> <span class="n">Lfr</span><span class="p">]</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">axis</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span><span class="mi">15</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">15</span><span class="p">])</span> <span class="c1"># Attention [x1,x2,y1,y2]</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Freq des U&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Freq des H&#39;</span><span class="p">)</span>
+<span class="c1">#plt.title(&#39;Représentation des deux types&#39;)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">liste_x_1</span><span class="p">,</span><span class="n">liste_y_1</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Anglais&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">liste_x_2</span><span class="p">,</span><span class="n">liste_y_2</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Français&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">([</span><span class="mi">100</span><span class="o">*</span><span class="n">inc</span><span class="p">[</span><span class="mi">0</span><span class="p">]],[</span><span class="mi">100</span><span class="o">*</span><span class="n">inc</span><span class="p">[</span><span class="mi">1</span><span class="p">]],</span><span class="n">label</span><span class="o">=</span><span class="s2">&quot;A classer&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+<span class="sd">&quot;&quot;&quot;Fin&quot;&quot;&quot;</span>
+</code></pre></div>
+</td></tr></table>
+</div>
+<p>Textes d'apprentissage :
+texte en anglais : <a href="img/pride.txt">texte en anglais</a><br />
+texte en français : <a href="img/cleves.txt">texte en français</a>  </p>
+<p>Textes inconnus dont il faut déterminer la langue :<br />
+<a href="img/inconnu.txt">texte inconnu</a><br />
+<a href="img/inconnu2.txt">texte inconnu 2</a><br />
+<a href="img/inconnu3.txt">texte inconnu 3</a><br />
+<a href="img/inconnu4.txt">texte inconnu 4</a>  </p>
+<h3 id="rendu">Rendu :<a class="headerlink" href="#rendu" title="Permanent link">⚓︎</a></h3>
+<p>il est IMPÉRATIF de rendre le fichier knn.py contenant les fonctions et le fichier main.py qui appelle les fonctions. RESPECTER LE NOM DES FICHIERS !! (pour passer les tests automatiques).  </p>
+<p>Le tout pourra être mis dans un dossier contenant les fichiers txt et les fichiers .py.  </p>
+<!---Javascript-->
+<script>
+
+
+function reactionText1(){
+    var msg;
+    console.log('fonction executee');
+    var reponse1=document.getElementById("reponse1");
+    var reponse2=document.getElementById("reponse2");
+    var reponse3=document.getElementById("reponse3");
+
+    if ((reponse1.value =='cause' )&&
+        reponse2.value =='effets' || reponse2.value =='effet' &&
+        reponse3.value =='lien' ){
+        msg='bravo';
+        style='style="color:green;"';
+        }
+    else{msg='Vous avez des erreurs';
+    style='style="color:red;"';}
+    document.getElementById("messageText1").innerHTML='<p '+style+'>'+msg+'</p>';
+    document.getElementById("boutoncorrection").style="margin:5px; padding:5px;  background-color : lightblue; border : solid 2px blue; border-radius : 5px;display:inline;";
+    }
+
+function affiche1(){
+    document.getElementById("correction1").style="display:block;";
+    document.getElementById("correction1").style="font-style:italic;";}
+
+function reactionListe2(){
+    var msg;
+    var style;
+    var selectElmt21 = document.getElementById("liste1");
+    var valeurselectionnee21 = selectElmt21.options[selectElmt21.selectedIndex].value;
+
+    var selectElmt22 = document.getElementById("liste2");
+    var valeurselectionnee22 = selectElmt22.options[selectElmt22.selectedIndex].value;
+
+    var selectElmt23 = document.getElementById("liste3");
+    var valeurselectionnee23 = selectElmt23.options[selectElmt23.selectedIndex].value;
+
+
+
+    if (valeurselectionnee21=="entrainement" && valeurselectionnee22=="validation" && valeurselectionnee23=="prediction" ){
+        msg='Bonne réponse';
+        style='style="color:green;"';
+    }
+    else if (valeurselectionnee21=="entrainement" || valeurselectionnee22=="validation" || valeurselectionnee23=="prediction" ){
+        msg='Réponse partiellement correcte';
+        style='style="color:orange;"';
+    }
+    else{msg='Mauvaise réponse';
+        style='style="color:red;"';
+    }
+    document.getElementById("messageListe2").innerHTML='<p '+style+'>'+msg+'</p>';
+    document.getElementById('bouAffListe2').style="margin:5px; padding:5px;  background-color : lightblue; border : solid 2px blue; border-radius : 5px;display:inline;";
+}
+
+/*affichage de la réponse*/
+function AfficheListe2(){
+    document.getElementById("correctionListe2").style="display:block;";
+    document.getElementById("correctionListe2").style="font-style:italic;";
+}
+
+function reactionListe3(){
+    var msg;
+    var style;
+    var selectElmt31 = document.getElementById("liste31");
+    var valeurselectionnee31 = selectElmt31.options[selectElmt31.selectedIndex].value;
+
+    var selectElmt32 = document.getElementById("liste32");
+    var valeurselectionnee32 = selectElmt32.options[selectElmt32.selectedIndex].value;
+
+    var selectElmt33 = document.getElementById("liste33");
+    var valeurselectionnee33 = selectElmt33.options[selectElmt33.selectedIndex].value;
+    var selectElmt34 = document.getElementById("liste34");
+    var valeurselectionnee34 = selectElmt34.options[selectElmt34.selectedIndex].value;
+
+
+
+    if (valeurselectionnee31=="male" && valeurselectionnee32=="femelle" && valeurselectionnee33=="male" && valeurselectionnee34=="indetermine"  ){
+        msg='Bonne réponse';
+        style='style="color:green;"';
+    }
+    else if (valeurselectionnee31=="male" || valeurselectionnee32=="femelle" || valeurselectionnee33=="male" || valeurselectionnee34=="indetermine"  ){
+        msg='Réponse partiellement correcte';
+        style='style="color:orange;"';
+    }
+    else{msg='Mauvaise réponse';
+        style='style="color:red;"';
+    }
+    document.getElementById("messageListe3").innerHTML='<p '+style+'>'+msg+'</p>';
+    document.getElementById('bouAffListe3').style="margin:5px; padding:5px;  background-color : lightblue; border : solid 2px blue; border-radius : 5px;display:inline;";
+}
+
+/*affichage de la réponse*/
+function AfficheListe3(){
+    document.getElementById("correctionListe3").style="display:block;";
+    document.getElementById("correctionListe3").style="font-style:italic;";
+}
+
+function reactionText4(){
+    var msg;
+    var style;
+    var reponse=document.getElementById("reponse4");
+    if (reponse.value =='impaires' || reponse.value =='impaire' ){
+        msg='bravo';
+        style='style="color:green;"';
+        }
+    else{msg='non, essaye encore';
+        style='style="color:red;"';
+    }
+    document.getElementById("messageText4").innerHTML='<p '+style+'>'+msg+'</p>';
+    document.getElementById("bouAffText4").style="margin:5px; padding:5px;  background-color : lightblue; border : solid 2px blue; border-radius : 5px;display:inline;";
+}
+
+function AfficheText4(){
+    document.getElementById("correctionText4").style="display:block;";
+    document.getElementById("correctionText4").style="font-style:italic;";
+}
+
+
+function reactionText5(){
+    var msg;
+    console.log('fonction executee');
+    var reponse51=document.getElementById("reponse51");
+    var reponse52=document.getElementById("reponse52");
+
+
+    if ((reponse51.value =='précise' || reponse51.value =='precise' || reponse51.value =='fiable')&&
+        reponse52.value =='lent' || reponse52.value =='long'  ){
+        msg='bravo';
+        style='style="color:green;"';
+        }
+    else{msg='Vous avez des erreurs';
+    style='style="color:red;"';}
+    document.getElementById("messageText5").innerHTML='<p '+style+'>'+msg+'</p>';
+    document.getElementById("boutoncorrection5").style="margin:5px; padding:5px;  background-color : lightblue; border : solid 2px blue; border-radius : 5px;display:inline;";
+    }
+
+function affiche5(){
+    document.getElementById("correction5").style="display:block;";
+    document.getElementById("correction5").style="font-style:italic;";}
+
+function reactionListe6(){
+    var msg;
+    var style;
+    var selectElmt61 = document.getElementById("liste61");
+    var valeurselectionnee61 = selectElmt61.options[selectElmt61.selectedIndex].value;
+
+    var selectElmt62 = document.getElementById("liste62");
+    var valeurselectionnee62 = selectElmt62.options[selectElmt62.selectedIndex].value;
+
+
+    if (valeurselectionnee61=="bleue" && valeurselectionnee62=="verte" ){
+        msg='Bonne réponse';
+        style='style="color:green;"';
+    }
+    else if (valeurselectionnee61=="bleue" || valeurselectionnee62=="verte" ){
+        msg='Réponse partiellement correcte';
+        style='style="color:orange;"';
+    }
+    else{msg='Mauvaise réponse';
+        style='style="color:red;"';
+    }
+    document.getElementById("messageListe6").innerHTML='<p '+style+'>'+msg+'</p>';
+    document.getElementById('bouAffListe6').style="margin:5px; padding:5px;  background-color : lightblue; border : solid 2px blue; border-radius : 5px;display:inline;";
+}
+
+/*affichage de la réponse*/
+function AfficheListe6(){
+    document.getElementById("correctionListe6").style="display:block;";
+    document.getElementById("correctionListe6").style="font-style:italic;";
+}
+</script>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+        
+          <a href="#" class="md-top md-icon" title="Back to top" data-md-component="top" data-md-state="hidden">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"/></svg>
+          </a>
+        
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="tris.html" class="md-footer__link md-footer__link--prev" aria-label="Précédent: Algorithmes de tris" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Précédent
+              </span>
+              Algorithmes de tris
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../archi/reseaux/reseau.html" class="md-footer__link md-footer__link--next" aria-label="Suivant: Qu&#39;est-ce qu&#39;un réseau" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Suivant
+              </span>
+              Qu'est-ce qu'un réseau
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+        
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.tabs", "navigation.expand", "navigation.top", "toc.integrate", "header.autohide"], "translations": {"clipboard.copy": "Copier dans le presse-papier", "clipboard.copied": "Copi\u00e9 dans le presse-papier", "search.config.lang": "fr", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Rechercher", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../assets/javascripts/workers/search.b0710199.min.js", "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.76f349be.min.js"></script>
+      
+        <script src="../javascripts/extra.js"></script>
+      
+        <script src="../javascripts/prism.js"></script>
+      
+        <script src="../javascripts/config.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+        <script src="https://unpkg.com/mermaid@8.9.2/dist/mermaid.min.js"></script>
+      
+        <script src="../javascripts/mermaid.js"></script>
+      
+    
+  </body>
+</html>
