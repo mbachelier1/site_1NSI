@@ -9,44 +9,43 @@ Pour résoudre un problème d'optimisation nous auront besoin :
 - l’existence d'une solution optimale ou assez bonne  
 
 !!! example "Un petit exemple"
-	Question
 	Un voyageur souhaite visiter plusieurs villes de France, dans n'importe quel ordre, mais en minimisant la distance parcourue.
 	Départ et arrivée à Clermont-Ferrand.  
 	Villes à visiter : Limoges, Lyon, Paris et Toulouse.  
 	Le tableau suivant donne les distances routières kilométriques entre plusieurs villes de France :
 	![tableau des distances](img/distances.PNG)
-	1. Déterminer tous les trajets possibles et en déduire le trajet optimal. 
-	*On ne comptera pas deux fois les mêmes trajets effectués dans deux sens différents*
-    <iframe src="https://lockee.fr/o/yTAfGoCJ" height="500" width="350" frameborder="0" ></iframe>
-	<a HREF="javascript:AccesProtege1()">Solution</a>
+	1. Déterminer tous les trajets possibles et en déduire le trajet optimal.  
+	*On ne comptera pas deux fois les mêmes trajets effectués dans deux sens différents*  
+    Pour débloquer la solution entrer le code correspondant au nombre de trajets trouvés :  
+    <iframe src="https://lockee.fr/o/yTAfGoCJ?noft" height="500" style="width:100%;" frameborder="0" ></iframe>
 	2. Calculer le nombre de trajets possibles si le voyageur décide de visiter toutes les villes du tableau.
-	*On donnera que la façon de calculer le nombre de coombinaisons possibles avec n chiffres est nx(n-1)x(n-2)x...x1 = n! (factorrrielle n)*
-	<a HREF="javascript:AccesProtege2()">Solution</a>
-	<div>n !/2 = 20160 solutions ce qui commence à être gourmand en terme de complexité.</div>
+	*On donnera que la façon de calculer le nombre de coombinaisons possibles avec n chiffres est nx(n-1)x(n-2)x...x1 = n! (factorrrielle n)*  
+    *compter le nombre de villes*  
+    <iframe src="https://lockee.fr/o/qrK8Peae?noft" height="500" style="width:100%;" frameborder="0" ></iframe>
+
 
 ## Problème de rendu de monnaie
 Le but est de programmer une caisse automatique pour qu'elle rende la monnaie de façon optimale, c'est-à- dire avec le nombre minimal de pièces et de billets.
 Nous disposons de toutes ces pièces et nous en avons autant que l'on veut !
 
-!
+![pieces](img/tableau_monnaie.png)
 Vous souhaitez acheter un objet d'une valeur de 53 € et vous payez avec un billet de 100 €.   
 La caisse doit vous rendre : 100 - 53 = 47 € mais de quelle façon !  
 En effet, Il existe un grand nombre de possibilités pour vous rendre la monnaie :  
-!
+![nombre de pièces rendues](img/nb_pieces.png)
 
 Nous pourrions ainsi lister l'ensemble de ces possibilités de façon “méthodique” en utilisant un arbre mais cet algorithme serait très “coûteux” en temps de calcul.
-
 Imaginons un exemple en partant simplement de la valeur 11 €  
-!
+![chemin de rendu de pieces](img/arbre_monnaie.png)
 
 
 Nous allons donc utiliser un algorithme “glouton” pour optimiser ce problème.
 
-Définition : A chaque étape, on effectue le choix qui semble le meilleur, sans jamais remettre en question les choix déjà effectués.
+> Définition : A chaque étape, on effectue le choix qui semble le meilleur, sans jamais remettre en question les choix déjà effectués.
 
-Pour le rendu de monnaie, c'est assez simple, il suffit de prendre à chaque étape la plus grande valeur de billet ou de pièce. Dans notre système monétaire, cet algorithme est pratiquement toujours la solution la plus optimisée mais nous allons verrons plus loin que ce n'est pas toujours le cas.
-Voici l'algorithme proposé, il sera à implémenter plus tard
-La fonction `renduMonnaie()` prendra en argument la somme à rendre et la liste des pièces et billets à disposition. Cette fonction retournera la liste des pièces et billets à rendre.
+Pour le rendu de monnaie, c'est assez simple, il suffit de prendre à chaque étape la plus grande valeur de billet ou de pièce. Dans notre système monétaire, cet algorithme est pratiquement toujours la solution la plus optimisée mais nous allons verrons plus loin que ce n'est pas toujours le cas.  
+Voici l'algorithme proposé, il sera à implémenter plus tard.  
+La fonction `renduMonnaie()` prendra en argument la somme à rendre et la liste des pièces et billets à disposition. Cette fonction retournera la liste des pièces et billets à rendre  
 ```pseudocode
 def renduMonnaie(somme, liste):
     Initialisation d'un tableau monnaie à la liste vide.
@@ -60,13 +59,16 @@ renvoie monnaie
 ```
 
 !!! example "Exemple 1 : on dispose de toutes les pièces"
+    ![exemple](img/ex1.png)
 
 !!! example "Exemple 2 :"
 	L'algorithme est-il toujours optimisé si vous ne disposez plus de toutes les pièces ...
 	A vous de résoudre cette situation à la main dans un premier temps.
 	somme = 63
 	liste = [1, 2, 20, 50, 100, 200]...
-	**Vous avez bien lu, il ne reste plus de pièces de 5 € , ni de billets de 10 €!!**
+	**Vous avez bien lu, il ne reste plus de pièces de 5 € , ni de billets de 10 €!!**  
+    Pour débloquer la solution, trouver au moins le nombre de pièces rendues :  
+    <iframe src="https://lockee.fr/o/JD6XgHKb?noft" height="500" style="width:100%;" frameborder="0" ></iframe>
 
 
 ### Implémentation
@@ -81,9 +83,11 @@ renvoie monnaie
 
 
 ## Problème du sac à dos
-ous êtes chasseur de trésors ! Après de longues heures d'aventure, des dangers évités de justesse, et malgré une armée de pilleurs à vos trousses, vous avez trouvé un énorme TRÉSOR !  
+![chasseur](img/chasseur.png){align=left}
+Vous êtes chasseur de trésors ! Après de longues heures d'aventure, des dangers évités de justesse, et malgré une armée de pilleurs à vos trousses, vous avez trouvé un énorme TRÉSOR !  
 Vous êtes heureux, vous sautez de joie et lancez des pièces en l'air !  
 Finalement vous retrouvez votre calme et commencez à réfléchir vite (n'oubliez pas l'armée de pillards qui est sur vos traces...).  
+![tresor](img/tresor.png){align=right}
 Votre sac à dos est assez solide pour n'emporter que 10 kg et le trésor pèse bien plus... Il va vous falloir choisir les objets à emporter. Heureusement vous êtes prévoyant et vous avez la liste des objets présents dans le coffre ainsi que leur masse et leur valeur (Comment ça “ce n'est pas très crédible” ? Vous êtes vraiment chasseur de trésor vous ?)  
 En bon “geek” que vous êtes, vous avez toujours votre IDE Python favorite sur vous. Il va falloir créer un algorithme de remplissage de votre sac à dos et fissa si vous ne voulez pas finir ruiné voire pire...  
 Il s'agit de choisir les objets à emporter dans le sac afin d'obtenir la valeur totale la plus grande tout en respectant la contrainte du poids maximal. C'est un problème d'optimisation avec contrainte.  
@@ -104,7 +108,7 @@ Bien sur, si vous êtes joueur, vous pouvez essayer de tout tester ;-) mais nous
 
 Vous disposez de plusieurs programme “squelette” qui contient l'ossature de vos différentes fonctions. Elles sont documentées `(docstring)` et testées `(assert)`.
 Vous disposez également d'une liste des objets présents pour tester vos différentes fonctions :
-!
+![liste des objets](img/objets.png)
 
 La fonction (valeur) permet de trier la liste des objets en fonction de leur valeur.
 
