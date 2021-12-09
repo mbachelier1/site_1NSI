@@ -1,0 +1,4 @@
+AuthType Basic
+AuthName "Faites l'exercies avant d'aller voir la correction"
+AuthUserFile /../../.htpasswd
+require valid-user
