@@ -13,8 +13,7 @@ Voici un code `html` contenant du `javascript`.
   <head>
     <title>Ma Page avec un JS inclus</title>
       <script language="JavaScript">
-        alert("JavaScript est maintenant inclus dans mon fichier et ce 
-        message s'affiche dans une fenêtre d'alerte");
+        alert("JavaScript est maintenant inclus dans mon fichier et ce message s'affiche dans une fenêtre d'alerte");
       </script>
   </head>
 <body>
@@ -58,7 +57,7 @@ Puis ceci :
 var tonNom =prompt('quel est ton nom?');
 var tonPrenom =prompt('quel est ton prénom?');
 var toi=tonNom+' '+tonPrenom;
-if tonNom=='Einstein'{  
+if (tonNom=='Einstein'){  
   alert(toi+ ':tu est un génie!');}
 else {
   alert(toi+ ':tu est juste un être humain');} 
