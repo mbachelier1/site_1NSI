@@ -23,11 +23,13 @@ h1
 
 
 .md-typeset .admonition {
-    font-size: 0.8rem;
+    font-size: 0.7rem;
+    background-color: #f5f5f5;
 }
 
 .md-typeset details {
-    font-size: 0.8rem;
+    font-size: 0.7rem;
+    background-color: #f5f5f5;
 }
 
 .def{

@@ -1169,13 +1169,11 @@
  8
  9
 10
-11
-12</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
+11</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
   <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
     <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Ma Page avec un JS inclus<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
       <span class="p">&lt;</span><span class="nt">script</span> <span class="na">language</span><span class="o">=</span><span class="s">&quot;JavaScript&quot;</span><span class="p">&gt;</span>
-        <span class="nx">alert</span><span class="p">(</span><span class="s2">&quot;JavaScript est maintenant inclus dans mon fichier et ce </span>
-<span class="s2">        message s&#39;affiche dans une fenêtre d&#39;alerte&quot;</span><span class="p">);</span>
+        <span class="nx">alert</span><span class="p">(</span><span class="s2">&quot;JavaScript est maintenant inclus dans mon fichier et ce message s&#39;affiche dans une fenêtre d&#39;alerte&quot;</span><span class="p">);</span>
       <span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
   <span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
 <span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
@@ -1226,7 +1224,7 @@
 7</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kd">var</span> <span class="nx">tonNom</span> <span class="o">=</span><span class="nx">prompt</span><span class="p">(</span><span class="s1">&#39;quel est ton nom?&#39;</span><span class="p">);</span>
 <span class="kd">var</span> <span class="nx">tonPrenom</span> <span class="o">=</span><span class="nx">prompt</span><span class="p">(</span><span class="s1">&#39;quel est ton prénom?&#39;</span><span class="p">);</span>
 <span class="kd">var</span> <span class="nx">toi</span><span class="o">=</span><span class="nx">tonNom</span><span class="o">+</span><span class="s1">&#39; &#39;</span><span class="o">+</span><span class="nx">tonPrenom</span><span class="p">;</span>
-<span class="k">if</span> <span class="nx">tonNom</span><span class="o">==</span><span class="s1">&#39;Einstein&#39;</span><span class="p">{</span>  
+<span class="k">if</span> <span class="p">(</span><span class="nx">tonNom</span><span class="o">==</span><span class="s1">&#39;Einstein&#39;</span><span class="p">){</span>  
   <span class="nx">alert</span><span class="p">(</span><span class="nx">toi</span><span class="o">+</span> <span class="s1">&#39;:tu est un génie!&#39;</span><span class="p">);}</span>
 <span class="k">else</span> <span class="p">{</span>
   <span class="nx">alert</span><span class="p">(</span><span class="nx">toi</span><span class="o">+</span> <span class="s1">&#39;:tu est juste un être humain&#39;</span><span class="p">);}</span> 
@@ -1238,15 +1236,15 @@
 2
 3</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kd">function</span> <span class="nx">carre</span><span class="p">(</span><span class="nx">nombre</span><span class="p">){</span>
   <span class="k">return</span> <span class="nx">nombre</span><span class="o">*</span><span class="nx">nombre</span>
-<span class="p">}</span>
+<span class="p">};</span>
 </code></pre></div>
 </td></tr></table>
 Pour exécuter la fonction :<br />
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
-3</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kd">var</span> <span class="nx">c</span>
-<span class="nx">c</span><span class="o">=</span><span class="nx">carre</span><span class="p">(</span><span class="mf">4</span><span class="p">)</span>
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">c</span><span class="p">)</span>
+3</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kd">var</span> <span class="nx">c</span><span class="p">;</span>
+<span class="nx">c</span><span class="o">=</span><span class="nx">carre</span><span class="p">(</span><span class="mf">4</span><span class="p">);</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">c</span><span class="p">);</span>
 </code></pre></div>
 </td></tr></table></p>
 <div class="admonition note">
@@ -1269,7 +1267,7 @@ Vous pouvez si vous êtes à l'aise tester les instructions proposées en dessou
 4
 5
 6</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kd">var</span> <span class="nx">result</span><span class="p">;</span>
-<span class="kd">var</span> <span class="nx">a</span><span class="o">=-</span><span class="mf">5</span>
+<span class="kd">var</span> <span class="nx">a</span><span class="o">=-</span><span class="mf">5</span><span class="p">;</span>
 <span class="k">if</span> <span class="p">(</span><span class="nx">a</span><span class="o">&gt;</span><span class="mf">0</span><span class="p">)</span> <span class="p">{</span>
   <span class="nx">result</span><span class="o">=</span><span class="s1">&#39;positive&#39;</span><span class="p">;</span>
 <span class="p">}</span> <span class="k">else</span> <span class="p">{</span><span class="nx">result</span><span class="o">=</span><span class="s1">&#39;Not positive&#39;</span><span class="p">;}</span>
