@@ -1,5 +1,5 @@
-#Programmation évènementielle
-##Atteindre un élément de la page html
+# Programmation évènementielle
+## Atteindre un élément de la page html
 Tester ce code et n'oubliez pas d'aller voir dans la console.  
 
 !!! faq "Question"
@@ -24,20 +24,20 @@ Tester ce code et n'oubliez pas d'aller voir dans la console.
 ```
 
 !!! faq "Questions"
-    **1.** Identifier ce que fait le code javascript en consultant la console.  
-		**2.** Expliquer à quoi servent les commandes `document.getElementById` et `document.getElementsByTagName`. 
-		**3.** Ajouter `.innerHTML` à la suite de `document.getElementById`. Que récupère la commande ?  
-		**4.** Même question en remplaçant `innerHTML` par `innerText`. 
+    **1.** Identifier ce que fait le code javascript en consultant la console.    
+		**2.** Expliquer à quoi servent les commandes `document.getElementById` et `document.getElementsByTagName`.   
+		**3.** Ajouter `.innerHTML` à la suite de `document.getElementById`. Que récupère la commande ?   
+		**4.** Même question en remplaçant `innerHTML` par `innerText`.   
 
-##Manipuler le html :
+## Manipuler le html :
 ```html
 <script>
       document.getElementById("1").innerHTML = "je modifie mon paragraphe";
 </script>
 ```
 !!! faq "Questions"
-    **5.** Remplacer "=" par "+=". Que se passe-t-il?
-    **6.** Que fait ce code? Le tester.
+    **5.** Remplacer "=" par "+=". Que se passe-t-il?  
+    **6.** Que fait ce code? Le tester.  
 
 ```html
   <body>
@@ -57,7 +57,7 @@ Tester ce code et n'oubliez pas d'aller voir dans la console.
 !!! faq "Questions"
     **7.** Modifier le code de façon à créer un lien vers le site informatiquelha.wordpress.com dans le deuxième paragraphe. Ce lien doit avoir un identifiant `id`.
 
-##Manipuler le `css`
+##  Manipuler le `css`
 ```html
 <html>
   <head>
@@ -81,7 +81,6 @@ Tester ce code et n'oubliez pas d'aller voir dans la console.
       alert("on récupère l'élément exemple et on en modifie le style");
       // on modifie son style
       elmt.style.backgroundColor = "gray";
-      ...
     </script>
   </body>
 </html>

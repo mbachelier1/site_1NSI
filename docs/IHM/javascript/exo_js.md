@@ -68,13 +68,13 @@ Pour créer une fonction, on utilise la syntaxe ci-dessous :
 ```js
 function carre(nombre){
   return nombre*nombre
-}
+};
 ```
 Pour exécuter la fonction :  
 ```js
-var c
-c=carre(4)
-console.log(c)
+var c;
+c=carre(4);
+console.log(c);
 ```
 !!! note "Remarque"
     La notion de porté de variable est valable aussi en Javascript. Pour déclarer une variable qui ne sera valable que dans un bloc ou une fonction on peut utiliser le mot-clé `let` au lieu de `var`. 
@@ -92,7 +92,7 @@ Vous pouvez si vous êtes à l'aise tester les instructions proposées en dessou
 ###Syntaxe des conditions
 ```js
 var result;
-var a=-5
+var a=-5;
 if (a>0) {
   result='positive';
 } else {result='Not positive';}
