@@ -1118,14 +1118,14 @@
 <div class="admonition example">
 <p class="admonition-title">Exemple</p>
 <p><form>
- <input type="button" value="tester" onclick="testBidon()"></td>
+ <input type="button" style="margin:5px; padding:5px;  background-color : lightblue; border : solid 2px blue; border-radius : 5px;"  value="tester" onclick="testBidon()">
 </form>
 <div id="casecouleur"> Un élément de formulaire fondamental : le bouton</div></p>
 </div>
-<div class="admonition faq">
+<div class="admonition caution">
 <p class="admonition-title">Code</p>
 <div class="tabbed-set" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><label for="__tabbed_1_1">html</label><div class="tabbed-content">
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;button&quot;</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;tester&quot;</span> <span class="na">onclick</span><span class="o">=</span><span class="s">&quot;testBidon()&quot;</span><span class="p">&gt;</span> 
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;button&quot;</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;tester&quot;</span>  <span class="na">onclick</span><span class="o">=</span><span class="s">&quot;testBidon()&quot;</span><span class="p">&gt;</span> 
 </code></pre></div>
 </td></tr></table>
 </div>
@@ -1149,14 +1149,22 @@
 2<input type="radio" name="testRad" value="2" id="radio2">
 3<input type="radio" name="testRad" value="3" id="radio3">
 4<input type="radio" name="testRad" value="4" id="radio4">
-<input type="button" value="tester" onclick="testRadio()">
+<input type="button" style="margin:5px; padding:5px;  background-color : lightblue; border : solid 2px blue; border-radius : 5px;" value="tester" onclick="testRadio()">
 </form>
 <div id="texteRadio" class="rajout"></div></p>
 </div>
-<div class="admonition faq">
+<div class="admonition caution">
 <p class="admonition-title">Code</p>
 <div class="tabbed-set" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><label for="__tabbed_2_1">html</label><div class="tabbed-content">
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>    1 <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;radio&quot;</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;testRad&quot;</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;1&quot;</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;radio1&quot;</span><span class="p">&gt;</span>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>      1 <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;radio&quot;</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;testRad&quot;</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;1&quot;</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;radio1&quot;</span><span class="p">&gt;</span>
+      2 <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;radio&quot;</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;testRad&quot;</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;2&quot;</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;radio2&quot;</span><span class="p">&gt;</span>
+      ...
+      <span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;texteRadio&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;button&quot;</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;tester&quot;</span> <span class="na">onclick</span><span class="o">=</span><span class="s">&quot;tesRadio()&quot;</span><span class="p">&gt;</span> 
 </code></pre></div>
 </td></tr></table>
 </div>
@@ -1185,6 +1193,11 @@
 </div>
 </div>
 </div>
+<p>Le contenu de la variable <code>contenu</code> est écrit dans une balise dont l'<code>id</code> est <code>texteRadio</code> initialement vide.</p>
+<div class="admonition faq">
+<p class="admonition-title">A faire</p>
+<p>Compléter et tester le code pour ajouter les deux boutons radio manquant.</p>
+</div>
 <h3 id="cases-a-cocher">Cases à cocher<a class="headerlink" href="#cases-a-cocher" title="Permanent link">⚓︎</a></h3>
 <div class="admonition example">
 <p class="admonition-title">Exemple</p>
@@ -1193,15 +1206,29 @@
 <input type="checkbox" name="testCase" value="Case 1" id="case1">Case 1   <br><br />
 <input type="checkbox" name="testCase" value="Case 2" id="case2"> Case 2  <br><br />
  <input type="checkbox" name="testCase" value="Case 3" id="case3">Case 3<br>
-<input type="button" value="tester" onclick="testCases()">
+<input type="button" style="margin:5px; padding:5px;  background-color : lightblue; border : solid 2px blue; border-radius : 5px;" value="tester" onclick="testCases()">
 <div id="texteCases" class="rajout"></div>
 </div>
 </form></p>
 </div>
-<div class="admonition faq">
+<div class="admonition caution">
 <p class="admonition-title">Code</p>
 <div class="tabbed-set" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><label for="__tabbed_3_1">html</label><div class="tabbed-content">
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>    <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;checkbox&quot;</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;testCase&quot;</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;Case 1&quot;</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;case1&quot;</span> <span class="p">&gt;</span> Case 1
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>    <span class="p">&lt;</span><span class="nt">form</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;casesACocher&quot;</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;checkbox&quot;</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;testCase&quot;</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;Case 1&quot;</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;case1&quot;</span><span class="p">&gt;</span>Case 1   <span class="p">&lt;</span><span class="nt">br</span><span class="p">&gt;</span>  
+            ...
+            <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;button&quot;</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;tester&quot;</span> <span class="na">onclick</span><span class="o">=</span><span class="s">&quot;...&quot;</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+        <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">form</span><span class="p">&gt;</span>
 </code></pre></div>
 </td></tr></table>
 </div>
@@ -1228,7 +1255,9 @@
 </div>
 </div>
 </div>
-<p>Remarque 1 : ici le choix a été de faire apparaître la légende (Case 1) après le bouton donc après la balise.<br />
+<p>!!!  faq "A faire"
+    Compléter le code HTML pour ajouter les deux cases manquantes, le bouton de validation et le bloc pour récupérer le résultat.
+ Remarque 1 : ici le choix a été de faire apparaître la légende (Case 1) après le bouton donc après la balise.<br />
  Remarque 2 : il faut donner le même nom aux cases à cocher mais des id différents.</p>
 <h3 id="selection">Sélection<a class="headerlink" href="#selection" title="Permanent link">⚓︎</a></h3>
 <div class="admonition example">
@@ -1240,12 +1269,12 @@
 <option name="selection" value="mot 1" id="mot1">mot 1</option>
 <option name="selection" value="mot 2" id="mot2">mot 2</option>
 </select>
-<input type="button" value="tester" onclick="testMenu()">
+<input type="button" style="margin:5px; padding:5px;  background-color : lightblue; border : solid 2px blue; border-radius : 5px;" value="tester" onclick="testMenu()">
 </div>
 </form>
 <div id="texteMenu" class="rajout"></div></p>
 </div>
-<div class="admonition faq">
+<div class="admonition caution">
 <p class="admonition-title">Code</p>
 <div class="tabbed-set" data-tabs="4:2"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio" /><label for="__tabbed_4_1">html</label><div class="tabbed-content">
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
@@ -1281,6 +1310,10 @@
 </div>
 </div>
 </div>
+<div class="admonition faq">
+<p class="admonition-title">A faire</p>
+<p>Récupérer et modifier le code pour créer votre propre liste déroulante et récupérer le résultat.</p>
+</div>
 <p>Remarque 1 : ici le choix a été de faire apparaître une première légende vide (…) pour l'affichage par défaut (qui est la première balise <code>option</code>).<br />
 Remarque 2 : il faut donner le même nom aux balises <code>option</code> mais des id différents.  <br />
 exemple :  on teste quel mot a été sélectionné <code>selected</code> ; on rajoute alors ce mot dans le texte (aecrire) à afficher dans le bloc d'identifiant "texteMenu".</p>
@@ -1290,12 +1323,12 @@ exemple :  on teste quel mot a été sélectionné <code>selected</code> ; on ra
 <p><form>
 <div id="zoneTexte">
 Entrez votre texte : <input type="text" value="" id="saisie">
-<input type="button" value="tester" onclick="testSaisie()">
+<input type="button" style="margin:5px; padding:5px;  background-color : lightblue; border : solid 2px blue; border-radius : 5px;" value="tester" onclick="testSaisie()">
 </div>
 </form>
 <div id="texteSaisie" class="rajout"></div></p>
 </div>
-<div class="admonition faq">
+<div class="admonition caution">
 <p class="admonition-title">Code</p>
 <div class="tabbed-set" data-tabs="5:2"><input checked="checked" id="__tabbed_5_1" name="__tabbed_5" type="radio" /><label for="__tabbed_5_1">html</label><div class="tabbed-content">
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>    Entrez votre texte : <span class="p">&lt;</span> <span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;text&quot;</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;&quot;</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;saisie&quot;</span> <span class="p">&gt;</span>
