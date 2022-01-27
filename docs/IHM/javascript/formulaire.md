@@ -1,20 +1,22 @@
-#Les Formulaires
-##Quelques éléments de formulaires
+# Les Formulaires
+## Quelques éléments de formulaires
 ### Le bouton
+
+
 
 !!! example "Exemple"
 
 	<form>
-	 <input type="button" value="tester" onclick="testBidon()"></td>
+	 <input type="button" style="margin:5px; padding:5px;  background-color : lightblue; border : solid 2px blue; border-radius : 5px;"  value="tester" onclick="testBidon()">
 	</form>
 	<div id="casecouleur"> Un élément de formulaire fondamental : le bouton</div>
 
-!!! faq "Code"
+!!! caution "Code"
 
 	=== "html"
 
 		```html
-		<input type="button" value="tester" onclick="testBidon()"> 
+		<input type="button" value="tester"  onclick="testBidon()"> 
 		```
 
 	=== "javascript"
@@ -25,7 +27,7 @@
     		}
 		```
 
-###Boutons radio
+### Boutons radio
 Il faut donner le même nom aux boutons radios mais des `id` différents
 !!! example "Exemple"
 
@@ -34,15 +36,19 @@ Il faut donner le même nom aux boutons radios mais des `id` différents
 	2<input type="radio" name="testRad" value="2" id="radio2">
 	3<input type="radio" name="testRad" value="3" id="radio3">
 	4<input type="radio" name="testRad" value="4" id="radio4">
-	<input type="button" value="tester" onclick="testRadio()">
+	<input type="button" style="margin:5px; padding:5px;  background-color : lightblue; border : solid 2px blue; border-radius : 5px;" value="tester" onclick="testRadio()">
 	</form>
 	<div id="texteRadio" class="rajout"></div>
 
-!!! faq "Code"
+!!! caution "Code"
 
 	=== "html"
 		```html
-			1 <input type="radio" name="testRad" value="1" id="radio1">
+			  1 <input type="radio" name="testRad" value="1" id="radio1">
+			  2 <input type="radio" name="testRad" value="2" id="radio2">
+			  ...
+			  <div id="texteRadio"></div>
+			<input type="button" value="tester" onclick="tesRadio()"> 
 		```
 
 	=== "javascript"
@@ -59,7 +65,12 @@ Il faut donner le même nom aux boutons radios mais des `id` différents
 			}
 		```
 
-###Cases à cocher
+Le contenu de la variable `contenu` est écrit dans une balise dont l'`id` est `texteRadio` initialement vide.
+
+!!! faq  "A faire"
+	Compléter et tester le code pour ajouter les deux boutons radio manquant.
+
+### Cases à cocher
 
 !!! example "Exemple"
 
@@ -68,17 +79,24 @@ Il faut donner le même nom aux boutons radios mais des `id` différents
 	<input type="checkbox" name="testCase" value="Case 1" id="case1">Case 1   <br>  
 	<input type="checkbox" name="testCase" value="Case 2" id="case2"> Case 2  <br>  
 	 <input type="checkbox" name="testCase" value="Case 3" id="case3">Case 3<br>
-	<input type="button" value="tester" onclick="testCases()">
+	<input type="button" style="margin:5px; padding:5px;  background-color : lightblue; border : solid 2px blue; border-radius : 5px;" value="tester" onclick="testCases()">
 	<div id="texteCases" class="rajout"></div>
 	</div>
 	</form>
 
 
-!!! faq "Code"
+!!! caution "Code"
 
 	=== "html"
 		```html
-			<input type="checkbox" name="testCase" value="Case 1" id="case1" > Case 1
+			<form>
+				<div id="casesACocher">
+					<input type="checkbox" name="testCase" value="Case 1" id="case1">Case 1   <br>  
+					...
+					<input type="button" value="tester" onclick="...">
+					<div></div>
+				</div>
+			</form>
 		```
 
 	=== "javascript"
@@ -94,10 +112,12 @@ Il faut donner le même nom aux boutons radios mais des `id` différents
 			}
 		```
 
+!!!  faq "A faire"
+	Compléter le code HTML pour ajouter les deux cases manquantes, le bouton de validation et le bloc pour récupérer le résultat.
  Remarque 1 : ici le choix a été de faire apparaître la légende (Case 1) après le bouton donc après la balise.  
  Remarque 2 : il faut donner le même nom aux cases à cocher mais des id différents.
 	
-###Sélection
+### Sélection
 
 
 !!! example "Exemple"
@@ -109,12 +129,12 @@ Il faut donner le même nom aux boutons radios mais des `id` différents
 	<option name="selection" value="mot 1" id="mot1">mot 1</option>
 	<option name="selection" value="mot 2" id="mot2">mot 2</option>
 	</select>
-	<input type="button" value="tester" onclick="testMenu()">
+	<input type="button" style="margin:5px; padding:5px;  background-color : lightblue; border : solid 2px blue; border-radius : 5px;" value="tester" onclick="testMenu()">
 	</div>
 	</form>
 	<div id="texteMenu" class="rajout"></div>
 
-!!! faq "Code"
+!!! caution "Code"
 
 	=== "html"
 		```html
@@ -137,22 +157,26 @@ Il faut donner le même nom aux boutons radios mais des `id` différents
 		}
 		```
 		
+!!! faq "A faire"
+	Récupérer et modifier le code pour créer votre propre liste déroulante et récupérer le résultat.
+
+	
 Remarque 1 : ici le choix a été de faire apparaître une première légende vide (…) pour l'affichage par défaut (qui est la première balise `option`).  
 Remarque 2 : il faut donner le même nom aux balises `option` mais des id différents.	
 exemple :  on teste quel mot a été sélectionné `selected` ; on rajoute alors ce mot dans le texte (aecrire) à afficher dans le bloc d'identifiant "texteMenu".
 	
-###Récupération de texte 
+### Récupération de texte 
 !!! example "Exemple"
 
 	<form>
 	<div id="zoneTexte">
 	Entrez votre texte : <input type="text" value="" id="saisie">
-	<input type="button" value="tester" onclick="testSaisie()">
+	<input type="button" style="margin:5px; padding:5px;  background-color : lightblue; border : solid 2px blue; border-radius : 5px;" value="tester" onclick="testSaisie()">
     </div>
 	</form>
 	<div id="texteSaisie" class="rajout"></div>
 
-!!! faq "Code"
+!!! caution "Code"
 
 	=== "html"
 		```html
@@ -175,7 +199,7 @@ Remarque : il existe d'autres balises permettant de récupérer un texte plus lo
 exemple : on récupère le texte entré `value` ; on rajoute alors ce texte dans le texte (aecrire) à afficher dans le bloc d'identifiant "texteSaisie".
 
 ---
-###Remarques
+### Remarques
 Le choix a été fait ici de focaliser sur la construction du formulaire pour récupérer des données et non pas sur la transmission de ces données. La transmission des données fera l'objet d'un cours ultérieur.  
 
 Seuls quelques éléments de formulaires et leur utilisation basique ont été présentés dans ce cours. Pour approfondir, il existe de nombreuses ressources en ligne. 
@@ -186,7 +210,7 @@ Seuls quelques éléments de formulaires et leur utilisation basique ont été p
     - un memento des éléments de formulaire et de leurs attributs sur <a href="https://www.toutjavascript.com/savoir/savoir06_1.php3">toutjavascript.com</a>
     - fonctionnalités avancées sur <a href="https://openclassrooms.com/fr/courses/1916641-dynamisez-vos-sites-web-avec-javascript/1919022-les-formulaires">Openclassroom</a>
 
-##Application
+## Application
 
 Vous êtes en charge du site de commande pour la commercialisation d'un mini-drone.
 A vous de construire le formulaire sur la page de commande et de compléter la page d'accusé de réception accessible après validation du formulaire. Les données entrées dans le formulaire devront être récapituler en dessous lors de la validation de celui-ci.
