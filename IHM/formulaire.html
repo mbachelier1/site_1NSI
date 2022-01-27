@@ -10,15 +10,15 @@
       
       
       <link rel="icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.2.1, mkdocs-material-7.1.8">
+      <meta name="generator" content="mkdocs-1.2.1, mkdocs-material-7.1.10">
     
     
       
-        <title>Formulaire - NSI au Lycée Henri Avril</title>
+        <title>Les Formulaires - NSI au Lycée Henri Avril</title>
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.ca7ac06f.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.1fe995fd.min.css">
       
         
         <link rel="stylesheet" href="../assets/stylesheets/palette.f1a3b89f.min.css">
@@ -94,7 +94,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Formulaire
+              Les Formulaires
             
           </span>
         </div>
@@ -1017,21 +1017,21 @@
 <div class="admonition example">
 <p class="admonition-title">Exemple</p>
 <p><form>
- <input type="button" value="tester" onclick="testBidon()"></td>
+ <input type="button" style="margin:5px; padding:5px;  background-color : lightblue; border : solid 2px blue; border-radius : 5px;"  value="tester" onclick="testBidon()">
 </form>
 <div id="casecouleur"> Un élément de formulaire fondamental : le bouton</div></p>
 </div>
 <div class="admonition faq">
 <p class="admonition-title">Code</p>
 <div class="tabbed-set" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><label for="__tabbed_1_1">html</label><div class="tabbed-content">
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;button&quot;</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;tester&quot;</span> <span class="na">onclick</span><span class="o">=</span><span class="s">&quot;testBidon()&quot;</span><span class="p">&gt;</span> 
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;button&quot;</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;tester&quot;</span> <span class="na">style</span><span class="o">=</span><span class="s">&quot;margin:5px; padding:5px;  background-color : lightblue; border : solid 2px blue; border-radius : 5px;&quot;</span> <span class="na">onclick</span><span class="o">=</span><span class="s">&quot;testBidon()&quot;</span><span class="p">&gt;</span> 
 </code></pre></div>
 </td></tr></table>
 </div>
 <input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><label for="__tabbed_1_2">javascript</label><div class="tabbed-content">
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
-2
-3</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kd">function</span> <span class="nx">testBidon</span><span class="p">(){</span>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kd">function</span> <span class="nx">testBidon</span><span class="p">(){</span>
             <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&quot;casecouleur&quot;</span><span class="p">).</span><span class="nx">style</span><span class="p">.</span><span class="nx">backgroundColor</span><span class="o">=</span><span class="s1">&#39;aqua&#39;</span><span class="p">;</span>
     <span class="p">}</span>
 </code></pre></div>
@@ -1048,28 +1048,38 @@
 2<input type="radio" name="testRad" value="2" id="radio2">
 3<input type="radio" name="testRad" value="3" id="radio3">
 4<input type="radio" name="testRad" value="4" id="radio4">
-<input type="button" value="tester" onclick="testRadio()">
+<input type="button" style="margin:5px; padding:5px;  background-color : lightblue; border : solid 2px blue; border-radius : 5px;" value="tester" onclick="testRadio()">
 </form>
 <div id="texteRadio" class="rajout"></div></p>
 </div>
 <div class="admonition faq">
 <p class="admonition-title">Code</p>
 <div class="tabbed-set" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><label for="__tabbed_2_1">html</label><div class="tabbed-content">
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>    1 <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;radio&quot;</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;testRad&quot;</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;1&quot;</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;radio1&quot;</span><span class="p">&gt;</span>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>      1 <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;radio&quot;</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;testRad&quot;</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;1&quot;</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;radio1&quot;</span><span class="p">&gt;</span>
+      2 <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;radio&quot;</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;testRad&quot;</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;1&quot;</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;radio1&quot;</span><span class="p">&gt;</span>
+      3 <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;radio&quot;</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;testRad&quot;</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;1&quot;</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;radio1&quot;</span><span class="p">&gt;</span>
+      4 <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;radio&quot;</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;testRad&quot;</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;1&quot;</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;radio1&quot;</span><span class="p">&gt;</span>
+
+    <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;button&quot;</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;tester&quot;</span> <span class="na">onclick</span><span class="o">=</span><span class="s">&quot;tesRadio()&quot;</span><span class="p">&gt;</span> 
 </code></pre></div>
 </td></tr></table>
 </div>
 <input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><label for="__tabbed_2_2">javascript</label><div class="tabbed-content">
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kd">function</span> <span class="nx">testRadio</span><span class="p">(){</span>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kd">function</span> <span class="nx">testRadio</span><span class="p">(){</span>
     <span class="kd">var</span> <span class="nx">aecrire</span><span class="o">=</span><span class="s2">&quot;Le bouton radio sélectionné est le &quot;</span><span class="p">;</span> 
     <span class="k">if</span> <span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;radio1&#39;</span><span class="p">).</span><span class="nx">checked</span><span class="p">)</span> <span class="nx">aecrire</span><span class="o">+=</span><span class="mf">1</span><span class="p">;</span>
     <span class="k">if</span> <span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;radio2&#39;</span><span class="p">).</span><span class="nx">checked</span><span class="p">)</span> <span class="nx">aecrire</span><span class="o">+=</span><span class="mf">2</span><span class="p">;</span>
@@ -1092,7 +1102,7 @@
 <input type="checkbox" name="testCase" value="Case 1" id="case1">Case 1   <br><br />
 <input type="checkbox" name="testCase" value="Case 2" id="case2"> Case 2  <br><br />
  <input type="checkbox" name="testCase" value="Case 3" id="case3">Case 3<br>
-<input type="button" value="tester" onclick="testCases()">
+<input type="button" style="margin:5px; padding:5px;  background-color : lightblue; border : solid 2px blue; border-radius : 5px;" value="tester" onclick="testCases()">
 <div id="texteCases" class="rajout"></div>
 </div>
 </form></p>
@@ -1100,20 +1110,36 @@
 <div class="admonition faq">
 <p class="admonition-title">Code</p>
 <div class="tabbed-set" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><label for="__tabbed_3_1">html</label><div class="tabbed-content">
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>    <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;checkbox&quot;</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;testCase&quot;</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;Case 1&quot;</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;case1&quot;</span> <span class="p">&gt;</span> Case 1
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span>
+<span class="normal">9</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>    <span class="p">&lt;</span><span class="nt">form</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;casesACocher&quot;</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;checkbox&quot;</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;testCase&quot;</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;Case 1&quot;</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;case1&quot;</span><span class="p">&gt;</span>Case 1   <span class="p">&lt;</span><span class="nt">br</span><span class="p">&gt;</span>  
+        <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;checkbox&quot;</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;testCase&quot;</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;Case 2&quot;</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;case2&quot;</span><span class="p">&gt;</span> Case 2  <span class="p">&lt;</span><span class="nt">br</span><span class="p">&gt;</span>  
+         <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;checkbox&quot;</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;testCase&quot;</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;Case 3&quot;</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;case3&quot;</span><span class="p">&gt;</span>Case 3<span class="p">&lt;</span><span class="nt">br</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;button&quot;</span> <span class="na">style</span><span class="o">=</span><span class="s">&quot;margin:5px; padding:5px;  background-color : lightblue; border : solid 2px blue; border-radius : 5px;&quot;</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;tester&quot;</span> <span class="na">onclick</span><span class="o">=</span><span class="s">&quot;testCases()&quot;</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;texteCases&quot;</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;rajout&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+        <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+        <span class="p">&lt;/</span><span class="nt">form</span><span class="p">&gt;</span>
 </code></pre></div>
 </td></tr></table>
 </div>
 <input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><label for="__tabbed_3_2">javascript</label><div class="tabbed-content">
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
-2
-3
-4
-5
-6
-7
-8
-9</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kd">function</span> <span class="nx">testCases</span><span class="p">(){</span>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span>
+<span class="normal">9</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kd">function</span> <span class="nx">testCases</span><span class="p">(){</span>
     <span class="kd">var</span> <span class="nx">aecrire</span><span class="o">=</span><span class="s2">&quot;vous avez coché &quot;</span><span class="p">;</span>
     <span class="k">if</span> <span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;case1&#39;</span><span class="p">).</span><span class="nx">checked</span><span class="p">)</span> <span class="nx">aecrire</span><span class="o">+=</span><span class="s2">&quot; la case 1, &quot;</span><span class="p">;</span>
     <span class="k">if</span> <span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;case2&#39;</span><span class="p">).</span><span class="nx">checked</span><span class="p">)</span> <span class="nx">aecrire</span><span class="o">+=</span><span class="s2">&quot; la case 2, &quot;</span><span class="p">;</span>
@@ -1139,7 +1165,7 @@
 <option name="selection" value="mot 1" id="mot1">mot 1</option>
 <option name="selection" value="mot 2" id="mot2">mot 2</option>
 </select>
-<input type="button" value="tester" onclick="testMenu()">
+<input type="button" style="margin:5px; padding:5px;  background-color : lightblue; border : solid 2px blue; border-radius : 5px;" value="tester" onclick="testMenu()">
 </div>
 </form>
 <div id="texteMenu" class="rajout"></div></p>
@@ -1147,11 +1173,11 @@
 <div class="admonition faq">
 <p class="admonition-title">Code</p>
 <div class="tabbed-set" data-tabs="4:2"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio" /><label for="__tabbed_4_1">html</label><div class="tabbed-content">
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
-2
-3
-4
-5</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">select</span> <span class="p">&gt;</span>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">select</span> <span class="p">&gt;</span>
 <span class="p">&lt;</span> <span class="nt">option</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;selection&quot;</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;...&quot;</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;rien&quot;</span> <span class="p">&gt;</span>....<span class="p">&lt;</span> <span class="p">/</span><span class="nt">option</span> <span class="p">&gt;</span>
 <span class="p">&lt;</span> <span class="nt">option</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;selection&quot;</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;mot 1&quot;</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;mot1&quot;</span> <span class="p">&gt;</span> mot 1 <span class="p">&lt;/</span><span class="nt">option</span> <span class="p">&gt;</span> 
 <span class="p">&lt;</span> <span class="nt">option</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;selection&quot;</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;mot 2&quot;</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;mot2&quot;</span><span class="p">&gt;</span> mot 2 <span class="p">&lt;/</span><span class="nt">option</span> <span class="p">&gt;</span>
@@ -1160,14 +1186,14 @@
 </td></tr></table>
 </div>
 <input id="__tabbed_4_2" name="__tabbed_4" type="radio" /><label for="__tabbed_4_2">javascript</label><div class="tabbed-content">
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
-2
-3
-4
-5
-6
-7
-8</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kd">function</span> <span class="nx">testMenu</span><span class="p">(){</span>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kd">function</span> <span class="nx">testMenu</span><span class="p">(){</span>
 <span class="kd">var</span> <span class="nx">aecrire</span><span class="o">=</span><span class="s2">&quot;vous avez sélectionné &quot;</span><span class="p">;</span>
 <span class="k">if</span> <span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;mot1&#39;</span><span class="p">).</span><span class="nx">selected</span><span class="p">)</span> <span class="nx">aecrire</span><span class="o">+=</span><span class="s2">&quot;le mot 1&quot;</span><span class="p">;</span>
 <span class="k">if</span> <span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;mot2&#39;</span><span class="p">).</span><span class="nx">selected</span><span class="p">)</span> <span class="nx">aecrire</span><span class="o">+=</span><span class="s2">&quot;le mot 2&quot;</span><span class="p">;</span>
@@ -1189,7 +1215,7 @@ exemple :  on teste quel mot a été sélectionné <code>selected</code> ; on ra
 <p><form>
 <div id="zoneTexte">
 Entrez votre texte : <input type="text" value="" id="saisie">
-<input type="button" value="tester" onclick="testSaisie()">
+<input type="button" style="margin:5px; padding:5px;  background-color : lightblue; border : solid 2px blue; border-radius : 5px;" value="tester" onclick="testSaisie()">
 </div>
 </form>
 <div id="texteSaisie" class="rajout"></div></p>
@@ -1197,18 +1223,18 @@ Entrez votre texte : <input type="text" value="" id="saisie">
 <div class="admonition faq">
 <p class="admonition-title">Code</p>
 <div class="tabbed-set" data-tabs="5:2"><input checked="checked" id="__tabbed_5_1" name="__tabbed_5" type="radio" /><label for="__tabbed_5_1">html</label><div class="tabbed-content">
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>    Entrez votre texte : <span class="p">&lt;</span> <span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;text&quot;</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;&quot;</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;saisie&quot;</span> <span class="p">&gt;</span>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>    Entrez votre texte : <span class="p">&lt;</span> <span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;text&quot;</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;&quot;</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;saisie&quot;</span> <span class="p">&gt;</span>
 </code></pre></div>
 </td></tr></table>
 </div>
 <input id="__tabbed_5_2" name="__tabbed_5" type="radio" /><label for="__tabbed_5_2">javascript</label><div class="tabbed-content">
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
-2
-3
-4
-5
-6
-7</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kd">function</span> <span class="nx">testSaisie</span><span class="p">(){</span>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kd">function</span> <span class="nx">testSaisie</span><span class="p">(){</span>
 <span class="kd">var</span> <span class="nx">aecrire</span><span class="o">=</span><span class="s2">&quot;vous avez écrit &quot;</span><span class="p">;</span>
 <span class="nx">aecrire</span><span class="o">+=</span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;saisie&#39;</span><span class="p">).</span><span class="nx">value</span><span class="p">;</span>
 <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;texteSaisie&#39;</span><span class="p">).</span><span class="nx">innerHTML</span><span class="o">=</span><span class="nx">aecrire</span><span class="p">;</span>
@@ -1326,8 +1352,9 @@ document.getElementById("aremplir").innerHTML=obj;
           </div>
         </div>
         
-          <a href="#" class="md-top md-icon" title="Back to top" data-md-component="top" data-md-state="hidden">
+          <a href="#" class="md-top md-icon" data-md-component="top" data-md-state="hidden">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"/></svg>
+            Back to top
           </a>
         
       </main>
@@ -1354,10 +1381,10 @@ document.getElementById("aremplir").innerHTML=obj;
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.tabs", "navigation.expand", "navigation.top", "toc.integrate", "header.autohide"], "translations": {"clipboard.copy": "Copier dans le presse-papier", "clipboard.copied": "Copi\u00e9 dans le presse-papier", "search.config.lang": "fr", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Rechercher", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../assets/javascripts/workers/search.b0710199.min.js", "version": null}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.tabs", "navigation.expand", "navigation.top", "toc.integrate", "header.autohide"], "translations": {"clipboard.copy": "Copier dans le presse-papier", "clipboard.copied": "Copi\u00e9 dans le presse-papier", "search.config.lang": "fr", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Rechercher", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../assets/javascripts/workers/search.477d984a.min.js", "version": null}</script>
     
     
-      <script src="../assets/javascripts/bundle.76f349be.min.js"></script>
+      <script src="../assets/javascripts/bundle.ddd52ceb.min.js"></script>
       
         <script src="../javascripts/extra.js"></script>
       

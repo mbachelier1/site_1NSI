@@ -10,7 +10,7 @@
       
       
       <link rel="icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.2.1, mkdocs-material-7.1.8">
+      <meta name="generator" content="mkdocs-1.2.1, mkdocs-material-7.1.10">
     
     
       
@@ -18,7 +18,7 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.ca7ac06f.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.1fe995fd.min.css">
       
         
         <link rel="stylesheet" href="../assets/stylesheets/palette.f1a3b89f.min.css">
@@ -1028,12 +1028,12 @@
                 <h1 id="les-tuples">Les tuples<a class="headerlink" href="#les-tuples" title="Permanent link">⚓︎</a></h1>
 <p>Un tuple, ou n-uplet, est un type données Python constitués d'éléments séparés par des virgules, et encadrés par des parenthèses. Un tuple ressemble à une liste, mais un tuple n'est pas modifiable (ni insertion ni suppression ni remplacement de valeurs).<br />
 La syntaxe diffère des listes en utilisant les paranthèses au lieu des crochets.<br />
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
-2
-3
-4
-5
-6</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">a</span><span class="o">=</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">)</span> <span class="c1">#a est un tuple contenant les valeurs 3 et 4</span>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">a</span><span class="o">=</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">)</span> <span class="c1">#a est un tuple contenant les valeurs 3 et 4</span>
 
 <span class="n">u</span><span class="p">,</span><span class="n">v</span><span class="o">=</span><span class="n">a</span> <span class="c1">#permet de récupérer séparément les valeurs contennues dans a</span>
 <span class="c1">#u sera égal à 3 te v à 4</span>
@@ -1042,8 +1042,8 @@ La syntaxe diffère des listes en utilisant les paranthèses au lieu des crochet
 </code></pre></div>
 </td></tr></table>
 Si on essaye de supprimer par exemple : 
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
-2</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">a</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">a</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
 <span class="c1">#si on essaye de supprimer une valeur le programme renvoie une erreur</span>
 </code></pre></div>
 </td></tr></table>
@@ -1051,20 +1051,20 @@ Les tuples sont utilisés lorsque l'on souhaite que les données ne soient pas m
 <hr />
 <h1 id="les-dictionnaires">Les dictionnaires<a class="headerlink" href="#les-dictionnaires" title="Permanent link">⚓︎</a></h1>
 <p>un dictionnaire est une collection de valeurs, un peu comme une liste sauf que les valeurs ne sont pas ordonnées mais associées deux à deux. Chaque valeur du dictionnaire correspond à une clé. Par exemple : 
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">nb_pneus</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;voiture&quot;</span> <span class="p">:</span> <span class="mi">4</span><span class="p">,</span><span class="s2">&quot;vélo&quot;</span> <span class="p">:</span> <span class="mi">2</span><span class="p">,</span><span class="s2">&quot;tricycle&quot;</span> <span class="p">:</span> <span class="mi">3</span><span class="p">}</span>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">nb_pneus</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;voiture&quot;</span> <span class="p">:</span> <span class="mi">4</span><span class="p">,</span><span class="s2">&quot;vélo&quot;</span> <span class="p">:</span> <span class="mi">2</span><span class="p">,</span><span class="s2">&quot;tricycle&quot;</span> <span class="p">:</span> <span class="mi">3</span><span class="p">}</span>
 </code></pre></div>
 </td></tr></table>
 Voici un dictionnaire qui associe la valeur 4 aux voitures, 2 aux vélos, ...<br />
 "voiture", "vélo", "tricycle" sont les clés du dictionnaire et 4, 2 et 3 sont les valeurs correspndant aux clés.</p>
 <h2 id="ajouter-modifier-et-supprimer-un-element">Ajouter, modifier et supprimer un élément<a class="headerlink" href="#ajouter-modifier-et-supprimer-un-element" title="Permanent link">⚓︎</a></h2>
 <p>On peut créer un dictionnaire vide <code>dico={}</code> puis ajouter des valeurs au fur et à mesure avec la syntaxe <code>dico[cle]=valeur</code>.<br />
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
-2
-3
-4
-5
-6
-7</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">dico</span><span class="o">=</span><span class="p">{}</span>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">dico</span><span class="o">=</span><span class="p">{}</span>
 <span class="n">dico</span><span class="p">[</span><span class="s2">&quot;maths&quot;</span><span class="p">]</span><span class="o">=</span><span class="mi">12</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">dico</span><span class="p">)</span>
 
@@ -1074,16 +1074,16 @@ Voici un dictionnaire qui associe la valeur 4 aux voitures, 2 aux vélos, ...<br
 </code></pre></div>
 </td></tr></table></p>
 <p>une fois créée, on peut modifier cette valeur :
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">dico</span><span class="o">=</span><span class="p">{}</span>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">dico</span><span class="o">=</span><span class="p">{}</span>
 <span class="n">dico</span><span class="p">[</span><span class="s2">&quot;maths&quot;</span><span class="p">]</span><span class="o">=</span><span class="mi">12</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">dico</span><span class="p">)</span>
 <span class="n">dico</span><span class="p">[</span><span class="s2">&quot;maths&quot;</span><span class="p">]</span><span class="o">=</span><span class="mi">20</span>
@@ -1096,19 +1096,19 @@ Voici un dictionnaire qui associe la valeur 4 aux voitures, 2 aux vélos, ...<br
 </code></pre></div>
 </td></tr></table></p>
 <p>ou la supprimer :
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10
-11
-12
-13</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">dico</span><span class="o">=</span><span class="p">{}</span>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">dico</span><span class="o">=</span><span class="p">{}</span>
 <span class="n">dico</span><span class="p">[</span><span class="s2">&quot;maths&quot;</span><span class="p">]</span><span class="o">=</span><span class="mi">12</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">dico</span><span class="p">)</span>
 <span class="n">dico</span><span class="p">[</span><span class="s2">&quot;NSI&quot;</span><span class="p">]</span><span class="o">=</span><span class="mi">14</span>
@@ -1125,16 +1125,16 @@ Voici un dictionnaire qui associe la valeur 4 aux voitures, 2 aux vélos, ...<br
 </td></tr></table></p>
 <h2 id="acceder-aux-elements-dun-dictionnaire">Accéder aux éléments d'un dictionnaire<a class="headerlink" href="#acceder-aux-elements-dun-dictionnaire" title="Permanent link">⚓︎</a></h2>
 <p>Nous allons partir de ce dictionnaire :
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">moyennes</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;maths&quot;</span> <span class="p">:</span> <span class="mi">12</span><span class="p">,</span> <span class="s2">&quot;NSI&quot;</span> <span class="p">:</span> <span class="mi">14</span><span class="p">,</span> <span class="s2">&quot;Anglais&quot;</span> <span class="p">:</span> <span class="mi">8</span><span class="p">,</span> <span class="s2">&quot;Histoire&quot;</span> <span class="p">:</span> <span class="mi">18</span><span class="p">}</span>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">moyennes</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;maths&quot;</span> <span class="p">:</span> <span class="mi">12</span><span class="p">,</span> <span class="s2">&quot;NSI&quot;</span> <span class="p">:</span> <span class="mi">14</span><span class="p">,</span> <span class="s2">&quot;Anglais&quot;</span> <span class="p">:</span> <span class="mi">8</span><span class="p">,</span> <span class="s2">&quot;Histoire&quot;</span> <span class="p">:</span> <span class="mi">18</span><span class="p">}</span>
 </code></pre></div>
 </td></tr></table></p>
 <h3 id="acceder-a-la-valeur-correspndant-a-une-cle">Accéder à la valeur correspndant à une clé<a class="headerlink" href="#acceder-a-la-valeur-correspndant-a-une-cle" title="Permanent link">⚓︎</a></h3>
 <p>Pour récupérer la valeur correspondant à la clé "NSI" par exemple :<br />
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
-2
-3
-4
-5</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="n">moyennes</span><span class="p">[</span><span class="s2">&quot;NSI&quot;</span><span class="p">])</span>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="n">moyennes</span><span class="p">[</span><span class="s2">&quot;NSI&quot;</span><span class="p">])</span>
 
 <span class="o">&gt;&gt;&gt;</span> <span class="c1"># script executed</span>
 <span class="mi">14</span>
@@ -1142,11 +1142,11 @@ Voici un dictionnaire qui associe la valeur 4 aux voitures, 2 aux vélos, ...<br
 </code></pre></div>
 </td></tr></table></p>
 <h3 id="acceder-a-la-liste-des-cles">Accéder à la liste des clés<a class="headerlink" href="#acceder-a-la-liste-des-cles" title="Permanent link">⚓︎</a></h3>
-<p><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
-2
-3
-4
-5</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="n">moyennes</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span>
+<p><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="n">moyennes</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span>
 
 <span class="o">&gt;&gt;&gt;</span> <span class="c1"># script executed</span>
 <span class="n">dict_keys</span><span class="p">([</span><span class="s1">&#39;maths&#39;</span><span class="p">,</span> <span class="s1">&#39;NSI&#39;</span><span class="p">,</span> <span class="s1">&#39;Anglais&#39;</span><span class="p">,</span> <span class="s1">&#39;Histoire&#39;</span><span class="p">])</span>
@@ -1155,11 +1155,11 @@ Voici un dictionnaire qui associe la valeur 4 aux voitures, 2 aux vélos, ...<br
 </td></tr></table>
 On constate que l'on a QUE LES CLES et sous la forme d'un objet un peu spécial non manipulable.<br />
 Pour utiliser cette liste nous allons la convertir en liste avec la méthode <code>list</code>.</p>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
-2
-3
-4
-5</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="n">moyennes</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="n">moyennes</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span>
 
 <span class="o">&gt;&gt;&gt;</span> <span class="c1"># script executed</span>
 <span class="p">[</span><span class="s1">&#39;maths&#39;</span><span class="p">,</span> <span class="s1">&#39;NSI&#39;</span><span class="p">,</span> <span class="s1">&#39;Anglais&#39;</span><span class="p">,</span> <span class="s1">&#39;Histoire&#39;</span><span class="p">]</span>
@@ -1168,13 +1168,13 @@ Pour utiliser cette liste nous allons la convertir en liste avec la méthode <co
 </td></tr></table>
 <h3 id="acceder-a-la-liste-des-valeurs">Accéder à la liste des valeurs<a class="headerlink" href="#acceder-a-la-liste-des-valeurs" title="Permanent link">⚓︎</a></h3>
 <p>Comme pour les clés, nous allons convertir en liste le résultat :</p>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
-2
-3
-4
-5
-6
-7</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="n">moyennes</span><span class="o">.</span><span class="n">values</span><span class="p">())</span>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="n">moyennes</span><span class="o">.</span><span class="n">values</span><span class="p">())</span>
 <span class="nb">print</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="n">moyennes</span><span class="o">.</span><span class="n">values</span><span class="p">()))</span>
 
 <span class="o">&gt;&gt;&gt;</span> <span class="c1"># script executed</span>
@@ -1185,13 +1185,13 @@ Pour utiliser cette liste nous allons la convertir en liste avec la méthode <co
 </td></tr></table>
 <h3 id="acceder-a-la-liste-des-couples-clevaleur">Accéder à la liste des couples (clé,valeur)<a class="headerlink" href="#acceder-a-la-liste-des-couples-clevaleur" title="Permanent link">⚓︎</a></h3>
 <p>Les couples (clé,valeur) sont appelés les <code>items</code> d'un dictionnaire. La fonction <code>items()</code> permet de les réupérer sous forme de tuples et nous allons encore une fois les ranger dans une liste pour plus de facilités.
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
-2
-3
-4
-5
-6
-7</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="n">moyennes</span><span class="o">.</span><span class="n">items</span><span class="p">())</span>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="n">moyennes</span><span class="o">.</span><span class="n">items</span><span class="p">())</span>
 <span class="nb">print</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="n">moyennes</span><span class="o">.</span><span class="n">items</span><span class="p">()))</span>
 
 <span class="o">&gt;&gt;&gt;</span> <span class="c1"># script executed</span>
@@ -1225,8 +1225,9 @@ Pour utiliser cette liste nous allons la convertir en liste avec la méthode <co
           </div>
         </div>
         
-          <a href="#" class="md-top md-icon" title="Back to top" data-md-component="top" data-md-state="hidden">
+          <a href="#" class="md-top md-icon" data-md-component="top" data-md-state="hidden">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"/></svg>
+            Back to top
           </a>
         
       </main>
@@ -1288,10 +1289,10 @@ Pour utiliser cette liste nous allons la convertir en liste avec la méthode <co
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.tabs", "navigation.expand", "navigation.top", "toc.integrate", "header.autohide"], "translations": {"clipboard.copy": "Copier dans le presse-papier", "clipboard.copied": "Copi\u00e9 dans le presse-papier", "search.config.lang": "fr", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Rechercher", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../assets/javascripts/workers/search.b0710199.min.js", "version": null}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.tabs", "navigation.expand", "navigation.top", "toc.integrate", "header.autohide"], "translations": {"clipboard.copy": "Copier dans le presse-papier", "clipboard.copied": "Copi\u00e9 dans le presse-papier", "search.config.lang": "fr", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Rechercher", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../assets/javascripts/workers/search.477d984a.min.js", "version": null}</script>
     
     
-      <script src="../assets/javascripts/bundle.76f349be.min.js"></script>
+      <script src="../assets/javascripts/bundle.ddd52ceb.min.js"></script>
       
         <script src="../javascripts/extra.js"></script>
       
