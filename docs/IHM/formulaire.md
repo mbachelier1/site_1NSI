@@ -1,11 +1,13 @@
-#Les Formulaires
-##Quelques éléments de formulaires
+# Les Formulaires
+## Quelques éléments de formulaires
 ### Le bouton
+
+
 
 !!! example "Exemple"
 
 	<form>
-	 <input type="button" value="tester" onclick="testBidon()"></td>
+	 <input type="button" style="margin:5px; padding:5px;  background-color : lightblue; border : solid 2px blue; border-radius : 5px;"  value="tester" onclick="testBidon()">
 	</form>
 	<div id="casecouleur"> Un élément de formulaire fondamental : le bouton</div>
 
@@ -14,7 +16,7 @@
 	=== "html"
 
 		```html
-		<input type="button" value="tester" onclick="testBidon()"> 
+		<input type="button" value="tester" style="margin:5px; padding:5px;  background-color : lightblue; border : solid 2px blue; border-radius : 5px;" onclick="testBidon()"> 
 		```
 
 	=== "javascript"
@@ -25,7 +27,7 @@
     		}
 		```
 
-###Boutons radio
+### Boutons radio
 Il faut donner le même nom aux boutons radios mais des `id` différents
 !!! example "Exemple"
 
@@ -34,7 +36,7 @@ Il faut donner le même nom aux boutons radios mais des `id` différents
 	2<input type="radio" name="testRad" value="2" id="radio2">
 	3<input type="radio" name="testRad" value="3" id="radio3">
 	4<input type="radio" name="testRad" value="4" id="radio4">
-	<input type="button" value="tester" onclick="testRadio()">
+	<input type="button" style="margin:5px; padding:5px;  background-color : lightblue; border : solid 2px blue; border-radius : 5px;" value="tester" onclick="testRadio()">
 	</form>
 	<div id="texteRadio" class="rajout"></div>
 
@@ -42,7 +44,12 @@ Il faut donner le même nom aux boutons radios mais des `id` différents
 
 	=== "html"
 		```html
-			1 <input type="radio" name="testRad" value="1" id="radio1">
+			  1 <input type="radio" name="testRad" value="1" id="radio1">
+			  2 <input type="radio" name="testRad" value="1" id="radio1">
+			  3 <input type="radio" name="testRad" value="1" id="radio1">
+			  4 <input type="radio" name="testRad" value="1" id="radio1">
+
+			<input type="button" value="tester" onclick="tesRadio()"> 
 		```
 
 	=== "javascript"
@@ -68,7 +75,7 @@ Il faut donner le même nom aux boutons radios mais des `id` différents
 	<input type="checkbox" name="testCase" value="Case 1" id="case1">Case 1   <br>  
 	<input type="checkbox" name="testCase" value="Case 2" id="case2"> Case 2  <br>  
 	 <input type="checkbox" name="testCase" value="Case 3" id="case3">Case 3<br>
-	<input type="button" value="tester" onclick="testCases()">
+	<input type="button" style="margin:5px; padding:5px;  background-color : lightblue; border : solid 2px blue; border-radius : 5px;" value="tester" onclick="testCases()">
 	<div id="texteCases" class="rajout"></div>
 	</div>
 	</form>
@@ -78,7 +85,15 @@ Il faut donner le même nom aux boutons radios mais des `id` différents
 
 	=== "html"
 		```html
-			<input type="checkbox" name="testCase" value="Case 1" id="case1" > Case 1
+			<form>
+				<div id="casesACocher">
+				<input type="checkbox" name="testCase" value="Case 1" id="case1">Case 1   <br>  
+				<input type="checkbox" name="testCase" value="Case 2" id="case2"> Case 2  <br>  
+				 <input type="checkbox" name="testCase" value="Case 3" id="case3">Case 3<br>
+				<input type="button" style="margin:5px; padding:5px;  background-color : lightblue; border : solid 2px blue; border-radius : 5px;" value="tester" onclick="testCases()">
+				<div id="texteCases" class="rajout"></div>
+				</div>
+				</form>
 		```
 
 	=== "javascript"
@@ -109,7 +124,7 @@ Il faut donner le même nom aux boutons radios mais des `id` différents
 	<option name="selection" value="mot 1" id="mot1">mot 1</option>
 	<option name="selection" value="mot 2" id="mot2">mot 2</option>
 	</select>
-	<input type="button" value="tester" onclick="testMenu()">
+	<input type="button" style="margin:5px; padding:5px;  background-color : lightblue; border : solid 2px blue; border-radius : 5px;" value="tester" onclick="testMenu()">
 	</div>
 	</form>
 	<div id="texteMenu" class="rajout"></div>
@@ -141,13 +156,13 @@ Remarque 1 : ici le choix a été de faire apparaître une première légende vi
 Remarque 2 : il faut donner le même nom aux balises `option` mais des id différents.	
 exemple :  on teste quel mot a été sélectionné `selected` ; on rajoute alors ce mot dans le texte (aecrire) à afficher dans le bloc d'identifiant "texteMenu".
 	
-###Récupération de texte 
+### Récupération de texte 
 !!! example "Exemple"
 
 	<form>
 	<div id="zoneTexte">
 	Entrez votre texte : <input type="text" value="" id="saisie">
-	<input type="button" value="tester" onclick="testSaisie()">
+	<input type="button" style="margin:5px; padding:5px;  background-color : lightblue; border : solid 2px blue; border-radius : 5px;" value="tester" onclick="testSaisie()">
     </div>
 	</form>
 	<div id="texteSaisie" class="rajout"></div>
