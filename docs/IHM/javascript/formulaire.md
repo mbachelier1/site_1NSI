@@ -60,8 +60,6 @@ Il faut donner le même nom aux boutons radios mais des `id` différents
 			if (document.getElementById('radio3').checked) aecrire+=3;
 			if (document.getElementById('radio4').checked) aecrire+=4;
 			document.getElementById('texteRadio').innerHTML=aecrire;
-			contenu+=aecrire;
-			contenu+="< br >";
 			}
 		```
 
@@ -76,10 +74,10 @@ Le contenu de la variable `contenu` est écrit dans une balise dont l'`id` est `
 
 	<form>
 	<div id="casesACocher">
-	<input type="checkbox" name="testCase" value="Case 1" id="case1">Case 1   <br>  
-	<input type="checkbox" name="testCase" value="Case 2" id="case2"> Case 2  <br>  
-	 <input type="checkbox" name="testCase" value="Case 3" id="case3">Case 3<br>
-	<input type="button" style="margin:5px; padding:5px;  background-color : lightblue; border : solid 2px blue; border-radius : 5px;" value="tester" onclick="testCases()">
+		<input type="checkbox" name="testCase" value="Case 1" id="case1">Case 1   <br>  
+		<input type="checkbox" name="testCase" value="Case 2" id="case2"> Case 2  <br>  
+		<input type="checkbox" name="testCase" value="Case 3" id="case3">Case 3<br>
+		<input type="button" style="margin:5px; padding:5px;  background-color : lightblue; border : solid 2px blue; border-radius : 5px;" value="tester" onclick="testCases()">
 	<div id="texteCases" class="rajout"></div>
 	</div>
 	</form>
@@ -107,8 +105,6 @@ Le contenu de la variable `contenu` est écrit dans une balise dont l'`id` est `
 			if (document.getElementById('case2').checked) aecrire+=" la case 2, ";
 			if (document.getElementById('case3').checked) aecrire+=" la case 3, ";
 			document.getElementById('texteCases').innerHTML=aecrire;
-			contenu+=aecrire;
-			contenu+="";
 			}
 		```
 
@@ -125,9 +121,9 @@ Le contenu de la variable `contenu` est écrit dans une balise dont l'`id` est `
 	<form>
 	<div id="MenuDeroulant">
 	<select>
-	<option name="selection" value="..." id="rien">....</option>
-	<option name="selection" value="mot 1" id="mot1">mot 1</option>
-	<option name="selection" value="mot 2" id="mot2">mot 2</option>
+		<option name="selection" value="..." id="rien">....</option>
+		<option name="selection" value="mot 1" id="mot1">mot 1</option>
+		<option name="selection" value="mot 2" id="mot2">mot 2</option>
 	</select>
 	<input type="button" style="margin:5px; padding:5px;  background-color : lightblue; border : solid 2px blue; border-radius : 5px;" value="tester" onclick="testMenu()">
 	</div>
@@ -139,9 +135,9 @@ Le contenu de la variable `contenu` est écrit dans une balise dont l'`id` est `
 	=== "html"
 		```html
 		<select >
-		< option name="selection" value="..." id="rien" >....< /option >
-		< option name="selection" value="mot 1" id="mot1" > mot 1 </option > 
-		< option name="selection" value="mot 2" id="mot2"> mot 2 </option >
+			<option name="selection" value="..." id="rien" >....</option >
+			<option name="selection" value="mot 1" id="mot1" > mot 1 </option > 
+			<option name="selection" value="mot 2" id="mot2"> mot 2 </option >
 		</select >
 		```
 
@@ -152,8 +148,6 @@ Le contenu de la variable `contenu` est écrit dans une balise dont l'`id` est `
 		if (document.getElementById('mot1').selected) aecrire+="le mot 1";
 		if (document.getElementById('mot2').selected) aecrire+="le mot 2";
 		document.getElementById('texteMenu').innerHTML=aecrire;
-		contenu+=aecrire;
-		contenu+="";
 		}
 		```
 		
@@ -180,7 +174,7 @@ exemple :  on teste quel mot a été sélectionné `selected` ; on rajoute alors
 
 	=== "html"
 		```html
-			Entrez votre texte : < input type="text" value="" id="saisie" >
+			Entrez votre texte : <input type="text" value="" id="saisie" >
 		```
 
 	=== "javascript"
@@ -189,8 +183,6 @@ exemple :  on teste quel mot a été sélectionné `selected` ; on rajoute alors
 		var aecrire="vous avez écrit ";
 		aecrire+=document.getElementById('saisie').value;
 		document.getElementById('texteSaisie').innerHTML=aecrire;
-		contenu+=aecrire;
-		contenu+="";
 		}
 		```
 		
@@ -215,6 +207,17 @@ Seuls quelques éléments de formulaires et leur utilisation basique ont été p
 Vous êtes en charge du site de commande pour la commercialisation d'un mini-drone.
 A vous de construire le formulaire sur la page de commande et de compléter la page d'accusé de réception accessible après validation du formulaire. Les données entrées dans le formulaire devront être récapituler en dessous lors de la validation de celui-ci.
 Pour plus de clareté vous essayerez de faire "disparaitre" le formulaire grâce à la propritété css "hidden".
+Vous créerez un formulaire de commande et en cliquant sur un bouton VALIDER, le script doit récuprer les données
+entrées par l'utilisateur puis écrire un paragraphe récapitulif en dessous du formulaire. Faites preuve de créativité.
+
+[commande.html](../src/commande.html)  
+[feuille de style](../src/style_achat.css)  
+![bourdon](../src/bourdon.jpg)  
+![guêpe](../src/guepe.jpg)  
+![mouche](../src/mouche.jpg)  
+![moustique](../src/moustique.jpg)  
+![pub](../src/pub.png)  
+
 
 
 !!! hint "navigation"
@@ -250,8 +253,6 @@ var contenu="";
 			if (document.getElementById('radio3').checked) aecrire+=3;
 			if (document.getElementById('radio4').checked) aecrire+=4;
 			document.getElementById('texteRadio').innerHTML=aecrire;
-            contenu+=aecrire;
-            contenu+="<br>";
 		}
 		
 		// la fonction qui écrit quelle(s) case(s) a (ont) été sélectionnée(s)
@@ -262,8 +263,6 @@ var contenu="";
 			if (document.getElementById('case2').checked) aecrire+=" la case 2, ";
 			if (document.getElementById('case3').checked) aecrire+=" la case 3, ";
 			document.getElementById('texteCases').innerHTML=aecrire;
-            contenu+=aecrire;
-            contenu+="<br>";
 		}
 		
 		// la fonction qui écrit quel mot a été sélectionné
@@ -273,8 +272,6 @@ var contenu="";
 			if (document.getElementById('mot1').selected) aecrire+="le mot 1";
 			if (document.getElementById('mot2').selected) aecrire+="le mot 2";
 			document.getElementById('texteMenu').innerHTML=aecrire;
-            contenu+=aecrire;
-            contenu+="<br>";
 		}
 		
 		// la fonction qui réécrit le texte saisi
@@ -283,13 +280,7 @@ var contenu="";
 			var aecrire="vous avez écrit ";
 			aecrire+=document.getElementById('saisie').value;
 			document.getElementById('texteSaisie').innerHTML=aecrire;
-            contenu+=aecrire;
-            contenu+="<br>";
 		}
-    function recuperer()
-{
-var obj = JSON.parse(localStorage.getItem('monTexte'));
-document.getElementById("aremplir").innerHTML=obj;  
-}
+
 </script>
 		

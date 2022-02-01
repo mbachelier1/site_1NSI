@@ -5,7 +5,7 @@
 
 L’ENIAC — Electronic Numerical Integrator and Computer — fut construit aux Etats Unis pendant la première guerre mondiale. Sous la direction de John Mauchly et J. Presper Eckert, ce calcultateur uiversel était destiné à effectuer des calculs de valeurs des tables de tirs d'artillerie. La machine était programmable par câblage, c'est-à-dire que pour chaque problème donné à résoudre, il fallait passer de longues heures à câbler la machine.
 L'ENIAC pesait 27 tonnes et occupait une sirface de 170m² dans les sous-sols de la Moore School of Electrical Engineering de l'université de Pennsylvanie. Le temps moyen entre deux pannes était de 2 jours.   
-L'ENIAC n'avait pas de mamoire, au sens actuel du terme, mais seulement 20 accumulateur pouvant chacun contenir un nombre de 10 chiffres. Les calculs aithmétiques (additions, soustraction, multiplication) étaient possibles à raison de 5000 opérations par seconde. Les entrées-sorties, se faisainet au moyen de cartes perforées.  
+L'ENIAC n'avait pas de mémoire, au sens actuel du terme, mais seulement 20 accumulateurs pouvant chacun contenir un nombre de 10 chiffres. Les calculs aithmétiques (additions, soustraction, multiplication) étaient possibles à raison de 5000 opérations par seconde. Les entrées-sorties, se faisaient au moyen de cartes perforées.  
 
 
 
@@ -113,13 +113,13 @@ La mémoire d'une machine permet de stocker les données. Elle est exprimée en 
 
 -	La "mémoire morte" , en anglais ROM (Read Only Memory). Mémoire persistante de quelques Mégaoctets contenant juste le nécessaire pour faire démarrer l’ordinateur. Son contenu est fixé lors de la fabrication de la machine et n'est pas prévue pour être modifié. 
 -	La "mémoire vive", en anglais RAM (Random Access Memory). Mémoire de capacité moyenne (4 à 32Go dans les ordinateurs personnels). Mémoire dans laquelles sont enregistrées les informations traitées par la machine. 
--	La "mémoire de masse" : Mémoire qui peut être lue et écrite par la machine. Sa grande capacité permet d'y enregistrer une grande quantité de données, C'est le cas des disques durs SSD, cartes SD ou clé USB.
+-	La "mémoire de masse" : Mémoire qui peut être lue et écrite par la machine. Sa grande capacité permet d'y enregistrer une grande quantité de données, C'est le cas des périphériques de stockage.
 -	La "mémoire cache", Mémoire qui a pour rôle d'accélérer l'accès aux informations de la mémoire vive. Elle contient des informations fréquemment utilisées par le processeur ou es prochaines dont il aura besoin. Elle a une capacité d'une dizaine de mégaoctets 
 
 !!! faq "questions"
 	8.Pour chaque type de mémoire, dire si elle est volatile ou permanente.  
 	9.Classer les mémoires citées de la plus rapide à la moins rapide.  
-	10.Citer des exemples de mémoires de masse.   
+	10. Donner des exemples de mémoires de masse.
 
 ### Les périphériques
 
@@ -128,9 +128,9 @@ En plus des ressousrces matérielles, le système doit interagir avec l'utilisat
 - Les périphériques de sortie servent à faire sortir les informations du système
 - Les périphériques d'entrée/sortie permettent aussi bien de lire et écrire des données
 
-!!! questions "questions"
-	11.Parmi la liste des périphériques cités dans le schéma des composants d'un ordinateur, classer les selon leur type (entree, sortie ou etrée/sortie).
-	12.Ajoutez en un maximum d'autres de votre connaissance.  
+!!! faq "questions"
+	11.Parmi la liste des périphériques cités dans le schéma des composants d'un ordinateur, classer les selon leur type (entree, sortie ou entrée/sortie).  
+	12.Ajoutez en un maximum d'autres de votre connaissance.    
 
 ---
 ### Pour aller plus loin ...

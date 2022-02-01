@@ -157,7 +157,7 @@ Dans le pire des cas, l'algorithme 1 fait opérations 43 opérations. Le deuxiè
 La complexité de l'algorithme 1 est linéaire et celle du 2 est linéaire.</p></div>
 
 
-###Module time
+### Module time
 Le module `time` permet de gérer le temps.  
 Tout part du nombre de seconde (microsecondes même) qui se sont écoulées depuis le 1er janvier 1970 à minuit. Cette date est appelée Epoch Time.
 
