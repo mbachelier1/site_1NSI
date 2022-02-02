@@ -16,7 +16,9 @@
 	=== "html"
 
 		```html
-		<input type="button" value="tester"  onclick="testBidon()"> 
+		<form>
+			<input type="button" value="tester"  onclick="testBidon()"> 
+		</form>
 		```
 
 	=== "javascript"
@@ -44,11 +46,13 @@ Il faut donner le même nom aux boutons radios mais des `id` différents
 
 	=== "html"
 		```html
-			  1 <input type="radio" name="testRad" value="1" id="radio1">
-			  2 <input type="radio" name="testRad" value="2" id="radio2">
-			  ...
-			  <div id="texteRadio"></div>
-			<input type="button" value="tester" onclick="tesRadio()"> 
+			<form>
+				  1 <input type="radio" name="testRad" value="1" id="radio1">
+				  2 <input type="radio" name="testRad" value="2" id="radio2">
+			 	 ...
+			 	 <div id="texteRadio"></div>
+				<input type="button" value="tester" onclick="tesRadio()"> 
+			</form>
 		```
 
 	=== "javascript"
@@ -108,10 +112,11 @@ Le contenu de la variable `contenu` est écrit dans une balise dont l'`id` est `
 			}
 		```
 
-!!!  faq "A faire"
-	Compléter le code HTML pour ajouter les deux cases manquantes, le bouton de validation et le bloc pour récupérer le résultat.
+!!! faq "A faire"
+	Compléter le code HTML pour ajouter les deux cases manquantes, le bouton de validation et le bloc pour récupérer le résultat. 
+
  Remarque 1 : ici le choix a été de faire apparaître la légende (Case 1) après le bouton donc après la balise.  
- Remarque 2 : il faut donner le même nom aux cases à cocher mais des id différents.
+ Remarque 2 : il faut donner le même nom aux cases à cocher mais des id différents.  s
 	
 ### Sélection
 
@@ -134,11 +139,13 @@ Le contenu de la variable `contenu` est écrit dans une balise dont l'`id` est `
 
 	=== "html"
 		```html
-		<select >
-			<option name="selection" value="..." id="rien" >....</option >
-			<option name="selection" value="mot 1" id="mot1" > mot 1 </option > 
-			<option name="selection" value="mot 2" id="mot2"> mot 2 </option >
-		</select >
+		<form>
+			<select >
+				<option name="selection" value="..." id="rien" >....</option >
+				<option name="selection" value="mot 1" id="mot1" > mot 1 </option > 
+				<option name="selection" value="mot 2" id="mot2"> mot 2 </option >
+			</select >
+		</form>
 		```
 
 	=== "javascript"
@@ -174,7 +181,9 @@ exemple :  on teste quel mot a été sélectionné `selected` ; on rajoute alors
 
 	=== "html"
 		```html
+			<form>
 			Entrez votre texte : <input type="text" value="" id="saisie" >
+			</form>
 		```
 
 	=== "javascript"
@@ -217,6 +226,79 @@ entrées par l'utilisateur puis écrire un paragraphe récapitulif en dessous du
 ![mouche](../src/mouche.jpg)  
 ![moustique](../src/moustique.jpg)  
 ![pub](../src/pub.png)  
+
+
+!!! done "En bonus"
+
+	On pourra améliorer le programme en chargeant la validation du formulaire das une autre page `accuse.html`. pour cela il va falloir stocker les données et les récupérer dans l'autre page. On donne en exemple le passage d'une page à l'autre avec un élément de formulaire. Au clic sur le bouton ENREGISTRER, le récapitulatif est donné dans uen autre page.    
+	=== "Visuel formulaire"
+		<h1>Formulaire à remplir</h1>
+	    <form>
+	        Ton nom <input type="text" value="" id="nom">
+	        <input type="button" value="enregistrer" onclick="enregistrer()">
+	    </form>
+
+	=== "page1.html"
+		```html
+			<!DOCTYPE html>
+				<html>
+				<head>
+				    <meta charset='utf-8'>
+				    <title>page 1</title>
+				    <link rel='stylesheet' type='text/css' media='screen' href='style.css'>
+				    <script src="js.js"></script>
+				</head>
+				<body> 
+				    <h1>Formulaire à remplir</h1>
+				    <form>
+				        Ton nom <input type="text" value="" id="nom">
+				        <input type="button" value="enregistrer" onclick="enregistrer()">
+				    </form>
+				</body>
+				</html>
+		```
+
+	=== "page2.html"
+		```html
+			<!DOCTYPE html>
+				<html>
+				<head>
+				    <meta charset='utf-8'>
+				    <title>page 2</title>
+				    <link rel='stylesheet' type='text/css' media='screen' href='style.css'>
+				    <script src="js.js"></script>
+				</head>
+				<body onload="recuperer()"> <! -- chage la fonction recuperer() avant le corps du site-->
+				    <h1>Validation du formulaire</h1>
+				    <p> Voici les éléments du formulaire: <br>
+				        <span id="validation" ></span>
+				    </p>
+				</body>
+				</html>
+		```
+
+	=== "js.js"
+		```javascript
+			var texte="";
+		// la fonction d'enregistrement du formulaire, à compléter
+		function enregistrer()
+		    { var phraseNom="vous vous appelez";
+		    	phraseNom+=document.getElementById('nom').value;
+		    	texte+=phraseNom;
+		    	texte+="";
+		    // récupération des données des éléments du formulaire à compléter 
+		    // stockage en local des données dans la variable texte
+		    	sessionStorage.setItem('monObjet', JSON.stringify(texte));
+		     // changement automatique de page vers la page 2
+		   		document.location.href="page2.html";
+		    } 
+		function recuperer()
+		    {
+		        var obj = JSON.parse(sessionStorage.getItem('monObjet'));
+		        document.getElementById("validation").innerHTML=obj; 
+		    }
+		```
+
 
 
 
