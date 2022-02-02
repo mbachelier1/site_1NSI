@@ -1125,7 +1125,11 @@
 <div class="admonition caution">
 <p class="admonition-title">Code</p>
 <div class="tabbed-set" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><label for="__tabbed_1_1">html</label><div class="tabbed-content">
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;button&quot;</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;tester&quot;</span>  <span class="na">onclick</span><span class="o">=</span><span class="s">&quot;testBidon()&quot;</span><span class="p">&gt;</span> 
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">form</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;button&quot;</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;tester&quot;</span>  <span class="na">onclick</span><span class="o">=</span><span class="s">&quot;testBidon()&quot;</span><span class="p">&gt;</span> 
+<span class="p">&lt;/</span><span class="nt">form</span><span class="p">&gt;</span>
 </code></pre></div>
 </td></tr></table>
 </div>
@@ -1160,11 +1164,15 @@
 2
 3
 4
-5</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>      1 <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;radio&quot;</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;testRad&quot;</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;1&quot;</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;radio1&quot;</span><span class="p">&gt;</span>
-      2 <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;radio&quot;</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;testRad&quot;</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;2&quot;</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;radio2&quot;</span><span class="p">&gt;</span>
-      ...
-      <span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;texteRadio&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;button&quot;</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;tester&quot;</span> <span class="na">onclick</span><span class="o">=</span><span class="s">&quot;tesRadio()&quot;</span><span class="p">&gt;</span> 
+5
+6
+7</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>    <span class="p">&lt;</span><span class="nt">form</span><span class="p">&gt;</span>
+          1 <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;radio&quot;</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;testRad&quot;</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;1&quot;</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;radio1&quot;</span><span class="p">&gt;</span>
+          2 <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;radio&quot;</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;testRad&quot;</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;2&quot;</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;radio2&quot;</span><span class="p">&gt;</span>
+         ...
+         <span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;texteRadio&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;button&quot;</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;tester&quot;</span> <span class="na">onclick</span><span class="o">=</span><span class="s">&quot;tesRadio()&quot;</span><span class="p">&gt;</span> 
+    <span class="p">&lt;/</span><span class="nt">form</span><span class="p">&gt;</span>
 </code></pre></div>
 </td></tr></table>
 </div>
@@ -1247,10 +1255,12 @@
 </div>
 </div>
 </div>
-<p>!!!  faq "A faire"
-    Compléter le code HTML pour ajouter les deux cases manquantes, le bouton de validation et le bloc pour récupérer le résultat.
- Remarque 1 : ici le choix a été de faire apparaître la légende (Case 1) après le bouton donc après la balise.<br />
- Remarque 2 : il faut donner le même nom aux cases à cocher mais des id différents.</p>
+<div class="admonition faq">
+<p class="admonition-title">A faire</p>
+<p>Compléter le code HTML pour ajouter les deux cases manquantes, le bouton de validation et le bloc pour récupérer le résultat. </p>
+</div>
+<p>Remarque 1 : ici le choix a été de faire apparaître la légende (Case 1) après le bouton donc après la balise.<br />
+ Remarque 2 : il faut donner le même nom aux cases à cocher mais des id différents.  s</p>
 <h3 id="selection">Sélection<a class="headerlink" href="#selection" title="Permanent link">⚓︎</a></h3>
 <div class="admonition example">
 <p class="admonition-title">Exemple</p>
@@ -1273,11 +1283,15 @@
 2
 3
 4
-5</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">select</span> <span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">option</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;selection&quot;</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;...&quot;</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;rien&quot;</span> <span class="p">&gt;</span>....<span class="p">&lt;/</span><span class="nt">option</span> <span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">option</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;selection&quot;</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;mot 1&quot;</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;mot1&quot;</span> <span class="p">&gt;</span> mot 1 <span class="p">&lt;/</span><span class="nt">option</span> <span class="p">&gt;</span> 
-    <span class="p">&lt;</span><span class="nt">option</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;selection&quot;</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;mot 2&quot;</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;mot2&quot;</span><span class="p">&gt;</span> mot 2 <span class="p">&lt;/</span><span class="nt">option</span> <span class="p">&gt;</span>
-<span class="p">&lt;/</span><span class="nt">select</span> <span class="p">&gt;</span>
+5
+6
+7</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">form</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">select</span> <span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">option</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;selection&quot;</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;...&quot;</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;rien&quot;</span> <span class="p">&gt;</span>....<span class="p">&lt;/</span><span class="nt">option</span> <span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">option</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;selection&quot;</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;mot 1&quot;</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;mot1&quot;</span> <span class="p">&gt;</span> mot 1 <span class="p">&lt;/</span><span class="nt">option</span> <span class="p">&gt;</span> 
+        <span class="p">&lt;</span><span class="nt">option</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;selection&quot;</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;mot 2&quot;</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;mot2&quot;</span><span class="p">&gt;</span> mot 2 <span class="p">&lt;/</span><span class="nt">option</span> <span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">select</span> <span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">form</span><span class="p">&gt;</span>
 </code></pre></div>
 </td></tr></table>
 </div>
@@ -1319,7 +1333,11 @@ Entrez votre texte : <input type="text" value="" id="saisie">
 <div class="admonition caution">
 <p class="admonition-title">Code</p>
 <div class="tabbed-set" data-tabs="5:2"><input checked="checked" id="__tabbed_5_1" name="__tabbed_5" type="radio" /><label for="__tabbed_5_1">html</label><div class="tabbed-content">
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>    Entrez votre texte : <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;text&quot;</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;&quot;</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;saisie&quot;</span> <span class="p">&gt;</span>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>    <span class="p">&lt;</span><span class="nt">form</span><span class="p">&gt;</span>
+    Entrez votre texte : <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;text&quot;</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;&quot;</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;saisie&quot;</span> <span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">form</span><span class="p">&gt;</span>
 </code></pre></div>
 </td></tr></table>
 </div>
@@ -1365,6 +1383,125 @@ entrées par l'utilisateur puis écrire un paragraphe récapitulif en dessous du
 <img alt="mouche" src="../src/mouche.jpg" /><br />
 <img alt="moustique" src="../src/moustique.jpg" /><br />
 <img alt="pub" src="../src/pub.png" />  </p>
+<div class="admonition done">
+<p class="admonition-title">En bonus</p>
+<p>On pourra améliorer le programme en chargeant la validation du formulaire das une autre page <code>accuse.html</code>. pour cela il va falloir stocker les données et les récupérer dans l'autre page. On donne en exemple le passage d'une page à l'autre avec un élément de formulaire. Au clic sur le bouton ENREGISTRER, le récapitulatif est donné dans uen autre page.    </p>
+<div class="tabbed-set" data-tabs="6:4"><input checked="checked" id="__tabbed_6_1" name="__tabbed_6" type="radio" /><label for="__tabbed_6_1">Visuel formulaire</label><div class="tabbed-content">
+<p><h1>Formulaire à remplir</h1>
+<form>
+    Ton nom <input type="text" value="" id="nom">
+    <input type="button" value="enregistrer" onclick="enregistrer()">
+</form></p>
+</div>
+<input id="__tabbed_6_2" name="__tabbed_6" type="radio" /><label for="__tabbed_6_2">page1.html</label><div class="tabbed-content">
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>    <span class="cp">&lt;!DOCTYPE html&gt;</span>
+        <span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&#39;utf-8&#39;</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>page 1<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#39;stylesheet&#39;</span> <span class="na">type</span><span class="o">=</span><span class="s">&#39;text/css&#39;</span> <span class="na">media</span><span class="o">=</span><span class="s">&#39;screen&#39;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#39;style.css&#39;</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;js.js&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+        <span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span> 
+            <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Formulaire à remplir<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">form</span><span class="p">&gt;</span>
+                Ton nom <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;text&quot;</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;&quot;</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;nom&quot;</span><span class="p">&gt;</span>
+                <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;button&quot;</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;enregistrer&quot;</span> <span class="na">onclick</span><span class="o">=</span><span class="s">&quot;enregistrer()&quot;</span><span class="p">&gt;</span>
+            <span class="p">&lt;/</span><span class="nt">form</span><span class="p">&gt;</span>
+        <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+        <span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</code></pre></div>
+</td></tr></table>
+</div>
+<input id="__tabbed_6_3" name="__tabbed_6" type="radio" /><label for="__tabbed_6_3">page2.html</label><div class="tabbed-content">
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>    <span class="cp">&lt;!DOCTYPE html&gt;</span>
+        <span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&#39;utf-8&#39;</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>page 2<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#39;stylesheet&#39;</span> <span class="na">type</span><span class="o">=</span><span class="s">&#39;text/css&#39;</span> <span class="na">media</span><span class="o">=</span><span class="s">&#39;screen&#39;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#39;style.css&#39;</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;js.js&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+        <span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">body</span> <span class="na">onload</span><span class="o">=</span><span class="s">&quot;recuperer()&quot;</span><span class="p">&gt;</span> <span class="cp">&lt;! -- chage la fonction recuperer() avant le corps du site--&gt;</span>
+            <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Validation du formulaire<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span> Voici les éléments du formulaire: <span class="p">&lt;</span><span class="nt">br</span><span class="p">&gt;</span>
+                <span class="p">&lt;</span><span class="nt">span</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;validation&quot;</span> <span class="p">&gt;&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+            <span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+        <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+        <span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</code></pre></div>
+</td></tr></table>
+</div>
+<input id="__tabbed_6_4" name="__tabbed_6" type="radio" /><label for="__tabbed_6_4">js.js</label><div class="tabbed-content">
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>    <span class="kd">var</span> <span class="nx">texte</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">;</span>
+<span class="c1">// la fonction d&#39;enregistrement du formulaire, à compléter</span>
+<span class="kd">function</span> <span class="nx">enregistrer</span><span class="p">()</span>
+    <span class="p">{</span> <span class="kd">var</span> <span class="nx">phraseNom</span><span class="o">=</span><span class="s2">&quot;vous vous appelez&quot;</span><span class="p">;</span>
+        <span class="nx">phraseNom</span><span class="o">+=</span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;nom&#39;</span><span class="p">).</span><span class="nx">value</span><span class="p">;</span>
+        <span class="nx">texte</span><span class="o">+=</span><span class="nx">phraseNom</span><span class="p">;</span>
+        <span class="nx">texte</span><span class="o">+=</span><span class="s2">&quot;&quot;</span><span class="p">;</span>
+    <span class="c1">// récupération des données des éléments du formulaire à compléter </span>
+    <span class="c1">// stockage en local des données dans la variable texte</span>
+        <span class="nx">sessionStorage</span><span class="p">.</span><span class="nx">setItem</span><span class="p">(</span><span class="s1">&#39;monObjet&#39;</span><span class="p">,</span> <span class="nx">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">texte</span><span class="p">));</span>
+     <span class="c1">// changement automatique de page vers la page 2</span>
+        <span class="nb">document</span><span class="p">.</span><span class="nx">location</span><span class="p">.</span><span class="nx">href</span><span class="o">=</span><span class="s2">&quot;page2.html&quot;</span><span class="p">;</span>
+    <span class="p">}</span> 
+<span class="kd">function</span> <span class="nx">recuperer</span><span class="p">()</span>
+    <span class="p">{</span>
+        <span class="kd">var</span> <span class="nx">obj</span> <span class="o">=</span> <span class="nx">JSON</span><span class="p">.</span><span class="nx">parse</span><span class="p">(</span><span class="nx">sessionStorage</span><span class="p">.</span><span class="nx">getItem</span><span class="p">(</span><span class="s1">&#39;monObjet&#39;</span><span class="p">));</span>
+        <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&quot;validation&quot;</span><span class="p">).</span><span class="nx">innerHTML</span><span class="o">=</span><span class="nx">obj</span><span class="p">;</span> 
+    <span class="p">}</span>
+</code></pre></div>
+</td></tr></table>
+</div>
+</div>
+</div>
 <div class="admonition hint">
 <p class="admonition-title">navigation</p>
 <ul>
