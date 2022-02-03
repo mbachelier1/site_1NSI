@@ -24,7 +24,7 @@ Une petite vidéo pour comprendre
 <iframe width="560" height="315" src="https://www.youtube.com/embed/pzxSlJVprkc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 L'algorithme de tri par insertion : 
-![tri insertion](img/algo_insertion.png)
+![tri insertion](img/algo_insertion.PNG)
 
 C’est le tri qu’on utilise quand on range des cartes : On parcourt la liste à trier du début à la fin. Au moment où l’on considère le ième élément,les i−1 premiers sont déjà triés, et on insère ce ième élément à la bonne place parmi les i−1 En pratique, on fait «remonter» ce ième élément en l’échangeant avec son prédécesseur tant qu’il est plus grand que lui.
 

@@ -109,7 +109,7 @@ On peut s'intéresser à la complexité d'un algorithme dans: le meilleur des ca
 
 
 
-!!! faq "Comparer deux algorithmes"
+!!! faq "Comparer deux algorithmes de recherhce d'un élément dans un tableau"
 	On cherche à comparer les deux algorithmes :
 	```pseudocode
 	## Algorithme 1
@@ -181,7 +181,7 @@ Renvoie un objet contenant :
 - `tm_isdst`: un entier représentant le changement d'heure local.
 
 
-###Module Matplotlib
+### Module Matplotlib
 Déjà probablement utilisé en sciences physiques, le module matplotlib permet de tracer des graphiques.  
 L'idée ici est de comparer les complexités selon la taille du tableau.  
 Voici comment tracer un graphique avec deux séries de valeurs (abscisses et ordonnées) :  
@@ -241,17 +241,17 @@ plt.close()
 ```
 
 
-##Exercices
-###Exercice 1
-Écrire le programme qui calcule le maximum et le minimum d'un tableau en utilisant l'algorithme ci-dessus
+## Exercices
+### Exercice 1
+Écrire le programme qui calcule le maximum et le minimum d'un tableau en utilisant l'algorithme proposé dans l'activité (recherche de maximum)
 
-###Exercice 2
+### Exercice 2
 Écrire les programmes de recherche de valeur avec les deux algorithmes. Faire afficher le nombre d'étapes exécutées et comparer à la complexité dans le pire des cas. A-t-on autant d'étapes que celles évaluées sur la complexité ?  
 
 !!! note "Comparer les compléxités"
 	Après avoir codé la recherche de valeurs avec les deux algorithmes de recherche de valeur (exercice 2), récupérer le nombre d'étapes en fonction de la taille de la liste et tracer les deux graphiques dans la même fenêtre.
 
-###Exercice 3
+### Exercice 3
 Codez une fonction qui cherche le maximum d'une liste en ne tenant pas compte des valeurs supérieures ou égales à 10.
 
 Faire compter les étapes au programme et comparer avec les camarades.
