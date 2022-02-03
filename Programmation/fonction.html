@@ -10,7 +10,7 @@
       
       
       <link rel="icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.2.1, mkdocs-material-7.1.8">
+      <meta name="generator" content="mkdocs-1.2.1, mkdocs-material-7.1.10">
     
     
       
@@ -18,7 +18,7 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.ca7ac06f.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.1fe995fd.min.css">
       
         
         <link rel="stylesheet" href="../assets/stylesheets/palette.f1a3b89f.min.css">
@@ -1145,9 +1145,9 @@ La valeur de distace et le nom de l'élève sont appelés <code>paramètre</code
 En python pour définir une fonction on utilise le mot clé <code>def</code> suivi du nom de la fonction et des paramètres. Pour la valeur calculée on utilisera le mot clé <code>return</code>. </p>
 <div class="admonition example">
 <p class="admonition-title">Exemple</p>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
-2
-3</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">calcule_cube</span><span class="p">(</span><span class="n">a</span><span class="p">):</span>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">calcule_cube</span><span class="p">(</span><span class="n">a</span><span class="p">):</span>
     <span class="n">cube</span><span class="o">=</span><span class="n">a</span><span class="o">*</span><span class="n">a</span><span class="o">*</span><span class="n">a</span>
     <span class="k">return</span> <span class="n">cube</span>
 </code></pre></div>
@@ -1155,11 +1155,11 @@ En python pour définir une fonction on utilise le mot clé <code>def</code> sui
 <p>Cette fonction calcule le cube d’un nombre, par exemple calcule_cube(2) n’affiche rien mais envoie la valeur 8 .</p>
 <p><strong>Remarque:</strong> ce code "ne fait rien", il définit une fonction seulement... tant qu'elle n'est pas utilisée, rien ne se passe</p>
 <p>Si on ajoute dans le code les lignes ci-desous, alors la fonction est utilisée et elle calcule le cube de 2 puis la somme 3<sup>3+4</sup>3`.</p>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
-2
-3
-4
-5</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="n">calcule_cube</span><span class="p">(</span><span class="mi">2</span><span class="p">))</span>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="n">calcule_cube</span><span class="p">(</span><span class="mi">2</span><span class="p">))</span>
 <span class="n">x</span><span class="o">=</span><span class="mi">3</span>
 <span class="n">y</span><span class="o">=</span><span class="mi">4</span>
 <span class="n">z</span><span class="o">=</span><span class="n">calcule_cube</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="o">+</span><span class="n">calcule_cube</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
@@ -1170,16 +1170,16 @@ En python pour définir une fonction on utilise le mot clé <code>def</code> sui
 <p>De façon générale, la strucutre à respectée est celle-ci :
 <img alt="structure fonction" src="img/fonction.PNG" /></p>
 <p>Et sous forme de code : 
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">ma_fonction</span><span class="p">(</span><span class="n">arg1</span><span class="p">,</span><span class="n">arg2</span><span class="p">):</span> 
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">ma_fonction</span><span class="p">(</span><span class="n">arg1</span><span class="p">,</span><span class="n">arg2</span><span class="p">):</span> 
 <span class="c1"># ma_fonction va utiliser deux arguments arg1 et arg2 qui pourront avoir des valeurs différetes à chauqe appel</span>
     <span class="n">resultat</span><span class="o">=</span><span class="n">arg1</span><span class="o">+</span><span class="n">arg2</span> <span class="c1">#on additionne les deux paramètres</span>
     <span class="k">return</span> <span class="n">resultat</span> <span class="c1"># on retourne le résultat</span>
@@ -1196,13 +1196,13 @@ En python pour définir une fonction on utilise le mot clé <code>def</code> sui
 <p>on peut exécuter la fonction avec un <code>print(ma_fonction(2,3))</code> qui affichera le résultat mais ne le retiendra pas. Si on écrit simplement <code>ma_fonction(2,3)</code> la fonction sera exécutée mais le résultat ne sera pas affiché ni mémorisé.</p>
 </div>
 <p>Une fonction peut avoir plusieurs paramètres et renvoyer plusieurs résultats :
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
-2
-3
-4
-5
-6
-7</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">somme_produit</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">):</span>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">somme_produit</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">):</span>
   <span class="sd">&quot;&quot;&quot;Calcule la somme et le produit de deux nombres&quot;&quot;&quot;</span>
   <span class="n">s</span><span class="o">=</span><span class="n">a</span><span class="o">+</span><span class="n">b</span>
   <span class="n">p</span><span class="o">=</span><span class="n">a</span><span class="o">*</span><span class="n">b</span>
@@ -1235,13 +1235,13 @@ En python pour définir une fonction on utilise le mot clé <code>def</code> sui
 </div>
 <h2 id="portee-dune-variable">Portée d'une variable<a class="headerlink" href="#portee-dune-variable" title="Permanent link">⚓︎</a></h2>
 <p>Une variable est appelée <strong>locale</strong> lorsqu'elle n'est utilisée que dans la fonction. Le programme principal ne reconnait pas la variable. Si elle est définie dans tout le programme elle est appelée variable <strong>globale</strong>.<br />
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
-2
-3
-4
-5
-6
-7</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">vol_sphere</span><span class="p">(</span><span class="n">r</span><span class="p">):</span>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">vol_sphere</span><span class="p">(</span><span class="n">r</span><span class="p">):</span>
     <span class="n">cube</span><span class="o">=</span><span class="n">r</span><span class="o">*</span><span class="n">r</span><span class="o">*</span><span class="n">r</span>
     <span class="n">vol</span><span class="o">=</span><span class="mi">4</span><span class="o">*</span><span class="n">cube</span><span class="o">*</span><span class="mf">3.14</span><span class="o">/</span><span class="mi">3</span>
     <span class="k">return</span> <span class="n">vol</span>
@@ -1254,12 +1254,12 @@ En python pour définir une fonction on utilise le mot clé <code>def</code> sui
 <p>La variable <code>cube</code> est définie DANS la fonction et n'est donc pas reconnu par le programme principal. v est définie dans le programme principale, elle sera reconnue partout, c'est une variable globale.</p>
 <div class="admonition danger">
 <p class="admonition-title">Attention aux confusions</p>
-<p><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
-2
-3
-4
-5
-6</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">a</span><span class="o">=</span><span class="mi">15</span>
+<p><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">a</span><span class="o">=</span><span class="mi">15</span>
 <span class="k">def</span> <span class="nf">calcul</span><span class="p">(</span><span class="n">nb</span><span class="p">):</span>
     <span class="n">a</span><span class="o">=</span><span class="mi">12</span>
     <span class="k">return</span> <span class="n">nb</span><span class="o">+</span><span class="n">a</span>
@@ -1275,18 +1275,18 @@ a=12 est une variable locale valable que dans la fonction. <br />
 <p><img alt="strucuturer son script" src="https://courspython.com/_images/structure_programme.png" />
 Le programme commence à être long, il faut ranger:<br />
 On définit le format de codage du texte :</p>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
-2</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="c1"># -*- coding: utf-8 -*- </span>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="c1"># -*- coding: utf-8 -*- </span>
 <span class="c1"># coding : utf-8</span>
 </code></pre></div>
 </td></tr></table>
 <p>Importer les fonctions de modules externes
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">math</span> <span class="kn">import</span> <span class="n">cos</span><span class="p">,</span><span class="n">pi</span>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">math</span> <span class="kn">import</span> <span class="n">cos</span><span class="p">,</span><span class="n">pi</span>
 </code></pre></div>
 </td></tr></table></p>
 <p>Définition de vos fonctions
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
-2</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">Def</span> <span class="n">ma_fonction</span><span class="p">(</span><span class="n">arg1</span><span class="p">,</span><span class="n">arg2</span><span class="p">):</span>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">Def</span> <span class="n">ma_fonction</span><span class="p">(</span><span class="n">arg1</span><span class="p">,</span><span class="n">arg2</span><span class="p">):</span>
     <span class="k">return</span> <span class="n">arg1</span><span class="o">+</span><span class="n">arg2</span>
 </code></pre></div>
 </td></tr></table>
@@ -1297,14 +1297,14 @@ On utilise plusieurs fichiers et on les importe comme une bibliothèque normale 
 <p><img alt="test" src="img/module.PNG" />
 <img alt="main" src="img/module2.PNG" /></p>
 <p>Plusieurs possibilités d’import dans main :
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
-2
-3
-4
-5
-6
-7
-8</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">tests</span> <span class="kn">import</span> <span class="n">affiche</span>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">tests</span> <span class="kn">import</span> <span class="n">affiche</span>
 <span class="n">affiche</span><span class="p">()</span>
 
 <span class="kn">import</span> <span class="nn">tests</span>
@@ -1345,12 +1345,12 @@ Ici, un test sur 3 de la fonction carré ne renvoie pas ce qu’on attend: <br /
 <img alt="erreur des tests unitaires" src="img/res_test_unitaire.PNG" /></p>
 <h3 id="assertions">Assertions<a class="headerlink" href="#assertions" title="Permanent link">⚓︎</a></h3>
 <p>On souhaite ici que la fonction calcule la somme de deux entiers et uniquement des entiers. Il va donc falloir vérifer que l'utilisateur en entrer des entiers :
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
-2
-3
-4
-5
-6</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">somme</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">):</span>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">somme</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">):</span>
     <span class="k">assert</span><span class="p">(</span><span class="nb">isinstance</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="nb">int</span><span class="p">))</span>
     <span class="k">assert</span><span class="p">(</span><span class="nb">isinstance</span><span class="p">(</span><span class="n">y</span><span class="p">,</span><span class="nb">int</span><span class="p">))</span>
     <span class="n">s</span><span class="o">=</span><span class="n">x</span><span class="o">+</span><span class="n">y</span>
@@ -1367,23 +1367,23 @@ Avantage sur tests unitaires :</p>
 <li>Permet de donner un message différent selon l’erreur détectée</li>
 </ul>
 <p>Par exemple, on demande son age à l'utilisateur. On s'attend à ce qu'il entre un nombre positif. On va donc tester si c'est un nombre et s'il est positifi avec des messages d'erreur adaptés.</p>
-<p><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10
-11
-12
-13
-14
-15
-16
-17</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">age</span><span class="o">=</span><span class="nb">input</span><span class="p">(</span><span class="s1">&#39;quel est ton age? &#39;</span><span class="p">)</span>
+<p><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">age</span><span class="o">=</span><span class="nb">input</span><span class="p">(</span><span class="s1">&#39;quel est ton age? &#39;</span><span class="p">)</span>
 <span class="k">try</span> <span class="p">:</span> 
     <span class="c1">#bloc à tester</span>
     <span class="n">age</span><span class="o">=</span><span class="nb">int</span><span class="p">(</span><span class="n">age</span><span class="p">)</span> <span class="c1">#on converti en entier</span>
@@ -1404,20 +1404,20 @@ Avantage sur tests unitaires :</p>
 </td></tr></table>
 Ce bloc permettra de tester les entrées de l'utilisateur lors de programmes plus complexe.</p>
 <details class="example"><summary>Tester des entrées sans sortir du programme</summary><p>Tant que l'age entré ne sera pas un entier positif, le programme continue de proposer d'entrer une valeur.
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10
-11
-12
-13
-14</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">ok</span><span class="o">=</span><span class="kc">True</span>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">ok</span><span class="o">=</span><span class="kc">True</span>
 <span class="k">while</span> <span class="n">ok</span><span class="p">:</span> <span class="c1">#tant que l&#39;on a pas validé l&#39;entrée</span>
     <span class="n">age</span><span class="o">=</span><span class="nb">input</span><span class="p">(</span><span class="s1">&#39;quel est ton age? &#39;</span><span class="p">)</span>
     <span class="k">try</span> <span class="p">:</span> 
@@ -1445,8 +1445,9 @@ Ce bloc permettra de tester les entrées de l'utilisateur lors de programmes plu
           </div>
         </div>
         
-          <a href="#" class="md-top md-icon" title="Back to top" data-md-component="top" data-md-state="hidden">
+          <a href="#" class="md-top md-icon" data-md-component="top" data-md-state="hidden">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"/></svg>
+            Back to top
           </a>
         
       </main>
@@ -1508,10 +1509,10 @@ Ce bloc permettra de tester les entrées de l'utilisateur lors de programmes plu
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.tabs", "navigation.expand", "navigation.top", "toc.integrate", "header.autohide"], "translations": {"clipboard.copy": "Copier dans le presse-papier", "clipboard.copied": "Copi\u00e9 dans le presse-papier", "search.config.lang": "fr", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Rechercher", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../assets/javascripts/workers/search.b0710199.min.js", "version": null}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.tabs", "navigation.expand", "navigation.top", "toc.integrate", "header.autohide"], "translations": {"clipboard.copy": "Copier dans le presse-papier", "clipboard.copied": "Copi\u00e9 dans le presse-papier", "search.config.lang": "fr", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Rechercher", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../assets/javascripts/workers/search.477d984a.min.js", "version": null}</script>
     
     
-      <script src="../assets/javascripts/bundle.76f349be.min.js"></script>
+      <script src="../assets/javascripts/bundle.ddd52ceb.min.js"></script>
       
         <script src="../javascripts/extra.js"></script>
       
