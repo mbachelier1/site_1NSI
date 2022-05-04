@@ -9,6 +9,7 @@ Par exemple, la table ET (appelée également AND) aura une valeur de sortie à 
 Utiliser l'application en ligne ci-dessous :</br>
 	<iframe width="600px" height="400px" src="https://circuitverse.org/simulator/embed/portes-logiques" id="projectPreview" scrolling="no" webkitAllowFullScreen mozAllowFullScreen allowFullScreen></iframe>
 	
+	Les schémas des portes sont donnés dans l'ordre : Non-OU, Non-ET, OU, ET, Non, et OU-Exclusif
 !!! faq "Questions"
 	1.Remplir les tables de vérité des portes NON (NOTGATE), ET (AND), NON-ET (NAND), OU (OR), NON-OU (NOR) et OU EXCLUSIF (XOR). Ces tables donnent l’état de la sortie en fonction des valeurs d’entrée.    
 	![tables de vérité à remplir](../img/tables_verite.JPG)

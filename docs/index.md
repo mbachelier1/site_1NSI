@@ -41,9 +41,9 @@ Voici les différentes parties du programme
 
 [Introduction à l'algorithmie](algorithmie/intro_algo.html){ .md-button} 
 
-[Complexité](Programmation/complexite.html){ .md-button}  
+[Complexité](algorithmie/complexite.html){ .md-button}  
 
-[Algorithmes de tris](algorithmie/tris.html){ .md-button}  [K plus proches voisins](Algorithmie/kppv.html){ .md-button }   
+[Algorithmes de tris](algorithmie/tris.html){ .md-button}  [K plus proches voisins](algorithmie/kppv.html){ .md-button }   
 
 [Algorithmes glouton](algorithmie/glouton.html){ .md-button }   
 

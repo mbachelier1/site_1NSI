@@ -7,7 +7,7 @@ Visionner cette conférence jusque au moins 17min30s
 
 Dans l'exemple de la vidéo, l'objectif est de reconnaître une clémentine d'une orange en mesurant simplement son diamètre.  
 
-Si tous les voisins sont des clémentines ou des oranges, la prédiction est assez simple. Cependant en cas de "cas limite" il faut faire un choix sr la détermination. Est-on au-dessus ou en-dessous de la moyenne ? Quel est le fruit le plus proche ?  
+Si tous les voisins sont des clémentines ou des oranges, la prédiction est assez simple. Cependant en cas de "cas limite" il faut faire un choix sur la détermination. Est-on au-dessus ou en-dessous de la moyenne ? Quel est le fruit le plus proche ?  
 
 Autre solution, que sont les 3 ou 5 plus proches voisins ?  
 
@@ -44,7 +44,7 @@ Autre solution, que sont les 3 ou 5 plus proches voisins ?
 			étape 3 :
 		    <select id="liste3">
 		        <option value="nonChoix" selected> ... </option>
-		        <option value="preidction"> Prédiction</option>
+		        <option value="prediction"> Prédiction</option>
 		        <option value="validation"> Validation </option>
 		        <option value="entrainement"> Entrainement</option>
 		    </select><br>

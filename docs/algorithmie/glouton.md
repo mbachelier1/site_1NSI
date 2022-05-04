@@ -88,20 +88,20 @@ Vous êtes chasseur de trésors ! Après de longues heures d'aventure, des dange
 Vous êtes heureux, vous sautez de joie et lancez des pièces en l'air !  
 Finalement vous retrouvez votre calme et commencez à réfléchir vite (n'oubliez pas l'armée de pillards qui est sur vos traces...).  
 ![tresor](img/tresor.png){align=right}
-Votre sac à dos est assez solide pour n'emporter que 10 kg et le trésor pèse bien plus... Il va vous falloir choisir les objets à emporter. Heureusement vous êtes prévoyant et vous avez la liste des objets présents dans le coffre ainsi que leur masse et leur valeur (Comment ça “ce n'est pas très crédible” ? Vous êtes vraiment chasseur de trésor vous ?)  
+Votre sac à dos est assez solide pour n'emporter que 10 kg et le trésor pèse bien plus... Il va vous falloir choisir les objets à emporter. Heureusement vous êtes prévoyant et vous avez la liste des objets présents dans le coffre ainsi que leur masse et leur valeur (Comment ça “ce n'est pas très crédible” ? Vous êtes vraiment chasseur de trésor vous ?). Le trésor ne contient qu'un exemplaire de chaque objet.  
 En bon “geek” que vous êtes, vous avez toujours votre IDE Python favorite sur vous. Il va falloir créer un algorithme de remplissage de votre sac à dos et fissa si vous ne voulez pas finir ruiné voire pire...  
 Il s'agit de choisir les objets à emporter dans le sac afin d'obtenir la valeur totale la plus grande tout en respectant la contrainte du poids maximal. C'est un problème d'optimisation avec contrainte.  
 Ce problème peut se résoudre par force brute, c'est-à-dire en testant tous les cas possibles. Mais ce type de résolution présente un problème de complexité. Son coût en fonction du nombre d'objets disponibles croît de manière exponentielle. 
 Vous envisagerez plutôt une stratégie gloutonne (méthode heuristique dans la vidéo suivante).
 Le principe d'un algorithme glouton est de faire le meilleur choix pour le premier objet, puis le meilleur choix pour le deuxième, et ainsi de suite sans jamais remettre en cause le choix précédent !  
 
-Que faut-il entendre par “meilleur choix” ?
+Que faut-il entendre par “meilleur choix” ?  
 - Est-ce prendre l'objet qui a la plus grande valeur ?  
 - Est-ce prendre l'objet qui a la plus petite masse ?  
 - Est-ce prendre l'objet le rapport valeur/poids le plus grand ?  
 - Le choix le plus “spontané” serait de prendre les objets qui ont les valeurs les plus élevées ?  
 - Est ce vraiment le bon ?  
-Bien sur, si vous êtes joueur, vous pouvez essayer de tout tester ;-) mais nous vous conseillons vivement de regarder cette vidéo avant de vous lancer dans la programmation : 
+Bien sur, si vous êtes joueur, vous pouvez essayer de tout tester mais nous vous conseillons vivement de regarder cette vidéo avant de vous lancer dans la programmation : 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/w0Q-X4F2iFU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ### A vous de l'implémenter
