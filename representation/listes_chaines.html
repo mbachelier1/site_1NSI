@@ -10,7 +10,7 @@
       
       
       <link rel="icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.2.1, mkdocs-material-7.1.10">
+      <meta name="generator" content="mkdocs-1.2.1, mkdocs-material-7.1.8">
     
     
       
@@ -18,7 +18,7 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.1fe995fd.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.ca7ac06f.min.css">
       
         
         <link rel="stylesheet" href="../assets/stylesheets/palette.f1a3b89f.min.css">
@@ -1116,10 +1116,10 @@
 <h2 id="indexation-se-reperer-dans-la-chaine">Indexation : se repérer dans la chaîne<a class="headerlink" href="#indexation-se-reperer-dans-la-chaine" title="Permanent link">⚓︎</a></h2>
 <p>Chaque caractère de la chaîne possède une coordonnée. On l'appelle index. On peut le retrouver par rapport à sa position dans la chaîne.</p>
 <p>On compte la position (l'index) en partant de la gauche et en démarrant à 0 (ou en démarrant de la droite en commençant par -1).  </p>
-<p><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">chaine</span><span class="o">=</span><span class="s1">&#39;je suis un génie!&#39;</span>
+<p><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3
+4</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">chaine</span><span class="o">=</span><span class="s1">&#39;je suis un génie!&#39;</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">chaine</span> <span class="p">[</span><span class="mi">0</span><span class="p">])</span> <span class="c1">#position 0 1er caractère</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">chaine</span> <span class="p">[</span><span class="mi">6</span><span class="p">])</span> <span class="c1"># position 6 7ème caractère</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">chaine</span> <span class="p">[</span><span class="o">-</span><span class="mi">4</span><span class="p">])</span> <span class="c1">#4eme caractère en commançant par la fin</span>
@@ -1137,12 +1137,12 @@ Si on ne précise pas l'index de début on démarre au début.<br />
 </div>
 <h2 id="longueur-de-la-chaine">Longueur de la chaîne<a class="headerlink" href="#longueur-de-la-chaine" title="Permanent link">⚓︎</a></h2>
 <p>On peut utiliser l'instruction <code>len(chaine)</code> pour connaitre le nombre de caractères d'une chaîne.<br />
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">chaine</span><span class="o">=</span><span class="s1">&#39;Bonjour, comment ca va?&#39;</span>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3
+4
+5
+6</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">chaine</span><span class="o">=</span><span class="s1">&#39;Bonjour, comment ca va?&#39;</span>
 <span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">chaine</span><span class="p">))</span>
 
 <span class="o">&gt;&gt;&gt;</span>
@@ -1153,17 +1153,17 @@ Si on ne précise pas l'index de début on démarre au début.<br />
 <h2 id="caractere-dechappement">Caractère d'échappement<a class="headerlink" href="#caractere-dechappement" title="Permanent link">⚓︎</a></h2>
 <p>Lorsque l'on écrit une chaîne de caractère on peut utiliser les apostrophes pour encadrer la chaîne. Mais qu'en ai-t-il quand un des caractères d la chaine est un aporstrophe?<br />
 On utilise le caractère d'échappemetn pour signaler à python que ce n'est pas la fin mais juste un caractère comme un autre :
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">chaine</span><span class="o">=</span><span class="s1">&#39;aujourd</span><span class="se">\&#39;</span><span class="s1">hui&#39;</span> <span class="c1">#ou chaine=&quot;auourd&#39;hui&quot;</span>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">chaine</span><span class="o">=</span><span class="s1">&#39;aujourd</span><span class="se">\&#39;</span><span class="s1">hui&#39;</span> <span class="c1">#ou chaine=&quot;auourd&#39;hui&quot;</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">chaine</span><span class="p">)</span>
 </code></pre></div>
 </td></tr></table>
 On peut aussi utiliser des guillemets pour encadrer la chaîne si elle contient un apostrophe ou l'inverse.</p>
 <h2 id="concatenation">Concaténation<a class="headerlink" href="#concatenation" title="Permanent link">⚓︎</a></h2>
 <p>Pour joindre deux chaîne l'une à la suite de l'autre (on parle de concaténation) on utilise simplement l'opération d'addition : 
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">nom</span><span class="o">=</span><span class="s1">&#39;Dupont&#39;</span>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">nom</span><span class="o">=</span><span class="s1">&#39;Dupont&#39;</span>
 <span class="n">prenom</span><span class="o">=</span><span class="s1">&#39;Jean&#39;</span>
 <span class="n">chaine</span> <span class="o">=</span> <span class="n">nom</span><span class="o">+</span><span class="n">prenom</span>
 </code></pre></div>
@@ -1175,13 +1175,13 @@ On peut aussi utiliser des guillemets pour encadrer la chaîne si elle contient 
 <h2 id="les-operations-sur-les-chaines-de-caracteres">Les opérations sur les chaînes de caractères<a class="headerlink" href="#les-operations-sur-les-chaines-de-caracteres" title="Permanent link">⚓︎</a></h2>
 <p><strong>Tester la présence d'un caractère dans la chaîne</strong><br />
 On peut tester la présence d'un élément dans une chaîne avec <code>in</code> qui renvoie <code>True</code> ou <code>False</code>.<br />
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">chaine</span><span class="o">=</span><span class="s1">&#39;Bonjour&#39;</span>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3
+4
+5
+6
+7</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">chaine</span><span class="o">=</span><span class="s1">&#39;Bonjour&#39;</span>
 <span class="n">element</span> <span class="o">=</span> <span class="s1">&#39;e&#39;</span>
 <span class="n">element</span> <span class="ow">in</span> <span class="n">chaine</span>
 
@@ -1192,12 +1192,12 @@ On peut tester la présence d'un élément dans une chaîne avec <code>in</code>
 </td></tr></table></p>
 <h3 id="nombre-doccurences">Nombre d'occurences<a class="headerlink" href="#nombre-doccurences" title="Permanent link">⚓︎</a></h3>
 <p>On peut compter le nombre de fois ou une chaîne est présente dans une autre avec la focntion <code>count()</code>:
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">chaine</span><span class="o">=</span><span class="s1">&#39;Bonjour&#39;</span>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3
+4
+5
+6</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">chaine</span><span class="o">=</span><span class="s1">&#39;Bonjour&#39;</span>
 <span class="n">chaine</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="s1">&#39;o&#39;</span><span class="p">)</span> <span class="c1"># compte le nombre de &#39;o&#39; dans &#39;bonjour&#39;</span>
 
 <span class="o">&gt;&gt;&gt;</span>
@@ -1207,12 +1207,12 @@ On peut tester la présence d'un élément dans une chaîne avec <code>in</code>
 </td></tr></table></p>
 <h3 id="remplacer-des-elements">Remplacer des éléments :<a class="headerlink" href="#remplacer-des-elements" title="Permanent link">⚓︎</a></h3>
 <p>On peut remplacer les 'o' par des 'u' par exemples :
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">chaine</span><span class="o">=</span><span class="s1">&#39;Bonjour&#39;</span>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3
+4
+5
+6</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">chaine</span><span class="o">=</span><span class="s1">&#39;Bonjour&#39;</span>
 <span class="n">chaine</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;o&#39;</span><span class="p">,</span><span class="s1">&#39;u&#39;</span><span class="p">)</span>
 
 <span class="o">&gt;&gt;&gt;</span>
@@ -1228,12 +1228,12 @@ On peut tester la présence d'un élément dans une chaîne avec <code>in</code>
 <h1 id="les-listes">les Listes<a class="headerlink" href="#les-listes" title="Permanent link">⚓︎</a></h1>
 <p>Les listes en python sont des objets capables de stocker plusieurs objets (même de types différents).
 Par exemple :<br />
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="c1"># constitués d&#39;objets identiques</span>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3
+4
+5
+6</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="c1"># constitués d&#39;objets identiques</span>
 <span class="n">L</span><span class="o">=</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">19</span><span class="p">]</span>
 <span class="c1">#ou d&#39;objets différents</span>
 <span class="n">L2</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;coucou&#39;</span><span class="p">,</span><span class="mi">25</span><span class="p">,</span><span class="mf">4.2</span><span class="p">]</span>
@@ -1255,22 +1255,22 @@ L[:] : reprend toute la liste et permet de faire une copie.  </p>
 </div>
 <h2 id="creer-une-liste">Créer une liste<a class="headerlink" href="#creer-une-liste" title="Permanent link">⚓︎</a></h2>
 <p>Créer une liste vide : <br />
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">L</span><span class="o">=</span><span class="p">[]</span>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">L</span><span class="o">=</span><span class="p">[]</span>
 </code></pre></div>
 </td></tr></table>
 Créer une liste de 5 '0':<br />
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">L</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">*</span><span class="mi">5</span>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">L</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">*</span><span class="mi">5</span>
 </code></pre></div>
 </td></tr></table>
 Remplir une liste en la parcourant :
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span>
-<span class="normal">8</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">Liste</span><span class="o">=</span><span class="p">[]</span>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3
+4
+5
+6
+7
+8</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">Liste</span><span class="o">=</span><span class="p">[]</span>
 <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">5</span><span class="p">):</span>
     <span class="n">Liste</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">=</span><span class="n">i</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">Liste</span><span class="p">)</span>
@@ -1281,7 +1281,7 @@ Remplir une liste en la parcourant :
 </code></pre></div>
 </td></tr></table></p>
 <h3 id="creer-une-liste-par-comprehension">Créer une liste par compréhension :<a class="headerlink" href="#creer-une-liste-par-comprehension" title="Permanent link">⚓︎</a></h3>
-<p><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">liste</span> <span class="o">=</span> <span class="p">[</span><span class="n">i</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">11</span><span class="p">)</span> <span class="k">if</span> <span class="n">i</span><span class="o">%</span><span class="mi">2</span><span class="o">==</span><span class="mi">0</span><span class="p">]</span>
+<p><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">liste</span> <span class="o">=</span> <span class="p">[</span><span class="n">i</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">11</span><span class="p">)</span> <span class="k">if</span> <span class="n">i</span><span class="o">%</span><span class="mi">2</span><span class="o">==</span><span class="mi">0</span><span class="p">]</span>
 </code></pre></div>
 </td></tr></table>
 Cette méthode permet d'écrire en une seule ligne une boucle avec une condition.<br />
@@ -1289,12 +1289,12 @@ Cette méthode permet d'écrire en une seule ligne une boucle avec une condition
 Ici par exemple on rempli une liste avec les valeurs de i comprises entre 0 et 1 seulement si i est pair.  </p>
 <h2 id="ajouter-un-element-dans-une-liste">Ajouter un élement dans une liste<a class="headerlink" href="#ajouter-un-element-dans-une-liste" title="Permanent link">⚓︎</a></h2>
 <p>La méthode <code>append()</code> ajoute un élément dans une liste en l'ajoutant à la fin.<br />
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">L</span><span class="o">=</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="s1">&#39;coucou&#39;</span><span class="p">,</span><span class="kc">False</span><span class="p">]</span>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3
+4
+5
+6</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">L</span><span class="o">=</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="s1">&#39;coucou&#39;</span><span class="p">,</span><span class="kc">False</span><span class="p">]</span>
 <span class="n">L</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">L</span><span class="p">)</span>
 
@@ -1318,7 +1318,7 @@ Ici par exemple on rempli une liste avec les valeurs de i comprises entre 0 et 1
 <p>En python un tableau est une liste de listes. Chaque liste représente en fait une ligne et les index identiques représentent les éléments d'une même colonne.<br />
 <img alt="tableau" src="img/tableau.PNG" /></p>
 <p>Ce tableau peut être représenter ainsi :
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">Tab</span><span class="o">=</span><span class="p">[[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">],[</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">8</span><span class="p">],[</span><span class="mi">9</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">11</span><span class="p">,</span><span class="mi">12</span><span class="p">]]</span>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">Tab</span><span class="o">=</span><span class="p">[[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">],[</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">8</span><span class="p">],[</span><span class="mi">9</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">11</span><span class="p">,</span><span class="mi">12</span><span class="p">]]</span>
 </code></pre></div>
 </td></tr></table></p>
 <h2 id="acceder-aux-elements-dun-tableau">Accéder aux éléments d'un tableau<a class="headerlink" href="#acceder-aux-elements-dun-tableau" title="Permanent link">⚓︎</a></h2>
@@ -1332,29 +1332,29 @@ Si on veut le 3e élément de cette liste (index 2) on utilise <code>[2]</code> 
 <p>Une colonne en python n'est pas identifiable directement. Il s'agit en fait de tous les éléments de meme index de chaque ligne.
 On veut afficher la 3e colonne du tableau. Ce sont en fait les éléments d'index 2 de chaque ligne.<br />
 Il va donc falloir parcourir chaque ligne et en extraire l'élément d'index 2.
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">for</span> <span class="n">ligne</span> <span class="ow">in</span> <span class="n">Tab</span> <span class="p">:</span> <span class="c1"># pour chaque liste de Tab</span>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">for</span> <span class="n">ligne</span> <span class="ow">in</span> <span class="n">Tab</span> <span class="p">:</span> <span class="c1"># pour chaque liste de Tab</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">ligne</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span>
 </code></pre></div>
 </td></tr></table>
 Cette instruction affiche sucessivement 3,7 et 11.</p>
 <h2 id="parcourir-un-tableau">Parcourir un tableau<a class="headerlink" href="#parcourir-un-tableau" title="Permanent link">⚓︎</a></h2>
 <p>Pour accéder aux élément d'un tableau un par un il va falloir parcourir chaque ligne et à l'intérieur de chaque ligne parcourir toute les cases :
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>pour i allant de 0 à 2:
-    pour j allant de 0 à 3:
-        action à effectuer pour chaque cellule
-    fin pour
-fin pour
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3
+4
+5</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">pour </span><span class="nv">i</span> <span class="nv">allant</span> <span class="nv">de</span> <span class="mi">0</span> <span class="k">à </span><span class="mi">2</span><span class="p">:</span>
+    <span class="k">pour </span><span class="nv">j</span> <span class="nv">allant</span> <span class="nv">de</span> <span class="mi">0</span> <span class="k">à </span><span class="mi">3</span><span class="p">:</span>
+        <span class="nv">action</span> <span class="k">à </span><span class="nv">effectuer</span> <span class="k">pour </span><span class="nv">chaque</span> <span class="nv">cellule</span>
+    <span class="k">fin pour</span>
+<span class="k">fin pour</span>
 </code></pre></div>
 </td></tr></table>
 En phython cela donne 
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span> <span class="p">(</span><span class="mi">3</span><span class="p">):</span>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span> <span class="p">(</span><span class="mi">3</span><span class="p">):</span>
     <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span> <span class="p">(</span><span class="mi">3</span><span class="p">):</span>
         <span class="nb">print</span> <span class="p">(</span><span class="n">Tab</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">])</span>
 </code></pre></div>
@@ -1362,13 +1362,13 @@ En phython cela donne
 Lorsque l'on ne connait pas la longueur du tableau (pas le courage de compter, risque de se tromper ou longueur des lignes différentes), on pourra remplacer le 3 par <code>len(Tab)</code> qui représente le nombre de lignes (nombre de sous_listes que contient tab) et <code>len(Tab[i])</code>(nombre d'éléments de la ligne i).  </p>
 <h2 id="creer-un-tableau">Créer un tableau<a class="headerlink" href="#creer-un-tableau" title="Permanent link">⚓︎</a></h2>
 <p>On crée un tableau comme une liste, mais il faudra faire deux boucles imbriquées pour remplir chaque case : 
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">random</span> <span class="kn">import</span> <span class="n">randint</span>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3
+4
+5
+6
+7</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">random</span> <span class="kn">import</span> <span class="n">randint</span>
 <span class="n">T</span><span class="o">=</span><span class="p">[]</span> <span class="c1"># on crée un tableau vide</span>
 <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span> <span class="p">(</span><span class="mi">5</span><span class="p">):</span> <span class="c1">#notre tableau aura 5 lignes</span>
         <span class="n">T</span><span class="o">.</span><span class="n">append</span><span class="p">([])</span> <span class="c1"># on crée une ligne vide</span>
@@ -1388,9 +1388,8 @@ Lorsque l'on ne connait pas la longueur du tableau (pas le courage de compter, r
           </div>
         </div>
         
-          <a href="#" class="md-top md-icon" data-md-component="top" data-md-state="hidden">
+          <a href="#" class="md-top md-icon" title="Back to top" data-md-component="top" data-md-state="hidden">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"/></svg>
-            Back to top
           </a>
         
       </main>
@@ -1452,10 +1451,10 @@ Lorsque l'on ne connait pas la longueur du tableau (pas le courage de compter, r
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.tabs", "navigation.expand", "navigation.top", "toc.integrate", "header.autohide"], "translations": {"clipboard.copy": "Copier dans le presse-papier", "clipboard.copied": "Copi\u00e9 dans le presse-papier", "search.config.lang": "fr", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Rechercher", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../assets/javascripts/workers/search.477d984a.min.js", "version": null}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.tabs", "navigation.expand", "navigation.top", "toc.integrate", "header.autohide"], "translations": {"clipboard.copy": "Copier dans le presse-papier", "clipboard.copied": "Copi\u00e9 dans le presse-papier", "search.config.lang": "fr", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Rechercher", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../assets/javascripts/workers/search.b0710199.min.js", "version": null}</script>
     
     
-      <script src="../assets/javascripts/bundle.ddd52ceb.min.js"></script>
+      <script src="../assets/javascripts/bundle.76f349be.min.js"></script>
       
         <script src="../javascripts/extra.js"></script>
       
