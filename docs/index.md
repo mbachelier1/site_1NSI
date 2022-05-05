@@ -43,7 +43,7 @@ Voici les différentes parties du programme
 
 [Complexité](algorithmie/complexite.html){ .md-button}  
 
-[Algorithmes de tris](algorithmie/tris.html){ .md-button}  [K plus proches voisins](algorithmie/kppv.html){ .md-button }   
+[Algorithmes de tris](algorithmie/tris.html){ .md-button}  [K plus proches voisins](algorithmie/knn.html){ .md-button }   
 
 [Algorithmes glouton](algorithmie/glouton.html){ .md-button }   
 

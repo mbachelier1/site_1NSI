@@ -217,8 +217,8 @@ Codes à compléter :
 
 	def compteFreq(texte) :
 	    ''' test compteFreq :
-	    >>> compteFreq('uuuhhhhhhie.usdksvzep.huumd')
-	    [[0.25, 0.5], [0.1, 0.0], [0.4, 0.2]]'''
+	    >>> compteFreq('Uuuhhhhhhie.usdksvzep.huumd')
+	    [[0.2727272727272727, 0.5454545454545454], [0.1111111111111111, 0.0], [0.4, 0.2]]'''
 	    #...
 	    return #...
 
