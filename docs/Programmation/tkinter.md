@@ -478,7 +478,7 @@ Vous ne connaissez pas ?
    - Conserver le nom du joueur et le score dans un fichier extérieur (txt ou csv au choix)  
    - Faire afficher le nom du joueur ayant enregistré le meilleur score 
 
-![Motus](img/motus.PNG)  
+![Motus](img/motus.png)  
 
 
 !!! caution "Conseil"
