@@ -133,13 +133,15 @@ ou si l'image est ailleurs, avec son adresse absolue :
     ```html
     <img src=" https://i2.wp.com/beebom.com/wp-content/uploads/2016/01/Reverse-Image-Search-Engines-Apps-And-Its-Uses-2016.jpg?w=640&ssl=1 " />    
     ```
- Il est souhaitable (indispensable pour respecter W3C) d'ajouter un texte alternatif, en cas de problème de chargement, pour les non-voyants, … 
+ Il est souhaitable (indispensable pour respecter W3C) d'ajouter un texte alternatif, en cas de problème de chargement, pour les non-voyants, …  
+
  !!! example "exemple"
     ```html
     <img src="robot.jpg" alt="photo du robot Thymio 2"/>    
     ```
 ##Les tableaux
 On peut insérer un tableau par les balises. `<tr>` est la balise de ligne, `<td>` est la balise de cellule. 
+
 !!! method 'Créer un tableau'
     ```html
     <table>

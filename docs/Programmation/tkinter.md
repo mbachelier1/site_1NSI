@@ -200,9 +200,9 @@ from tkinter import*
 
 def pointeur(event):
     chaine.configure(text="Clic détecté en X = "+str(event.x)+", Y = "+str(event.y))
-    can.create_oval(event.x-2,event.y-2,event.x+2,event.y+2,outline='red',width=1)
+    
 fen=Tk()
-can=Canvas(fen, width=200, height=150, bg="light yellow")
+can=Frame(fen, width=200, height=150, bg="light yellow")
 can.bind("<Button-1>", pointeur)
 can.pack()
 chaine=Label(fen)
@@ -211,12 +211,13 @@ fen.mainloop()
 ```
 On obtient :  
 ![détection du clic d souris](img/res clic souris.JPG) 
+Le widget `Frame` sert à conenir des éléments. Il n'est pas utile de mettre un canevas si on a rien à dessiner.
 Le script fait apparaître une fenêtre contenant un cadre (frame) rectangulaire de couleur jaune pâle.  
 La méthode `bind()` du widget cadre associe l'événement clic à l'aide du premier bouton de la souris> au gestionnaire d'événement « pointeur ».    
-Ce gestionnaire d'événement peut utiliser les attributs x et y de l'objet event généré automatiquement par Python, pour construire la chaîne de caractères qu' affichera la position de la souris au moment du clic.
+Ce gestionnaire d'événement peut utiliser les attributs x et y de l'objet event généré automatiquement (sous le nom de `event.x` et `event.y`) par Python, pour construire la chaîne de caractères qu' affichera la position de la souris au moment du clic.
 
 ### **Exercices** :
-Modifier le script ci-dessus de manière à faire apparaître un petit cercle rouge à l'endroit où l'utilisateur a effectué son clic (il faut d'abord remplacer le widget Frame par un widget Canvas).  
+Modifier le script ci-dessus de manière à faire apparaître un petit cercle rouge à l'endroit où l'utilisateur a effectué son clic (il faut d'abord remplacer le widget Frame par un widget Canvas). On tracera alors un cercle autour de la position de la souris. 
 ![détection du clic d souris](img/re clic souris cercle rouge.JPG)  
 
 ## Widgets et positionnement dans le Canevas
@@ -268,14 +269,26 @@ Il est possible d'aligner les widgets avec l'option `sticky` qui peut prendre l'
 
 ### **Exercices :**
 1. Remplacer les deux premières instructions` grid( ) `du script par :   
-`txt1.grid(row=0, sticky=E)  
-  txt2.grid(row=1, sticky=E)`  
+`txt1.grid(row=0, sticky=E) `   
+  `txt2.grid(row=1, sticky=E)`  
 
 2. Le but de cet exercice est d'obtenir la fenêtre ci-dessous :   
 ![méthode grid](img/res grid.JPG) 
 voici le fichier image à utiliser (cliquer sur le lien pour télécharger) [Image anneaux](img/AnOlympiques.gif) 
 Le programme comportera entre autres, les parties suivantes :  
-![Aide](img/anneau aide.JPG)
+```python
+#Création des widget Label et Entry
+        A vous de compléter
+#Création d'un widget Canvas contenant une image
+can1=Canvas(fen1, width=320, height=160, bg='white')
+anneaux=PhotoImage(file='AnOlympiques.gif')
+item=can1.create_image(160, 80, image=anneaux)
+
+#Mise en place des widgetsLabel et Entry
+        A vous de compléter
+
+can1.grid(row=0, column=2, rowspan=3, padx=10, pady=5)
+```
 Tkinter ne permet pas d'insérer directement une image dans une fenêtre. Il faut d'abord installer un canevas, et ensuite positionner l'image dans celui-ci, grâce à l'instruction `item=can1.create_image(160, 80, image=anneaux)`.
 
 Les deux premiers arguments transmis `(160,80)` indiquent les coordonnées x et y du canevas où il faut placer le centre de l'image (ici, l'image sera donc centrée dans le canevas).  

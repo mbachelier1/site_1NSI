@@ -7,7 +7,8 @@
 !!! example "Exemple"
 
 	<form>
-	 <input type="button" style="margin:5px; padding:5px;  background-color : lightblue; border : solid 2px blue; border-radius : 5px;"  value="tester" onclick="testBidon()">
+		 <input type="button" style="margin:5px; padding:5px;  background-color : lightblue; border : solid 2px blue; border-radius : 5px;"  value="tester" onclick="testBidon()">
+	
 	</form>
 	<div id="casecouleur"> Un élément de formulaire fondamental : le bouton</div>
 
@@ -19,6 +20,7 @@
 		<form>
 			<input type="button" value="tester"  onclick="testBidon()"> 
 		</form>
+		<div id="casecouleur"> Texte à colorer</div>
 		```
 
 	=== "javascript"
@@ -51,7 +53,7 @@ Il faut donner le même nom aux boutons radios mais des `id` différents
 				  2 <input type="radio" name="testRad" value="2" id="radio2">
 			 	 ...
 			 	 <div id="texteRadio"></div>
-				<input type="button" value="tester" onclick="tesRadio()"> 
+				<input type="button" value="tester" onclick="testRadio()"> 
 			</form>
 		```
 
@@ -93,13 +95,13 @@ Le contenu de la variable `contenu` est écrit dans une balise dont l'`id` est `
 		```html
 			<form>
 				<div id="casesACocher">
-					<input type="checkbox" name="testCase" value="Case 1" id="case1">Case 1   <br>  
-					...
+					<input type="checkbox" name="testCase" value="Case 1" id="case1">Case 1   <br>  		  
 					<input type="button" value="tester" onclick="...">
 					<div></div>
 				</div>
 			</form>
 		```
+
 
 	=== "javascript"
 		```js

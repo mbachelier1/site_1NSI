@@ -6,21 +6,21 @@ Base usuelle : base 10
 Bases utilisées en informatique : base 2 et base 16  
 
 !!! example "Exemple d’écriture :"
-	(345)10 = 3 x 102 +4 x 101 + 5 x 100  
-	(0100110)2 = 0 x 26 + 1 x 25 + 0 x 24 + 0 x 23 + 1 x 22 + 1 x 21 + 0 x 20  
-	(345)16 = 3 x 162 + 4 x 161 + 5 x 160  
+	(345)<sub>10</sub> = 3 x 10<sup>2</sup> +4 x 10<sup>1</sup> + 5 x 10<sup>0</sup>  
+	(0100110)<sub>2</sub> = 0 x 2<sup>6</sup> + 1 x 2<sup>5</sup> + 0 x 2<sup>4</sup> + 0 x 2<sup>3</sup> + 1 x 2<sup>2</sup> + 1 x 2<sup>1</sup> + 0 x 2<sup>0</sup>  
+	(345)<sub>16</sub> = 3 x 16<sup>2</sup> + 4 x 16<sup>1</sup> + 5 x 16<sup>0</sup>  
 
 ##Principe d'une base
 ![compteur](img/compteur.jpg){align=right width=30%}
 Une fois atteint le dernier chiffre possible, on ajoute le premier chiffre à gauche et on recommence.
 
-4 chiffres → 104 valeurs possibles (de 0 à 9999) 
+4 chiffres → 10<sup>4</sup> valeurs possibles (de 0 à 9999) 
 
 ##Le binaire
 Pour transférer les données sans ambiguïté (0 absence de signal 1 réception d’un signal).
 ![conversion binaire decimal](img/conv_dec_bin.PNG){align=left}
 Binaire à décimal :
-(0100110)2 = 0 x 26 + 1 x 25 + 0 x 24 + 0 x 23 + 1 x 22 + 1 x 21 + 0 x 20
+(0100110)<sub>2</sub> = 0 x 2<sup>6</sup> + 1 x 2<sup>5</sup> + 0 x 2<sup>4</sup> + 0 x 2<sup>3</sup> + 1 x 2<sup>2</sup> + 1 x 2<sup>1</sup> + 0 x 2<sup>0</sup>
 = 0 + 32 + 0 + 0 + 4 + 2 + 0 = (38)<sub>10</sub>
 Décimal à binaise :
 Le premier bit est le bit de poids fort (MSB) le dernier est le bit de poids faible (LSB)    
@@ -32,8 +32,8 @@ Sert surtout à coder les couleurs.
 	Où A = 10, B = 11, C = 12, D = 13, E = 14, F = 15
 
 !!! method "passer de Hexadécimal en décimal :"
-	(34F5)16 = 3 x 163 + 4 x 162 + 15x161 + 5x160 =
-	s3 x 4096 + 4 x 256 + 15 x 16 + 5 x 1 = (13557)<sub>10</sub>
+	(34F5)<sub>16</sub> = 3 x 16<sup>3</sup> + 4 x 16<sup>2</sup> + 15x16<sup>1</sup> + 5x16<sup>0</sup> =
+	3 x 4096 + 4 x 256 + 15 x 16 + 5 x 1 = (13557)<sub>10</sub>
 
 !!! method "passer de Décimal en Hexadécimal :"
 	  
