@@ -452,7 +452,7 @@ Voici une petite [démonstration](https://www.google.fr/logos/2010/pacman10-i.ht
 
 
 Au minimum vous devez obtenir ceci :
-![pacMan](img/pacman.PNG)  
+![pacMan](img/pacman.png)  
 
 ??? caution "Conseils"
     Les fantômes peuvent être gérés par une liste.  
