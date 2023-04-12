@@ -170,7 +170,6 @@ Malgré sa simplicité, pour qu'il puisse contribuer à des prévisions correcte
 
 Le principe étant de disposer d'un jeu d'apprentissage et d'un jeu de test (un ensemble de données sur lesquelles ont connaît la réponse et on évalue la fiabilité de la prédiction). Le travail de mise au point (choix de k ici est fondamental).  
 
-
 ## L'algorithme
 
 ### Apprentissage :
@@ -186,6 +185,22 @@ extraire les catégories correspondantes
 chercher le nombre d’occurrences de chaque catégories  
 Renvoyer la catégorie ayant le plus grand nombre d’occurrences  
 
+## TP : Application
+Pour mettre en application cet algorithme rendez-vous sur capytale avec le code : 123b-604638
+## Projet : Le choixpeau magique
+
+L'idée est de programmer le choixpeau magique.  
+[choixpeau magique](img/choix peau magique.pdf)
+Une première partie permet d'affecter une maison selon des scores d'ambition, de courage, de bonté et d'intelligence.  
+voir capytale code : 85b9-1576377.  
+
+La deuxième partie pour les plus rapide sera de créer le questionnaire permettant de générer les notes. Il faudra que le programme pose les questions, gère les réponses et renvoie un score.  
+Vous pouvez inventer les questions ou vous aider de questionnaires existant.
+![test](https://beneylu.com/pssst/wp-content/uploads/2019/05/le-choixpeau-harry-potter-768x541.png)  
+
+*Bonus* : Si vraiment vous vous ennuyez, essayer de créer un programme en .exe que l'on pourrait donner à quelqu'un pour qu'il réponde aux questions et se voit affecter une maison.  
+
+<! --
 ## TP : détection de la langue d'un texte
 Dans un texte, on constate que la fréquence d'apparition des lettres de l'alphabet est différente selon la langue. En effet, en anglais par exemple, les H sont beaucoup plus fréquents que en français et à l'inverse, le français utilise plus de U.  
 
@@ -333,6 +348,7 @@ Textes inconnus dont il faut déterminer la langue :
 il est IMPÉRATIF de rendre le fichier knn.py contenant les fonctions et le fichier main.py qui appelle les fonctions. RESPECTER LE NOM DES FICHIERS !! (pour passer les tests automatiques).  
 
 Le tout pourra être mis dans un dossier contenant les fichiers txt et les fichiers .py.  
+ -->
 <!---Javascript-->
 <script>
 

@@ -81,6 +81,9 @@ renvoie monnaie
 	L'ancien système monétaire britannique était composé de pièces de (1,3,6,12,24,30).  
 	Modifier le système de monnaie et vérifier que le programme n'est plus optimal.  
 
+## Exercices
+Un TP  est disponible si le temps  le permet.
+
 
 ## Problème du sac à dos
 ![chasseur](img/chasseur.png){align=left}
