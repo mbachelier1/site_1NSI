@@ -32,10 +32,12 @@ Voici les différentes parties du programme
 ###javascript
 [Découverte de javascript](IHM/javascript/exo_js.html){ .md-button} [Programmation évènementielle](IHM/javascript/programmation_evenementielle.html){ .md-button} [Les formulaires](IHM/javascript/formulaire.html){ .md-button}
 
+
 ###Php
 [protocole HTTP](IHM/PHP/Protocole_HTTP.html){ .md-button} [PHP](IHM/PHP/TP_php.html){ .md-button}
 
-
+###Robotique
+[Robotique](IHM/robotique/robotique.html){ .md-button}	[Projets Robotique](IHM/robotique/projets.html){ .md-button}
 
 ##Algorithmie
 

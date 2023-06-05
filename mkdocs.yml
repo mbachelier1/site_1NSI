@@ -44,6 +44,9 @@ nav:
     - 'Protocole HTTP et PHP' : 
       - "Protocole HTTP" : 'IHM/php/Protocole_HTTP.md'
       - "TP PHP" : 'IHM/PHP/TP_php.md'
+    - 'Robotique' : 
+      - 'Robotique' : 'IHM/robotique/robotique.md' 
+      - 'Projets': 'IHM/robotique/projets.md'
 
 
 
