@@ -338,6 +338,7 @@ Le robot Maqueen micro:bit est un robot très bon marché (autour de 20€) cont
 A l'origine, ce robot se programme par blocs. Il a été développé un module python permettant de le programmer facilement sous Python également.  
 
 ### Installation du module pilote maqueen sous Python
+**Si vous l'installez chez vous**
 
 Pour installer le module sur Mu-editor :  
 
@@ -349,6 +350,91 @@ Si vous avez copié le fichier maqueen.py dans le dossier mu_code, vous devriez 
 
 ![maqueen fichier](../src/maqueenFichier.png)
 
+**Si vous travaillez au lycée**
+Vous n'avez pas accès au répertoire mu_code, nous allons donc faire précéder tous les programmes ci-dessous par le contenu du fichier `maqueen.py`. Le copier et le coller dans l'éditeur Mu :
+
+```python
+#bibliothèque
+import microbit
+import time
+import machine
+import music
+
+class Maqueen():
+    def __init__(self,addr=0x10):
+        """Initiaisation robot
+        addr : adresse i2c. 0x10 par defaut"""
+        self.addr=addr
+        self._vitesse=0 # vitesse entre 0 et 100
+
+    def getVitesse(self):
+        return self._vitesse
+
+    def setVitesse(self, v):
+        self._vitesse=v
+
+    def moteurDroit(self, v=None):
+        if v==None:
+            v=self._vitesse
+        sens=0 if v>=0 else 1 # sens moteur
+        vit=abs(v)*255//100   # vitesse moteur 0..255
+        microbit.i2c.write(self.addr,bytearray([2,sens, vit]))
+
+    def moteurGauche(self, v=None):
+        if v==None:
+            v=self._vitesse
+        sens=0 if v>=0 else 1 # sens moteur
+        vit=abs(v)*255//100   # vitesse moteur 0..255
+        microbit.i2c.write(self.addr,bytearray([0,sens, vit]))
+
+    def avance(self,v=None):
+        if v != None:
+            self._vitesse=v
+        self.moteurDroit()
+        self.moteurGauche()
+
+    def recule(self):
+        self.moteurDroit(-self._vitesse)
+        self.moteurGauche(-self._vitesse)
+
+    def stop(self):
+        microbit.i2c.write(self.addr,bytearray([0,0,0]))
+        microbit.sleep(1)
+        microbit.i2c.write(self.addr,bytearray([2,0,0]))
+
+    def distance(self):
+        """Calcule la distance à l'obstacle en cm
+        pin1 : Trig
+        pin2 : Echo"""
+        microbit.pin1.write_digital(1)
+        time.sleep_ms(10)
+        microbit.pin1.write_digital(0)
+
+        microbit.pin2.read_digital()
+        t2 = machine.time_pulse_us(microbit.pin2, 1)
+
+        d = 340 * t2 / 20000
+        return d
+
+    def son_r2d2(self):
+        tune=["A7:0", "G7:0", "E7:0","C7:0","D7:0","B7:0","F7:0","C8:0","A7:0","G7:0","E7:0","C7:0","D7:0","B7:0","F7:0","C8:0"]
+        music.play(tune)
+
+    def son_bip(self):
+        for i in range(2):
+            freq=2000
+            while freq>1000:
+                music.pitch(int(freq),10)
+                freq*=0.95
+            freq=1000
+            while freq<3000:
+                music.pitch(int(freq),10)
+                freq*=1.05
+
+#fin bibliothèque
+#début du programme
+
+```
 ### Méthodes fournies par le module
 `avance(vitesse)` : avance en ligne droite. vitesse est un nombre entre 0 et 100. Ce paramètre est optionnel. Si non spécifié, c'est la dernière vitesse spécifiée lors de avance() ou setVitesse() qui sera utilisée.  
 
@@ -384,13 +470,20 @@ Si vous avez copié le fichier maqueen.py dans le dossier mu_code, vous devriez 
     np.show()
 
     # np.clear() pour eteindre les neopixels
-    if pin14.read_digital() == 0 and pin13.read_digital() == 0 :# pin 14 est la diode de droite et 13 celle de gauche
+    
+    ```
+Autre exemple, si une ligne est franchie, les LED 13 et 14 détecte du noir :
+```python
+if pin14.read_digital() == 0 and pin13.read_digital() == 0 :# pin 14 est la diode de droite et 13 celle de gauche
         # detection de franchissement de ligne
         mq.son_bip()
-    ```
+```
 
 ### Utilisation du module
 Voici un exemple concret vous permettant de tester le module depuis le REPL afin de vous assurer que tout fonctionne. Je vous conseille de tester cela avec le robot sur le dos pour éviter qu'il parte avec un fil à la patte !
+!!! note "Attention"
+Ceci n'est valable que si vous avez installé la bibliothèque chez vous
+
 ```python
     >>> from maqueen import Maqueen
 
