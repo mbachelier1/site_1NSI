@@ -193,7 +193,7 @@ Mais on peut aussi utiliser d'autres variables pour affecter une valeur à une a
 		l'algorithme 3, la variable A contient 
 		<input style="border:  solid 1px;width:30px;border-radius:3px;" type="text" name="reponse" maxlenght="5" id="reponse46" autocomplete="off">
 		, la variable B contient 
-		<input style="border:  solid 1px;width:30px;order-radius:3px;" type="text" name="reponse" maxlenght="5" id="reponse47" autocomplete="off">
+		<input style="border:  solid 1px;width:30px;border-radius:3px;" type="text" name="reponse" maxlenght="5" id="reponse47" autocomplete="off">
 		et la variable C contient 
 		<input style="border:  solid 1px;width:30px;border-radius:3px;" type="text" name="reponse" maxlenght="15" id="reponse48" autocomplete="off">.<br>
 		<input type='button' style="margin:5px; padding:5px;  background-color : lightblue; border : solid 2px blue; border-radius : 5px;" id="BoutonValider" onclick="reactionText4()" value="Vérifier">
@@ -305,7 +305,7 @@ Par exemple :
 
 
 
-###Les sorties
+### Les sorties
 Le dernier algorithme calcule l'aire d'un disque dont le rayon est entré par l'utilisateur mais ne le renseigne pas sur le résultat.
 Il faut ensuite afficher le résultat du calcul avec :  
 `AFFICHER A`  
@@ -321,12 +321,12 @@ Ce qui donne :
 ##Passer de l'algorithme au langage Python  
 Toutes les instructions qui ont été vue peuvent être traduites en langage de programmation : python ou autre.  
 
-##Affections de variables
+## Affections de variables
 En python, les variables sont créées au moment où on leur affecte une valeur. Il n'est pas utile de les déclarer préalablement comme dans la plupart des langages.  
 ![affecter des variables en python](img/trad_affect.png)  
 
 
-##Entrées et sorties  
+## Entrées et sorties  
 Pour demander à l'utilisateur de rentrer une valeur, on utilise la commande `input().`  
 Lorsque l'on écrit cette commande, le programme attend que l'utilisateur écrive quelque chose avant de poursuivre.  
 En ajoutant du texte entre guillemets dans la parenthèse, on peut écrire un message destiné à l'utilisateur.  
@@ -439,6 +439,7 @@ function reactionText4(){
 	var msg;
 	var style;
 	var reponse41=document.getElementById("reponse41");
+	console.log(reponse41.value);
 	var reponse42=document.getElementById("reponse42");
 	var reponse43=document.getElementById("reponse43");
 	var reponse44=document.getElementById("reponse44");
@@ -446,11 +447,12 @@ function reactionText4(){
 	var reponse46=document.getElementById("reponse46");
 	var reponse47=document.getElementById("reponse47");
 	var reponse48=document.getElementById("reponse48");
-	if (reponse41.value =='3' && reponse42.value =='4' && reponse43.value =='2' && reponse44.value =='3' && reponse45.value =='1' && reponse46.value =='8' && reponse47.value =='11' && reponse48.value =='7'){
+
+	if ((((((((reponse41.value =='3' && reponse42.value =='4') && reponse43.value =='2') && reponse44.value =='3' )&& reponse45.value =='1') && reponse46.value =='8') && reponse47.value =='4') && reponse48.value =='7')){
 		msg='bravo';
 		style='style="color:green;"';
 		}
-	else if (reponse41.value ==='3' || reponse42.value ==='4' || reponse43.value ==='2' || reponse44.value ==='3' || reponse45.value ==='1' || reponse46.value ==='8' || reponse47.value ==='4' || reponse48.value ==='7'){
+	else if (reponse41.value =='3' || reponse42.value =='4' || reponse43.value =='2' || reponse44.value =='3' || reponse45.value =='1' || reponse46.value =='8' || reponse47.value =='4' || reponse48.value =='7'){
 			msg='Réponse partiellement correcte!';
 			style='style="color:orange;"';
 		}

@@ -22,7 +22,7 @@ Voici les différentes parties du programme
 ##Programmation
 [Bien démarrer en programmation](Programmation/demarrer.html){ .md-button} [Conditions et boucles](Programmation/boucle.html){ .md-button}  
 </br>
-[Fonctions](Programmation/fonction.html){ .md-button}  
+[Fonctions](Programmation/fonction.html){ .md-button}  [Types construits](Programmation/type.html){ .md-button} 
 </br>
 [Tkinter](Programmation/tkinter.html){ .md-button} 
 

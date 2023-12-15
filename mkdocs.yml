@@ -7,11 +7,11 @@ nav:
     -  'représenter les entiers' : 'representation/base_numeration.md'
     -  'représenter les réels et les flottants' : 'representation/reels_flottants.md'
     -  'représenter le texte' : 'representation/codage_texte.md'
-    -  'Types construits : Listes et chaines de caractères' : 'representation/listes_chaines.md'
-    -  'Types construits : tuples e dictionaires' : 'representation/tuples_dico.md'
+    
   - 'Tables de données':
     -  'Traitement de données en table' : 'table_donnees/traitement_donnees.md'
   - 'Programmation':
+    -  'Types construits' : 'Programmation/type.md'
     -  'Démarrer en programmation' : 'Programmation/demarrer.md'
     -  'Conditions et boucles' : 'Programmation/boucle.md'
     -  'Fonctions et spécifications' : 'Programmation/fonction.md'

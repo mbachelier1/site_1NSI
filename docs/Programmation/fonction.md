@@ -37,11 +37,11 @@ En python pour définir une fonction on utilise le mot clé `def` suivi du nom d
 		return cube
 	```
 		
-  	Cette fonction calcule le cube d’un nombre, par exemple calcule_cube(2) n’affiche rien mais envoie la valeur 8 .
+  	Cette fonction calcule le cube d’un nombre, par exemple calcule_cube(2), le nombre 2 remplacera a dans le calcul. L'exécution n’affiche rien mais envoie la valeur 8. Si on vaut afficher la valeur, il faudra ajouter `print(calcule_cube(2))`. 
 
-	**Remarque:** ce code "ne fait rien", il définit une fonction seulement... tant qu'elle n'est pas utilisée, rien ne se passe
+	**Remarque:** ce code seul "ne fait rien", il définit une fonction seulement... tant qu'elle n'est pas utilisée, rien ne se passe
 
-	Si on ajoute dans le code les lignes ci-desous, alors la fonction est utilisée et elle calcule le cube de 2 puis la somme 3^3+4^3`.
+	Si on ajoute dans le code les lignes ci-desous, alors la fonction est utilisée et elle calcule le cube de 2 puis la somme 3^3 + 4^3.
 
 	```python
 	print(calcule_cube(2))
