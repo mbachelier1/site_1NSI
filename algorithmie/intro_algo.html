@@ -221,7 +221,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../Programmation/demarrer.html" class="md-tabs__link">
+      <a href="../Programmation/type.html" class="md-tabs__link">
         Programmation
       </a>
     </li>
@@ -409,30 +409,6 @@
   
 
           
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../representation/listes_chaines.html" class="md-nav__link">
-        Types construits : Listes et chaines de caractères
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../representation/tuples_dico.html" class="md-nav__link">
-        Types construits : tuples e dictionaires
-      </a>
-    </li>
-  
-
-          
         </ul>
       </nav>
     </li>
@@ -504,6 +480,18 @@
           Programmation
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Programmation/type.html" class="md-nav__link">
+        Types construits
+      </a>
+    </li>
+  
+
           
             
   
@@ -1390,7 +1378,7 @@ A la fin de l'exécution de :
     l'algorithme 3, la variable A contient 
     <input style="border:  solid 1px;width:30px;border-radius:3px;" type="text" name="reponse" maxlenght="5" id="reponse46" autocomplete="off">
     , la variable B contient 
-    <input style="border:  solid 1px;width:30px;order-radius:3px;" type="text" name="reponse" maxlenght="5" id="reponse47" autocomplete="off">
+    <input style="border:  solid 1px;width:30px;border-radius:3px;" type="text" name="reponse" maxlenght="5" id="reponse47" autocomplete="off">
     et la variable C contient 
     <input style="border:  solid 1px;width:30px;border-radius:3px;" type="text" name="reponse" maxlenght="15" id="reponse48" autocomplete="off">.<br>
     <input type='button' style="margin:5px; padding:5px;  background-color : lightblue; border : solid 2px blue; border-radius : 5px;" id="BoutonValider" onclick="reactionText4()" value="Vérifier">
@@ -1630,6 +1618,7 @@ function reactionText4(){
     var msg;
     var style;
     var reponse41=document.getElementById("reponse41");
+    console.log(reponse41.value);
     var reponse42=document.getElementById("reponse42");
     var reponse43=document.getElementById("reponse43");
     var reponse44=document.getElementById("reponse44");
@@ -1637,11 +1626,12 @@ function reactionText4(){
     var reponse46=document.getElementById("reponse46");
     var reponse47=document.getElementById("reponse47");
     var reponse48=document.getElementById("reponse48");
-    if (reponse41.value =='3' && reponse42.value =='4' && reponse43.value =='2' && reponse44.value =='3' && reponse45.value =='1' && reponse46.value =='8' && reponse47.value =='11' && reponse48.value =='7'){
+
+    if ((((((((reponse41.value =='3' && reponse42.value =='4') && reponse43.value =='2') && reponse44.value =='3' )&& reponse45.value =='1') && reponse46.value =='8') && reponse47.value =='4') && reponse48.value =='7')){
         msg='bravo';
         style='style="color:green;"';
         }
-    else if (reponse41.value ==='3' || reponse42.value ==='4' || reponse43.value ==='2' || reponse44.value ==='3' || reponse45.value ==='1' || reponse46.value ==='8' || reponse47.value ==='4' || reponse48.value ==='7'){
+    else if (reponse41.value =='3' || reponse42.value =='4' || reponse43.value =='2' || reponse44.value =='3' || reponse45.value =='1' || reponse46.value =='8' || reponse47.value =='4' || reponse48.value =='7'){
             msg='Réponse partiellement correcte!';
             style='style="color:orange;"';
         }
