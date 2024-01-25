@@ -31,8 +31,11 @@ nav:
   - 'Architecture et OS' : 
     - "Architecture  matérielle" : 'archi/OS/vonneuman.md'
     - "Systèmes d'exploitation" : 'archi/OS/OS.md'
+    - "Linux" : 'archi/OS/linux.md'
+    - "Utilisation de la ligne de commande" : 'archi/OS/linux.md'
     - "Logique combinatoire" : 'archi/OS/logique_combinatoire.md'
     - "Assembleur" : 'archi/OS/assembleur.md'
+
   - 'IHM' : 
     - 'HTML et CSS' : 
       - 'HTML' : 'IHM/html/html.md'
