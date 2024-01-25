@@ -1,0 +1,2692 @@
+
+<!doctype html>
+<html lang="fr" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../fonction/">
+      
+      
+        <link rel="next" href="../../algorithmie/intro_algo/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.5">
+    
+    
+      
+        <title>Interface graphique : Tkinter - NSI au Lycée Henri Avril</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.50c56a3b.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+      <link rel="stylesheet" href="../../stylesheets/prism.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#interface-graphique-tkinter-tool-kit-interface" class="md-skip">
+          Aller au contenu
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="En-tête">
+    <a href="../.." title="NSI au Lycée Henri Avril" class="md-header__button md-logo" aria-label="NSI au Lycée Henri Avril" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            NSI au Lycée Henri Avril
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Interface graphique : Tkinter
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Mode sombre"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Mode sombre" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="blue" data-md-color-accent="blue"  aria-label="Mode clair"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Mode clair" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Rechercher" placeholder="Rechercher" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Recherche">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Effacer" aria-label="Effacer" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initialisation de la recherche
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Onglets" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+    
+  
+  Accueil
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../representation/base_numeration/" class="md-tabs__link">
+          
+  
+  Représenter de données
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../table_donnees/traitement_donnees/" class="md-tabs__link">
+          
+  
+  Tables de données
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../type/" class="md-tabs__link">
+          
+  
+  Programmation
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../algorithmie/intro_algo/" class="md-tabs__link">
+          
+  
+  Algorithmie
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../archi/reseaux/reseau/" class="md-tabs__link">
+          
+  
+  Réseaux et internet
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../archi/OS/vonneuman/" class="md-tabs__link">
+          
+  
+  Architecture et OS
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../IHM/html/html/" class="md-tabs__link">
+          
+  
+  IHM
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="NSI au Lycée Henri Avril" class="md-nav__button md-logo" aria-label="NSI au Lycée Henri Avril" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    NSI au Lycée Henri Avril
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Accueil
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Représenter de données
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Représenter de données
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../representation/base_numeration/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    représenter les entiers
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../representation/reels_flottants/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    représenter les réels et les flottants
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../representation/codage_texte/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    représenter le texte
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Tables de données
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Tables de données
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../table_donnees/traitement_donnees/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Traitement de données en table
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Programmation
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Programmation
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../type/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Types construits
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../demarrer/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Démarrer en programmation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../boucle/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Conditions et boucles
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../fonction/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Fonctions et spécifications
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lire_ecrire.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lire et Ecrire dans un fichier
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Interface graphique : Tkinter
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Interface graphique : Tkinter
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#dessiner" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dessiner
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Dessiner">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#prise-en-main" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prise en main
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#la-notion-devenements" class="md-nav__link">
+    <span class="md-ellipsis">
+      La notion d'évènements
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#trace-de-lignes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tracé de lignes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercices" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exercices
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deux-dessins-alternes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Deux dessins alternés
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercices_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exercices :
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#les-entrees-au-clavier-la-calculatrice" class="md-nav__link">
+    <span class="md-ellipsis">
+      Les entrées au clavier : la calculatrice
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#detection-du-clic-de-souris" class="md-nav__link">
+    <span class="md-ellipsis">
+      Détection du clic de souris
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Détection du clic de souris">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#exercices_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exercices :
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#widgets-et-positionnement-dans-le-canevas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Widgets et positionnement dans le Canevas
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Widgets et positionnement dans le Canevas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#classe-de-widgetwindowsgadget" class="md-nav__link">
+    <span class="md-ellipsis">
+      Classe de widget(windows+gadget)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#methode-grid-pour-le-positionnement-des-widgets" class="md-nav__link">
+    <span class="md-ellipsis">
+      Méthode grid() pour le positionnement des widgets
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercices_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exercices :
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#animations-deplacer-les-objets" class="md-nav__link">
+    <span class="md-ellipsis">
+      Animations : déplacer les objets
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Animations : déplacer les objets">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#modifier-les-proprietes-dun-objet-animation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Modifier les propriétés d'un objet (animation)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercices_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exercices :
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#animations-automatiques" class="md-nav__link">
+    <span class="md-ellipsis">
+      Animations automatiques
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercices_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exercices :
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#minis-projets" class="md-nav__link">
+    <span class="md-ellipsis">
+      Minis projets
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Minis projets">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pacman" class="md-nav__link">
+    <span class="md-ellipsis">
+      PacMan
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#repertoire-telephonique" class="md-nav__link">
+    <span class="md-ellipsis">
+      Répertoire téléphonique
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#motus" class="md-nav__link">
+    <span class="md-ellipsis">
+      Motus
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Algorithmie
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Algorithmie
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../algorithmie/intro_algo/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduction à l'algorithmie
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../algorithmie/complexite/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Compléxité
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../algorithmie/tris/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Algorithmes de tris
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../algorithmie/knn/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    K plus proches voisins
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../algorithmie/glouton/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Algorithme glouton
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Réseaux et internet
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Réseaux et internet
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../archi/reseaux/reseau/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Qu'est-ce qu'un réseau
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../archi/reseaux/TCP_IP/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Protocole TCP/IP
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../archi/reseaux/securisation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Sécurisation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Architecture et OS
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            Architecture et OS
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../archi/OS/vonneuman/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Architecture  matérielle
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../archi/OS/OS/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Systèmes d'exploitation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../archi/OS/linux/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Linux
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../archi/OS/linux/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Utilisation de la ligne de commande
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../archi/OS/logique_combinatoire/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Logique combinatoire
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../archi/OS/assembleur/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Assembleur
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    IHM
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            IHM
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_8_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_8_1" id="__nav_8_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    HTML et CSS
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_8_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8_1">
+            <span class="md-nav__icon md-icon"></span>
+            HTML et CSS
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../IHM/html/html/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    HTML
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../IHM/html/css/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CSS
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_8_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_8_2" id="__nav_8_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Javascript
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_8_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8_2">
+            <span class="md-nav__icon md-icon"></span>
+            Javascript
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../IHM/javascript/exo_js/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Exercices d'application Javascript
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../IHM/javascript/programmation_evenementielle/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Programmation evenementielle
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../IHM/javascript/formulaire/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Les formulaires
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_8_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_8_3" id="__nav_8_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Protocole HTTP et PHP
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_8_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8_3">
+            <span class="md-nav__icon md-icon"></span>
+            Protocole HTTP et PHP
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../IHM/php/Protocole_HTTP/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Protocole HTTP
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../IHM/PHP/TP_php.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    TP PHP
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_8_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_8_4" id="__nav_8_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Robotique
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_8_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8_4">
+            <span class="md-nav__icon md-icon"></span>
+            Robotique
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../IHM/robotique/robotique/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Robotique
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../IHM/robotique/projets/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Projets
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="interface-graphique-tkinter-tool-kit-interface">Interface Graphique TKinter (Tool Kit Interface)<a class="headerlink" href="#interface-graphique-tkinter-tool-kit-interface" title="Permanent link">⚓︎</a></h1>
+<p>Tkinter est UNE des nombreuses interfaces graphiques de python parmi d'autre. Étant une des plus simple à utiliser, elle permet des interfaces graphiques simples même quand on est débutant. <br />
+Dans cette partie, les applications seront à faire au fur et à mesure pour bien intégrer chaque notion avant de progresser. Veillez à chaque modification de programme à l'enregistrer sous un autre nom afin de ne pas écraser le précédent. <br />
+Ressources complémentaires :<br />
+<a href="http://tableauxmaths.fr/spip/spip.php?article202">Tableauxmaths : Boutons et zones de textes</a><br />
+<a href="http://tableauxmaths.fr/spip/spip.php?article48">Tableauxmaths : dessiner déplacer et gérer les collisions</a></p>
+<h2 id="dessiner">Dessiner<a class="headerlink" href="#dessiner" title="Permanent link">⚓︎</a></h2>
+<h3 id="prise-en-main">Prise en main<a class="headerlink" href="#prise-en-main" title="Permanent link">⚓︎</a></h3>
+<p>Création d'une fenêtre avec deux widgets (contraction de window gadget) : un bout de texte (label) et un bouton (button).
+Écrire, sauvegarder et exécuter le script suivant :
+<img alt="prise en main" src="../img/pgm%20prise%20en%20main.JPG" />
+vous devriez obtenir l'ouverture d'une fenêtre popup telle que: 
+<img alt="prise en main" src="../img/res%20prise%20en%20main.JPG" />  </p>
+<p><strong>fen1=tk()</strong> crée la fenêtre qui s'appellera fen1.<br />
+<strong>tex1=Label(fen1, text='Bonjour tout le monde !', fg='red')</strong> : le premier argument est le nom de la fenêtre dans lequel sera le bouton (fen1 est le widget maître de l'objet tex1, ou l'objet tex1 est un widget esclave de l'objet fen1). Le deuxième est facile à comprendre et le troisième est la couleur d'avant plan (foreground, en anglais).  </p>
+<p><strong>tex1.pack() :</strong> nous activons ici la méthode pack() à l'objet tex1. Cette méthode agit sur la disposition géométrique, la fenêtre maître est réduite automatiquement pour qu'elle soit juste assez grande pour contenir les widgets esclaves.  </p>
+<p><strong>fen1.mainloop() :</strong> c'est cette ligne qui provoque le démarrage du réceptionnaire d'événements associé à la fenêtre. Cette instruction est nécessaire pour que l'application soit « à l'affût » des clics de souris, des pressions exercées sur les touches du clavier, etc.   C'est donc cette instruction qui la met en marche.  </p>
+<h3 id="la-notion-devenements">La notion d'évènements<a class="headerlink" href="#la-notion-devenements" title="Permanent link">⚓︎</a></h3>
+<p>La notion d’événements est commune à tous les langages informatiques. Il s'agit des clics sur les boutons de souris, sur les touches du clavier ou sur l'interface créée. Il sera alors toujours nécessaire d'avoir un écouteur d’événement et des fonctions associées à chaque événement qui nous intéressera.<br />
+Par exemple, on pourra associer une fonction qui permet de quitter l'interface à une frappe sur la touche "q" du clavier.  </p>
+<h3 id="trace-de-lignes">Tracé de lignes<a class="headerlink" href="#trace-de-lignes" title="Permanent link">⚓︎</a></h3>
+<p>Écrire, sauvegarder et exécuter le script suivant :
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span>
+<span class="normal">32</span>
+<span class="normal">33</span>
+<span class="normal">34</span>
+<span class="normal">35</span>
+<span class="normal">36</span>
+<span class="normal">37</span>
+<span class="normal">38</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">from</span> <span class="nn">tkinter</span> <span class="kn">import</span><span class="o">*</span>
+<span class="kn">from</span> <span class="nn">random</span> <span class="kn">import</span> <span class="n">randrange</span>
+
+<span class="c1"># --- définition des fonctions gestionnaires d&#39;événements : ---</span>
+<span class="k">def</span> <span class="nf">drawline</span><span class="p">():</span>
+    <span class="c1">#Tracé d&#39;une ligne dans le canevas can1</span>
+    <span class="k">global</span> <span class="n">x1</span><span class="p">,</span><span class="n">x2</span><span class="p">,</span><span class="n">y1</span><span class="p">,</span><span class="n">y2</span><span class="p">,</span><span class="n">coul</span>
+    <span class="n">can1</span><span class="o">.</span><span class="n">create_line</span><span class="p">(</span><span class="n">x1</span><span class="p">,</span><span class="n">y1</span><span class="p">,</span><span class="n">x2</span><span class="p">,</span><span class="n">y2</span><span class="p">,</span><span class="n">width</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span><span class="n">fill</span><span class="o">=</span><span class="n">coul</span><span class="p">)</span>
+    <span class="c1"># modification des coordonnées pour la ligne suivante :</span>
+    <span class="n">y2</span><span class="o">=</span><span class="n">y2</span><span class="o">-</span><span class="mi">10</span>
+    <span class="n">y1</span><span class="o">=</span><span class="n">y1</span><span class="o">+</span><span class="mi">10</span>
+<span class="k">def</span> <span class="nf">changecolor</span><span class="p">():</span>
+    <span class="c1">#Changement aléatoire de la couleur du tracé</span>
+    <span class="k">global</span> <span class="n">coul</span>
+    <span class="n">pal</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;purple&#39;</span><span class="p">,</span><span class="s1">&#39;cyan&#39;</span><span class="p">,</span><span class="s1">&#39;maroon&#39;</span><span class="p">,</span><span class="s1">&#39;green&#39;</span><span class="p">,</span><span class="s1">&#39;red&#39;</span><span class="p">,</span><span class="s1">&#39;blue&#39;</span><span class="p">,</span><span class="s1">&#39;orange&#39;</span><span class="p">,</span><span class="s1">&#39;yellow&#39;</span><span class="p">]</span>
+    <span class="n">c</span><span class="o">=</span><span class="n">randrange</span><span class="p">(</span><span class="mi">8</span><span class="p">)</span> <span class="c1"># =&gt; génère un nombre aléatoire de 0 à 7</span>
+    <span class="n">coul</span><span class="o">=</span><span class="n">pal</span><span class="p">[</span><span class="n">c</span><span class="p">]</span>
+
+<span class="c1">#------ Programme principal ------</span>
+<span class="c1"># Les variables suivantes seront utilisées de manière globale :</span>
+<span class="n">x1</span><span class="p">,</span><span class="n">y1</span><span class="p">,</span><span class="n">x2</span><span class="p">,</span><span class="n">y2</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">190</span><span class="p">,</span><span class="mi">190</span> <span class="c1"># coordonnées de la ligne</span>
+<span class="n">coul</span><span class="o">=</span><span class="s2">&quot;dark green&quot;</span> <span class="c1"># couleur de la ligne</span>
+
+<span class="c1"># Création du widget principal (&quot;maître&quot;) :</span>
+<span class="n">fen1</span><span class="o">=</span><span class="n">Tk</span><span class="p">()</span>
+<span class="c1"># Création des widgets &quot;esclaves&quot; :</span>
+<span class="n">can1</span><span class="o">=</span><span class="n">Canvas</span><span class="p">(</span><span class="n">fen1</span><span class="p">,</span><span class="n">bg</span><span class="o">=</span><span class="s1">&#39;dark grey&#39;</span><span class="p">,</span><span class="n">height</span><span class="o">=</span><span class="mi">200</span><span class="p">,</span><span class="n">width</span><span class="o">=</span><span class="mi">200</span><span class="p">)</span>
+<span class="n">can1</span><span class="o">.</span><span class="n">pack</span><span class="p">(</span><span class="n">side</span><span class="o">=</span><span class="n">LEFT</span><span class="p">)</span>
+<span class="n">tex1</span><span class="o">=</span><span class="n">Label</span><span class="p">(</span><span class="n">fen1</span><span class="p">,</span><span class="n">text</span><span class="o">=</span><span class="s2">&quot;Bonjour tout le monde&quot;</span><span class="p">,</span><span class="n">fg</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">)</span>
+<span class="n">tex1</span><span class="o">.</span><span class="n">pack</span><span class="p">()</span>
+<span class="n">bou1</span><span class="o">=</span><span class="n">Button</span><span class="p">(</span><span class="n">fen1</span><span class="p">,</span> <span class="n">text</span><span class="o">=</span><span class="s2">&quot;Quitter&quot;</span><span class="p">,</span> <span class="n">command</span><span class="o">=</span><span class="n">fen1</span><span class="o">.</span><span class="n">quit</span><span class="p">)</span>
+<span class="n">bou1</span><span class="o">.</span><span class="n">pack</span><span class="p">(</span><span class="n">side</span><span class="o">=</span><span class="n">BOTTOM</span><span class="p">)</span>
+<span class="n">bou2</span><span class="o">=</span><span class="n">Button</span><span class="p">(</span><span class="n">fen1</span><span class="p">,</span> <span class="n">text</span><span class="o">=</span><span class="s2">&quot;Tracer de ligne&quot;</span><span class="p">,</span> <span class="n">command</span><span class="o">=</span><span class="n">drawline</span><span class="p">)</span>
+<span class="n">bou2</span><span class="o">.</span><span class="n">pack</span><span class="p">()</span>
+<span class="n">bou3</span><span class="o">=</span><span class="n">Button</span><span class="p">(</span><span class="n">fen1</span><span class="p">,</span> <span class="n">text</span><span class="o">=</span><span class="s2">&quot;Autre couleur&quot;</span><span class="p">,</span> <span class="n">command</span><span class="o">=</span><span class="n">changecolor</span><span class="p">)</span>
+<span class="n">bou3</span><span class="o">.</span><span class="n">pack</span><span class="p">()</span>
+<span class="n">fen1</span><span class="o">.</span><span class="n">mainloop</span><span class="p">()</span> <span class="c1"># démarrage du réceptionnaire d&#39;événement</span>
+<span class="n">fen1</span><span class="o">.</span><span class="n">destroy</span><span class="p">()</span> <span class="c1"># destruction (fermeture) de la fenêtre</span>
+</code></pre></div></td></tr></table></div>
+On doit obtenir ceci :<br />
+<img alt="Tracé de lignes" src="../img/res%20lignes.png" /></p>
+<p>Un canevas dans tkinter est une surface rectangulaire délimitée, dans laquelle on peut installer ensuite divers dessins et images à l'aide de méthodes spécifiques (canevas s'écrit canvas en anglais !).<br />
+La fonctionnalité de ce programme est assurée essentiellement par les deux fonctions <code>drawline()</code> et <code>changecolor()</code>.<br />
+Dans la fonction <code>changecolor()</code>, une couleur est choisie au hasard dans une liste, à l'aide de la fonction <code>randrange()</code> importée du module random.   Appelée avec un argument N, cette fonction renvoie un nombre entier, tiré au hasard entre zéro et N-1.
+La commande liée au bouton « Quitter » appelle la méthode <code>quit( )</code> de la fenêtre <code>fen1</code>.<br />
+Cette méthode sert à fermer le réceptionnaire d'événements (mainloop) associé à cette fenêtre. Lorsque cette méthode est activée, l'exécution du programme se poursuit avec les instructions qui suivent l'appel de mainloop. Dans l'exemple, cela consiste donc à effacer (destroy) la fenêtre.  </p>
+<h3 id="exercices">Exercices<a class="headerlink" href="#exercices" title="Permanent link">⚓︎</a></h3>
+<ol>
+<li>Modifier le programme pour ne plus avoir que des lignes de couleur cyan, maroon et green.</li>
+<li>Modifier le programme pour que toutes les lignes tracées soient horizontales et parallèles.</li>
+<li>Agrandir le canevas de manière à lui donner une largeur de 500 unités et une hauteur de 650. Modifier également la taille des lignes, afin que leurs extrémités se confondent avec les bords du canevas.</li>
+<li>Ajouter une fonction <code>drawline2( )</code> qui tracera deux ligne rouges en croix au centre du canevas : l'une horizontale et l'autre verticale. Ajouter également un bouton portant l'indication « viseur ». Un clic sur ce bouton devra provoquer l'affichage de la croix.</li>
+<li>Reprendre le programme initial. Remplacer la méthode <code>create_line</code> par la méthode <code>create_rectangle</code>. Que se passe-t-il ? Qu'indique les coordonnées fournies en paramètres ? (Noter ses informations dans un endroit où vous les retrouverez facilement</li>
+<li>Recommencer en remplaçant cette fois par <code>create_oval</code>. Que se passe-t-il et qu'indique les coordonnées fournies en paramètres ?</li>
+<li>Créer un programme qui dessinera les cinq anneaux olympiques dans un rectangle de fond blanc (white). Utiliser l'argument outline à la place de fill pour la couleur des anneaux. Un bouton « quitter » doit permettre de fermer la fenêtre.
+<img alt="anneaux" src="../img/anneaux.png" /></li>
+<li>Modifier le programme précédent en y ajoutant cinq boutons. Chacun de ces boutons provoquera le tracé d'un anneau.</li>
+</ol>
+<h3 id="deux-dessins-alternes">Deux dessins alternés<a class="headerlink" href="#deux-dessins-alternes" title="Permanent link">⚓︎</a></h3>
+<p>Écrire, sauvegarder et exécuter le script suivant :
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span>
+<span class="normal">32</span>
+<span class="normal">33</span>
+<span class="normal">34</span>
+<span class="normal">35</span>
+<span class="normal">36</span>
+<span class="normal">37</span>
+<span class="normal">38</span>
+<span class="normal">39</span>
+<span class="normal">40</span>
+<span class="normal">41</span>
+<span class="normal">42</span>
+<span class="normal">43</span>
+<span class="normal">44</span>
+<span class="normal">45</span>
+<span class="normal">46</span>
+<span class="normal">47</span>
+<span class="normal">48</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">from</span> <span class="nn">tkinter</span> <span class="kn">import</span><span class="o">*</span>
+<span class="k">def</span> <span class="nf">cercle</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">r</span><span class="p">,</span> <span class="n">coul</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">):</span>
+    <span class="s2">&quot;tracé d&#39;un cercle de centre (x,y) et de rayon r&quot;</span>
+    <span class="n">can</span><span class="o">.</span><span class="n">create_oval</span><span class="p">(</span><span class="n">x</span><span class="o">-</span><span class="n">r</span><span class="p">,</span> <span class="n">y</span><span class="o">-</span><span class="n">r</span><span class="p">,</span> <span class="n">x</span><span class="o">+</span><span class="n">r</span><span class="p">,</span> <span class="n">y</span><span class="o">+</span><span class="n">r</span><span class="p">,</span> <span class="n">outline</span><span class="o">=</span><span class="n">coul</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">figure_1</span><span class="p">():</span>
+    <span class="s2">&quot;dessiner une cible&quot;</span>
+    <span class="c1"># Effacer d&#39;abord tout dessin préexistant :</span>
+    <span class="n">can</span><span class="o">.</span><span class="n">delete</span><span class="p">(</span><span class="n">ALL</span><span class="p">)</span>
+    <span class="c1"># Tracer les deux lignes (vert. et horiz.) :</span>
+    <span class="n">can</span><span class="o">.</span><span class="n">create_line</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">200</span><span class="p">,</span> <span class="n">fill</span><span class="o">=</span><span class="s1">&#39;blue&#39;</span><span class="p">)</span>
+    <span class="n">can</span><span class="o">.</span><span class="n">create_line</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">200</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="n">fill</span><span class="o">=</span><span class="s1">&#39;blue&#39;</span><span class="p">)</span>
+    <span class="c1"># Tracer plusieurs cercles concentriques :</span>
+    <span class="n">rayon</span> <span class="o">=</span> <span class="mi">15</span>
+    <span class="k">while</span> <span class="n">rayon</span> <span class="o">&lt;</span> <span class="mi">100</span><span class="p">:</span>
+        <span class="n">cercle</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="n">rayon</span><span class="p">)</span>
+        <span class="n">rayon</span> <span class="o">+=</span> <span class="mi">15</span>
+
+<span class="k">def</span> <span class="nf">figure_2</span><span class="p">():</span>
+    <span class="s2">&quot;dessiner un visage simplifié&quot;</span>
+    <span class="c1"># Effacer d&#39;abord tout dessin préexistant :</span>
+    <span class="n">can</span><span class="o">.</span><span class="n">delete</span><span class="p">(</span><span class="n">ALL</span><span class="p">)</span>
+    <span class="c1"># Les caractéristiques de chaque cercle sont</span>
+    <span class="c1"># placées dans une liste de liste :</span>
+    <span class="n">cc</span><span class="o">=</span><span class="p">[[</span><span class="mi">100</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">80</span><span class="p">,</span> <span class="s1">&#39;red&#39;</span><span class="p">],</span> <span class="c1"># visage</span>
+        <span class="p">[</span><span class="mi">70</span><span class="p">,</span> <span class="mi">70</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="s1">&#39;blue&#39;</span><span class="p">],</span> <span class="c1"># yeux</span>
+        <span class="p">[</span><span class="mi">130</span><span class="p">,</span> <span class="mi">70</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="s1">&#39;blue&#39;</span><span class="p">],</span>
+        <span class="p">[</span><span class="mi">70</span><span class="p">,</span> <span class="mi">70</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="s1">&#39;black&#39;</span><span class="p">],</span>
+        <span class="p">[</span><span class="mi">130</span><span class="p">,</span> <span class="mi">70</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="s1">&#39;black&#39;</span><span class="p">],</span>
+        <span class="p">[</span><span class="mi">44</span><span class="p">,</span> <span class="mi">115</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="s1">&#39;red&#39;</span><span class="p">],</span> <span class="c1"># joues</span>
+        <span class="p">[</span><span class="mi">156</span><span class="p">,</span> <span class="mi">115</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="s1">&#39;red&#39;</span><span class="p">],</span>
+        <span class="p">[</span><span class="mi">100</span><span class="p">,</span> <span class="mi">95</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="s1">&#39;purple&#39;</span><span class="p">],</span> <span class="c1"># nez</span>
+        <span class="p">[</span><span class="mi">100</span><span class="p">,</span> <span class="mi">145</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="s1">&#39;purple&#39;</span><span class="p">]]</span> <span class="c1"># bouche</span>
+    <span class="c1"># on trace tous les cercles à l&#39;aide d&#39;une boucle :</span>
+
+    <span class="n">i</span><span class="o">=</span><span class="mi">0</span>
+    <span class="k">while</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">cc</span><span class="p">):</span> <span class="c1"># parcourt de la liste</span>
+        <span class="n">el</span> <span class="o">=</span> <span class="n">cc</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="c1"># chaque élément est lui-même une liste</span>
+        <span class="n">cercle</span><span class="p">(</span><span class="n">el</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">el</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">el</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">el</span><span class="p">[</span><span class="mi">3</span><span class="p">])</span>
+        <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
+<span class="c1">##### Programme principal #####</span>
+<span class="n">fen</span> <span class="o">=</span> <span class="n">Tk</span><span class="p">()</span>
+<span class="n">can</span> <span class="o">=</span> <span class="n">Canvas</span><span class="p">(</span><span class="n">fen</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">200</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="mi">200</span><span class="p">,</span> <span class="n">bg</span><span class="o">=</span><span class="s1">&#39;ivory&#39;</span><span class="p">)</span>
+<span class="n">can</span><span class="o">.</span><span class="n">pack</span><span class="p">(</span><span class="n">side</span><span class="o">=</span><span class="n">TOP</span><span class="p">,</span> <span class="n">padx</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">pady</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
+<span class="n">b1</span> <span class="o">=</span> <span class="n">Button</span><span class="p">(</span><span class="n">fen</span><span class="p">,</span> <span class="n">text</span><span class="o">=</span><span class="s1">&#39;dessin 1&#39;</span><span class="p">,</span> <span class="n">command</span><span class="o">=</span><span class="n">figure_1</span><span class="p">)</span>
+<span class="n">b1</span><span class="o">.</span><span class="n">pack</span><span class="p">(</span><span class="n">side</span><span class="o">=</span><span class="n">LEFT</span><span class="p">,</span> <span class="n">padx</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">pady</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
+<span class="n">b2</span> <span class="o">=</span> <span class="n">Button</span><span class="p">(</span><span class="n">fen</span><span class="p">,</span> <span class="n">text</span><span class="o">=</span><span class="s1">&#39;dessin 2&#39;</span><span class="p">,</span> <span class="n">command</span><span class="o">=</span><span class="n">figure_2</span><span class="p">)</span>
+<span class="n">b2</span><span class="o">.</span><span class="n">pack</span><span class="p">(</span><span class="n">side</span><span class="o">=</span><span class="n">RIGHT</span><span class="p">,</span> <span class="n">padx</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">pady</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
+<span class="n">fen</span><span class="o">.</span><span class="n">mainloop</span><span class="p">()</span>
+</code></pre></div></td></tr></table></div>
+on obtient : 
+<img alt="dessins alternés" src="../img/dessins_alternes.png" /></p>
+<p>L'option <code>side</code> peut accepter les valeurs <code>TOP, BOTTOM, LEFT ou RIGHT</code>, pour « pousser » le widget du côté correspondant de la fenêtre.<br />
+Les options <code>padx</code> et <code>pady</code> permettent de réserver un petit espace autour du widget. Cet espace est exprimé en nombre de pixels : <code>padx</code> réserve un espace à gauche et à droite du widget, <code>pady</code> réserve un espace au- dessus et au-dessous du widget.<br />
+Prenez le temps d'essayer de bien comprendre ce programme.  </p>
+<h3 id="exercices_1"><strong>Exercices</strong> :<a class="headerlink" href="#exercices_1" title="Permanent link">⚓︎</a></h3>
+<p>Écrire une application qui dessine un damier (carrés 'navy' sur fond blanc), ainsi que des pions rouges qui apparaissent au hasard lorsque que l'on clique sur un bouton dans un premier temps, on se contentera du damier).<br />
+Le canevas devra avoir une dimension de 300*300. Les carrés devront avoir un côté égal à 30.
+Les pions devront avoir un rayon égal à 10.</p>
+<p>Le programme comportera les fonctions suivantes :<br />
+<code>damier()</code>: donnée ci-dessous<br />
+<code>ligne_de_carres(x, y)</code>: dessine une ligne de 5 carrés de couleur 'navy' espacés, en partant de (x,y).<br />
+<code>disque(x, y, r, coul)</code> : dessine un disque de centre (x,y), de rayon r et de couleur coul.<br />
+<code>pion( )</code>: dessine un pion au hasard sur le damier (utilisera la fonction disque).<br />
+<img align="left" alt="fonction damier" src="../img/fonc%20damier.JPG" />
+<img align="float" alt="damier" src="../img/res%20damier.JPG" /></p>
+<h2 id="les-entrees-au-clavier-la-calculatrice">Les entrées au clavier : la calculatrice<a class="headerlink" href="#les-entrees-au-clavier-la-calculatrice" title="Permanent link">⚓︎</a></h2>
+<p>Écrire, sauvegarder et exécuter le script suivant : 
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">from</span> <span class="nn">tkinter</span> <span class="kn">import</span><span class="o">*</span>
+<span class="kn">from</span> <span class="nn">math</span> <span class="kn">import</span><span class="o">*</span>
+<span class="c1"># définition de l&#39;action à effectuer si l&#39;utilisateur actionne</span>
+<span class="c1"># la touche &quot;enter&quot; alors qu&#39;il édite le champ d&#39;entrée :</span>
+<span class="k">def</span> <span class="nf">evaluer</span><span class="p">(</span><span class="n">event</span><span class="p">):</span>
+    <span class="n">chaine</span><span class="o">.</span><span class="n">configure</span><span class="p">(</span><span class="n">text</span><span class="o">=</span><span class="s1">&#39;Résultat = &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="nb">eval</span><span class="p">(</span><span class="n">entree</span><span class="o">.</span><span class="n">get</span><span class="p">())))</span>
+
+<span class="c1">##### Programme principal #####</span>
+<span class="n">fenetre</span> <span class="o">=</span> <span class="n">Tk</span><span class="p">()</span>
+<span class="n">entree</span> <span class="o">=</span> <span class="n">Entry</span><span class="p">(</span><span class="n">fenetre</span><span class="p">,</span> <span class="n">background</span><span class="o">=</span><span class="s1">&#39;white&#39;</span><span class="p">)</span>
+<span class="n">entree</span><span class="o">.</span><span class="n">bind</span><span class="p">(</span><span class="s2">&quot;&lt;Return&gt;&quot;</span><span class="p">,</span> <span class="n">evaluer</span><span class="p">)</span>
+<span class="n">chaine</span> <span class="o">=</span> <span class="n">Label</span><span class="p">(</span><span class="n">fenetre</span><span class="p">)</span>
+<span class="n">entree</span><span class="o">.</span><span class="n">pack</span><span class="p">()</span>
+<span class="n">chaine</span><span class="o">.</span><span class="n">pack</span><span class="p">()</span>
+<span class="n">fenetre</span><span class="o">.</span><span class="n">mainloop</span><span class="p">()</span>
+</code></pre></div></td></tr></table></div>
+on obtient : 
+<img alt="calculatrice" src="../img/res_calculatrice.JPG" />
+Au début du script, on importe le module math pour que la calculatrice puisse disposer de toutes les fonctions mathématiques et scientifiques usuelles : sinus, cosinus, racine carrée, etc.<br />
+La fonction <code>evaluer()</code> sera la commande exécutée par le programme lorsque l'utilisateur actionnera la touche Return.<br />
+Cette fonction utilise la méthode <code>configure( )</code> du widget chaine, pour modifier son attribut text.<br />
+<code>eval( )</code> évalue (fait le calcul) la chaîne de caractères.<br />
+<code>str( )</code> transforme une expression numérique en chaîne de caractères.<br />
+<code>get( )</code> est une méthode qui permet d'extraire du widget entree la chaîne de caractères qui lui a été fournie par l'utilisateur.<br />
+entree est un widget de la « classe »<code>Entry</code>. Afin que ce widget puisse transmettre au programme l'expression que l'utilisateur y aura encodée, il faut lui associer un événement à l'aide de la méthode <code>bind()</code>(bind signifie « lier » en anglais).<br />
+<code>entree.bind("&lt;Return&gt;", evaluer)</code> signifie : « lier l'événement 'pression sur la touche <code>&lt;Return&gt;</code>' à l'objet entree, le gestionnaire de cet événement étant la fonction evaluer ».<br />
+L'argument event fourni à la fonction évaluer est obligatoire dès que l'on utilise la méthode <code>bind()</code>.  </p>
+<h2 id="detection-du-clic-de-souris">Détection du clic de souris<a class="headerlink" href="#detection-du-clic-de-souris" title="Permanent link">⚓︎</a></h2>
+<p>Écrire, sauvegarder et exécuter le script suivant :
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">from</span> <span class="nn">tkinter</span> <span class="kn">import</span><span class="o">*</span>
+<span class="c1"># Détection et positionnement d&#39;un clic de souris dans une fenêtre :</span>
+
+<span class="k">def</span> <span class="nf">pointeur</span><span class="p">(</span><span class="n">event</span><span class="p">):</span>
+    <span class="n">chaine</span><span class="o">.</span><span class="n">configure</span><span class="p">(</span><span class="n">text</span><span class="o">=</span><span class="s2">&quot;Clic détecté en X = &quot;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">event</span><span class="o">.</span><span class="n">x</span><span class="p">)</span><span class="o">+</span><span class="s2">&quot;, Y = &quot;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">event</span><span class="o">.</span><span class="n">y</span><span class="p">))</span>
+
+<span class="n">fen</span><span class="o">=</span><span class="n">Tk</span><span class="p">()</span>
+<span class="n">can</span><span class="o">=</span><span class="n">Frame</span><span class="p">(</span><span class="n">fen</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">200</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="mi">150</span><span class="p">,</span> <span class="n">bg</span><span class="o">=</span><span class="s2">&quot;light yellow&quot;</span><span class="p">)</span>
+<span class="n">can</span><span class="o">.</span><span class="n">bind</span><span class="p">(</span><span class="s2">&quot;&lt;Button-1&gt;&quot;</span><span class="p">,</span> <span class="n">pointeur</span><span class="p">)</span>
+<span class="n">can</span><span class="o">.</span><span class="n">pack</span><span class="p">()</span>
+<span class="n">chaine</span><span class="o">=</span><span class="n">Label</span><span class="p">(</span><span class="n">fen</span><span class="p">)</span>
+<span class="n">chaine</span><span class="o">.</span><span class="n">pack</span><span class="p">()</span>
+<span class="n">fen</span><span class="o">.</span><span class="n">mainloop</span><span class="p">()</span>
+</code></pre></div></td></tr></table></div>
+On obtient :<br />
+<img alt="détection du clic d souris" src="../img/res%20clic%20souris.JPG" /> 
+Le widget <code>Frame</code> sert à conenir des éléments. Il n'est pas utile de mettre un canevas si on a rien à dessiner.
+Le script fait apparaître une fenêtre contenant un cadre (frame) rectangulaire de couleur jaune pâle.<br />
+La méthode <code>bind()</code> du widget cadre associe l'événement clic à l'aide du premier bouton de la souris&gt; au gestionnaire d'événement « pointeur ».  <br />
+Ce gestionnaire d'événement peut utiliser les attributs x et y de l'objet event généré automatiquement (sous le nom de <code>event.x</code> et <code>event.y</code>) par Python, pour construire la chaîne de caractères qu' affichera la position de la souris au moment du clic.</p>
+<h3 id="exercices_2"><strong>Exercices</strong> :<a class="headerlink" href="#exercices_2" title="Permanent link">⚓︎</a></h3>
+<p>Modifier le script ci-dessus de manière à faire apparaître un petit cercle rouge à l'endroit où l'utilisateur a effectué son clic (il faut d'abord remplacer le widget Frame par un widget Canvas). On tracera alors un cercle autour de la position de la souris. 
+<img alt="détection du clic d souris" src="../img/re%20clic%20souris%20cercle%20rouge.JPG" />  </p>
+<h2 id="widgets-et-positionnement-dans-le-canevas">Widgets et positionnement dans le Canevas<a class="headerlink" href="#widgets-et-positionnement-dans-le-canevas" title="Permanent link">⚓︎</a></h2>
+<h3 id="classe-de-widgetwindowsgadget">Classe de widget(windows+gadget)<a class="headerlink" href="#classe-de-widgetwindowsgadget" title="Permanent link">⚓︎</a></h3>
+<p>Il existe 15 classes de base pour les widgets Tkinter :
+<code>Button</code> : Un bouton classi
+<code>Canvas</code>: Un espace pour disposer divers éléments graphiques. Ce widget peut être utilisé pour dessiner, créer des éditeurs graphiques, et aussi pour implémenter des widgets personnalisés.<br />
+<code>Checkbutton</code> : Une « case à cocher » qui peut prendre deux états distincts (la case est cochée ou non). Un clic sur ce widget provoque le changement d'état.<br />
+<code>Entry</code> : Un champ d'entrée, dans lequel l'utilisateur du programme pourra insérer un texte quelconque à partir du clavier.<br />
+<code>Frame</code> : Une surface rectangulaire dans la fenêtre, où l'on peut disposer d'autres widgets. Cette surface peut être colorée. Elle peut aussi être décorée d'une bordure.<br />
+<code>Label</code>: Un texte (ou libellé) quelconque (éventuellement une image).<br />
+<code>Listbox</code> : Une liste de choix proposés à l'utilisateur, généralement présentés dans une sorte de boîte. On peut également configurer la Listbox de telle manière qu'elle se comporte comme une série de « boutons radio » ou de cases à cocher.<br />
+<code>Menu</code> : Un menu. Ce peut être un menu déroulant attaché à la barre de titre, ou bien un menu « pop up » apparaissant n'importe où à la suite d'un clic.
+<code>Menubutton</code> : Un bouton-menu, à utiliser pour implémenter des menus déroulants.<br />
+<code>Message</code> : Permet d'afficher un texte. Ce widget est une variante du widget Label, qui permet d'adapter automatiquement le texte affiché à une certaine taille ou à un certain rapport largeur/hauteur.<br />
+<code>Radiobutton</code> : Représente (par un point noir dans un petit cercle) une des valeurs d'une variable qui peut en posséder plusieurs. Cliquer sur un « bouton radio » donne la valeur correspondante à la variable, et "vide" tous les autres boutons radio associés à la même variable.<br />
+<code>Scale</code> : Vous permet de faire varier de manière très visuelle la valeur d'une variable, en déplaçant un curseur le long d'une règle.<br />
+<code>Scrollbar</code> : « ascenseur » ou « barre de défilement » que vous pouvez utiliser en association avec les autres widgets : Canvas, Entry, Listbox, Text.<br />
+<code>Text</code>: Affichage de texte formaté. Permet aussi à l'utilisateur d'éditer le texte affiché. Des images peuvent également être insérées.<br />
+<code>Toplevel</code> : Une fenêtre affichée séparément, « par-dessus ».<br />
+Ces classes de widgets intègrent chacune un grand nombre de méthodes. On peut aussi leur associer (lier) des événements, comme déjà vu dans les pages précédentes. Tous ces widgets peuvent être positionnés dans les fenêtres à l'aide de trois méthodes différentes : la méthode <code>grid( )</code>, la méthode <code>pack( )</code> et d'autres encore...  </p>
+<p><a href="http://tkinter.fdex.eu/doc/uwm.html">Liste des méthodes communes à tous les widgets</a></p>
+<h3 id="methode-grid-pour-le-positionnement-des-widgets">Méthode grid() pour le positionnement des widgets<a class="headerlink" href="#methode-grid-pour-le-positionnement-des-widgets" title="Permanent link">⚓︎</a></h3>
+<p>Recopier, sauvegarder et exécuter le script suivant :<br />
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">from</span> <span class="nn">tkinter</span> <span class="kn">import</span><span class="o">*</span>
+
+<span class="n">fen1</span><span class="o">=</span><span class="n">Tk</span><span class="p">()</span>
+<span class="n">txt1</span><span class="o">=</span><span class="n">Label</span><span class="p">(</span><span class="n">fen1</span><span class="p">,</span> <span class="n">text</span><span class="o">=</span><span class="s1">&#39;Premier champ : &#39;</span><span class="p">)</span>
+<span class="n">txt2</span><span class="o">=</span><span class="n">Label</span><span class="p">(</span><span class="n">fen1</span><span class="p">,</span> <span class="n">text</span><span class="o">=</span><span class="s1">&#39;Second : &#39;</span><span class="p">)</span>
+<span class="n">entr1</span><span class="o">=</span><span class="n">Entry</span><span class="p">(</span><span class="n">fen1</span><span class="p">,</span> <span class="n">bg</span><span class="o">=</span><span class="s1">&#39;white&#39;</span><span class="p">)</span>
+<span class="n">entr2</span><span class="o">=</span><span class="n">Entry</span><span class="p">(</span><span class="n">fen1</span><span class="p">,</span> <span class="n">bg</span><span class="o">=</span><span class="s1">&#39;white&#39;</span><span class="p">)</span>
+
+<span class="n">txt1</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="n">row</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">txt2</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="n">row</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">entr1</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="n">row</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">column</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">entr2</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="n">row</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">column</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+
+<span class="n">fen1</span><span class="o">.</span><span class="n">mainloop</span><span class="p">()</span>
+</code></pre></div></td></tr></table></div>
+<img alt="méthode grid" src="../img/ex%20grid.JPG" /> 
+La méthode <code>grid()</code> considère la fenêtre comme un tableau, avec des lignes (row) et des colonnes (column).<br />
+Il est possible d'aligner les widgets avec l'option <code>sticky</code> qui peut prendre l'une des quatre valeurs N, S, E, W (les quatre points cardinaux en anglais).  </p>
+<h3 id="exercices_3"><strong>Exercices :</strong><a class="headerlink" href="#exercices_3" title="Permanent link">⚓︎</a></h3>
+<ol>
+<li>
+<p>Remplacer les deux premières instructions<code>grid( )</code>du script par : <br />
+<code>txt1.grid(row=0, sticky=E)</code> <br />
+<code>txt2.grid(row=1, sticky=E)</code>  </p>
+</li>
+<li>
+<p>Le but de cet exercice est d'obtenir la fenêtre ci-dessous : <br />
+<img alt="méthode grid" src="../img/res%20grid.JPG" /> 
+voici le fichier image à utiliser (cliquer sur le lien pour télécharger) <a href="../img/AnOlympiques.gif">Image anneaux</a> 
+Le programme comportera entre autres, les parties suivantes :<br />
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1">#Création des widget Label et Entry</span>
+        <span class="n">A</span> <span class="n">vous</span> <span class="n">de</span> <span class="n">compléter</span>
+<span class="c1">#Création d&#39;un widget Canvas contenant une image</span>
+<span class="n">can1</span><span class="o">=</span><span class="n">Canvas</span><span class="p">(</span><span class="n">fen1</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">320</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="mi">160</span><span class="p">,</span> <span class="n">bg</span><span class="o">=</span><span class="s1">&#39;white&#39;</span><span class="p">)</span>
+<span class="n">anneaux</span><span class="o">=</span><span class="n">PhotoImage</span><span class="p">(</span><span class="n">file</span><span class="o">=</span><span class="s1">&#39;AnOlympiques.gif&#39;</span><span class="p">)</span>
+<span class="n">item</span><span class="o">=</span><span class="n">can1</span><span class="o">.</span><span class="n">create_image</span><span class="p">(</span><span class="mi">160</span><span class="p">,</span> <span class="mi">80</span><span class="p">,</span> <span class="n">image</span><span class="o">=</span><span class="n">anneaux</span><span class="p">)</span>
+
+<span class="c1">#Mise en place des widgetsLabel et Entry</span>
+        <span class="n">A</span> <span class="n">vous</span> <span class="n">de</span> <span class="n">compléter</span>
+
+<span class="n">can1</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="n">row</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">column</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">rowspan</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">padx</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">pady</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+Tkinter ne permet pas d'insérer directement une image dans une fenêtre. Il faut d'abord installer un canevas, et ensuite positionner l'image dans celui-ci, grâce à l'instruction <code>item=can1.create_image(160, 80, image=anneaux)</code>.</p>
+</li>
+</ol>
+<p>Les deux premiers arguments transmis <code>(160,80)</code> indiquent les coordonnées x et y du canevas où il faut placer le centre de l'image (ici, l'image sera donc centrée dans le canevas).  </p>
+<p>L'instruction <code>rowspan=3</code> indique que le canevas pourra « s'étaler » sur trois lignes. padx et pady indiquent la dimension de l'espace à réserver autour du canevas.  </p>
+<h2 id="animations-deplacer-les-objets">Animations : déplacer les objets<a class="headerlink" href="#animations-deplacer-les-objets" title="Permanent link">⚓︎</a></h2>
+<h3 id="modifier-les-proprietes-dun-objet-animation">Modifier les propriétés d'un objet (animation)<a class="headerlink" href="#modifier-les-proprietes-dun-objet-animation" title="Permanent link">⚓︎</a></h3>
+<p>Recopier, sauvegarder et exécuter le script suivant :<br />
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span>
+<span class="normal">32</span>
+<span class="normal">33</span>
+<span class="normal">34</span>
+<span class="normal">35</span>
+<span class="normal">36</span>
+<span class="normal">37</span>
+<span class="normal">38</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">from</span> <span class="nn">tkinter</span> <span class="kn">import</span><span class="o">*</span>
+<span class="c1"># Procédure générale de déplacement :</span>
+<span class="k">def</span> <span class="nf">avance</span><span class="p">(</span><span class="n">gd</span><span class="p">,</span> <span class="n">hb</span><span class="p">):</span>
+    <span class="k">global</span> <span class="n">x1</span><span class="p">,</span> <span class="n">y1</span>
+    <span class="n">x1</span><span class="p">,</span> <span class="n">y1</span> <span class="o">=</span> <span class="n">x1</span><span class="o">+</span><span class="n">gd</span><span class="p">,</span> <span class="n">y1</span><span class="o">+</span><span class="n">hb</span>
+    <span class="n">can1</span><span class="o">.</span><span class="n">coords</span><span class="p">(</span><span class="n">oval1</span><span class="p">,</span> <span class="n">x1</span><span class="p">,</span> <span class="n">y1</span><span class="p">,</span> <span class="n">x1</span><span class="o">+</span><span class="mi">30</span><span class="p">,</span> <span class="n">y1</span><span class="o">+</span><span class="mi">30</span><span class="p">)</span>
+<span class="c1"># Gestionnaire d&#39;événements :</span>
+<span class="k">def</span> <span class="nf">depl_gauche</span><span class="p">():</span>
+    <span class="n">avance</span><span class="p">(</span><span class="o">-</span><span class="mi">10</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">depl_droite</span><span class="p">():</span>
+    <span class="n">avance</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">depl_haut</span><span class="p">():</span>
+    <span class="n">avance</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="mi">10</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">depl_bas</span><span class="p">():</span>
+    <span class="n">avance</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
+
+<span class="c1">##### Programme principal #####</span>
+
+<span class="c1"># Les variables suivantes seront utilisées de manière globale :</span>
+<span class="n">x1</span><span class="p">,</span> <span class="n">y1</span> <span class="o">=</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">10</span>     <span class="c1"># coordonnées initiales</span>
+
+<span class="c1"># Création du widget &quot;maître&quot; :</span>
+<span class="n">fen1</span> <span class="o">=</span><span class="n">Tk</span><span class="p">()</span>
+<span class="n">fen1</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Exercice d&#39;animation avec Tkinter&quot;</span><span class="p">)</span>
+
+<span class="c1"># Création des widgets &quot;esclaves&quot;</span>
+<span class="n">can1</span> <span class="o">=</span><span class="n">Canvas</span><span class="p">(</span><span class="n">fen1</span><span class="p">,</span><span class="n">bg</span><span class="o">=</span><span class="s1">&#39;dark gray&#39;</span><span class="p">,</span><span class="n">height</span><span class="o">=</span><span class="mi">300</span><span class="p">,</span><span class="n">width</span><span class="o">=</span><span class="mi">300</span><span class="p">)</span>
+<span class="n">oval1</span><span class="o">=</span><span class="n">can1</span><span class="o">.</span><span class="n">create_oval</span><span class="p">(</span><span class="n">x1</span><span class="p">,</span><span class="n">y1</span><span class="p">,</span><span class="n">x1</span><span class="o">+</span><span class="mi">30</span><span class="p">,</span><span class="n">y1</span><span class="o">+</span><span class="mi">30</span><span class="p">,</span><span class="n">width</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span><span class="n">fill</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">)</span>
+<span class="n">can1</span><span class="o">.</span><span class="n">pack</span><span class="p">(</span><span class="n">side</span><span class="o">=</span><span class="n">LEFT</span><span class="p">)</span>
+<span class="n">Button</span><span class="p">(</span><span class="n">fen1</span><span class="p">,</span><span class="n">text</span><span class="o">=</span><span class="s1">&#39;Quitter&#39;</span><span class="p">,</span><span class="n">command</span><span class="o">=</span><span class="n">fen1</span><span class="o">.</span><span class="n">quit</span><span class="p">)</span><span class="o">.</span><span class="n">pack</span><span class="p">(</span><span class="n">side</span><span class="o">=</span><span class="n">BOTTOM</span><span class="p">)</span>
+<span class="n">Button</span><span class="p">(</span><span class="n">fen1</span><span class="p">,</span><span class="n">text</span><span class="o">=</span><span class="s1">&#39;Gauche&#39;</span><span class="p">,</span><span class="n">command</span><span class="o">=</span><span class="n">depl_gauche</span><span class="p">)</span><span class="o">.</span><span class="n">pack</span><span class="p">()</span>
+<span class="n">Button</span><span class="p">(</span><span class="n">fen1</span><span class="p">,</span><span class="n">text</span><span class="o">=</span><span class="s1">&#39;Droite&#39;</span><span class="p">,</span><span class="n">command</span><span class="o">=</span><span class="n">depl_droite</span><span class="p">)</span><span class="o">.</span><span class="n">pack</span><span class="p">()</span>
+<span class="n">Button</span><span class="p">(</span><span class="n">fen1</span><span class="p">,</span><span class="n">text</span><span class="o">=</span><span class="s1">&#39;Haut&#39;</span><span class="p">,</span><span class="n">command</span><span class="o">=</span><span class="n">depl_haut</span><span class="p">)</span><span class="o">.</span><span class="n">pack</span><span class="p">()</span>
+<span class="n">Button</span><span class="p">(</span><span class="n">fen1</span><span class="p">,</span><span class="n">text</span><span class="o">=</span><span class="s1">&#39;Bas&#39;</span><span class="p">,</span><span class="n">command</span><span class="o">=</span><span class="n">depl_bas</span><span class="p">)</span><span class="o">.</span><span class="n">pack</span><span class="p">()</span>
+
+<span class="c1"># Démarrage du réceptionnaire d&#39;événement :</span>
+<span class="n">fen1</span><span class="o">.</span><span class="n">mainloop</span><span class="p">()</span>
+<span class="n">fen1</span><span class="o">.</span><span class="n">destroy</span><span class="p">()</span>
+</code></pre></div></td></tr></table></div>
+La fonction <code>avance( )</code> redéfinit les coordonnées de l'objet « cercle coloré » (<code>oval1</code>) à chaque fois que l'on clique sur un des boutons. Ce qui provoque son animation.<br />
+Les boutons ont été définis de manière plus compact (pas d'utilisation de variables).  </p>
+<h3 id="exercices_4"><strong>Exercices :</strong><a class="headerlink" href="#exercices_4" title="Permanent link">⚓︎</a></h3>
+<ol>
+<li>
+<p>Modifier le programme précédent de manière à ce que le cercle oval1 se place à l'endroit où l'on clique avec la souris.</p>
+</li>
+<li>
+<p>Écrire un programme qui fasse apparaître une fenêtre avec un canevas (100*150). Dans ce canevas, placer un petit cercle (de rayon 15) censé représenter une balle. Sous le canevas, placer un bouton. Chaque fois que l'on clique sur le bouton, la balle doit avancer d'une petite distance (10) vers la droite, jusqu'à ce qu'elle atteigne l'extrémité du canevas. Si l'on continue à cliquer, la balle doit alors revenir en arrière jusqu'à l'autre extrémité, et ainsi de suite. </p>
+</li>
+<li>
+<p>Écrire un programme qui fasse la conversion des degrés Celsius vers les degrés Fahrenheit en tapant la touche Return, et vice-versa. On utilisera la formule : TF =TC ×1,8+32 .<br />
+Vous aurez besoin de la méthode <code>get( )</code> du widget <code>Entry</code> (voir la calculatrice), ainsi que des méthodes <code>delete(0,END)</code> pour effacer un champ du début à la fin,  et <code>insert(0,text)</code> pour insérer le texte text à partir du début du champ.<br />
+<img alt="Convertisseur température" src="../img/convert.JPG" /></p>
+</li>
+</ol>
+<h3 id="animations-automatiques">Animations automatiques<a class="headerlink" href="#animations-automatiques" title="Permanent link">⚓︎</a></h3>
+<p>Recopier, sauvegarder et exécuter le script suivant :<br />
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span>
+<span class="normal">32</span>
+<span class="normal">33</span>
+<span class="normal">34</span>
+<span class="normal">35</span>
+<span class="normal">36</span>
+<span class="normal">37</span>
+<span class="normal">38</span>
+<span class="normal">39</span>
+<span class="normal">40</span>
+<span class="normal">41</span>
+<span class="normal">42</span>
+<span class="normal">43</span>
+<span class="normal">44</span>
+<span class="normal">45</span>
+<span class="normal">46</span>
+<span class="normal">47</span>
+<span class="normal">48</span>
+<span class="normal">49</span>
+<span class="normal">50</span>
+<span class="normal">51</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">from</span> <span class="nn">tkinter</span> <span class="kn">import</span><span class="o">*</span>
+
+<span class="c1"># définition des gestionnaires d&#39;événements</span>
+<span class="k">def</span> <span class="nf">move</span><span class="p">():</span>
+    <span class="s2">&quot;déplacement de la balle&quot;</span>
+    <span class="k">global</span> <span class="n">x1</span><span class="p">,</span> <span class="n">y1</span><span class="p">,</span> <span class="n">dx</span><span class="p">,</span> <span class="n">dy</span><span class="p">,</span> <span class="n">flag</span>
+    <span class="n">x1</span><span class="p">,</span> <span class="n">y1</span> <span class="o">=</span> <span class="n">x1</span><span class="o">+</span><span class="n">dx</span><span class="p">,</span> <span class="n">y1</span><span class="o">+</span><span class="n">dy</span>
+    <span class="k">if</span> <span class="n">x1</span><span class="o">&gt;</span><span class="mi">210</span> <span class="p">:</span>
+        <span class="n">x1</span><span class="p">,</span> <span class="n">dx</span><span class="p">,</span> <span class="n">dy</span> <span class="o">=</span> <span class="mi">210</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">15</span>
+    <span class="k">if</span> <span class="n">y1</span><span class="o">&gt;</span><span class="mi">210</span><span class="p">:</span>
+        <span class="n">y1</span><span class="p">,</span> <span class="n">dx</span><span class="p">,</span> <span class="n">dy</span> <span class="o">=</span> <span class="mi">210</span><span class="p">,</span> <span class="o">-</span><span class="mi">15</span><span class="p">,</span> <span class="mi">0</span>
+    <span class="k">if</span>  <span class="n">x1</span><span class="o">&lt;</span><span class="mi">10</span><span class="p">:</span>
+        <span class="n">x1</span><span class="p">,</span> <span class="n">dx</span><span class="p">,</span> <span class="n">dy</span> <span class="o">=</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="mi">15</span>
+    <span class="k">if</span> <span class="n">y1</span><span class="o">&lt;</span><span class="mi">10</span><span class="p">:</span>
+        <span class="n">y1</span><span class="p">,</span> <span class="n">dx</span><span class="p">,</span> <span class="n">dy</span> <span class="o">=</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="mi">0</span>
+    <span class="n">can1</span><span class="o">.</span><span class="n">coords</span><span class="p">(</span><span class="n">oval1</span><span class="p">,</span><span class="n">x1</span><span class="p">,</span><span class="n">y1</span><span class="p">,</span><span class="n">x1</span><span class="o">+</span><span class="mi">30</span><span class="p">,</span><span class="n">y1</span><span class="o">+</span><span class="mi">30</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">flag</span><span class="o">&gt;</span><span class="mi">0</span><span class="p">:</span>
+        <span class="n">fen1</span><span class="o">.</span><span class="n">after</span><span class="p">(</span><span class="mi">50</span><span class="p">,</span><span class="n">move</span><span class="p">)</span>     <span class="c1"># boucler après 50 millisecondes</span>
+<span class="k">def</span> <span class="nf">stop_it</span><span class="p">():</span>
+    <span class="s2">&quot;arrêt de l&#39;animation&quot;</span>
+    <span class="k">global</span> <span class="n">flag</span>
+    <span class="n">flag</span><span class="o">=</span><span class="mi">0</span>
+<span class="k">def</span> <span class="nf">start_it</span><span class="p">():</span>
+    <span class="s2">&quot;démarrage de l&#39;application&quot;</span>
+    <span class="k">global</span> <span class="n">flag</span>
+    <span class="k">if</span> <span class="n">flag</span><span class="o">==</span><span class="mi">0</span><span class="p">:</span>        <span class="c1"># pour ne lancer qu&#39;une seule boucle</span>
+        <span class="n">flag</span><span class="o">=</span><span class="mi">1</span>
+        <span class="n">move</span><span class="p">()</span>
+
+<span class="c1">##### Programme principal #####</span>
+<span class="c1"># Les variables suivantes sont utilisées de manière globale :</span>
+<span class="n">x1</span><span class="p">,</span> <span class="n">y1</span> <span class="o">=</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">10</span>     <span class="c1"># coordonnées initiales</span>
+<span class="n">dx</span><span class="p">,</span> <span class="n">dy</span> <span class="o">=</span> <span class="mi">15</span><span class="p">,</span> <span class="mi">0</span>      <span class="c1"># &#39;pas&#39; du déplacement</span>
+<span class="n">flag</span><span class="o">=</span><span class="mi">0</span>              <span class="c1"># commutateur</span>
+<span class="c1"># Création du widget &quot;parent&quot; :</span>
+<span class="n">fen1</span><span class="o">=</span><span class="n">Tk</span><span class="p">()</span>
+<span class="n">fen1</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Exercice d&#39;animation avec Tkinter&quot;</span><span class="p">)</span>
+<span class="c1"># Création des widgets &quot;enfants&quot; :</span>
+<span class="n">can1</span><span class="o">=</span><span class="n">Canvas</span><span class="p">(</span><span class="n">fen1</span><span class="p">,</span><span class="n">bg</span><span class="o">=</span><span class="s1">&#39;dark gray&#39;</span><span class="p">,</span><span class="n">height</span><span class="o">=</span><span class="mi">250</span><span class="p">,</span><span class="n">width</span><span class="o">=</span><span class="mi">250</span><span class="p">)</span>
+<span class="n">can1</span><span class="o">.</span><span class="n">pack</span><span class="p">(</span><span class="n">side</span><span class="o">=</span><span class="n">LEFT</span><span class="p">,</span><span class="n">padx</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span><span class="n">pady</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
+<span class="n">oval1</span><span class="o">=</span><span class="n">can1</span><span class="o">.</span><span class="n">create_oval</span><span class="p">(</span><span class="n">x1</span><span class="p">,</span><span class="n">y1</span><span class="p">,</span><span class="n">x1</span><span class="o">+</span><span class="mi">30</span><span class="p">,</span><span class="n">y1</span><span class="o">+</span><span class="mi">30</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span><span class="n">fill</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">)</span>
+<span class="n">bou1</span><span class="o">=</span><span class="n">Button</span><span class="p">(</span><span class="n">fen1</span><span class="p">,</span><span class="n">text</span><span class="o">=</span><span class="s1">&#39;Quitter&#39;</span><span class="p">,</span><span class="n">width</span><span class="o">=</span><span class="mi">8</span><span class="p">,</span><span class="n">command</span><span class="o">=</span><span class="n">fen1</span><span class="o">.</span><span class="n">quit</span><span class="p">)</span>
+<span class="n">bou1</span><span class="o">.</span><span class="n">pack</span><span class="p">(</span><span class="n">side</span><span class="o">=</span><span class="n">BOTTOM</span><span class="p">)</span>
+<span class="n">bou2</span><span class="o">=</span><span class="n">Button</span><span class="p">(</span><span class="n">fen1</span><span class="p">,</span><span class="n">text</span><span class="o">=</span><span class="s1">&#39;Démarrer&#39;</span><span class="p">,</span><span class="n">width</span><span class="o">=</span><span class="mi">8</span><span class="p">,</span><span class="n">command</span><span class="o">=</span><span class="n">start_it</span><span class="p">)</span>
+<span class="n">bou2</span><span class="o">.</span><span class="n">pack</span><span class="p">()</span>
+<span class="n">bou3</span><span class="o">=</span><span class="n">Button</span><span class="p">(</span><span class="n">fen1</span><span class="p">,</span><span class="n">text</span><span class="o">=</span><span class="s1">&#39;Arrêter&#39;</span><span class="p">,</span><span class="n">width</span><span class="o">=</span><span class="mi">8</span><span class="p">,</span><span class="n">command</span><span class="o">=</span><span class="n">stop_it</span><span class="p">)</span>
+<span class="n">bou3</span><span class="o">.</span><span class="n">pack</span><span class="p">()</span>
+
+<span class="c1"># Démarrage du réceptionnaire d&#39;événements :</span>
+<span class="n">fen1</span><span class="o">.</span><span class="n">mainloop</span><span class="p">()</span>
+<span class="n">fen1</span><span class="o">.</span><span class="n">destroy</span><span class="p">()</span>
+</code></pre></div></td></tr></table></div>
+La méthode <code>after()</code> déclenche l'appel d'une fonction après qu'un certain laps de temps se soit écoulé (temps en millisecondes).<br />
+Ici la méthode <code>after( )</code> se trouve dans la fonction <code>move( )</code>. Elle appelle la fonction <code>move( )</code> elle-même. Cette technique de programmation très puissante est appelée « récursivité » : la fonction s'appelle elle-même. Attention, pour que le programme ne boucle pas indéfiniment, il faut mettre en place un moyen pour l'interrompre.<br />
+À chaque itération de la boucle, le contenu de la variable <code>flag</code> est testé (instruction if). Si le contenu de la variable <code>flag</code> est à 0, alors le bouclage ne s'effectue plus et l'animation s'arrête.<br />
+Un premier clic sur « Démarrer » assigne une valeur non nulle à la variable <code>flag</code>, puis provoque immédiatement un appel de la fonction <code>move()</code>. Celle-ci s'exécute et continue à s'appeler elle-même toutes les 50 millisecondes, tant que<code>flag</code> ne revient pas à 0. Si l'on continue à cliquer sur le bouton
+« Démarrer », la fonction move() ne peut plus être appelée tant que flag vaut 1. On évite ainsi le démarrage de plusieurs boucles concurrentes.<br />
+Le bouton « Arrêter » remet <code>flag</code> à 0 et la boucle s'interrompt.  </p>
+<h3 id="exercices_5"><strong>Exercices :</strong><a class="headerlink" href="#exercices_5" title="Permanent link">⚓︎</a></h3>
+<p>Dans la fonction <code>start_it( )</code>, supprimer l'instruction <code>if flag==0</code>: (et l'indentation des deux lignes suivantes). Cliquer plusieurs fois sur le bouton « Démarrer ». Observer ce qui se passe Modifier le programme de telle façon que la balle change de couleur à chaque « virage ».<br />
+Vous aurez besoin de l'instruction : <code>can1.itemconfigure(oval1,fill='green')</code>   </p>
+<h2 id="minis-projets">Minis projets<a class="headerlink" href="#minis-projets" title="Permanent link">⚓︎</a></h2>
+<div class="admonition danger">
+<p class="admonition-title">Travaux de groupe</p>
+<p>Les groupes sont imposés, vous rendrez un seul projet et aurez tous la même note.</p>
+<ul>
+<li>DISCUTEZ ENTRE VOUS !!</li>
+<li>Répartissez vous le travail en vous mettant d'accord à l'avance sur le nom des fonctions, des variables, des fichiers, ...</li>
+<li>Prévoyez à l'avance, qui fait quoi, où vous vous arrêtez</li>
+<li>Lister TOUTES les fonctionnalités du programme</li>
+<li>Ne travaillez pas à plusieurs en parallèle sur le même fichier</li>
+</ul>
+</div>
+<h3 id="pacman"><strong>PacMan</strong><a class="headerlink" href="#pacman" title="Permanent link">⚓︎</a></h3>
+<p>Vous allez réaliser une version simplifiée de PacMan.<br />
+Voici une petite <a href="https://www.google.fr/logos/2010/pacman10-i.html">démonstration</a>.  </p>
+<div class="admonition info">
+<p class="admonition-title">Les objectifs minimums</p>
+<ul>
+<li>créer un rond jaune (30px de diametre) que l'on peut déplacer avec des flèches dans un canevas de 900 par 300.  </li>
+<li>Placer 10 rectangles blancs (fantomes de 1px de large et 20 de haut) de façon aléatoire.   </li>
+<li>Placer 50 pac-gommes (cercles noirs de rayon 5 px) de façon aléatoire.  </li>
+<li>Quand pac-man touche une pac-gomme, elle disparait et le score augment de 1  </li>
+<li>Quand pac-man touche un fantome, il perd une vie et revient à l'emplacement du début (sans remettre les pac-gomme déjà mangées et sans réinitialiser le score)  </li>
+<li>Le jeu se termine lorsque Pac-man a mangé toutes les pac-gomme ou qu'il a perdu 3 vies</li>
+</ul>
+</div>
+<p>!! info "Niveau intermédiaire :"</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>Faire déplacer les fantômes de façon aléatoire et les faire rebondir sur les bords
+</code></pre></div></td></tr></table></div>
+<div class="admonition info">
+<p class="admonition-title">Niveau avancé :</p>
+<ul>
+<li>Placer tout ce petit monde dans un labyrinthe.  </li>
+<li>Ajouter de la musique<br />
+...  </li>
+</ul>
+</div>
+<p>Au minimum vous devez obtenir ceci :
+<img alt="pacMan" src="../img/pacman.png" />  </p>
+<details class="caution">
+<summary>Conseils</summary>
+<p>Les fantômes peuvent être gérés par une liste.<br />
+Utiliser les morceaux de code vus en activité.<br />
+Attention aux nombreux codes que vous trouverez sur internet que vous ne sauriez ni expliquer ni utiliser (notamment ceux réalisés en programmation orienté objet).<br />
+Faites simple mais efficace</p>
+</details>
+<h3 id="repertoire-telephonique"><strong>Répertoire téléphonique</strong><a class="headerlink" href="#repertoire-telephonique" title="Permanent link">⚓︎</a></h3>
+<p>Vous allez créer une interface permettant de gérer un répertoire téléphonique.<br />
+Il faudra, dans un premier temps, créer en programmation classique la création et la modification du répertoire.<br />
+Ensuite, créer une interface graphique permettant d'utiliser le répertoire.<br />
+Voici les fichiers nécessaires à la réalisation du projet.<br />
+L'interface devra contenir les boutons AJOUTER, SUPPRIMER, RECHERCHER, QUITTER (qui devra enregistrer les modifications dans le fichier texte)<br />
+La fonction d'affichage peut se faire par défaut (comme sur votre smartphone) ou par action sur un bouton AFFICHER.<br />
+Le <a href="../img/Le_repertoire_telephonique.pdf">Le document de fonctionnement du répèrtoire téléphonique</a> , <a href="../img/dep.txt">L'exemple sur les départements</a> , <a href="../img/enregistrer_dico.py">Enregistrer un dictionnaire</a>, <a href="../img/recuperer_dico.py">récupérer un dictionnaire</a>, <a href="../img/repertoire_a_completer.py">répertoire à compléter</a> ,
+Vous pouvez aller voir par <a href="https://portail-public.fr/ux-ergonomie/application-mobile/">ici</a> pour tenir compte de l'ergonomie de votre interface.  </p>
+<div class="admonition caution">
+<p class="admonition-title">conseil</p>
+<p>Prévoir de faire une version qui fonctionne sans interface (l'interface sera plus facile à créer ensuite en appelant le fichier existant).</p>
+</div>
+<h3 id="motus"><strong>Motus</strong><a class="headerlink" href="#motus" title="Permanent link">⚓︎</a></h3>
+<p>Vous ne connaissez pas ?</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/KCssi-LlT34" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<div class="admonition info">
+<p class="admonition-title">Objectifs minimums</p>
+<ul>
+<li>utiliser le fichier <a href="../img/dico_propre.txt">dico propre</a> qui contient une très grande liste de mots et charger son contenu dans une liste (vérifier en affichant les 10 premiers mots par exemple)   </li>
+<li>Nettoyer la liste pour n'obtenir que les mots de 6 lettres</li>
+<li>Faire afficher la première lettre et les cases vides</li>
+<li>une fois un mot proposé par le joueur on détermine (comme dans la vidéo) les lettres bien placées et mal placées</li>
+<li>L'utilisateur, s'il trouve le mot cumule un certain nombre de points : 6 points s'il trouve à la premiere, 5 à la deuxième, ...</li>
+<li>L'utilisateur peut jouer 5 fois.</li>
+</ul>
+</div>
+<div class="admonition info">
+<p class="admonition-title">Niveau avancé</p>
+</div>
+<ul>
+<li>Conserver le nom du joueur et le score dans un fichier extérieur (txt ou csv au choix)  </li>
+<li>Faire afficher le nom du joueur ayant enregistré le meilleur score </li>
+</ul>
+<p><img alt="Motus" src="../img/motus.png" />  </p>
+<div class="admonition caution">
+<p class="admonition-title">Conseil</p>
+<p>Prévoir de faire une version qui fonctionne sans interface (l'interface sera plus facile à créer ensuite en appelant le fichier existant).</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  Retour en haut de la page
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.tabs", "navigation.expand", "navigation.top", "toc.integrate", "header.autohide"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.c18c5fb9.min.js"></script>
+      
+        <script src="../../javascripts/extra.js"></script>
+      
+        <script src="../../javascripts/prism.js"></script>
+      
+        <script src="../../javascripts/config.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+        <script src="https://unpkg.com/mermaid@8.9.2/dist/mermaid.min.js"></script>
+      
+        <script src="../../javascripts/mermaid.js"></script>
+      
+    
+  </body>
+</html>

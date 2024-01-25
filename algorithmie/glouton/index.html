@@ -1,0 +1,2167 @@
+
+<!doctype html>
+<html lang="fr" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../knn/">
+      
+      
+        <link rel="next" href="../../archi/reseaux/reseau/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.5">
+    
+    
+      
+        <title>Algorithme glouton - NSI au Lycée Henri Avril</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.50c56a3b.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+      <link rel="stylesheet" href="../../stylesheets/prism.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#les-algorithmes-gloutons" class="md-skip">
+          Aller au contenu
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="En-tête">
+    <a href="../.." title="NSI au Lycée Henri Avril" class="md-header__button md-logo" aria-label="NSI au Lycée Henri Avril" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            NSI au Lycée Henri Avril
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Algorithme glouton
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Mode sombre"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Mode sombre" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="blue" data-md-color-accent="blue"  aria-label="Mode clair"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Mode clair" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Rechercher" placeholder="Rechercher" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Recherche">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Effacer" aria-label="Effacer" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initialisation de la recherche
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Onglets" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+    
+  
+  Accueil
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../representation/base_numeration/" class="md-tabs__link">
+          
+  
+  Représenter de données
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../table_donnees/traitement_donnees/" class="md-tabs__link">
+          
+  
+  Tables de données
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../Programmation/type/" class="md-tabs__link">
+          
+  
+  Programmation
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../intro_algo/" class="md-tabs__link">
+          
+  
+  Algorithmie
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../archi/reseaux/reseau/" class="md-tabs__link">
+          
+  
+  Réseaux et internet
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../archi/OS/vonneuman/" class="md-tabs__link">
+          
+  
+  Architecture et OS
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../IHM/html/html/" class="md-tabs__link">
+          
+  
+  IHM
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="NSI au Lycée Henri Avril" class="md-nav__button md-logo" aria-label="NSI au Lycée Henri Avril" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    NSI au Lycée Henri Avril
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Accueil
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Représenter de données
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Représenter de données
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../representation/base_numeration/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    représenter les entiers
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../representation/reels_flottants/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    représenter les réels et les flottants
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../representation/codage_texte/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    représenter le texte
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Tables de données
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Tables de données
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../table_donnees/traitement_donnees/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Traitement de données en table
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Programmation
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Programmation
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Programmation/type/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Types construits
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Programmation/demarrer/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Démarrer en programmation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Programmation/boucle/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Conditions et boucles
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Programmation/fonction/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Fonctions et spécifications
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Programmation/lire_ecrire.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lire et Ecrire dans un fichier
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Programmation/tkinter/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Interface graphique : Tkinter
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Algorithmie
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Algorithmie
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../intro_algo/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduction à l'algorithmie
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../complexite/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Compléxité
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tris/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Algorithmes de tris
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../knn/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    K plus proches voisins
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Algorithme glouton
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Algorithme glouton
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#presentation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Présentation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#probleme-de-rendu-de-monnaie" class="md-nav__link">
+    <span class="md-ellipsis">
+      Problème de rendu de monnaie
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Problème de rendu de monnaie">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#implementation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Implémentation
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercices" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exercices
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#probleme-du-sac-a-dos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Problème du sac à dos
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Problème du sac à dos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-vous-de-limplementer" class="md-nav__link">
+    <span class="md-ellipsis">
+      A vous de l'implémenter
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Réseaux et internet
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Réseaux et internet
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../archi/reseaux/reseau/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Qu'est-ce qu'un réseau
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../archi/reseaux/TCP_IP/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Protocole TCP/IP
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../archi/reseaux/securisation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Sécurisation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Architecture et OS
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            Architecture et OS
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../archi/OS/vonneuman/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Architecture  matérielle
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../archi/OS/OS/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Systèmes d'exploitation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../archi/OS/linux/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Linux
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../archi/OS/linux/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Utilisation de la ligne de commande
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../archi/OS/logique_combinatoire/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Logique combinatoire
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../archi/OS/assembleur/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Assembleur
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    IHM
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            IHM
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_8_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_8_1" id="__nav_8_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    HTML et CSS
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_8_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8_1">
+            <span class="md-nav__icon md-icon"></span>
+            HTML et CSS
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../IHM/html/html/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    HTML
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../IHM/html/css/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CSS
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_8_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_8_2" id="__nav_8_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Javascript
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_8_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8_2">
+            <span class="md-nav__icon md-icon"></span>
+            Javascript
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../IHM/javascript/exo_js/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Exercices d'application Javascript
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../IHM/javascript/programmation_evenementielle/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Programmation evenementielle
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../IHM/javascript/formulaire/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Les formulaires
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_8_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_8_3" id="__nav_8_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Protocole HTTP et PHP
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_8_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8_3">
+            <span class="md-nav__icon md-icon"></span>
+            Protocole HTTP et PHP
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../IHM/php/Protocole_HTTP/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Protocole HTTP
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../IHM/PHP/TP_php.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    TP PHP
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_8_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_8_4" id="__nav_8_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Robotique
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_8_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8_4">
+            <span class="md-nav__icon md-icon"></span>
+            Robotique
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../IHM/robotique/robotique/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Robotique
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../IHM/robotique/projets/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Projets
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="les-algorithmes-gloutons">Les Algorithmes gloutons<a class="headerlink" href="#les-algorithmes-gloutons" title="Permanent link">⚓︎</a></h1>
+<h2 id="presentation">Présentation<a class="headerlink" href="#presentation" title="Permanent link">⚓︎</a></h2>
+<p>En programmation, on cherche à optimiser le problème, c'est-à-dire à trouver la meilleure solution. On cherche à diminuer le temps de calcul, l'utilisation de la mémoire, et surtout l'efficacité. On souhaite que la solution soit trouvée à chaque fois (ou au moins le plus souvent possible).  </p>
+<p>Pour résoudre un problème d'optimisation nous auront besoin : </p>
+<ul>
+<li>d'un problème aux multiples solutions  </li>
+<li>d'une fonction permettant d'évaluer la résolution   </li>
+<li>l’existence d'une solution optimale ou assez bonne  </li>
+</ul>
+<div class="admonition example">
+<p class="admonition-title">Un petit exemple</p>
+<p>Un voyageur souhaite visiter plusieurs villes de France, dans n'importe quel ordre, mais en minimisant la distance parcourue.
+Départ et arrivée à Clermont-Ferrand.<br />
+Villes à visiter : Limoges, Lyon, Paris et Toulouse.<br />
+Le tableau suivant donne les distances routières kilométriques entre plusieurs villes de France :
+<img alt="tableau des distances" src="../img/distances.PNG" />
+1. Déterminer tous les trajets possibles et en déduire le trajet optimal.<br />
+<em>On ne comptera pas deux fois les mêmes trajets effectués dans deux sens différents</em><br />
+Pour débloquer la solution entrer le code correspondant au nombre de trajets trouvés :<br />
+<iframe src="https://lockee.fr/o/yTAfGoCJ?noft" height="500" style="width:100%;" frameborder="0" ></iframe>
+2. Calculer le nombre de trajets possibles si le voyageur décide de visiter toutes les villes du tableau.
+<em>On donnera que la façon de calculer le nombre de coombinaisons possibles avec n chiffres est nx(n-1)x(n-2)x...x1 = n! (factorrrielle n)</em><br />
+<em>compter le nombre de villes</em><br />
+<iframe src="https://lockee.fr/o/qrK8Peae?noft" height="500" style="width:100%;" frameborder="0" ></iframe></p>
+</div>
+<h2 id="probleme-de-rendu-de-monnaie">Problème de rendu de monnaie<a class="headerlink" href="#probleme-de-rendu-de-monnaie" title="Permanent link">⚓︎</a></h2>
+<p>Le but est de programmer une caisse automatique pour qu'elle rende la monnaie de façon optimale, c'est-à- dire avec le nombre minimal de pièces et de billets.
+Nous disposons de toutes ces pièces et nous en avons autant que l'on veut !</p>
+<p><img alt="pieces" src="../img/tableau_monnaie.png" />
+Vous souhaitez acheter un objet d'une valeur de 53 € et vous payez avec un billet de 100 €. <br />
+La caisse doit vous rendre : 100 - 53 = 47 € mais de quelle façon !<br />
+En effet, Il existe un grand nombre de possibilités pour vous rendre la monnaie :<br />
+<img alt="nombre de pièces rendues" src="../img/nb_pieces.png" /></p>
+<p>Nous pourrions ainsi lister l'ensemble de ces possibilités de façon “méthodique” en utilisant un arbre mais cet algorithme serait très “coûteux” en temps de calcul.
+Imaginons un exemple en partant simplement de la valeur 11 €<br />
+<img alt="chemin de rendu de pieces" src="../img/arbre_monnaie.png" /></p>
+<p>Nous allons donc utiliser un algorithme “glouton” pour optimiser ce problème.</p>
+<blockquote>
+<p>Définition : A chaque étape, on effectue le choix qui semble le meilleur, sans jamais remettre en question les choix déjà effectués.</p>
+</blockquote>
+<p>Pour le rendu de monnaie, c'est assez simple, il suffit de prendre à chaque étape la plus grande valeur de billet ou de pièce. Dans notre système monétaire, cet algorithme est pratiquement toujours la solution la plus optimisée mais nous allons verrons plus loin que ce n'est pas toujours le cas.<br />
+Voici l'algorithme proposé, il sera à implémenter plus tard.<br />
+La fonction <code>renduMonnaie()</code> prendra en argument la somme à rendre et la liste des pièces et billets à disposition. Cette fonction retournera la liste des pièces et billets à rendre<br />
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span>
+<span class="normal">9</span></pre></div></td><td class="code"><div><pre><span></span><code>def renduMonnaie(somme, liste):
+    Initialisation d&#39;un tableau monnaie à la liste vide.
+    Initialisation de somme_restante à somme
+    Tant que la somme_restante est &gt;0
+        Choisir valeur_choisie dans la liste la plus grande valeur de monnaie qui ne dépasse pas somme_restante.
+        Ajouter cette valeur_choisie à monnaie
+        Somme_restante =  Somme_restante - valeur choisie
+    Fin tant que
+renvoie monnaie 
+</code></pre></div></td></tr></table></div></p>
+<div class="admonition example">
+<p class="admonition-title">Exemple 1 : on dispose de toutes les pièces</p>
+<p><img alt="exemple" src="../img/ex1.png" /></p>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Exemple 2 :</p>
+<p>L'algorithme est-il toujours optimisé si vous ne disposez plus de toutes les pièces ...
+A vous de résoudre cette situation à la main dans un premier temps.
+somme = 63
+liste = [1, 2, 20, 50, 100, 200]...
+<strong>Vous avez bien lu, il ne reste plus de pièces de 5 € , ni de billets de 10 €!!</strong><br />
+Pour débloquer la solution, trouver au moins le nombre de pièces rendues :<br />
+<iframe src="https://lockee.fr/o/JD6XgHKb?noft" height="500" style="width:100%;" frameborder="0" ></iframe></p>
+</div>
+<h3 id="implementation">Implémentation<a class="headerlink" href="#implementation" title="Permanent link">⚓︎</a></h3>
+<div class="admonition faq">
+<p class="admonition-title">A faire</p>
+<p>Programmer le rendu de monnaie et vérifier le résultat pour les exemples 1 et 2.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Situation Canonique</p>
+<p>La situation du rendu de monnaie, ici, est canonique c'est à dire qu'elle arrive toujours à une solution optimale. Ceci est lié à notre système de monnaie.<br />
+Avec un autre système monétaire, on pourrait se retrouver avec des résultats qui ne seraient pas satisfaisants : la somme rendue peut être supérieure ou inférieure à la somme dûe.<br />
+L'ancien système monétaire britannique était composé de pièces de (1,3,6,12,24,30).<br />
+Modifier le système de monnaie et vérifier que le programme n'est plus optimal.  </p>
+</div>
+<h2 id="exercices">Exercices<a class="headerlink" href="#exercices" title="Permanent link">⚓︎</a></h2>
+<p>Un TP  est disponible si le temps  le permet.</p>
+<h2 id="probleme-du-sac-a-dos">Problème du sac à dos<a class="headerlink" href="#probleme-du-sac-a-dos" title="Permanent link">⚓︎</a></h2>
+<p><img align="left" alt="chasseur" src="../img/chasseur.png" />
+Vous êtes chasseur de trésors ! Après de longues heures d'aventure, des dangers évités de justesse, et malgré une armée de pilleurs à vos trousses, vous avez trouvé un énorme TRÉSOR !<br />
+Vous êtes heureux, vous sautez de joie et lancez des pièces en l'air !<br />
+Finalement vous retrouvez votre calme et commencez à réfléchir vite (n'oubliez pas l'armée de pillards qui est sur vos traces...).<br />
+<img align="right" alt="tresor" src="../img/tresor.png" />
+Votre sac à dos est assez solide pour n'emporter que 10 kg et le trésor pèse bien plus... Il va vous falloir choisir les objets à emporter. Heureusement vous êtes prévoyant et vous avez la liste des objets présents dans le coffre ainsi que leur masse et leur valeur (Comment ça “ce n'est pas très crédible” ? Vous êtes vraiment chasseur de trésor vous ?). Le trésor ne contient qu'un exemplaire de chaque objet.<br />
+En bon “geek” que vous êtes, vous avez toujours votre IDE Python favorite sur vous. Il va falloir créer un algorithme de remplissage de votre sac à dos et fissa si vous ne voulez pas finir ruiné voire pire...<br />
+Il s'agit de choisir les objets à emporter dans le sac afin d'obtenir la valeur totale la plus grande tout en respectant la contrainte du poids maximal. C'est un problème d'optimisation avec contrainte.<br />
+Ce problème peut se résoudre par force brute, c'est-à-dire en testant tous les cas possibles. Mais ce type de résolution présente un problème de complexité. Son coût en fonction du nombre d'objets disponibles croît de manière exponentielle. 
+Vous envisagerez plutôt une stratégie gloutonne (méthode heuristique dans la vidéo suivante).
+Le principe d'un algorithme glouton est de faire le meilleur choix pour le premier objet, puis le meilleur choix pour le deuxième, et ainsi de suite sans jamais remettre en cause le choix précédent !  </p>
+<p>Que faut-il entendre par “meilleur choix” ?<br />
+- Est-ce prendre l'objet qui a la plus grande valeur ?<br />
+- Est-ce prendre l'objet qui a la plus petite masse ?<br />
+- Est-ce prendre l'objet le rapport valeur/poids le plus grand ?<br />
+- Le choix le plus “spontané” serait de prendre les objets qui ont les valeurs les plus élevées ?<br />
+- Est ce vraiment le bon ?<br />
+Bien sur, si vous êtes joueur, vous pouvez essayer de tout tester mais nous vous conseillons vivement de regarder cette vidéo avant de vous lancer dans la programmation : </p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/w0Q-X4F2iFU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<h3 id="a-vous-de-limplementer">A vous de l'implémenter<a class="headerlink" href="#a-vous-de-limplementer" title="Permanent link">⚓︎</a></h3>
+<p>Vous disposez de plusieurs programme “squelette” qui contient l'ossature de vos différentes fonctions. Elles sont documentées <code>(docstring)</code> et testées <code>(assert)</code>.
+Vous disposez également d'une liste des objets présents pour tester vos différentes fonctions :
+<img alt="liste des objets" src="../img/objets.png" /></p>
+<p>La fonction (valeur) permet de trier la liste des objets en fonction de leur valeur.</p>
+<p>Cette fonction est déjà complétée</p>
+<p><strong>Sac_v1.py</strong>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span>
+<span class="normal">32</span>
+<span class="normal">33</span>
+<span class="normal">34</span>
+<span class="normal">35</span>
+<span class="normal">36</span>
+<span class="normal">37</span>
+<span class="normal">38</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1">## Chasse au trésor : glouton sac a dos</span>
+<span class="c1">## liste des objets dispo chaque objet est représenté par une liste</span>
+<span class="c1">## item 0 : nom de l &#39;objet en str</span>
+<span class="c1">## item 1 : valeur de l&#39;objet en float</span>
+<span class="c1">## item 2 : masse de l&#39;objet en int</span>
+<span class="kn">from</span> <span class="nn">operator</span> <span class="kn">import</span> <span class="n">itemgetter</span>      <span class="c1"># pour utiliser la fonction sorted en choisissant l&#39;élément qui sert au tri</span>
+
+<span class="n">objets</span> <span class="o">=</span> <span class="p">[[</span><span class="s2">&quot;lingot&quot;</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="s2">&quot;couronne&quot;</span><span class="p">,</span> <span class="mi">80</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span> <span class="p">[</span><span class="s2">&quot;bracelet&quot;</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="p">[</span><span class="s2">&quot;collier&quot;</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="s2">&quot;assiette&quot;</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="p">[</span><span class="s2">&quot;déchets&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">]]</span>
+
+<span class="k">def</span> <span class="nf">valeur</span><span class="p">(</span><span class="n">liste</span><span class="p">)</span> <span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    trie les objets de la liste par valeur décroissante</span>
+<span class="sd">    parametre :</span>
+<span class="sd">    liste : la liste des objets à trier</span>
+
+<span class="sd">    return :</span>
+<span class="sd">    liste : la liste triée</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">liste</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">liste</span><span class="p">,</span> <span class="n">key</span> <span class="o">=</span> <span class="n">itemgetter</span><span class="p">(</span><span class="mi">1</span><span class="p">),</span> <span class="n">reverse</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">liste</span>
+
+<span class="k">assert</span><span class="p">(</span><span class="n">valeur</span><span class="p">([[</span><span class="s2">&quot;lingot&quot;</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="s2">&quot;couronne&quot;</span><span class="p">,</span> <span class="mi">80</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span> <span class="p">[</span><span class="s2">&quot;bracelet&quot;</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="p">[</span><span class="s2">&quot;collier&quot;</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="s2">&quot;assiette&quot;</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="p">[</span><span class="s2">&quot;déchets&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">]]))</span> <span class="o">==</span> <span class="p">[[</span><span class="s1">&#39;couronne&#39;</span><span class="p">,</span> <span class="mi">80</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span> <span class="p">[</span><span class="s1">&#39;lingot&#39;</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="s1">&#39;bracelet&#39;</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="p">[</span><span class="s1">&#39;collier&#39;</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="s1">&#39;assiette&#39;</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="p">[</span><span class="s1">&#39;déchets&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">]]</span>
+
+<span class="k">def</span> <span class="nf">sacGlouton</span><span class="p">(</span><span class="n">liste</span><span class="p">,</span> <span class="n">maxSac</span><span class="p">)</span> <span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    parametres :</span>
+<span class="sd">    liste  : la liste des objets à choisir c&#39;est une liste de liste</span>
+<span class="sd">    maxSac : masse max que peut supporte le sac (int)</span>
+
+<span class="sd">    return :</span>
+<span class="sd">    objetsSac    : la liste des objets sélectionnés</span>
+<span class="sd">    masseTotale  : la masse du sac</span>
+<span class="sd">    valeurTotale : la valeur du contenu</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1">## A COMPLETER</span>
+    <span class="k">return</span> <span class="n">objetsSac</span><span class="p">,</span> <span class="n">masseTotale</span><span class="p">,</span> <span class="n">valeurTotale</span>
+
+<span class="k">assert</span><span class="p">(</span><span class="n">sacGlouton</span><span class="p">([[</span><span class="s1">&#39;lingot&#39;</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="s1">&#39;couronne&#39;</span><span class="p">,</span> <span class="mi">80</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span> <span class="p">[</span><span class="s1">&#39;bracelet&#39;</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="p">[</span><span class="s1">&#39;collier&#39;</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="s1">&#39;assiette&#39;</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="p">[</span><span class="s1">&#39;déchets&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">]],</span> <span class="mi">10</span><span class="p">)</span> <span class="o">==</span> <span class="p">([[</span><span class="s1">&#39;couronne&#39;</span><span class="p">,</span> <span class="mi">80</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span> <span class="p">[</span><span class="s1">&#39;lingot&#39;</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="s1">&#39;bracelet&#39;</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="p">[</span><span class="s1">&#39;collier&#39;</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">1</span><span class="p">]],</span> <span class="mi">10</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div></p>
+<p>Une version plus subtile vous permettra de tester différentes méthodes heuristiques pour optimiser votre choix. (soit par valeur, soit par masse ou rapport valeur/masse)<br />
+La dernière fonction sacGlouton est la partie du programme qui sélectionne les trésors à emporter.<br />
+<strong>Sac_v2.py</strong>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span>
+<span class="normal">32</span>
+<span class="normal">33</span>
+<span class="normal">34</span>
+<span class="normal">35</span>
+<span class="normal">36</span>
+<span class="normal">37</span>
+<span class="normal">38</span>
+<span class="normal">39</span>
+<span class="normal">40</span>
+<span class="normal">41</span>
+<span class="normal">42</span>
+<span class="normal">43</span>
+<span class="normal">44</span>
+<span class="normal">45</span>
+<span class="normal">46</span>
+<span class="normal">47</span>
+<span class="normal">48</span>
+<span class="normal">49</span>
+<span class="normal">50</span>
+<span class="normal">51</span>
+<span class="normal">52</span>
+<span class="normal">53</span>
+<span class="normal">54</span>
+<span class="normal">55</span>
+<span class="normal">56</span>
+<span class="normal">57</span>
+<span class="normal">58</span>
+<span class="normal">59</span>
+<span class="normal">60</span>
+<span class="normal">61</span>
+<span class="normal">62</span>
+<span class="normal">63</span>
+<span class="normal">64</span>
+<span class="normal">65</span>
+<span class="normal">66</span>
+<span class="normal">67</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># glouton sac a dos</span>
+<span class="c1">## liste des objets dispo chaque objet est représenté par une liste</span>
+<span class="c1">## item 0 : nom de l &#39;objet en str</span>
+<span class="c1">## item 1 : valeur de l&#39;objet en float</span>
+<span class="c1">## item 2 : masse de l&#39;objet en float</span>
+<span class="kn">from</span> <span class="nn">operator</span> <span class="kn">import</span> <span class="n">itemgetter</span> <span class="c1"># pour utiliser la fonction sorted en choisissant l&#39;élément qui sert au tri</span>
+
+<span class="n">objets</span> <span class="o">=</span> <span class="p">[[</span><span class="s2">&quot;lingot&quot;</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="s2">&quot;couronne&quot;</span><span class="p">,</span> <span class="mi">80</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span> <span class="p">[</span><span class="s2">&quot;bracelet&quot;</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="p">[</span><span class="s2">&quot;collier&quot;</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="s2">&quot;assiette&quot;</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="p">[</span><span class="s2">&quot;déchets&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">]]</span>
+
+<span class="k">def</span> <span class="nf">valeur</span><span class="p">(</span><span class="n">liste</span><span class="p">)</span> <span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    trie les objets de la liste par valeur décroissante</span>
+<span class="sd">    parametre :</span>
+<span class="sd">    liste : la liste des objets à trier</span>
+<span class="sd">    return :</span>
+<span class="sd">    liste : la liste triée</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">liste</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">liste</span><span class="p">,</span> <span class="n">key</span> <span class="o">=</span> <span class="n">itemgetter</span><span class="p">(</span><span class="mi">1</span><span class="p">),</span> <span class="n">reverse</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">liste</span>
+
+<span class="k">assert</span><span class="p">(</span><span class="n">valeur</span><span class="p">([[</span><span class="s2">&quot;lingot&quot;</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="s2">&quot;couronne&quot;</span><span class="p">,</span> <span class="mi">80</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span> <span class="p">[</span><span class="s2">&quot;bracelet&quot;</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="p">[</span><span class="s2">&quot;collier&quot;</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="s2">&quot;assiette&quot;</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="p">[</span><span class="s2">&quot;déchets&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">]]))</span> <span class="o">==</span> <span class="p">[[</span><span class="s1">&#39;couronne&#39;</span><span class="p">,</span> <span class="mi">80</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span> <span class="p">[</span><span class="s1">&#39;lingot&#39;</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="s1">&#39;bracelet&#39;</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="p">[</span><span class="s1">&#39;collier&#39;</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="s1">&#39;assiette&#39;</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="p">[</span><span class="s1">&#39;déchets&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">]]</span>
+
+
+<span class="k">def</span> <span class="nf">masse</span><span class="p">(</span><span class="n">liste</span><span class="p">)</span> <span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    trie les objets par masse croissante</span>
+<span class="sd">    parametre :</span>
+<span class="sd">    liste : la liste des objets à trier</span>
+<span class="sd">    return :</span>
+<span class="sd">    liste : la liste triée</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1">### A COMPLETER</span>
+    <span class="k">return</span> <span class="n">liste</span>
+
+<span class="k">assert</span><span class="p">(</span><span class="n">masse</span><span class="p">([[</span><span class="s2">&quot;lingot&quot;</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="s2">&quot;couronne&quot;</span><span class="p">,</span> <span class="mi">80</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span> <span class="p">[</span><span class="s2">&quot;bracelet&quot;</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="p">[</span><span class="s2">&quot;collier&quot;</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="s2">&quot;assiette&quot;</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="p">[</span><span class="s2">&quot;déchets&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">]]))</span> <span class="o">==</span> <span class="p">[[</span><span class="s1">&#39;collier&#39;</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="s1">&#39;assiette&#39;</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="p">[</span><span class="s1">&#39;bracelet&#39;</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="p">[</span><span class="s1">&#39;lingot&#39;</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="s1">&#39;déchets&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span> <span class="p">[</span><span class="s1">&#39;couronne&#39;</span><span class="p">,</span> <span class="mi">80</span><span class="p">,</span> <span class="mi">4</span><span class="p">]]</span>
+
+
+<span class="k">def</span> <span class="nf">rapport</span><span class="p">(</span><span class="n">liste</span><span class="p">)</span> <span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    trie les objets par leur rapport valeur/masse, en cas d&#39;égalité, on pourra favoriser l&#39;objet le plus léger</span>
+<span class="sd">    parametre :</span>
+<span class="sd">    liste : la liste des objets à trier</span>
+<span class="sd">    return :</span>
+<span class="sd">    listeTriee : la liste triée</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1">## A COMPLETER</span>
+    <span class="k">return</span> <span class="n">listeTriee</span>
+
+<span class="k">assert</span><span class="p">(</span><span class="n">rapport</span><span class="p">([[</span><span class="s2">&quot;lingot&quot;</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="s2">&quot;couronne&quot;</span><span class="p">,</span> <span class="mi">80</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span> <span class="p">[</span><span class="s2">&quot;bracelet&quot;</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="p">[</span><span class="s2">&quot;collier&quot;</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="s2">&quot;assiette&quot;</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="p">[</span><span class="s2">&quot;déchets&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">]]))</span> <span class="o">==</span> <span class="p">[[</span><span class="s1">&#39;couronne&#39;</span><span class="p">,</span> <span class="mi">80</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span> <span class="p">[</span><span class="s1">&#39;collier&#39;</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="s1">&#39;lingot&#39;</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="s1">&#39;bracelet&#39;</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="p">[</span><span class="s1">&#39;assiette&#39;</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="p">[</span><span class="s1">&#39;déchets&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">]]</span>
+
+<span class="k">def</span> <span class="nf">sacGlouton</span><span class="p">(</span><span class="n">liste</span><span class="p">,</span> <span class="n">maxSac</span><span class="p">,</span> <span class="n">choixTri</span><span class="p">)</span> <span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    parametres :</span>
+<span class="sd">    liste : la liste des objets à choisir c&#39;est une liste de liste</span>
+<span class="sd">    maxSac : masse max que peut supporte le sac (int)</span>
+<span class="sd">    choixTri : si on choisit de faire un tri des objets par masse, valeur ou rapport (str)</span>
+<span class="sd">    return :</span>
+<span class="sd">    objetsSac : la liste des objets sélectionnés</span>
+<span class="sd">    masseTotale : la masse du sac</span>
+<span class="sd">    valeurTotale : la valeur du contenu</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1">## A COMPLETER</span>
+    <span class="k">return</span> <span class="n">objetsSac</span><span class="p">,</span> <span class="n">masseTotale</span><span class="p">,</span> <span class="n">valeurTotale</span>
+
+<span class="k">assert</span><span class="p">(</span><span class="n">sacGlouton</span><span class="p">([[</span><span class="s1">&#39;lingot&#39;</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="s1">&#39;couronne&#39;</span><span class="p">,</span> <span class="mi">80</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span> <span class="p">[</span><span class="s1">&#39;bracelet&#39;</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="p">[</span><span class="s1">&#39;collier&#39;</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="s1">&#39;assiette&#39;</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="p">[</span><span class="s1">&#39;déchets&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">]],</span> <span class="mi">10</span><span class="p">,</span> <span class="n">rapport</span><span class="p">))</span> <span class="o">==</span> <span class="p">([[</span><span class="s1">&#39;couronne&#39;</span><span class="p">,</span> <span class="mi">80</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span> <span class="p">[</span><span class="s1">&#39;collier&#39;</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="s1">&#39;lingot&#39;</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="s1">&#39;bracelet&#39;</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">2</span><span class="p">]],</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">180</span><span class="p">)</span>
+<span class="k">assert</span><span class="p">(</span><span class="n">sacGlouton</span><span class="p">([[</span><span class="s1">&#39;lingot&#39;</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="s1">&#39;couronne&#39;</span><span class="p">,</span> <span class="mi">80</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span> <span class="p">[</span><span class="s1">&#39;bracelet&#39;</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="p">[</span><span class="s1">&#39;collier&#39;</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="s1">&#39;assiette&#39;</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="p">[</span><span class="s1">&#39;déchets&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">]],</span> <span class="mi">10</span><span class="p">,</span> <span class="n">masse</span><span class="p">))</span> <span class="o">==</span> <span class="p">([[</span><span class="s1">&#39;collier&#39;</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="s1">&#39;assiette&#39;</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="p">[</span><span class="s1">&#39;bracelet&#39;</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="p">[</span><span class="s1">&#39;lingot&#39;</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">3</span><span class="p">]],</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">105</span><span class="p">)</span>
+<span class="k">assert</span><span class="p">(</span><span class="n">sacGlouton</span><span class="p">([[</span><span class="s1">&#39;lingot&#39;</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="s1">&#39;couronne&#39;</span><span class="p">,</span> <span class="mi">80</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span> <span class="p">[</span><span class="s1">&#39;bracelet&#39;</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="p">[</span><span class="s1">&#39;collier&#39;</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="s1">&#39;assiette&#39;</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="p">[</span><span class="s1">&#39;déchets&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">]],</span> <span class="mi">10</span><span class="p">,</span> <span class="n">valeur</span><span class="p">))</span> <span class="o">==</span> <span class="p">([[</span><span class="s1">&#39;couronne&#39;</span><span class="p">,</span> <span class="mi">80</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span> <span class="p">[</span><span class="s1">&#39;lingot&#39;</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="s1">&#39;bracelet&#39;</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="p">[</span><span class="s1">&#39;collier&#39;</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">1</span><span class="p">]],</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">180</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+Si vous commencez par la version simple (Sac_v1.py), vous ne perdrez absolument pas votre temps car votre travail va vous permettra d'implémenter assez facilement la version adaptative qui permet de faire des comparaisons ( Sac_v2.py )<br />
+A vous de les compléter pour emporter les meilleurs pièces du trésor avant l'arrivée de vos ennemis !<br />
+Vous présenterez vos résultats sous la forme d'une phrase en français indiquant la valeur dans le sac à dos, sa masse et la liste des objets !  </p>
+<SCRIPT>
+
+function AccesProtege1() {
+    self.location.href=prompt("Mot de passe (nombre de solutions trouvées) :","") + ".html";
+    }
+function AccesProtege2() {
+    self.location.href=prompt("Mot de passe (nombre de solutions trouvées) :","") + ".html";
+    }
+
+</SCRIPT>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  Retour en haut de la page
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.tabs", "navigation.expand", "navigation.top", "toc.integrate", "header.autohide"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.c18c5fb9.min.js"></script>
+      
+        <script src="../../javascripts/extra.js"></script>
+      
+        <script src="../../javascripts/prism.js"></script>
+      
+        <script src="../../javascripts/config.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+        <script src="https://unpkg.com/mermaid@8.9.2/dist/mermaid.min.js"></script>
+      
+        <script src="../../javascripts/mermaid.js"></script>
+      
+    
+  </body>
+</html>
