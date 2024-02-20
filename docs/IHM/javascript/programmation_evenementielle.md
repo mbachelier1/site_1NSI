@@ -16,17 +16,22 @@ Tester ce code et n'oubliez pas d'aller voir dans la console.
       <p id="1">voici un premier <strong>paragraphe</strong> dont l'identifiant est "1"</p>
       <p id="2">voici un autre paragraphe dont l'identifiant est "2"</p>
       <script>
-        console.log(document.getElementById("1"));
-        console.log(document.getElementsByTagName("p"));
+        console.log(document.getElementById("1").outerHTML);
+        console.log(document.getElementsByTagName("p")[0].);
       </script>
   </body>
 </html>
 ```
 
+!!! important Récupérer les éléments
+  - `document.getElementById("1")` : permet de récupérer l'élément dont l'id est "1"   
+  - `document.getElementsByTagName("p")` : permet de récupérer tous les éléments de type paragraphe.  
+  - `document.getElementsByTagName("p")[0]` :récupère le premier élément de type paragraphe.  
+
 !!! faq "Questions"
-    **1.** Identifier ce que fait le code javascript en consultant la console.    
-		**2.** Expliquer à quoi servent les commandes `document.getElementById` et `document.getElementsByTagName`.   
-		**3.** Ajouter `.innerHTML` à la suite de `document.getElementById`. Que récupère la commande ?   
+    **1.** Vérifier dans la console les éléments ainsi récupérés.   
+		**2.** Remplacer la ligne 11 par `console.log(document.getElementById("1").outerHTML);` Que fait la méthode `outerHTML`?   
+		**3.** Remplacer `outerHTML` par `.innerHTML` . Que récupère la commande ?   
 		**4.** Même question en remplaçant `innerHTML` par `innerText`.   
 
 ## Manipuler le html :

@@ -97,7 +97,7 @@ On peut changer de dossier en écrivant par exemple:
 
 On peut aussi faire un lien vers un autre endroit de la même page (utile pour un lexique par exemple). Il faut d'abord créer une "ancre" à l'endroit que l'on veut atteindre par le lien, avec: 
 
-!!! method "creer une ancre"
+!!! tip "creer une ancre"
     Créer une ancre
     ```html
     <a name="toto">On veut aller ici</a>    
@@ -111,7 +111,7 @@ On peut aussi faire un lien vers un autre endroit de la même page (utile pour u
 ##Les listes 
 On dispose de 2 types de listes. Les listes à puces délimitées par les balises `<ul>` et `</ul>` et les listes numérotées délimitées par `<ol>` et `</ol>`. Chaque élément de la liste est alors délimité par `<li>` et `</li>` :
 
-!!! method "Créer une liste"
+!!! tip "Créer une liste"
     ```html
     <ul >Voici une liste de choses :
         <li> 1er élément </li>
@@ -142,7 +142,7 @@ ou si l'image est ailleurs, avec son adresse absolue :
 ##Les tableaux
 On peut insérer un tableau par les balises. `<tr>` est la balise de ligne, `<td>` est la balise de cellule. 
 
-!!! method 'Créer un tableau'
+!!! tip "Créer un tableau"
     ```html
     <table>
         <thead>

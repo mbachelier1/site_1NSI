@@ -2,7 +2,7 @@
 
 ## Structures conditionnelles `if... else`
 On n'exécute certaines instructions que si une condition est remplie. Et d'autres instructions si ele ne l'est pas.
-![bloc IF else](img/algo_if.PNG)  
+![bloc IF else](img/algo_if.png)  
 ```python
 heure=21
 if heure>=23 : #la condition est que la vriable heure est supérieure ou égale à 23
@@ -17,7 +17,7 @@ else : # dans tous les autres cas. On ne met pas de condition à un else
 
 On utilise cette structure si on a plusieurs conditions à tester. Ici le choix n'est pas binaire.  
 
-![bloc IF elif else](img/algo_if_imbrique.PNG) 
+![bloc IF elif else](img/algo_if_imbrique.png) 
 ```pseudocode
 SI A>B:
 	affiche 'A est plus grand que B'
@@ -51,7 +51,7 @@ if A>B or C>D:
 
 ## Boucle Tant que ... : `While`
 On va tester une condition, puis exécuter une série d'instruction tant que cette condition est vraie.  
-![bloc while](img/algo_while.PNG)
+![bloc while](img/algo_while.png)
 ```pseudocode
 TANT QUE condition est vraie :
 	on répète les instructions du bloc

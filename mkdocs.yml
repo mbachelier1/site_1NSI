@@ -59,6 +59,8 @@ nav:
   
 theme:
   name: material
+  icon :
+    logo: material/cast-education
   font: false
   language: fr
   features:

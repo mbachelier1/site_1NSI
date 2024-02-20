@@ -27,8 +27,8 @@ Voici les différentes parties du programme
 </br>
 [Tkinter](Programmation/tkinter.html){ .md-button} 
 
-##IHM
-###HTML et CSS
+## IHM
+###html et CSS
 [HTML](IHM/html/html.html){ .md-button} [CSS](IHM/html/css.html){ .md-button}
 ###javascript
 [Découverte de javascript](IHM/javascript/exo_js.html){ .md-button} [Programmation évènementielle](IHM/javascript/programmation_evenementielle.html){ .md-button} [Les formulaires](IHM/javascript/formulaire.html){ .md-button}

@@ -58,9 +58,9 @@ var tonNom =prompt('quel est ton nom?');
 var tonPrenom =prompt('quel est ton prénom?');
 var toi=tonNom+' '+tonPrenom;
 if (tonNom=='Einstein'){  
-  alert(toi+ ':tu est un génie!');}
+  alert(toi+ ':tu es un génie!');}
 else {
-  alert(toi+ ':tu est juste un être humain');} 
+  alert(toi+ ':tu es juste un être humain');} 
 ```
 
 ##Fonctions et calcul :
