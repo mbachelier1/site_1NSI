@@ -19,7 +19,7 @@ En combinant plusieurs portes logiques, on peut obtenir des opérations plus com
 <iframe width="600px" height="400px" src="https://circuitverse.org/simulator/embed/additionneur" id="projectPreview" scrolling="no" webkitAllowFullScreen mozAllowFullScreen allowFullScreen></iframe>
 
 !!! faq "Questions"
-		Etablir la table de vérité de l'additionneur.</br>
-		![additionneur](../img/additionneur.PNG)
+		Etablir la table de vérité de l'additionneur.  
+		![additionneur](../img/additionneur.png)
 
-Une fois l'activité terminée, poursuivre avec [l'assembleur](assembleur.html)
+Une fois l'activité terminée, poursuivre avec [l'assembleur](../OS/assembleur.html)
