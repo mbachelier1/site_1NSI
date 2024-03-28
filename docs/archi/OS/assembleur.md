@@ -162,6 +162,7 @@ monLabel:
 	4.Faites en sorte que dans la mémoire 100, il y ait le résultat de la somme de 42 et 54. 
 
 <p>On peut également faire des boucles en assembleur. Le programme ci-contre compare deux valeur et se "branche" sur une autre partie du programme selon le résultat de la comparaison. <code>BNE nonegal</code> va exécuter la partie du programme à partir du lable 'nonegal' si la comparaison n'estpas égale. En revanch, si c'est égal (BEQ : Branch if Equal) le programme continue au label correspondant, ici 'egal'. Les labels peuvent être choisis comme on veut.</p>
+
 ![boucle en assembleur](../img/boucle_assembleur.PNG)
 ![boucle assembleur](../img/boucle_assembleur.svg)
 

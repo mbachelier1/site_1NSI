@@ -22,4 +22,4 @@ En combinant plusieurs portes logiques, on peut obtenir des opérations plus com
 		Etablir la table de vérité de l'additionneur.  
 		![additionneur](../img/additionneur.png)
 
-Une fois l'activité terminée, poursuivre avec [l'assembleur](../OS/assembleur.html)
+Une fois l'activité terminée, poursuivre avec [l'assembleur](assembleur.html)
