@@ -1,6 +1,5 @@
 site_name: NSI au Lycée Henri Avril
-
-
+use_directory_urls: false
 nav:
   - 'Accueil': 'index.md'
   - 'Représenter de données':
@@ -59,8 +58,10 @@ nav:
   
 theme:
   name: material
+
   icon :
     logo: material/cast-education
+  favicon: material/cast-education
   font: false
   language: fr
   features:

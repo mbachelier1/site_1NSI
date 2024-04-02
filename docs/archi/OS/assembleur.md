@@ -1,8 +1,8 @@
 # L'ASSEMBLEUR
-Avant de commencer cette activité, assurez-vous d'avoir fait celle sur la [logique combinatoire](logique_combinatoire.html)
+Avant de commencer cette activité, assurez-vous d'avoir fait celle sur la [logique combinatoire](logique_combinatoire.md)
 ## Le processeur et la mémoire
 Les ordinateurs plus modernes, sont principalement composés de deux grands circuits : le processeur et la mémoire. Ces deux circuits sont reliés entre eux par des fils qui constituent un ou plusieurs bus de communication, parmi lesquels un bus de données et un bus d'adresses. Le processeur est composé de deux unités. L'unité de contrôle lit en mémoire un programme et donne à l'unité de calcul la séquence des instructions à effectuer. Le processeur dispose par ailleurs de bus d'entrées et de sorties permettant d'accéder aux autres parties de l'ordinateur, que l'on nomme les périphériques (clavier, écran, souris, disques....). Cette organisation générale, l'architecture de Von Neumann, est étonnamment stable depuis les années quarante.  
-![Machine de Von Neumann](../img/von neumann.jpg)
+![Machine de Von Neumann](../img/von_neumann.jpg)
 
 La mémoire est composée de plusieurs milliards de circuits mémoires de un bit. Ces circuits sont organisés en agrégats de huit, seize, trente deux, soixante quatre bits, et parfois davantage, que l'on appelle des cases mémoires, et qui peuvent donc mémoriser des mots de huit, seize, trente deux, soixante quatre bits, etc. Le nombre de ces cases définit la taille de la mémoire de l'ordinateur. Comme il faut distinguer ces cases les unes des autres, on donne à chacune un numéro : son adresse. La mémoire contient les données sur lesquelles on calcule et le programme qui décrit le calcul effectué, donné sous la forme d'un ensemble d'instructions.  
 Le processeur de son côté n'a qu'un très petit nombre de cases mémoires que l'on appelle des registres. Les registres peuvent contenir des données, mais aussi des adresses de cases mémoire. Lorsque l'on parle de processeurs 32 bits ou 64 bits, on fait référence à la taille de ces registres.  
@@ -93,6 +93,16 @@ Place le nombre 23 dans le registre R1
 MOV R0, R3
 ```
 Place la valeur stockée dans le registre R3 dans le registre R0
+
+!!! faq "A faire"
+	2.Modifiez le premier programme pour qu'à la fin de l'exécution on trouve le nombre 54 à l'adresse mémoire 50. On utilisera le registre R1 à la place du registre R0. Testez vos modifications en exécutant la simulation.   
+	3.Entrer la série d'instructions suivante et dire ce qu'elle fait.  
+	![question](../img/exo.PNG)
+
+## Rupture de séquences (branchements)
+
+Le code peut ne pas s'éxécuter de manière linéaire, mais se "brancher" à un autre endroit de la mémoire.  Vous ne pourrez pas tester directement ce qui suit mais lisez attentivement.  
+
 ```pseudocode
 B 45
 ```
@@ -109,7 +119,7 @@ Compare la valeur stockée dans le registre R0 et la valeur stockée dans le reg
 CMP R0, #23
 BEQ 78
 ```
-La prochaine instruction à exécuter se situe à l'adresse mémoire 78 si la valeur stockée dans le registre R0 est égale à 23
+La prochaine instruction à exécuter se situe à l'adresse mémoire 78 (on utilisera des labels pour aller chercher le programme à éxécuter) si la valeur stockée dans le registre R0 est égale à 23
 ```pseudocode
 CMP R0, #23
 BNE 78
@@ -137,11 +147,6 @@ Arrête l'exécution du programme
 
 
 
-!!! faq "A faire"
-	2.Modifiez le programme précédent pour qu'à la fin de l'exécution on trouve le nombre 54 à l'adresse mémoire 50. On utilisera le registre R1 à la place du registre R0. Testez vos modifications en exécutant la simulation.   
-	3.Entrer la série d'instructions suivante et dire ce qu'elle fait.  
-	![question](../img/exo.PNG)
-
 ### Utilisation des labels
 <p>En fait, les instructions assembleur B, BEQ, BNE, BGT et BLT n'utilisent pas directement l'adresse mémoire de la prochaine instruction à exécuter, mais des "labels". Un label correspond à une adresse en mémoire vive (c'est l'assembleur qui fera la traduction "label"->"adresse mémoire"). L'utilisation d'un label évite donc d'avoir à manipuler des adresses mémoires en binaire ou en hexadécimale. Voici un exemple qui montre comment utiliser un label :</p>
 ```pseudocode
@@ -155,13 +160,17 @@ monLabel:
 ```
 <p>Dans l'exemple ci-dessus, nous avons choisi "monLabel" comme nom de label. La ligne `MOV R0,#18 ` a pour label "monLabel" car elle est située juste après la ligne "monLabel:". Concrètement, voici ce qui se passe avec ce programme : si la valeur stockée dans le registre R4 est supérieure à 18 on place le nombre 18 dans le registre R0 sinon on place le nombre 14 dans le registre R0.</p> 
 
+!!! warning Attention
+	Il ne faut pas mettre d'espace avant les ':' sinon le programme ne comprend pas que c'est un label.  
+
+
 !!! danger "ATTENTION"
 	La présence du "HALT" juste après la ligne "MOV R0,#14" est indispensable, car sinon, la ligne "MOV R0,#18" sera aussi exécutée (même si la valeur stockée dans le registre R4 est inférieure à 18).   
 
 !!! faq "A faire"
 	4.Faites en sorte que dans la mémoire 100, il y ait le résultat de la somme de 42 et 54. 
 
-<p>On peut également faire des boucles en assembleur. Le programme ci-contre compare deux valeur et se "branche" sur une autre partie du programme selon le résultat de la comparaison. <code>BNE nonegal</code> va exécuter la partie du programme à partir du lable 'nonegal' si la comparaison n'estpas égale. En revanch, si c'est égal (BEQ : Branch if Equal) le programme continue au label correspondant, ici 'egal'. Les labels peuvent être choisis comme on veut.</p>
+<p>On peut également faire des boucles en assembleur. Le programme ci-contre compare deux valeur et se "branche" sur une autre partie du programme selon le résultat de la comparaison. <code>BNE nonegal</code> va exécuter la partie du programme à partir du lable 'nonegal' si la comparaison n'est pas égale. En revanche, si c'est égal (BEQ : Branch if Equal) le programme continue au label correspondant, ici 'egal'. Les labels peuvent être choisis comme on veut.</p>
 
 ![boucle en assembleur](../img/boucle_assembleur.PNG)
 ![boucle assembleur](../img/boucle_assembleur.svg)

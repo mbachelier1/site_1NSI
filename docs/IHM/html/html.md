@@ -81,7 +81,7 @@ L’intérêt essentiel des pages web est l'utilisation des liens. Les balises s
     ```html
     <a href="http://www.google.fr">Moteur de recherche</a>
     ```
-    affiche " Moteur de recherche " et lorsqu'on clique dessus, envoie sur [www.google.fr](www.google.fr); 
+    affiche " Moteur de recherche " et lorsqu'on clique dessus, envoie sur [www.google.fr](http://www.google.fr); 
 
 !!! info "Un lien peut être relatif : "
     ```html

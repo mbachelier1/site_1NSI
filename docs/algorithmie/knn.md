@@ -190,7 +190,7 @@ Pour mettre en application cet algorithme rendez-vous sur capytale avec le code 
 ## Projet : Le choixpeau magique
 
 L'idée est de programmer le choixpeau magique.  
-[choixpeau magique](img/choix peau magique.pdf)
+[choixpeau magique](img/Le_choixpeau_magique.pdf)
 Une première partie permet d'affecter une maison selon des scores d'ambition, de courage, de bonté et d'intelligence.  
 voir capytale code : 85b9-1576377.  
 

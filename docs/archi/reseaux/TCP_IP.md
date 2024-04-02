@@ -216,7 +216,9 @@ et passe le relais à la couche du dessus.
 
 ??? note "Liaison filiaire"
     
-    ![eth](../img/cable_ethernet.png){align=right width=50%}
+    ![eth](../img/rj45.PNG){align=right width=50%}
+
+    
     Les informations peuvent être transmises *via* des câbles. Le plus utilisé est le câble Ethernet. Son nom est UTP-CAT5 
     ou UTP-CAT6, la différence étant que le second permet un débit dix fois plus grand que le premier ( 1 Gbit/s contre 100
     Mbit/s).

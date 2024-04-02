@@ -164,8 +164,11 @@ Tout part du nombre de seconde (microsecondes même) qui se sont écoulées depu
 <iframe src="https://trinket.io/embed/python3/af01bb1340" width="100%" height="356" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
 
 **Affichage de l'heure locale**
+
 <div id=center>
-	<img src="img/localtime_1.png" alt="afficher heure locale">
+	
+![affichage heure locale](img/localtime_1.png)
+
 </div>
 
 Renvoie un objet contenant :

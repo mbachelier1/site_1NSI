@@ -20,6 +20,6 @@ En combinant plusieurs portes logiques, on peut obtenir des opérations plus com
 
 !!! faq "Questions"
 		Etablir la table de vérité de l'additionneur.  
-		![additionneur](../img/additionneur.png)
+		![additionneur](../img/additionneur.PNG)
 
-Une fois l'activité terminée, poursuivre avec [l'assembleur](assembleur.html)
+Une fois l'activité terminée, poursuivre avec [l'assembleur](assembleur.md)

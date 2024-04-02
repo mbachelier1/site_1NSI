@@ -6,48 +6,50 @@
 Voici les différentes parties du programme 
 
 ##Repésenter les données  
-[Représenter les entiers](representation/base_numeration.html){ .md-button} [Représenter les reels et flottants](representation/reels_flottants.html){ .md-button} [Représenter le texte](representation/codage_texte.html){ .md-button}
+[Représenter les entiers](representation/base_numeration.md){ .md-button} [Représenter les reels et flottants](representation/reels_flottants.md){ .md-button} [Représenter le texte](representation/codage_texte.md){ .md-button}
 
 ##Table de données  
-[Traitement de données en table](table_donnees/traitement_donnees.html){ .md-button}
+[Traitement de données en table](table_donnees/traitement_donnees.md){ .md-button}
 
 ##Réseaux et internet
-[Réseau](archi/reseaux/reseau.html){ .md-button} [Protocole TCP IP](archi/reseaux/TCP_IP.html){ .md-button} [Sécurisation](archi/reseaux/securisation.html){ .md-button}
+[Réseau](archi/reseaux/reseau.md){ .md-button} [Protocole TCP IP](archi/reseaux/TCP_IP.md){ .md-button} [Sécurisation](archi/reseaux/securisation.md){ .md-button}
 ##Modèle d'architecture et système d'exploitation
 ###Architecture
-[Modèle de von Neumann](archi/OS/vonneuman.html){ .md-button} [Les systèmes d'exploitation](archi/OS/OS.html){ .md-button} 
+[Modèle de von Neumann](archi/OS/vonneuman.md){ .md-button} [Les systèmes d'exploitation](archi/OS/OS.md){ .md-button} 
 ###Echanger avec la machine
-[Logique combinatoire](archi/OS/logique_combinatoire.html){ .md-button}   [Assembleur](archi/OS/assembleur.html){ .md-button} 
-[Linux](archi/OS/linux.html){ .md-button}   [Assembleur](archi/OS/assembleur.html){ .md-button} 
+[Logique combinatoire](archi/OS/logique_combinatoire.md){ .md-button}   [Assembleur](archi/OS/assembleur.md){ .md-button} 
+[Linux](archi/OS/linux.md){ .md-button}   [Assembleur](archi/OS/assembleur.md){ .md-button} 
 
 ##Programmation
-[Bien démarrer en programmation](Programmation/demarrer.html){ .md-button} [Conditions et boucles](Programmation/boucle.html){ .md-button}  
+[Bien démarrer en programmation](Programmation/demarrer.md){ .md-button} [Conditions et boucles](Programmation/boucle.md){ .md-button}  
 </br>
-[Fonctions](Programmation/fonction.html){ .md-button}  [Types construits](Programmation/type.html){ .md-button} 
+
+[Fonctions](Programmation/fonction.md){ .md-button}  [Types construits](Programmation/type.md){ .md-button} 
 </br>
-[Tkinter](Programmation/tkinter.html){ .md-button} 
+
+[Tkinter](Programmation/tkinter.md){ .md-button} 
 
 ## IHM
 ###html et CSS
-[HTML](IHM/html/html.html){ .md-button} [CSS](IHM/html/css.html){ .md-button}
+[HTML](IHM/html/html.md){ .md-button} [CSS](IHM/html/css.md){ .md-button}
 ###javascript
-[Découverte de javascript](IHM/javascript/exo_js.html){ .md-button} [Programmation évènementielle](IHM/javascript/programmation_evenementielle.html){ .md-button} [Les formulaires](IHM/javascript/formulaire.html){ .md-button}
+[Découverte de javascript](IHM/javascript/exo_js.md){ .md-button} [Programmation évènementielle](IHM/javascript/programmation_evenementielle.md){ .md-button} [Les formulaires](IHM/javascript/formulaire.md){ .md-button}
 
 
 ###Php
-[protocole HTTP](IHM/PHP/Protocole_HTTP.html){ .md-button} [PHP](IHM/PHP/TP_php.html){ .md-button}
+[protocole HTTP](IHM/PHP/Protocole_HTTP.md){ .md-button} [PHP](IHM/PHP/TP_php.md){ .md-button}
 
 ###Robotique
-[Robotique](IHM/robotique/robotique.html){ .md-button}	[Projets Robotique](IHM/robotique/projets.html){ .md-button}
+[Robotique](IHM/robotique/robotique.md){ .md-button}	[Projets Robotique](IHM/robotique/projets.md){ .md-button}
 
 ##Algorithmie
 
-[Introduction à l'algorithmie](algorithmie/intro_algo.html){ .md-button} 
+[Introduction à l'algorithmie](algorithmie/intro_algo.md){ .md-button} 
 
-[Complexité](algorithmie/complexite.html){ .md-button}  
+[Complexité](algorithmie/complexite.md){ .md-button}  
 
-[Algorithmes de tris](algorithmie/tris.html){ .md-button}  [K plus proches voisins](algorithmie/knn.html){ .md-button }   
+[Algorithmes de tris](algorithmie/tris.md){ .md-button}  [K plus proches voisins](algorithmie/knn.md){ .md-button }   
 
-[Algorithmes glouton](algorithmie/glouton.html){ .md-button }   
+[Algorithmes glouton](algorithmie/glouton.md){ .md-button }   
 
 
