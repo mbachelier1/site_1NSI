@@ -1,0 +1,1505 @@
+
+<!doctype html>
+<html lang="fr" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      <link rel="icon" href="../../material/cast-education">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-7.1.10">
+    
+    
+      
+        <title>HTML - NSI au Lycée Henri Avril</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.1fe995fd.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.f1a3b89f.min.css">
+        
+      
+    
+    
+    
+      
+    
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+      <link rel="stylesheet" href="../../stylesheets/prism.css">
+    
+    
+      
+
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <script>function __prefix(e){return new URL("../..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+    
+      <script>var palette=__get("__palette");if(null!==palette&&"object"==typeof palette.color)for(var key in palette.color)document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#bases-du-langage-html" class="md-skip">
+          Aller au contenu
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../index.html" title="NSI au Lycée Henri Avril" class="md-header__button md-logo" aria-label="NSI au Lycée Henri Avril" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 3H3a2 2 0 0 0-2 2v3h2V5h18v14h-7v2h7a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2M1 18v3h3a3 3 0 0 0-3-3m0-4v2a5 5 0 0 1 5 5h2a7 7 0 0 0-7-7m0-4v2a9 9 0 0 1 9 9h2c0-6.08-4.93-11-11-11m10 1.09v2L14.5 15l3.5-1.91v-2L14.5 13 11 11.09M14.5 6 9 9l5.5 3L20 9l-5.5-3z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            NSI au Lycée Henri Avril
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              HTML
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Mode sombre"  type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="Mode sombre" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7 10a2 2 0 0 1 2 2 2 2 0 0 1-2 2 2 2 0 0 1-2-2 2 2 0 0 1 2-2m10-3a5 5 0 0 1 5 5 5 5 0 0 1-5 5H7a5 5 0 0 1-5-5 5 5 0 0 1 5-5h10M7 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3h10a3 3 0 0 0 3-3 3 3 0 0 0-3-3H7z"/></svg>
+            </label>
+          
+        
+          
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="blue" data-md-color-accent="blue"  aria-label="Mode clair"  type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="Mode clair" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3z"/></svg>
+            </label>
+          
+        
+      </form>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Rechercher" placeholder="Rechercher" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../../index.html" class="md-tabs__link">
+      Accueil
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../representation/base_numeration.html" class="md-tabs__link">
+        Représenter de données
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../table_donnees/traitement_donnees.html" class="md-tabs__link">
+        Tables de données
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../Programmation/type.html" class="md-tabs__link">
+        Programmation
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../algorithmie/intro_algo.html" class="md-tabs__link">
+        Algorithmie
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../archi/reseaux/reseau.html" class="md-tabs__link">
+        Réseaux et internet
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../archi/OS/vonneuman.html" class="md-tabs__link">
+        Architecture et OS
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="html.html" class="md-tabs__link md-tabs__link--active">
+        IHM
+      </a>
+    </li>
+  
+
+  
+
+      
+    </ul>
+  </div>
+</nav>
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../index.html" title="NSI au Lycée Henri Avril" class="md-nav__button md-logo" aria-label="NSI au Lycée Henri Avril" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 3H3a2 2 0 0 0-2 2v3h2V5h18v14h-7v2h7a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2M1 18v3h3a3 3 0 0 0-3-3m0-4v2a5 5 0 0 1 5 5h2a7 7 0 0 0-7-7m0-4v2a9 9 0 0 1 9 9h2c0-6.08-4.93-11-11-11m10 1.09v2L14.5 15l3.5-1.91v-2L14.5 13 11 11.09M14.5 6 9 9l5.5 3L20 9l-5.5-3z"/></svg>
+
+    </a>
+    NSI au Lycée Henri Avril
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../index.html" class="md-nav__link">
+        Accueil
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" data-md-state="indeterminate" type="checkbox" id="__nav_2" checked>
+      
+      <label class="md-nav__link" for="__nav_2">
+        Représenter de données
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Représenter de données" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Représenter de données
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../representation/base_numeration.html" class="md-nav__link">
+        représenter les entiers
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../representation/reels_flottants.html" class="md-nav__link">
+        représenter les réels et les flottants
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../representation/codage_texte.html" class="md-nav__link">
+        représenter le texte
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" data-md-state="indeterminate" type="checkbox" id="__nav_3" checked>
+      
+      <label class="md-nav__link" for="__nav_3">
+        Tables de données
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Tables de données" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Tables de données
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../table_donnees/traitement_donnees.html" class="md-nav__link">
+        Traitement de données en table
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" data-md-state="indeterminate" type="checkbox" id="__nav_4" checked>
+      
+      <label class="md-nav__link" for="__nav_4">
+        Programmation
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Programmation" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Programmation
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Programmation/type.html" class="md-nav__link">
+        Types construits
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Programmation/demarrer.html" class="md-nav__link">
+        Démarrer en programmation
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Programmation/boucle.html" class="md-nav__link">
+        Conditions et boucles
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Programmation/fonction.html" class="md-nav__link">
+        Fonctions et spécifications
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Programmation/lire_ecrire.md" class="md-nav__link">
+        Lire et Ecrire dans un fichier
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Programmation/tkinter.html" class="md-nav__link">
+        Interface graphique : Tkinter
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" data-md-state="indeterminate" type="checkbox" id="__nav_5" checked>
+      
+      <label class="md-nav__link" for="__nav_5">
+        Algorithmie
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Algorithmie" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Algorithmie
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../algorithmie/intro_algo.html" class="md-nav__link">
+        Introduction à l'algorithmie
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../algorithmie/complexite.html" class="md-nav__link">
+        Compléxité
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../algorithmie/tris.html" class="md-nav__link">
+        Algorithmes de tris
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../algorithmie/knn.html" class="md-nav__link">
+        K plus proches voisins
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../algorithmie/glouton.html" class="md-nav__link">
+        Algorithme glouton
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" data-md-state="indeterminate" type="checkbox" id="__nav_6" checked>
+      
+      <label class="md-nav__link" for="__nav_6">
+        Réseaux et internet
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Réseaux et internet" data-md-level="1">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          Réseaux et internet
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../archi/reseaux/reseau.html" class="md-nav__link">
+        Qu'est-ce qu'un réseau
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../archi/reseaux/TCP_IP.html" class="md-nav__link">
+        Protocole TCP/IP
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../archi/reseaux/securisation.html" class="md-nav__link">
+        Sécurisation
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" data-md-state="indeterminate" type="checkbox" id="__nav_7" checked>
+      
+      <label class="md-nav__link" for="__nav_7">
+        Architecture et OS
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Architecture et OS" data-md-level="1">
+        <label class="md-nav__title" for="__nav_7">
+          <span class="md-nav__icon md-icon"></span>
+          Architecture et OS
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../archi/OS/vonneuman.html" class="md-nav__link">
+        Architecture  matérielle
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../archi/OS/OS.html" class="md-nav__link">
+        Systèmes d'exploitation
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../archi/OS/linux.html" class="md-nav__link">
+        Linux
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../archi/OS/linux.html" class="md-nav__link">
+        Utilisation de la ligne de commande
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../archi/OS/logique_combinatoire.html" class="md-nav__link">
+        Logique combinatoire
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../archi/OS/assembleur.html" class="md-nav__link">
+        Assembleur
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8" type="checkbox" id="__nav_8" checked>
+      
+      <label class="md-nav__link" for="__nav_8">
+        IHM
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="IHM" data-md-level="1">
+        <label class="md-nav__title" for="__nav_8">
+          <span class="md-nav__icon md-icon"></span>
+          IHM
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8_1" type="checkbox" id="__nav_8_1" checked>
+      
+      <label class="md-nav__link" for="__nav_8_1">
+        HTML et CSS
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="HTML et CSS" data-md-level="2">
+        <label class="md-nav__title" for="__nav_8_1">
+          <span class="md-nav__icon md-icon"></span>
+          HTML et CSS
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          HTML
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="html.html" class="md-nav__link md-nav__link--active">
+        HTML
+      </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    Introduction
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#premieres-balises-html" class="md-nav__link">
+    Premières balises HTML
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#les-liens" class="md-nav__link">
+    Les liens
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#les-listes" class="md-nav__link">
+    Les listes
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#les-images" class="md-nav__link">
+    les images
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#les-tableaux" class="md-nav__link">
+    Les tableaux
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercice" class="md-nav__link">
+    Exercice
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#complements" class="md-nav__link">
+    Compléments
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="css.html" class="md-nav__link">
+        CSS
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8_2" data-md-state="indeterminate" type="checkbox" id="__nav_8_2" checked>
+      
+      <label class="md-nav__link" for="__nav_8_2">
+        Javascript
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Javascript" data-md-level="2">
+        <label class="md-nav__title" for="__nav_8_2">
+          <span class="md-nav__icon md-icon"></span>
+          Javascript
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../javascript/exo_js.html" class="md-nav__link">
+        Exercices d'application Javascript
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../javascript/programmation_evenementielle.html" class="md-nav__link">
+        Programmation evenementielle
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../javascript/formulaire.html" class="md-nav__link">
+        Les formulaires
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8_3" data-md-state="indeterminate" type="checkbox" id="__nav_8_3" checked>
+      
+      <label class="md-nav__link" for="__nav_8_3">
+        Protocole HTTP et PHP
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Protocole HTTP et PHP" data-md-level="2">
+        <label class="md-nav__title" for="__nav_8_3">
+          <span class="md-nav__icon md-icon"></span>
+          Protocole HTTP et PHP
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../php/Protocole_HTTP.html" class="md-nav__link">
+        Protocole HTTP
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../PHP/TP_php.md" class="md-nav__link">
+        TP PHP
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8_4" data-md-state="indeterminate" type="checkbox" id="__nav_8_4" checked>
+      
+      <label class="md-nav__link" for="__nav_8_4">
+        Robotique
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Robotique" data-md-level="2">
+        <label class="md-nav__title" for="__nav_8_4">
+          <span class="md-nav__icon md-icon"></span>
+          Robotique
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../robotique/robotique.html" class="md-nav__link">
+        Robotique
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../robotique/projets.html" class="md-nav__link">
+        Projets
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="bases-du-langage-html">Bases du langage <code>HTML</code><a class="headerlink" href="#bases-du-langage-html" title="Permanent link">⚓︎</a></h1>
+<h2 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">⚓︎</a></h2>
+<p>Le langage html est interprété par les navigateurs internet. Il repose sur la norme W3C. 
+C'est un langage qui utilise des balises pour la mise en forme d'un texte. 
+Exemple pour écrire du texte en gras on utilise la balise "strong" 
+Chaque balise est écrite ente les symboles &lt; et &gt;, et doit être refermée (symbole /). 
+(Certaines sont auto-fermantes comme <code>&lt;br/&gt;</code>, <code>&lt;img/&gt;</code>, <code>&lt;meta/&gt;</code>).  </p>
+<div class="admonition example">
+<p class="admonition-title">Par exemple :</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>blablabla<span class="p">&lt;</span><span class="nt">strong</span><span class="p">&gt;</span>youpi<span class="p">&lt;/</span><span class="nt">strong</span><span class="p">&gt;</span>blablabla, va écrire&quot; youpi&quot; en gras.
+</code></pre></div>
+</td></tr></table>
+</div>
+<p>Toute page commence par <code>&lt;!DOCTYPE html &gt;</code> et finit par <code>&lt;/html&gt;</code>.</p>
+<p>Ensuite il y a l'entête qui contient divers renseignements importants : le titre de la page ,balise <code>&lt;title&gt;</code>,</p>
+<ul>
+<li>le nom de l'auteur, (facultatif)</li>
+<li>le mode d'encodage, (TRES IMPORTANT)</li>
+<li>le lien vers la feuille de style (voir chapitre suivant), …..balises auto fermante <code>&lt;meta&gt;</code></li>
+<li>les mots clés qui favorisent le référencement de votre site par les moteurs de recherche</li>
+</ul>
+<p>Elle est délimitée par les balises <code>&lt;head&gt;</code> et<code>&lt;/head&gt;</code> </p>
+<div class="admonition example">
+<p class="admonition-title">Voici un exemple :</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span> 
+    <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span> Page Web de la spécialité NSI <span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span> 
+    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;author&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;Cligniez-Djebali&quot;</span> <span class="p">/&gt;</span> 
+    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset </span><span class="o">=</span> <span class="s">&quot;utf-8&quot;</span> <span class="p">/&gt;</span>  
+    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">NAME</span><span class="o">=</span><span class="s">&quot;keywords&quot;</span> <span class="na">CONTENT</span><span class="o">=</span><span class="s">&quot;mot1,mot2, mot3&quot;</span><span class="p">/&gt;</span> 
+<span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+</code></pre></div>
+</td></tr></table>
+</div>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>On a souvent des problèmes d'accents avec les pages WEB, les bases de données, … C'est pourquoi il faut prendre garde au mode d'encodage des caractères. Je vous recommande d'utiliser le jeu de caractères UTF-8. Mais attention, votre fichier doit lui aussi être encodé en UTF-8! Dans l’éditeur de texte dans l'onglet "encodage", choisissez "Encoder en UTF8 (sans BOM)".</p>
+</div>
+<p>Puis vient le corps de la page " body " entre les balises <code>&lt; body&gt;</code> et <code>&lt; /body&gt;</code> C'est entre ces balises que se trouvent les éléments de votre page. </p>
+<h2 id="premieres-balises-html">Premières balises <code>HTML</code><a class="headerlink" href="#premieres-balises-html" title="Permanent link">⚓︎</a></h2>
+<p>Il y a 6 balises de titres : h1, h2, h3, ….(ordre décroissant de taille) Les textes sont écrits entre les balises de paragraphes <code>&lt;p&gt;</code> et <code>&lt;/p&gt;</code> Un saut à la ligne est provoqué par la balise auto fermante<code>.</code></p>
+<p><code>&lt;strong&gt;</code> et <code>&lt;/strong&gt;</code> permettent d'écrire en gras, <code>&lt;em&gt;</code> et <code>&lt;/em&gt;</code> en italique, <code>&lt;sub&gt;</code> et <code>&lt;/sub&gt;</code> en indice <code>&lt;sup&gt;</code> et &lt;<code>/sup&gt;</code> en exposant.
+Voici donc une première page web :<br />
+Pour l’écrire on utilise un simple éditeur de texte (par exemple sublime text, ou notepad++ qui pratique une coloration syntaxique bien pratique.)
+Il est plus lisible pour la présentation, d'utiliser l'indentation comme en python. Ainsi on risque moins de se tromper dans les balises imbriquées.  </p>
+<div class="admonition important">
+<p class="admonition-title">Fichier à créér</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="cp">&lt;!DOCTYPE html &gt;</span> 
+
+<span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span> 
+  <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span> Page test de la spécialité NSI <span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span> 
+  <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset </span><span class="o">=</span><span class="s">&quot;utf-8&quot;</span> <span class="p">/&gt;</span> 
+              <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">NAME</span><span class="o">=</span><span class="s">&quot;keywords&quot;</span> <span class="na">CONTENT</span><span class="o">=</span><span class="s">&quot;mot1,mot2, mot3&quot;</span><span class="p">&gt;</span> 
+
+<span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span> 
+
+<span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span> 
+  <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Voici un gros titre<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span> 
+  <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Le langage xhtml permet d&#39;écrire des textes <span class="p">&lt;</span><span class="nt">strong</span><span class="p">&gt;</span>en gras<span class="p">&lt;/</span><span class="nt">strong</span><span class="p">&gt;</span> ou  
+  <span class="p">&lt;</span><span class="nt">em</span><span class="p">&gt;</span>en italique<span class="p">&lt;/</span><span class="nt">em</span><span class="p">&gt;</span>. On peut passer à la ligne,<span class="p">&lt;</span><span class="nt">br</span><span class="p">/&gt;</span> 
+  et écrire des exposants ou des indices : u<span class="p">&lt;</span><span class="nt">sub</span><span class="p">&gt;</span>n<span class="p">&lt;/</span><span class="nt">sub</span><span class="p">&gt;</span>=n<span class="p">&lt;</span><span class="nt">sup</span><span class="p">&gt;</span>2<span class="p">&lt;/</span><span class="nt">sup</span><span class="p">&gt;</span>+1.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span> 
+<span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span> 
+
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</code></pre></div>
+</td></tr></table>
+</div>
+<p>Enregistrer ce fichier sous le nom <strong>" test.html "</strong> et ouvrez avec un navigateur. 
+La page est très dépouillée ! On apprendra plus tard à mettre des couleurs, des bordures, des logos avec les feuilles de style et le langage 
+<code>CSS</code>.</p>
+<h2 id="les-liens">Les liens<a class="headerlink" href="#les-liens" title="Permanent link">⚓︎</a></h2>
+<p>L’intérêt essentiel des pages web est l'utilisation des liens. Les balises sont <code>&lt;a&gt;</code> et <code>&lt;/a&gt;</code>.  </p>
+<div class="admonition info">
+<p class="admonition-title">Un lien peut être absolu : </p>
+<p><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;http://www.google.fr&quot;</span><span class="p">&gt;</span>Moteur de recherche<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+</code></pre></div>
+</td></tr></table>
+affiche " Moteur de recherche " et lorsqu'on clique dessus, envoie sur <a href="http://www.google.fr">www.google.fr</a>; </p>
+</div>
+<div class="admonition info">
+<p class="admonition-title">Un lien peut être relatif : </p>
+<p><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;python.html&quot;</span><span class="p">&gt;</span>Ma page de programmation<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+</code></pre></div>
+</td></tr></table>
+affiche " Ma page de programmation " et lorsqu'on clique dessus envoie sur la page python.html qui doit être dans le même dossier que la page qui contient le lien.     </p>
+</div>
+<p>On peut changer de dossier en écrivant par exemple: </p>
+<div class="admonition example">
+<p class="admonition-title">exemple</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;documents/python.html&quot;</span><span class="p">&gt;</span> 
+</code></pre></div>
+</td></tr></table>
+</div>
+<p>On peut aussi faire un lien vers un autre endroit de la même page (utile pour un lexique par exemple). Il faut d'abord créer une "ancre" à l'endroit que l'on veut atteindre par le lien, avec: </p>
+<div class="admonition tip">
+<p class="admonition-title">creer une ancre</p>
+<p>Créer une ancre
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">a</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;toto&quot;</span><span class="p">&gt;</span>On veut aller ici<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>    
+</code></pre></div>
+</td></tr></table>
+Puis créer le lien avec : 
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;ma_page.html#toto&quot;</span><span class="p">&gt;</span>
+</code></pre></div>
+</td></tr></table></p>
+</div>
+<h2 id="les-listes">Les listes<a class="headerlink" href="#les-listes" title="Permanent link">⚓︎</a></h2>
+<p>On dispose de 2 types de listes. Les listes à puces délimitées par les balises <code>&lt;ul&gt;</code> et <code>&lt;/ul&gt;</code> et les listes numérotées délimitées par <code>&lt;ol&gt;</code> et <code>&lt;/ol&gt;</code>. Chaque élément de la liste est alors délimité par <code>&lt;li&gt;</code> et <code>&lt;/li&gt;</code> :</p>
+<div class="admonition tip">
+<p class="admonition-title">Créer une liste</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">ul</span> <span class="p">&gt;</span>Voici une liste de choses :
+    <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span> 1er élément <span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span> 2eme élément <span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span> 3eme élément <span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
+</code></pre></div>
+</td></tr></table>
+</div>
+<h2 id="les-images">les images<a class="headerlink" href="#les-images" title="Permanent link">⚓︎</a></h2>
+<p>On insère une image par la balise auto-fermante : </p>
+<div class="admonition example">
+<p class="admonition-title">exemple</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;images/mon_image.jpg&quot;</span> <span class="p">/&gt;</span>    
+</code></pre></div>
+</td></tr></table>
+</div>
+<p>ce qui affiche l'image "mon_image.jpg" situé dans le dossier "images" qu’il faut créer.</p>
+<p>ou si l'image est ailleurs, avec son adresse absolue : </p>
+<div class="admonition example">
+<p class="admonition-title">exemple</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot; https://i2.wp.com/beebom.com/wp-content/uploads/2016/01/Reverse-Image-Search-Engines-Apps-And-Its-Uses-2016.jpg?w=640&amp;ssl=1 &quot;</span> <span class="p">/&gt;</span>    
+</code></pre></div>
+</td></tr></table>
+</div>
+<p>Il est souhaitable (indispensable pour respecter W3C) d'ajouter un texte alternatif, en cas de problème de chargement, pour les non-voyants, …  </p>
+<p>!!! example "exemple"
+    <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;robot.jpg&quot;</span> <span class="na">alt</span><span class="o">=</span><span class="s">&quot;photo du robot Thymio 2&quot;</span><span class="p">/&gt;</span>    
+</code></pre></div>
+</td></tr></table></p>
+<h2 id="les-tableaux">Les tableaux<a class="headerlink" href="#les-tableaux" title="Permanent link">⚓︎</a></h2>
+<p>On peut insérer un tableau par les balises. <code>&lt;tr&gt;</code> est la balise de ligne, <code>&lt;td&gt;</code> est la balise de cellule. </p>
+<div class="admonition tip">
+<p class="admonition-title">Créer un tableau</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">table</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">thead</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">th</span><span class="p">&gt;</span>1ere colone<span class="p">&lt;/</span><span class="nt">th</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">th</span><span class="p">&gt;</span>2eme colonne<span class="p">&lt;/</span><span class="nt">th</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">th</span><span class="p">&gt;</span>3eme colonne<span class="p">&lt;/</span><span class="nt">th</span><span class="p">&gt;</span>
+        <span class="p">&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">thead</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">tbody</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span> case 1 <span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span> case 2 <span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span> case 3<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+        <span class="p">&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;</span>
+          <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span> case 4 <span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+          <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span> case 5 <span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+          <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span> case 6<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span> 
+    <span class="p">&lt;/</span><span class="nt">tbody</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">table</span><span class="p">&gt;</span>
+</code></pre></div>
+</td></tr></table>
+</div>
+<div class="admonition caution">
+<p class="admonition-title">important</p>
+<p>on peut fusionner des cellules notamment dans le <code>header</code> : 
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">table</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">thead</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">th</span> <span class="na">colspan</span><span class="o">=</span><span class="s">&quot;3&quot;</span><span class="p">&gt;</span>The table header<span class="p">&lt;/</span><span class="nt">th</span><span class="p">&gt;</span>
+        <span class="p">&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
+        ...
+</code></pre></div>
+</td></tr></table></p>
+</div>
+<h2 id="exercice">Exercice<a class="headerlink" href="#exercice" title="Permanent link">⚓︎</a></h2>
+<p>Créer au moins 3 pages <code>html</code> (pour exploiter les liens!!)
+La première sera nommée "index.html", page de base de votre site. Elle comportera un titre h1, au moins un paragraphe, des mots en gras, en italique.
+Elle comportera aussi un lien vers une deuxième page nommée "page1.html" qui aura aussi un titre un paragraphe et un lien de retour vers votre page "index".
+Compléter avec une troisième page, accessible par lien depuis la page "index", qui comportera une liste ( <code>&lt;ul&gt;</code>)de liens absolus vers des sites de votre choix.
+Votre site doit contenir au moins un élément de chaque type vus précédememnt (listes, tableausx, images, ...).   </p>
+<p>Commencez une fiche de référence des balises html essentielles. Vous rajouterez toutes celles rencontrées au cours du travail à réaliser dans les prochaines semaines. Réservez le dos de la fiche pour le mémo <code>CSS</code>.  </p>
+<h2 id="complements">Compléments<a class="headerlink" href="#complements" title="Permanent link">⚓︎</a></h2>
+<p>Le web fournit une très grande quantité de tutoriel sur le HTML. N'hésitez pas à aller voir toutes les balises existantes, notamment pour intégrer des vidéos ou d'autres istes web à votre site.   </p>
+<p>En naviguant sur Internet, lorsque vous trouvez une belle présentation, faites un clic droit sur la page et choisissez "afficher la source", et vous obtenez le code xhtml.<br />
+Attention, c'est parfois du lourd car il y a des codes javascript , du style css, mélangés au html. Mais ça donne des idées…..  </p>
+<p>Une fois que votre site est testé en local sur votre PC, vous pouvez passer à l'étape suivante et le mettre en ligne en <a href="https://openclassrooms.com/fr/courses/918836-concevez-votre-site-web-avec-php-et-mysql/918167-envoyez-votre-site-sur-le-web">jetant un oeil par ici</a>.  </p>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+        
+          <a href="#" class="md-top md-icon" data-md-component="top" data-md-state="hidden">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"/></svg>
+            Back to top
+          </a>
+        
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="../../archi/OS/assembleur.html" class="md-footer__link md-footer__link--prev" aria-label="Précédent: Assembleur" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Précédent
+              </span>
+              Assembleur
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="css.html" class="md-footer__link md-footer__link--next" aria-label="Suivant: CSS" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Suivant
+              </span>
+              CSS
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+        
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.tabs", "navigation.expand", "navigation.top", "toc.integrate", "header.autohide"], "search": "../../assets/javascripts/workers/search.477d984a.min.js", "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.config.lang": "fr", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Rechercher", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.ddd52ceb.min.js"></script>
+      
+        <script src="../../javascripts/extra.js"></script>
+      
+        <script src="../../javascripts/prism.js"></script>
+      
+        <script src="../../javascripts/config.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+        <script src="https://unpkg.com/mermaid@8.9.2/dist/mermaid.min.js"></script>
+      
+        <script src="../../javascripts/mermaid.js"></script>
+      
+    
+  </body>
+</html>

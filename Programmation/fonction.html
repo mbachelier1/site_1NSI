@@ -1,0 +1,1596 @@
+
+<!doctype html>
+<html lang="fr" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      <link rel="icon" href="../material/cast-education">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-7.1.10">
+    
+    
+      
+        <title>Fonctions et spécifications - NSI au Lycée Henri Avril</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.1fe995fd.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.f1a3b89f.min.css">
+        
+      
+    
+    
+    
+      
+    
+    
+    
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
+      <link rel="stylesheet" href="../stylesheets/prism.css">
+    
+    
+      
+
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <script>function __prefix(e){return new URL("..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+    
+      <script>var palette=__get("__palette");if(null!==palette&&"object"==typeof palette.color)for(var key in palette.color)document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#fonctions-et-specifications" class="md-skip">
+          Aller au contenu
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../index.html" title="NSI au Lycée Henri Avril" class="md-header__button md-logo" aria-label="NSI au Lycée Henri Avril" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 3H3a2 2 0 0 0-2 2v3h2V5h18v14h-7v2h7a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2M1 18v3h3a3 3 0 0 0-3-3m0-4v2a5 5 0 0 1 5 5h2a7 7 0 0 0-7-7m0-4v2a9 9 0 0 1 9 9h2c0-6.08-4.93-11-11-11m10 1.09v2L14.5 15l3.5-1.91v-2L14.5 13 11 11.09M14.5 6 9 9l5.5 3L20 9l-5.5-3z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            NSI au Lycée Henri Avril
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Fonctions et spécifications
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Mode sombre"  type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="Mode sombre" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7 10a2 2 0 0 1 2 2 2 2 0 0 1-2 2 2 2 0 0 1-2-2 2 2 0 0 1 2-2m10-3a5 5 0 0 1 5 5 5 5 0 0 1-5 5H7a5 5 0 0 1-5-5 5 5 0 0 1 5-5h10M7 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3h10a3 3 0 0 0 3-3 3 3 0 0 0-3-3H7z"/></svg>
+            </label>
+          
+        
+          
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="blue" data-md-color-accent="blue"  aria-label="Mode clair"  type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="Mode clair" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3z"/></svg>
+            </label>
+          
+        
+      </form>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Rechercher" placeholder="Rechercher" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../index.html" class="md-tabs__link">
+      Accueil
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../representation/base_numeration.html" class="md-tabs__link">
+        Représenter de données
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../table_donnees/traitement_donnees.html" class="md-tabs__link">
+        Tables de données
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="type.html" class="md-tabs__link md-tabs__link--active">
+        Programmation
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../algorithmie/intro_algo.html" class="md-tabs__link">
+        Algorithmie
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../archi/reseaux/reseau.html" class="md-tabs__link">
+        Réseaux et internet
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../archi/OS/vonneuman.html" class="md-tabs__link">
+        Architecture et OS
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../IHM/html/html.html" class="md-tabs__link">
+        IHM
+      </a>
+    </li>
+  
+
+  
+
+      
+    </ul>
+  </div>
+</nav>
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../index.html" title="NSI au Lycée Henri Avril" class="md-nav__button md-logo" aria-label="NSI au Lycée Henri Avril" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 3H3a2 2 0 0 0-2 2v3h2V5h18v14h-7v2h7a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2M1 18v3h3a3 3 0 0 0-3-3m0-4v2a5 5 0 0 1 5 5h2a7 7 0 0 0-7-7m0-4v2a9 9 0 0 1 9 9h2c0-6.08-4.93-11-11-11m10 1.09v2L14.5 15l3.5-1.91v-2L14.5 13 11 11.09M14.5 6 9 9l5.5 3L20 9l-5.5-3z"/></svg>
+
+    </a>
+    NSI au Lycée Henri Avril
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../index.html" class="md-nav__link">
+        Accueil
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" data-md-state="indeterminate" type="checkbox" id="__nav_2" checked>
+      
+      <label class="md-nav__link" for="__nav_2">
+        Représenter de données
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Représenter de données" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Représenter de données
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../representation/base_numeration.html" class="md-nav__link">
+        représenter les entiers
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../representation/reels_flottants.html" class="md-nav__link">
+        représenter les réels et les flottants
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../representation/codage_texte.html" class="md-nav__link">
+        représenter le texte
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" data-md-state="indeterminate" type="checkbox" id="__nav_3" checked>
+      
+      <label class="md-nav__link" for="__nav_3">
+        Tables de données
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Tables de données" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Tables de données
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../table_donnees/traitement_donnees.html" class="md-nav__link">
+        Traitement de données en table
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" checked>
+      
+      <label class="md-nav__link" for="__nav_4">
+        Programmation
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Programmation" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Programmation
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="type.html" class="md-nav__link">
+        Types construits
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="demarrer.html" class="md-nav__link">
+        Démarrer en programmation
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="boucle.html" class="md-nav__link">
+        Conditions et boucles
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Fonctions et spécifications
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="fonction.html" class="md-nav__link md-nav__link--active">
+        Fonctions et spécifications
+      </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#creer-une-fonction" class="md-nav__link">
+    Créer une fonction
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fonction-sans-valeur-de-retour-etou-sans-arguments" class="md-nav__link">
+    Fonction sans valeur de retour et/ou sans arguments
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#portee-dune-variable" class="md-nav__link">
+    Portée d'une variable
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#structurer-son-script" class="md-nav__link">
+    Structurer son script
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conventions" class="md-nav__link">
+    Conventions
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#documenter-une-fonction" class="md-nav__link">
+    Documenter une fonction
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tester-une-fonction" class="md-nav__link">
+    Tester une fonction
+  </a>
+  
+    <nav class="md-nav" aria-label="Tester une fonction">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tests-unitaires" class="md-nav__link">
+    Tests unitaires
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#assertions" class="md-nav__link">
+    Assertions
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="lire_ecrire.md" class="md-nav__link">
+        Lire et Ecrire dans un fichier
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="tkinter.html" class="md-nav__link">
+        Interface graphique : Tkinter
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" data-md-state="indeterminate" type="checkbox" id="__nav_5" checked>
+      
+      <label class="md-nav__link" for="__nav_5">
+        Algorithmie
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Algorithmie" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Algorithmie
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../algorithmie/intro_algo.html" class="md-nav__link">
+        Introduction à l'algorithmie
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../algorithmie/complexite.html" class="md-nav__link">
+        Compléxité
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../algorithmie/tris.html" class="md-nav__link">
+        Algorithmes de tris
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../algorithmie/knn.html" class="md-nav__link">
+        K plus proches voisins
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../algorithmie/glouton.html" class="md-nav__link">
+        Algorithme glouton
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" data-md-state="indeterminate" type="checkbox" id="__nav_6" checked>
+      
+      <label class="md-nav__link" for="__nav_6">
+        Réseaux et internet
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Réseaux et internet" data-md-level="1">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          Réseaux et internet
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../archi/reseaux/reseau.html" class="md-nav__link">
+        Qu'est-ce qu'un réseau
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../archi/reseaux/TCP_IP.html" class="md-nav__link">
+        Protocole TCP/IP
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../archi/reseaux/securisation.html" class="md-nav__link">
+        Sécurisation
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" data-md-state="indeterminate" type="checkbox" id="__nav_7" checked>
+      
+      <label class="md-nav__link" for="__nav_7">
+        Architecture et OS
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Architecture et OS" data-md-level="1">
+        <label class="md-nav__title" for="__nav_7">
+          <span class="md-nav__icon md-icon"></span>
+          Architecture et OS
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../archi/OS/vonneuman.html" class="md-nav__link">
+        Architecture  matérielle
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../archi/OS/OS.html" class="md-nav__link">
+        Systèmes d'exploitation
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../archi/OS/linux.html" class="md-nav__link">
+        Linux
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../archi/OS/linux.html" class="md-nav__link">
+        Utilisation de la ligne de commande
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../archi/OS/logique_combinatoire.html" class="md-nav__link">
+        Logique combinatoire
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../archi/OS/assembleur.html" class="md-nav__link">
+        Assembleur
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8" data-md-state="indeterminate" type="checkbox" id="__nav_8" checked>
+      
+      <label class="md-nav__link" for="__nav_8">
+        IHM
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="IHM" data-md-level="1">
+        <label class="md-nav__title" for="__nav_8">
+          <span class="md-nav__icon md-icon"></span>
+          IHM
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8_1" data-md-state="indeterminate" type="checkbox" id="__nav_8_1" checked>
+      
+      <label class="md-nav__link" for="__nav_8_1">
+        HTML et CSS
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="HTML et CSS" data-md-level="2">
+        <label class="md-nav__title" for="__nav_8_1">
+          <span class="md-nav__icon md-icon"></span>
+          HTML et CSS
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../IHM/html/html.html" class="md-nav__link">
+        HTML
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../IHM/html/css.html" class="md-nav__link">
+        CSS
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8_2" data-md-state="indeterminate" type="checkbox" id="__nav_8_2" checked>
+      
+      <label class="md-nav__link" for="__nav_8_2">
+        Javascript
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Javascript" data-md-level="2">
+        <label class="md-nav__title" for="__nav_8_2">
+          <span class="md-nav__icon md-icon"></span>
+          Javascript
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../IHM/javascript/exo_js.html" class="md-nav__link">
+        Exercices d'application Javascript
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../IHM/javascript/programmation_evenementielle.html" class="md-nav__link">
+        Programmation evenementielle
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../IHM/javascript/formulaire.html" class="md-nav__link">
+        Les formulaires
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8_3" data-md-state="indeterminate" type="checkbox" id="__nav_8_3" checked>
+      
+      <label class="md-nav__link" for="__nav_8_3">
+        Protocole HTTP et PHP
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Protocole HTTP et PHP" data-md-level="2">
+        <label class="md-nav__title" for="__nav_8_3">
+          <span class="md-nav__icon md-icon"></span>
+          Protocole HTTP et PHP
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../IHM/php/Protocole_HTTP.html" class="md-nav__link">
+        Protocole HTTP
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../IHM/PHP/TP_php.md" class="md-nav__link">
+        TP PHP
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8_4" data-md-state="indeterminate" type="checkbox" id="__nav_8_4" checked>
+      
+      <label class="md-nav__link" for="__nav_8_4">
+        Robotique
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Robotique" data-md-level="2">
+        <label class="md-nav__title" for="__nav_8_4">
+          <span class="md-nav__icon md-icon"></span>
+          Robotique
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../IHM/robotique/robotique.html" class="md-nav__link">
+        Robotique
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../IHM/robotique/projets.html" class="md-nav__link">
+        Projets
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="fonctions-et-specifications">Fonctions et spécifications<a class="headerlink" href="#fonctions-et-specifications" title="Permanent link">⚓︎</a></h1>
+<h2 id="creer-une-fonction">Créer une fonction<a class="headerlink" href="#creer-une-fonction" title="Permanent link">⚓︎</a></h2>
+<p>Pour ne pas répéter plusieurs fois la même série de calculs dans un programme, on peut définir une fonction qui à chaque fois qu'on l'éxécutera, répètera les instrucions qu'elle contient.  </p>
+<div class="admonition example">
+<p class="admonition-title">Le prof d'EPS</p>
+<p>Pour ne pas répéter plusieurs fois les consignes de courses, un prof d'EPS définit la fonction <em>courir_sur(distance,eleve)</em> distance pourra changer de valeur en fonction des élèves (100m, 200m ou 400m).</p>
+<p>La fonction courir_sur(distance,eleve) consiste à :</p>
+<ul>
+<li>élève s'échauffe en trotinnant sur 3 tours de piste</li>
+<li>élève reprend son soufle et s'étire</li>
+<li>élève se rend sur la ligne de départ</li>
+<li>quand le starter retentit élève court le plus vite poussible sur distance</li>
+<li>élève vient annoncer son temps au professeur.</li>
+</ul>
+<p>Une fois la fonction définie le prof n'a plus qu'à dire à certains élèves <em>courir_sur(100m,Juliette)</em> ou <em>courir_sur(200m,Arthur)</em> sans avoir à répéter les consignes.<br />
+La valeur de distace et le nom de l'élève sont appelés <code>paramètre</code> ou <code>argument</code>de la fonction, et la valeur retournée (le temps) dépend à la fois du paramètre distance mais aussi de l'élève.</p>
+</div>
+<div class="admonition caution">
+<p class="admonition-title">Attention</p>
+<p>Si le professeur explique la fonction aux élèves mais que jamais il ne l'utilise, personne ne courra. Il faut <code>appeler</code>la fonction pour qu'elle s'éxécute.</p>
+</div>
+<p>Une fonction en informatique est une portion de code réalisant un tâche bien précise et qui pourra être utilisée une ou plusieurs fois dans la suite du programme.</p>
+<p>Les fonctions informatiques acquièrent tout leur potentiel avec :</p>
+<p>•   une entrée, qui regroupe des variables qui servent de paramètres  </p>
+<p>•    une sortie , qui est un résultat renvoyé par la fonction (et qui souvent dépendra des paramètres d’entrée).<br />
+En python pour définir une fonction on utilise le mot clé <code>def</code> suivi du nom de la fonction et des paramètres. Pour la valeur calculée on utilisera le mot clé <code>return</code>. </p>
+<div class="admonition example">
+<p class="admonition-title">Exemple</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">calcule_cube</span><span class="p">(</span><span class="n">a</span><span class="p">):</span>
+    <span class="n">cube</span><span class="o">=</span><span class="n">a</span><span class="o">*</span><span class="n">a</span><span class="o">*</span><span class="n">a</span>
+    <span class="k">return</span> <span class="n">cube</span>
+</code></pre></div>
+</td></tr></table>
+<p>Cette fonction calcule le cube d’un nombre, par exemple calcule_cube(2), le nombre 2 remplacera a dans le calcul. L'exécution n’affiche rien mais envoie la valeur 8. Si on vaut afficher la valeur, il faudra ajouter <code>print(calcule_cube(2))</code>. </p>
+<p><strong>Remarque:</strong> ce code seul "ne fait rien", il définit une fonction seulement... tant qu'elle n'est pas utilisée, rien ne se passe</p>
+<p>Si on ajoute dans le code les lignes ci-desous, alors la fonction est utilisée et elle calcule le cube de 2 puis la somme 3^3 + 4^3.</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="n">calcule_cube</span><span class="p">(</span><span class="mi">2</span><span class="p">))</span>
+<span class="n">x</span><span class="o">=</span><span class="mi">3</span>
+<span class="n">y</span><span class="o">=</span><span class="mi">4</span>
+<span class="n">z</span><span class="o">=</span><span class="n">calcule_cube</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="o">+</span><span class="n">calcule_cube</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">z</span><span class="p">)</span>
+</code></pre></div>
+</td></tr></table>
+</div>
+<p>De façon générale, la strucutre à respectée est celle-ci :
+<img alt="structure fonction" src="img/fonction.PNG" /></p>
+<p>Et sous forme de code : 
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">ma_fonction</span><span class="p">(</span><span class="n">arg1</span><span class="p">,</span><span class="n">arg2</span><span class="p">):</span> 
+<span class="c1"># ma_fonction va utiliser deux arguments arg1 et arg2 qui pourront avoir des valeurs différetes à chauqe appel</span>
+    <span class="n">resultat</span><span class="o">=</span><span class="n">arg1</span><span class="o">+</span><span class="n">arg2</span> <span class="c1">#on additionne les deux paramètres</span>
+    <span class="k">return</span> <span class="n">resultat</span> <span class="c1"># on retourne le résultat</span>
+<span class="c1">#on exécute la fonction</span>
+<span class="n">a</span><span class="o">=</span><span class="n">ma_fonction</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span> <span class="c1"># a prend la valeur du résultat de la fonction soit 5</span>
+<span class="n">b</span><span class="o">=</span><span class="n">ma_fonction</span><span class="p">(</span><span class="s1">&#39;coucou&#39;</span><span class="p">,</span><span class="s1">&#39;toi&#39;</span><span class="p">)</span> <span class="c1">#b prend la valeur du résultat soit &#39;coucoutoi&#39;</span>
+<span class="c1">#on affiche les résultats</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
+</code></pre></div>
+</td></tr></table></p>
+<div class="admonition note">
+<p class="admonition-title">Remarque</p>
+<p>on peut exécuter la fonction avec un <code>print(ma_fonction(2,3))</code> qui affichera le résultat mais ne le retiendra pas. Si on écrit simplement <code>ma_fonction(2,3)</code> la fonction sera exécutée mais le résultat ne sera pas affiché ni mémorisé.</p>
+</div>
+<p>Une fonction peut avoir plusieurs paramètres et renvoyer plusieurs résultats :
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">somme_produit</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">):</span>
+  <span class="sd">&quot;&quot;&quot;Calcule la somme et le produit de deux nombres&quot;&quot;&quot;</span>
+  <span class="n">s</span><span class="o">=</span><span class="n">a</span><span class="o">+</span><span class="n">b</span>
+  <span class="n">p</span><span class="o">=</span><span class="n">a</span><span class="o">*</span><span class="n">b</span>
+  <span class="k">return</span> <span class="n">s</span><span class="p">,</span><span class="n">p</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">somme_produit</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span><span class="mi">7</span><span class="p">))</span>
+</code></pre></div>
+</td></tr></table></p>
+<div class="admonition note">
+<p class="admonition-title">Remarques</p>
+<p>•   Il peut y avoir plusieurs paramètres en entrée.</p>
+<p>•   Il peut y avoir plusieurs résultats en sortie.</p>
+<p>•   Très important! Il ne faut pas confondre afficher et renvoyer une valeur. L’affichage (par la commande print() ) affiche juste quelque chose à l’écran. </p>
+<p>La plupart des fonctions n’affichent rien, mais renvoient une valeur (ou plusieurs).  </p>
+<p>C’est beaucoup plus utile car cette valeur peut être utilisée ailleurs dans le programme.</p>
+<p>•   Dès que le programme rencontre l’instruction return , la fonction s’arrête et renvoie le résultat. Il peut y avoir plusieurs fois l’instruction return dans une fonction mais une seule sera exécutée. On peut aussi ne pas mettre d’instruction return si la fonction ne renvoie rien.</p>
+</div>
+<h2 id="fonction-sans-valeur-de-retour-etou-sans-arguments">Fonction sans valeur de retour et/ou sans arguments<a class="headerlink" href="#fonction-sans-valeur-de-retour-etou-sans-arguments" title="Permanent link">⚓︎</a></h2>
+<p>Une fonction qui ne renvoie pas de valeur est appelée <strong>procédure</strong> elle a une simple fonction d'affichage. </p>
+<iframe id="inlineFrameExample"
+    title="Inline Frame Example"
+    width="100%"
+    height="400"
+    src="https://console.basthon.fr/?script=eJxNjsEOwiAMhu8kvEPNDrB40Xgz7rI3abay1QxYGOjri0zFnpq_7fe12dBt8MCFUoCRIFD0KUgxkgE0hocZJwJtfWyvUkCuNbCLJZBCit-OVr1393yrSt4ULoYpWXJx5w3erjF79BfF3WlvnjMvBHy7fAbVw21NuOPj-f8JZdjx4S2s6Bd9STp5">
+</iframe>
+<p>La fonction <code>compteur()</code> sans argument s'éxécutera toujours de la même façon. </p>
+<div class="admonition caution">
+<p class="admonition-title">Affichage de la valeur</p>
+<p>Si on uilise l'instruction <code>print(compteur())</code> le programme retournera <code>None</code>. En effet, l'instruction <code>print</code> pour une fonction a pour effet d'afficher la valeur retournée par l'instruction <code>return</code>, or ici il n'y en a pas.</p>
+</div>
+<h2 id="portee-dune-variable">Portée d'une variable<a class="headerlink" href="#portee-dune-variable" title="Permanent link">⚓︎</a></h2>
+<p>Une variable est appelée <strong>locale</strong> lorsqu'elle n'est utilisée que dans la fonction. Le programme principal ne reconnait pas la variable. Si elle est définie dans tout le programme elle est appelée variable <strong>globale</strong>.<br />
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">vol_sphere</span><span class="p">(</span><span class="n">r</span><span class="p">):</span>
+    <span class="n">cube</span><span class="o">=</span><span class="n">r</span><span class="o">*</span><span class="n">r</span><span class="o">*</span><span class="n">r</span>
+    <span class="n">vol</span><span class="o">=</span><span class="mi">4</span><span class="o">*</span><span class="n">cube</span><span class="o">*</span><span class="mf">3.14</span><span class="o">/</span><span class="mi">3</span>
+    <span class="k">return</span> <span class="n">vol</span>
+
+<span class="n">v</span><span class="o">=</span><span class="n">vol_sphere</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">cube</span><span class="p">)</span>
+</code></pre></div>
+</td></tr></table>
+<img alt="variable locale" src="img/erreur_cube.PNG" /></p>
+<p>La variable <code>cube</code> est définie DANS la fonction et n'est donc pas reconnu par le programme principal. v est définie dans le programme principale, elle sera reconnue partout, c'est une variable globale.</p>
+<div class="admonition danger">
+<p class="admonition-title">Attention aux confusions</p>
+<p><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">a</span><span class="o">=</span><span class="mi">15</span>
+<span class="k">def</span> <span class="nf">calcul</span><span class="p">(</span><span class="n">nb</span><span class="p">):</span>
+    <span class="n">a</span><span class="o">=</span><span class="mi">12</span>
+    <span class="k">return</span> <span class="n">nb</span><span class="o">+</span><span class="n">a</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">calcul</span><span class="p">(</span><span class="mi">2</span><span class="p">))</span> <span class="c1">#renvoie le calcul fait avec a=12</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">)</span> <span class="c1">#renvoie 15</span>
+</code></pre></div>
+</td></tr></table>
+a=15  variable globale valable dans tout le programme sauf dans la fonction.<br />
+a=12 est une variable locale valable que dans la fonction. <br />
+<strong>ATTENTION : Ne pas nommer de la même façon deux variables!</strong>  </p>
+</div>
+<h2 id="structurer-son-script">Structurer son script<a class="headerlink" href="#structurer-son-script" title="Permanent link">⚓︎</a></h2>
+<p><img alt="strucuturer son script" src="https://courspython.com/_images/structure_programme.png" />
+Le programme commence à être long, il faut ranger:<br />
+On définit le format de codage du texte :</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="c1"># -*- coding: utf-8 -*- </span>
+<span class="c1"># coding : utf-8</span>
+</code></pre></div>
+</td></tr></table>
+<p>Importer les fonctions de modules externes
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">math</span> <span class="kn">import</span> <span class="n">cos</span><span class="p">,</span><span class="n">pi</span>
+</code></pre></div>
+</td></tr></table></p>
+<p>Définition de vos fonctions
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">Def</span> <span class="n">ma_fonction</span><span class="p">(</span><span class="n">arg1</span><span class="p">,</span><span class="n">arg2</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">arg1</span><span class="o">+</span><span class="n">arg2</span>
+</code></pre></div>
+</td></tr></table>
+Corps principal du programme
+<em>main</em></p>
+<p>Le code est TRES long?!<br />
+On utilise plusieurs fichiers et on les importe comme une bibliothèque normale  </p>
+<p><img alt="test" src="img/module.PNG" />
+<img alt="main" src="img/module2.PNG" /></p>
+<p>Plusieurs possibilités d’import dans main :
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">tests</span> <span class="kn">import</span> <span class="n">affiche</span>
+<span class="n">affiche</span><span class="p">()</span>
+
+<span class="kn">import</span> <span class="nn">tests</span>
+<span class="n">tests</span><span class="o">.</span><span class="n">affiche</span><span class="p">()</span>
+
+<span class="kn">import</span> <span class="nn">tests</span> <span class="k">as</span> <span class="nn">ts</span>
+<span class="n">ts</span><span class="o">.</span><span class="n">affiche</span><span class="p">()</span>
+</code></pre></div>
+</td></tr></table></p>
+<h2 id="conventions">Conventions<a class="headerlink" href="#conventions" title="Permanent link">⚓︎</a></h2>
+<p><code>nom_de_ma_fonction</code>: pour les fonctions, variables et méthodes tout en minuscule avec _ pour séparer les mots.</p>
+<p><code>MaClasse</code>: pour le nom des classes (en terminale). Majuscule pour chaque nouveau mot et mots collés. </p>
+<p>Les constantes sont entièrement en majuscule: <code>NOM_DE_MA_CONSTANTE</code>. Une constante est une variable à laquelle on donne une valeur qui ne changera pas dans tout le programme. </p>
+<h2 id="documenter-une-fonction">Documenter une fonction<a class="headerlink" href="#documenter-une-fonction" title="Permanent link">⚓︎</a></h2>
+<p>Le <code>docstring</code> se place juste après la création de la fonction par <code>def</code>. Il commence et termine par trois guillemets ".
+Le  docstring doit contenir :  </p>
+<ul>
+<li>La descripton et le rôle de la fonction  </li>
+<li>les paramètres passés en arguments (type et rôle)  </li>
+<li>le type de ce qui est retourné  </li>
+</ul>
+<p>Ce docstring, peut être lu en tapant:<br />
+<code>help(nom_de_ma_fonction)</code> <br />
+Ou <br />
+<code>nom_de_ma_fonction.__doc__</code>   </p>
+<p><img alt="Documenter la focntion" src="img/documenter.PNG" />
+<img alt="Accéder à la documentation de la focntion" src="img/res_documenter.PNG" /><br />
+Très utile lorsque le code est réutilisé ensuite par quelqu’un d’autre.</p>
+<h2 id="tester-une-fonction">Tester une fonction<a class="headerlink" href="#tester-une-fonction" title="Permanent link">⚓︎</a></h2>
+<h3 id="tests-unitaires">Tests unitaires<a class="headerlink" href="#tests-unitaires" title="Permanent link">⚓︎</a></h3>
+<p>Ils permettent de savoir si une fonction est correctement implémentée. On vérifie notamment les valeurs limites, les cas particuliers et les erreurs.
+On les place dans la docstring.<br />
+Créer des tests unitaires :
+<img alt="créer des tests unitaires" src="img/test_unitaires.PNG" /><br />
+En cas d’erreur (un test n’est pas exécuté correctement).<br />
+On modifie le code précédet en remplaçant le résultat de carré(2) par 3 au lieu de 4 pour générer une erreur.<br />
+Ici, un test sur 3 de la fonction carré ne renvoie pas ce qu’on attend: <br />
+<img alt="erreur des tests unitaires" src="img/res_test_unitaire.PNG" /></p>
+<h3 id="assertions">Assertions<a class="headerlink" href="#assertions" title="Permanent link">⚓︎</a></h3>
+<p>On souhaite ici que la fonction calcule la somme de deux entiers et uniquement des entiers. Il va donc falloir vérifer que l'utilisateur en entrer des entiers :
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">somme</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">):</span>
+    <span class="k">assert</span><span class="p">(</span><span class="nb">isinstance</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="nb">int</span><span class="p">))</span>
+    <span class="k">assert</span><span class="p">(</span><span class="nb">isinstance</span><span class="p">(</span><span class="n">y</span><span class="p">,</span><span class="nb">int</span><span class="p">))</span>
+    <span class="n">s</span><span class="o">=</span><span class="n">x</span><span class="o">+</span><span class="n">y</span>
+    <span class="k">return</span> <span class="n">s</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">somme</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mf">2.2</span><span class="p">))</span>
+</code></pre></div>
+</td></tr></table>
+Une assertion (mot clé <code>assert</code>) permet de vérifier si une condition est respectée à un moment du code. Ici on vérifie que x et y sont des entiers avant de faire le calcul.
+<img alt="erreur assertion" src="img/erreur_assert.PNG" />
+Ici une erreur d'assertion est détectée puisque y est un flottant.<br />
+Avantage sur tests unitaires :</p>
+<ul>
+<li>Permet de placer des tests en cours de fonction et pas seulement sur le résultat</li>
+<li>Permet de donner un message différent selon l’erreur détectée</li>
+</ul>
+<p>Par exemple, on demande son age à l'utilisateur. On s'attend à ce qu'il entre un nombre positif. On va donc tester si c'est un nombre et s'il est positifi avec des messages d'erreur adaptés.</p>
+<p><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">age</span><span class="o">=</span><span class="nb">input</span><span class="p">(</span><span class="s1">&#39;quel est ton age? &#39;</span><span class="p">)</span>
+<span class="k">try</span> <span class="p">:</span> 
+    <span class="c1">#bloc à tester</span>
+    <span class="n">age</span><span class="o">=</span><span class="nb">int</span><span class="p">(</span><span class="n">age</span><span class="p">)</span> <span class="c1">#on converti en entier</span>
+    <span class="k">assert</span> <span class="n">age</span><span class="o">&gt;=</span><span class="mi">0</span>
+<span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span>
+    <span class="c1">#bloc à executer en cas de détectiion d&#39;une erreur lié à la valeur</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;on demande un nombre&#39;</span><span class="p">)</span>
+<span class="k">except</span> <span class="ne">AssertionError</span><span class="p">:</span>
+    <span class="c1">#bloc à executer si l&#39;assertion lève une erreur</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;on veut un nombre positif SVP!&#39;</span><span class="p">)</span>
+<span class="k">else</span> <span class="p">:</span>
+    <span class="c1">#aucune erreur détectée</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;tu as </span><span class="si">{</span><span class="n">age</span><span class="si">}</span><span class="s1"> ans&#39;</span><span class="p">)</span>
+<span class="k">finally</span> <span class="p">:</span>
+    <span class="c1"># à exécuter quoiqu&#39;il arrive</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;merci d</span><span class="se">\&#39;</span><span class="s1">avoir joué!&#39;</span><span class="p">)</span>
+</code></pre></div>
+</td></tr></table>
+Ce bloc permettra de tester les entrées de l'utilisateur lors de programmes plus complexe.</p>
+<details class="example"><summary>Tester des entrées sans sortir du programme</summary><p>Tant que l'age entré ne sera pas un entier positif, le programme continue de proposer d'entrer une valeur.
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">ok</span><span class="o">=</span><span class="kc">True</span>
+<span class="k">while</span> <span class="n">ok</span><span class="p">:</span> <span class="c1">#tant que l&#39;on a pas validé l&#39;entrée</span>
+    <span class="n">age</span><span class="o">=</span><span class="nb">input</span><span class="p">(</span><span class="s1">&#39;quel est ton age? &#39;</span><span class="p">)</span>
+    <span class="k">try</span> <span class="p">:</span> 
+        <span class="n">age</span><span class="o">=</span><span class="nb">int</span><span class="p">(</span><span class="n">age</span><span class="p">)</span> 
+        <span class="k">assert</span> <span class="n">age</span><span class="o">&gt;=</span><span class="mi">0</span>
+    <span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;on demande un nombre&#39;</span><span class="p">)</span>
+    <span class="k">except</span> <span class="ne">AssertionError</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;on veut un nombre positif SVP!&#39;</span><span class="p">)</span>
+    <span class="k">else</span> <span class="p">:</span>
+        <span class="c1">#aucune erreur détectée</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;tu as </span><span class="si">{</span><span class="n">age</span><span class="si">}</span><span class="s1"> ans&#39;</span><span class="p">)</span>
+        <span class="n">ok</span><span class="o">=</span><span class="kc">False</span> <span class="c1">#l&#39;entrée est validée on sort de la boucle while</span>
+</code></pre></div>
+</td></tr></table></p>
+</details>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+        
+          <a href="#" class="md-top md-icon" data-md-component="top" data-md-state="hidden">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"/></svg>
+            Back to top
+          </a>
+        
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="boucle.html" class="md-footer__link md-footer__link--prev" aria-label="Précédent: Conditions et boucles" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Précédent
+              </span>
+              Conditions et boucles
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="tkinter.html" class="md-footer__link md-footer__link--next" aria-label="Suivant: Interface graphique : Tkinter" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Suivant
+              </span>
+              Interface graphique : Tkinter
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+        
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.tabs", "navigation.expand", "navigation.top", "toc.integrate", "header.autohide"], "search": "../assets/javascripts/workers/search.477d984a.min.js", "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.config.lang": "fr", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Rechercher", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.ddd52ceb.min.js"></script>
+      
+        <script src="../javascripts/extra.js"></script>
+      
+        <script src="../javascripts/prism.js"></script>
+      
+        <script src="../javascripts/config.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+        <script src="https://unpkg.com/mermaid@8.9.2/dist/mermaid.min.js"></script>
+      
+        <script src="../javascripts/mermaid.js"></script>
+      
+    
+  </body>
+</html>
