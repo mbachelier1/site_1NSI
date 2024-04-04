@@ -2,7 +2,7 @@ site_name: NSI au Lycée Henri Avril
 use_directory_urls: false
 nav:
   - 'Accueil': 'index.md'
-  - 'Représenter de données':
+  - 'Représenter les données':
     -  'représenter les entiers' : 'representation/base_numeration.md'
     -  'représenter les réels et les flottants' : 'representation/reels_flottants.md'
     -  'représenter le texte' : 'representation/codage_texte.md'
@@ -58,10 +58,8 @@ nav:
   
 theme:
   name: material
-
-  icon :
-    logo: material/cast-education
-  favicon: material/cast-education
+  logo: icones/logo4blanc.png
+  favicon: icones/logo4.png
   font: false
   language: fr
   features:
@@ -76,7 +74,7 @@ theme:
     # Light mode
     - media: "(prefers-color-scheme: light)"
       scheme: default
-      primary: indigo
+      primary: blue grey
       accent: indigo
       toggle:
         icon: material/toggle-switch-off-outline
@@ -85,7 +83,7 @@ theme:
     # Dark mode
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
-      primary: blue
+      primary: grey
       accent: blue
       toggle:
         icon: material/toggle-switch
@@ -111,6 +109,9 @@ markdown_extensions:
   - pymdownx.highlight:
       linenums: true
   - pymdownx.inlinehilite
+#  - pymdownx.emoji:
+#      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+#      emoji_index: !!python/name:material.extensions.emoji.twemoji
   - pymdownx.keys
   - pymdownx.tabbed
   - pymdownx.betterem:

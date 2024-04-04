@@ -1,11 +1,12 @@
-#Coût temporel d'un programme
-##Qu'est ce que la compléxité?
+# Coût temporel d'un programme
+
+## Qu'est ce que la compléxité?
 Le problème de la complexité temporelle (le temps mis par le programme) est fondamental en informatique. Sur un petit exercice contenant seulement 20 valeurs, les ranger dans l'ordre croissant sera très rapide quel que soit la méthode. Mais s'il faut répéter cela des milliers de fois ou que la taille de la liste est de 50000 valeurs, la qualité de l'algorithme est très importante. Entre l'algorithme le plus performant et le moins performant nous aurons un écart de 15 fois meilleur (dans le pire des cas) pour 20 valeurs et de 10640 fois pour 50000 valeurs! 
 
 Pour évaluer la complexité d'un algorithme on calcule le nombre d'étapes (comparaisons, calculs, affectations) nécessaires pour n données.  
 
 
-!!! faq "Parcours d'un tableau"
+!!! question "Parcours d'un tableau"
 	Lorsqu'on parcourt un tableau pour lire toutes les valeurs, combien d'actions fait-on si on a 20 éléments dans le tableau ?
 	```pseudocode
 	tab ← tableau de 20 valeurs
@@ -25,7 +26,7 @@ Pour évaluer la complexité d'un algorithme on calcule le nombre d'étapes (com
 	
 
 
-!!! faq "et pour n cases?"
+!!! question "et pour n cases?"
 	<div id="text">
 	  	<form>
 	    <input style="border : solid 1px; border-radius : 2px;" type="text" name="reponse" maxlenght="15" id="reponse2" autocomplete="off">
@@ -68,7 +69,7 @@ On peut s'intéresser à la complexité d'un algorithme dans: le meilleur des ca
 	- Des opérations de lectures et d'écritures simples.  
 	*A noter que l'incrémentation pour passer d'un élément à l'autre dans une boucle n'est pas considérée comme une étape*
 
-!!! faq "Calcul de la moyenne d'un tableau"
+!!! question "Calcul de la moyenne d'un tableau"
 	Voici un algorithme. Quel est le type de complexité pour l'exécuter?
 	```pseudocode
 	➦ initialiser total à 0
@@ -88,7 +89,7 @@ On peut s'intéresser à la complexité d'un algorithme dans: le meilleur des ca
 	
 
 
-!!! faq "Recherche de maximum"
+!!! question "Recherche de maximum"
 	Quelle est la complexité de cet algorithme ?  
 	*La réponse attendue est un seul mot*  
 	```pseudocode
@@ -165,11 +166,11 @@ Tout part du nombre de seconde (microsecondes même) qui se sont écoulées depu
 
 **Affichage de l'heure locale**
 
-<div id=center>
+
 	
 ![affichage heure locale](img/localtime_1.png)
 
-</div>
+
 
 Renvoie un objet contenant :
 
@@ -181,7 +182,7 @@ Renvoie un objet contenant :
 - `tm_sec`: le nombre de secondes (entre 0 et 61, même si on n'utilisera ici que les valeurs de 0 à 59, c'est bien suffisant) ;
 - `tm_wday`: un entier représentant le jour de la semaine (entre 0 et 6, 0 correspond par défaut au lundi) ;
 - `tm_yday`: le jour de l'année, entre 1 et 366 ;
-- `tm_isdst`: un entier représentant le changement d'heure local.
+- `tm_isdst`: un entier représentant le changement d'heure locale.
 
 
 ### Module Matplotlib
@@ -223,7 +224,7 @@ plt.plot(x2, y2)
 plt.show()
 plt.close()
 ```
-Voici quelques propriétés des fenêtres graphiques (mais il y en a plein d'autres RTFM)
+Voici quelques propriétés des fenêtres graphiques (mais il y en a plein d'autres)
 ```python
 import matplotlib.pyplot as plt
 
@@ -259,16 +260,12 @@ Codez une fonction qui cherche le maximum d'une liste en ne tenant pas compte de
 
 Faire compter les étapes au programme et comparer avec les camarades.
 
-###Exercice 4
+### Exercice 4
 Une liste contient des listes de coordonnées dans l'espace (x,y,z). On cherche le point le plus bas! Réalisez ce codage en recherchant la complexité minimum
 
 ###Exercice 5
 Une liste contient des listes de coordonnées dans l'espace (x,y,z). On cherche si un point de la liste a une abscisse donnée, ou une ordonnée données ou une profondeur donnée.
 
-
-<p style="text-align: center; color:gray; font-size: 10px;">
-Création MB. (ré)utilisation et modification libre mais non commerciale CC-BY-NC
-</p>
 
 <!---Javascript-->
 <script>

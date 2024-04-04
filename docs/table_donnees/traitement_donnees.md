@@ -1,7 +1,8 @@
-#Traitement de données en tables
-##Activité introduction
+# Traitement de données en tables
+## Activité introduction
 
-##Définitions
+## Définitions
+
 >Base de données : ensemble d’informations structurées  
 >Descripteur : champ prenant une certaine valeur (donnée) par ex Nom, Prenom, …  
 >Collection: ensemble de données partageant les mêmes descripteurs par ex contacts partagent tous les descripteurs nom et prenom.  
@@ -22,9 +23,9 @@ Elles permettent de faire des traitements statistiques et adapter les comporteme
 
 
 
-##Bibliothèque Pandas
+## Bibliothèque Pandas
 
-###Créer Dataframe
+### Créer Dataframe
 ![Dataframe](img/dataframe.png){align=left}
 
 On crée un Dataframe à partir d’un tableau existant :
@@ -33,7 +34,6 @@ On crée un Dataframe à partir d’un tableau existant :
 	```python
 	ar = [[1.1, 2, 3.3, 4], [2.7, 10, 5.4, 7], [5.3, 9, 1.5, 15]]
 	df = pd.DataFrame(ar, index = ['a1', 'a2', 'a3'], columns = ['A', 'B', 'C', 'D’])
-
 	```
 
 
@@ -50,7 +50,7 @@ Ou à partir de rien
 Il faudra importer la bibliothèque pandas : `import pandas as pd`  
 Importer à partir d’un fichier csv :  
 ```python
-df = pandas.read_csv('myFile.csv’, delimiter=",", encoding=’utf’)
+df = pandas.read_csv('myFile.csv', delimiter=",", encoding=’utf’)
 ```
 
 !!! note "remarque"
@@ -89,23 +89,23 @@ Affiche les valeurs de A différentes qui apparaissent.
 
 La méthode `len` permet de connaitre de nombre de valeurs différentes de A.
 
-##Grouper et compter les valeurs correspondant à une certaine donnée
-###Groupby
-![code](img/groupby_code.png){align=left}
-![resultat](img/groupby.png){align=right}
+## Grouper et compter les valeurs correspondant à une certaine donnée
+### Groupby
+![code](img/groupby_code.png)
+![resultat](img/groupby.png)
 
-###Opérations
+### Opérations
 
 `df.shape` : affiche le nombre de lignes et de colonnes  
 
 Identifier et supprimer les doublons :
-![code](img/operation_code.png){align=left}
-![resultat](img/supp_doublon.png){align=right}      
-<br/><br/><br/><br/><br/>
+![resultat](img/supp_doublon.png){align=right}![code](img/operation_code.png){align=left}
+      
+<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
 On peut choisir de garder le premier, le dernier
 
 **Calculs divers :**
-![calcul de moyenne](img/moyenne.png){align=left}
+![calcul de moyenne](img/moyenne.png){align=right}
 
 -	`mean()`
 -	`count()`
