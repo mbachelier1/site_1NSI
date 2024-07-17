@@ -1,0 +1,2297 @@
+
+<!doctype html>
+<html lang="fr" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../html/css.html">
+      
+      
+        <link rel="next" href="programmerJS.html">
+      
+      
+      <link rel="icon" href="../../icones/logo4.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.17">
+    
+    
+      
+        <title>Introduction au Javascrip - NSI au Lycée Henri Avril</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.bcfcd587.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+      <link rel="stylesheet" href="../../stylesheets/prism.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue-grey" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#rendre-le-site-dynamique-avec-javascript" class="md-skip">
+          Aller au contenu
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="En-tête">
+    <a href="../../index.html" title="NSI au Lycée Henri Avril" class="md-header__button md-logo" aria-label="NSI au Lycée Henri Avril" data-md-component="logo">
+      
+  <img src="../../icones/logo4blanc.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            NSI au Lycée Henri Avril
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Introduction au Javascrip
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="blue-grey" data-md-color-accent="indigo"  aria-label="Mode sombre"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Mode sombre" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="grey" data-md-color-accent="blue"  aria-label="Mode clair"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Mode clair" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Rechercher" placeholder="Rechercher" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Recherche">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Effacer" aria-label="Effacer" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initialisation de la recherche
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Onglets" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../index.html" class="md-tabs__link">
+        
+  
+    
+  
+  Accueil
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../representation/base_numeration.html" class="md-tabs__link">
+          
+  
+  Représenter les données
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../table_donnees/traitement_donnees.html" class="md-tabs__link">
+          
+  
+  Tables de données
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../Programmation/type.html" class="md-tabs__link">
+          
+  
+  Programmation
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../algorithmie/intro_algo.html" class="md-tabs__link">
+          
+  
+  Algorithmie
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../archi/reseaux/reseau.html" class="md-tabs__link">
+          
+  
+  Réseaux et internet
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../archi/OS/vonneuman.html" class="md-tabs__link">
+          
+  
+  Architecture et OS
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../html/html.html" class="md-tabs__link">
+          
+  
+  IHM
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../index.html" title="NSI au Lycée Henri Avril" class="md-nav__button md-logo" aria-label="NSI au Lycée Henri Avril" data-md-component="logo">
+      
+  <img src="../../icones/logo4blanc.png" alt="logo">
+
+    </a>
+    NSI au Lycée Henri Avril
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../index.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Accueil
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Représenter les données
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Représenter les données
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../representation/base_numeration.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    représenter les entiers
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../representation/reels_flottants.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    représenter les réels et les flottants
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../representation/codage_texte.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    représenter le texte
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Tables de données
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Tables de données
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../table_donnees/traitement_donnees.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Traitement de données en table
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Programmation
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Programmation
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Programmation/type.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Types construits
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Programmation/demarrer.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Démarrer en programmation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Programmation/boucle.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Conditions et boucles
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Programmation/fonction.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Fonctions et spécifications
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Programmation/lire_ecrire.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lire et Ecrire dans un fichier
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Programmation/tkinter.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Interface graphique : Tkinter
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Algorithmie
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Algorithmie
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../algorithmie/intro_algo.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduction à l'algorithmie
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../algorithmie/tris.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Algorithmes de tris
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../algorithmie/complexite.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Compléxité
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../algorithmie/knn.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    K plus proches voisins
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../algorithmie/glouton.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Algorithme glouton
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Réseaux et internet
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Réseaux et internet
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../archi/reseaux/reseau.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Qu'est-ce qu'un réseau
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../archi/reseaux/TCP_IP.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Protocole TCP/IP
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../archi/reseaux/securisation.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Sécurisation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Architecture et OS
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            Architecture et OS
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../archi/OS/vonneuman.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Architecture  matérielle
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../archi/OS/OS.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Systèmes d'exploitation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../archi/OS/linux.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Linux
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../archi/OS/linux.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Utilisation de la ligne de commande
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../archi/OS/logique_combinatoire.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Logique combinatoire
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../archi/OS/assembleur.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Assembleur
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    IHM
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            IHM
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_8_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_8_1" id="__nav_8_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    HTML et CSS
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_8_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8_1">
+            <span class="md-nav__icon md-icon"></span>
+            HTML et CSS
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../html/html.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    HTML
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../html/css.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CSS
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_8_2" id="__nav_8_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Javascript
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_8_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_8_2">
+            <span class="md-nav__icon md-icon"></span>
+            Javascript
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Introduction au Javascrip
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="introJS.html" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Introduction au Javascrip
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#premiere-approche" class="md-nav__link">
+    <span class="md-ellipsis">
+      Première approche
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#avant-daller-plus-loin-parlons-du-dom" class="md-nav__link">
+    <span class="md-ellipsis">
+      Avant d'aller plus loin... Parlons du DOM.
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modifier-un-element-du-dom" class="md-nav__link">
+    <span class="md-ellipsis">
+      Modifier un élément du DOM
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Modifier un élément du DOM">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#modifier-le-texte" class="md-nav__link">
+    <span class="md-ellipsis">
+      Modifier le texte
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modifier-les-proprietes-css" class="md-nav__link">
+    <span class="md-ellipsis">
+      Modifier les propriétés CSS
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#les-evenements" class="md-nav__link">
+    <span class="md-ellipsis">
+      Les évènements
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Les évènements">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#evenements-lies-a-la-souris" class="md-nav__link">
+    <span class="md-ellipsis">
+      Evènements liés à la souris
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#evenements-lies-au-clavier" class="md-nav__link">
+    <span class="md-ellipsis">
+      Evènements liés au clavier
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ajouter-un-element" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ajouter un élément
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Ajouter un élément">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#creation-de-lelement" class="md-nav__link">
+    <span class="md-ellipsis">
+      Création de l'élément
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#travailler-proprement" class="md-nav__link">
+    <span class="md-ellipsis">
+      Travailler proprement
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Travailler proprement">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#separer-les-fichiers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Séparer les fichiers.
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#linspecteur-dobjet" class="md-nav__link">
+    <span class="md-ellipsis">
+      L'inspecteur d'objet
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="programmerJS.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Programmer en Javascript
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="formulaire.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Les formulaires
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_8_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_8_3" id="__nav_8_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Protocole HTTP et PHP
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_8_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8_3">
+            <span class="md-nav__icon md-icon"></span>
+            Protocole HTTP et PHP
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../php/Protocole_HTTP.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Protocole HTTP
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_8_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_8_4" id="__nav_8_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Robotique
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_8_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8_4">
+            <span class="md-nav__icon md-icon"></span>
+            Robotique
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../robotique/robotique.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Robotique
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../robotique/projets.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Projets
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="rendre-le-site-dynamique-avec-javascript">Rendre le site dynamique avec JavaScript<a class="headerlink" href="#rendre-le-site-dynamique-avec-javascript" title="Permanent link">⚓︎</a></h1>
+<h2 id="premiere-approche">Première approche<a class="headerlink" href="#premiere-approche" title="Permanent link">⚓︎</a></h2>
+<div class="admonition info">
+<p class="admonition-title">Javascript ?</p>
+<p>Javascript, souvent raccourci en JS, est un langage de programmation interprété, tout comme Python. Il est une des briques angulaire de HTML 5, avec HTML et CSS.
+A chaque fois qu'une page fait plus que simplement afficher du texte et des images - un contenu statique, copmme par exemple afficher des animations, des cartes interactives, des menus déroulants, etc, il y a de bonnes chances pour que ce soit un script JavaScript qui en soit la raison.
+Un tutoriel complet sur Javascript est disponible sur <a href="https://developer.mozilla.org/fr/docs/Learn/JavaScript/First_steps/What_is_JavaScript">MDN Web Docs</a>. Vous y trouverez de nombreuses explications absentes de ce cours.</p>
+</div>
+<p>En exemple pour l'utilisation de Javascript, nous allons voir comment modifier le texte d'un pargraphe en un clic.</p>
+<div class="admonition warning">
+<p class="admonition-title">Une petite erreur dans la vidéo</p>
+<p>Dans cette vidéo, le code JS enfermé dans les balises <code>&lt;script&gt;</code> et <code>&lt;/script&gt;</code> sont à placer <strong>AVANT</strong> la balise <code>&lt;/body&gt;</code> et non après.</p>
+</div>
+<iframe src="//video.toutatice.fr/video_priv/12970/fd9462474a58b36c03c0d879b49335902aa126082f0b910f8d9b8221a0c22d06/?is_iframe=true&size=240" width="640" height="360" style="padding: 0; margin: 0; border:0" allowfullscreen ></iframe>
+
+<h2 id="avant-daller-plus-loin-parlons-du-dom">Avant d'aller plus loin... Parlons du DOM.<a class="headerlink" href="#avant-daller-plus-loin-parlons-du-dom" title="Permanent link">⚓︎</a></h2>
+<p>Arrétons nous sur le DOM qui est le modèle de document d'un fichier HTML. Il faut voir les bloc HTML comme des boites imbriquées les unes dans les autres.
+Voici un code HTML :
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span>
+<span class="normal">32</span>
+<span class="normal">33</span>
+<span class="normal">34</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&quot;utf-8&quot;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;viewport&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;width=device-width&quot;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Mon site<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>  
+
+  <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span> Le super titre de mon monstrueux site <span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+
+  <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span> Un petit paragraphe qui paye pas de mine<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+
+  <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span> Un bloc div qui contient plusieurs choses<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+
+    <span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;chat.jpg&quot;</span><span class="p">/&gt;</span>
+
+  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+
+  <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">ul</span><span class="p">&gt;</span> 
+
+      <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span> Un truc dans une liste<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+
+      <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span> Un 2e truc dans la liste<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+
+    <span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
+
+    <span class="p">&lt;</span><span class="nt">a</span><span class="p">&gt;</span> Un petit lien<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+
+  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</code></pre></div></td></tr></table></div></p>
+<p>On pourrait le représenter par ces blocs : <em>Cliquer sur les blocs pour voir ce qu'ils contiennent</em></p>
+<div id="animDOM">
+<div id="document"  style="display:block;"> <p>DOCUMENT</p>
+    <div id="titre"  style="display:block;"> TITRE H1
+        <div id="titreChild" style="display:none;"> "Le super titre de mon monstrueux site"</div>
+    </div>
+    <div id="para" style="display:block;">Paragraphe p 
+        <div id="paraChild" style="display:none;"> "Un petit paragraphe qui paye pas de mine"</div>
+    </div>
+
+
+<div id="div1" style="display:block;"><p> Un bloc DIV</p>
+
+
+        <div id="para2" style="display:none;">Paragraphe p 
+        <div id="para2Child" style="display:none;"> " Un bloc div qui contient plusieurs choses"</div>
+    </div>
+
+
+        <div id="image" style="display:none;"> Image
+        </div>
+
+</div>
+<div id="div2" style="display:block;"><p>Un autre bloc DIV</p>
+    <div id="liste" style="display:none;"><p>Une liste</p>
+        <div id="eltlist1" style="display:none;"> Element de liste
+            <div id="Contenteltlist1" style="display:none;"> "Un truc dans une liste"</div>
+        </div>
+        <div id="eltlist2" style="display:none;"> Element de liste
+            <div id="Contenteltlist2" style="display:none;"> "Un truc dans une liste"</div>
+        </div>
+    </div>
+    <div id='lien' style="display:none;"> Un lien
+        <div id="lienContent" style="display:none;"> " Un petit lien"</div>
+</div>
+</div>
+</div></div>
+
+<p>Voici les blocs dans le code HTML : </p>
+<p><img alt="bloc du DOM" src="../src/blocDOM.png" />
+On voit que le <code>body</code> contient 4 blocs, un titre <code>h1</code> un pararagraphe, deux blocs <code>div</code>. Le premier boc <code>div</code> contient un paragraphe et une image et le second une liste et un lien. Chaque paragrahe, lien ou élément de liste contient un contenu sous forme de texte.<br />
+Si on veut modifier un élément (son contenu ou son style) ou le supprimer il faut accéder à l'élément et en modifier les propriétés. Si on veut ajouter un élément, il faut entrer dans le bloc parent et ajouter un bloc (par exemple si on veut accéder un 3eme élément dans la liste il faut accéder à la liste et insérer un élément). </p>
+<div class="admonition note">
+<p class="admonition-title">Accéder à un élément (un bloc)</p>
+<p>On accède à un élément du DOM en utlisant la requete suivante : <code>document.querySelector(selecteur)</code> ou le selecteur peut-etre un type d'élément, un <code>id</code> ou une <code>class</code>.<br />
+- <code>document.querySelector("a")</code> : accèdera au premier lien rencontré dans le Document (balise <code>a</code>)<br />
+- <code>document.querySelector(".maClasse")</code> : accèdera au premier élément de <code>class="maClasse"</code><br />
+- <code>document.querySelector("#monID")</code>: accèdera à l'élémént de <code>id="monID"</code>  </p>
+</div>
+<div class="admonition info">
+<p class="admonition-title">Plusieurs éléments</p>
+<p>S'il y a plusieurs liens dans la page et que l'on veut les atteindre tous, on utilisera <code>mesLiens=document.querySelectorAll("a")</code> qui renvoie une liste. <code>mesLiens</code>est une liste contenant les infos de chaque lien. <br />
+Comme en python <code>mesLiens[2]</code> est le 3e lien de la page.</p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">En plus..."</p>
+<p>Il y a d'autres méthodes que <code>querySelector</code> pour sélectionner un élément que vous pouvez trouver <a href="https://developer.mozilla.org/fr/docs/Web/API/Document/getElementById">ici</a>. On choisira d'atteindre les éléments par l'Id, la classe, le nom, ...</p>
+</div>
+<div class="admonition question">
+<p class="admonition-title">Dessiner un DOM</p>
+<p><strong>1</strong> Utiliser le fichier créé grâce à la vidéo et dessiner le DOM correspondant. Ajouter une liste et un bloc DIV comme enfant de BODY. Le bloc DIV sera parent de deux nouveaux paragraphes.<br />
+<strong>2</strong> Modifier le graphes et écrire la structure HTML <strong>à la main</strong> sur une feuille.</p>
+</div>
+<h2 id="modifier-un-element-du-dom">Modifier un élément du DOM<a class="headerlink" href="#modifier-un-element-du-dom" title="Permanent link">⚓︎</a></h2>
+<p>Pour modifier un élément du DOM, on va le stocker dans une variable (attention à bien en choisir le nom) puis on utilisera <code>textContent</code> pour modifier le contenu et <code>style</code> pour modifier une propriété CSS.</p>
+<h3 id="modifier-le-texte">Modifier le texte<a class="headerlink" href="#modifier-le-texte" title="Permanent link">⚓︎</a></h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">paragrahe</span><span class="o">=</span><span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s2">&quot;p&quot;</span><span class="p">);</span><span class="w"> </span><span class="c1">//element est donc une variable contenant le premier paragraphe et les balises correspondant</span>
+<span class="nx">paragraphe</span><span class="p">.</span><span class="nx">textContent</span><span class="o">=</span><span class="s2">&quot;Bonjour tout le monde&quot;</span><span class="p">;</span><span class="c1">// On remplace le conetnu du texte par celui-ci</span>
+<span class="nx">paragraphe</span><span class="p">.</span><span class="nx">textContent</span><span class="o">+=</span><span class="s2">&quot;Bonjour tout le monde&quot;</span><span class="p">;</span><span class="c1">//on ajoute le texte à celui existant</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="modifier-les-proprietes-css">Modifier les propriétés CSS<a class="headerlink" href="#modifier-les-proprietes-css" title="Permanent link">⚓︎</a></h3>
+<p>On utlisera la commande <code>style</code> suivi de la propriété CSS que l'on souhaite modifier puis on modifie la valeur.
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nx">paragraphe</span><span class="p">.</span><span class="nx">style</span><span class="p">.</span><span class="nx">color</span><span class="o">=</span><span class="s2">&quot;red&quot;</span><span class="p">;</span><span class="w"> </span><span class="c1">// on change la couleur en rouge</span>
+</code></pre></div></td></tr></table></div></p>
+<div class="admonition warning">
+<p class="admonition-title">Camelcase</p>
+<p>Attention, le JS ne supporte pas les <code>-</code> on utilisera le CamelCase pour les propriétés dont le nom en comporte un :
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nx">paragraphe</span><span class="p">.</span><span class="nx">style</span><span class="p">.</span><span class="nx">backgroundColor</span><span class="o">=</span><span class="s2">&quot;grey&quot;</span><span class="p">;</span><span class="c1">// pour modifier la propriété CSS background-color</span>
+</code></pre></div></td></tr></table></div></p>
+</div>
+<h2 id="les-evenements">Les évènements<a class="headerlink" href="#les-evenements" title="Permanent link">⚓︎</a></h2>
+<h3 id="evenements-lies-a-la-souris">Evènements liés à la souris<a class="headerlink" href="#evenements-lies-a-la-souris" title="Permanent link">⚓︎</a></h3>
+<p>Dans l'exemple précédent l'évènement est déclenché par le  clic de la souris sur l'élément. Mais il y a plein d'actions possibles.</p>
+<div class="admonition question">
+<p class="admonition-title">Tester ceci</p>
+<p><strong>3</strong> Tester ce code et chercher les éléments qui déclenchent le changement.
+<p class="codepen" data-height="350" data-theme-id="dark" data-default-tab="html,result" data-user="muriel722" data-slug-hash="xxZPJyx" style="height: 350px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="flash">
+  <span>See the Pen <a href="https://codepen.io/muriel722/pen/xxZPJyx">
+  flash</a> by muriel722 (<a href="https://codepen.io/muriel722">@muriel722</a>)
+  on <a href="https://codepen.io">CodePen</a>.</span>
+</p>
+<script async src="https://static.codepen.io/assets/embed/ei.js"></script></p>
+</div>
+<div class="admonition question">
+<p class="admonition-title">Questions</p>
+<p><strong>4</strong> L'évènement <code>mouseout</code> détecte le fait que la souris quitte la zone. Modifier le code pour que le paragraphe reprenne sa forme originale lorsque la souris quitte la zone.  </p>
+</div>
+<p>Voici ce que l'on peut faire d'autre :</p>
+<p><img src="../src/evt_souris.png" alt="évènements liés à la souris"></p></p>
+<h3 id="evenements-lies-au-clavier">Evènements liés au clavier<a class="headerlink" href="#evenements-lies-au-clavier" title="Permanent link">⚓︎</a></h3>
+<p>Tester ceci :</p>
+<div class="admonition success">
+<p class="admonition-title">Code</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">html</label><label for="__tabbed_1_2">javascript</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Taper sur une touche<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">p</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;aremplir3&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;index.js&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+</code></pre></div></td></tr></table></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">var</span><span class="w"> </span><span class="nx">texte0</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot; ; elle correspond au caractère &quot;</span><span class="p">;</span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">zone3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s2">&quot;#aremplir3&quot;</span><span class="p">);</span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">texte3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;vous avez frappé la touche de code &quot;</span><span class="p">;</span>
+<span class="nb">document</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s2">&quot;keypress&quot;</span><span class="p">,</span><span class="w"> </span><span class="kd">function</span><span class="p">(</span><span class="nx">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="nx">zone3</span><span class="p">.</span><span class="nx">textContent</span><span class="w"> </span><span class="o">=</span>
+<span class="w">  </span><span class="nx">texte3</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">e</span><span class="p">.</span><span class="nx">keyCode</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">texte0</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nb">String</span><span class="p">.</span><span class="nx">fromCharCode</span><span class="p">(</span><span class="nx">e</span><span class="p">.</span><span class="nx">keyCode</span><span class="p">);</span>
+<span class="p">});</span>
+</code></pre></div></td></tr></table></div>
+</div>
+</div>
+</div>
+</div>
+<div class="admonition question">
+<p class="admonition-title">Questions</p>
+<p><strong>5</strong> Que font les fonctions <code>keyCode</code> et <code>String.fromCharCode(e.keyCode)</code>?<br />
+<strong>6</strong> Remplacer <code>keypress</code> par <code>keydown</code> puis <code>keyup</code>. Quelles sont les différences (notamment en terme d'affichage)?  </p>
+</div>
+<h2 id="ajouter-un-element">Ajouter un élément<a class="headerlink" href="#ajouter-un-element" title="Permanent link">⚓︎</a></h2>
+<h3 id="creation-de-lelement">Création de l'élément<a class="headerlink" href="#creation-de-lelement" title="Permanent link">⚓︎</a></h3>
+<p>On va crée un nouveau lien, d'id <code>monLien</code> dont le texte est 'Mon super site' et l'url "https://mbachelier1.github.io/site_1NSI/index.html".
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">nvLien</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="s1">&#39;a&#39;</span><span class="p">);</span>
+<span class="nx">nvLien</span><span class="p">.</span><span class="nx">title</span><span class="o">=</span><span class="s1">&#39;Mon super site&#39;</span><span class="p">;</span>
+<span class="nx">nvLien</span><span class="p">.</span><span class="nx">href</span><span class="o">=</span><span class="s2">&quot;https://mbachelier1.github.io/site_1NSI/index.html&quot;</span><span class="p">;</span>
+<span class="nx">nvLien</span><span class="p">.</span><span class="nx">id</span><span class="o">=</span><span class="s2">&quot;monLien&quot;</span><span class="p">;</span>
+</code></pre></div></td></tr></table></div>
+Puis on le place dans le bloc parent (ici le premier paragraphe) :
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s1">&#39;p&#39;</span><span class="p">).</span><span class="nx">appendChild</span><span class="p">(</span><span class="nx">nvLien</span><span class="p">);</span>
+</code></pre></div></td></tr></table></div></p>
+<h2 id="travailler-proprement">Travailler proprement<a class="headerlink" href="#travailler-proprement" title="Permanent link">⚓︎</a></h2>
+<h3 id="separer-les-fichiers">Séparer les fichiers.<a class="headerlink" href="#separer-les-fichiers" title="Permanent link">⚓︎</a></h3>
+<p>Nous avons vu que l'on pouvait mettre le javascript entre les balises <code>script</code> dans le code HTML. De la même façon que le CSS, ce n'est, de manière générale pas conseillé. A partie de maintenant vous ouvrirez 3 fichiers séparés dans le même dossier et on ajoutera la ligne sivante dans l'en-tête du fichier <code>HTML</code> :
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;mon_fichier.js&quot;</span><span class="p">&gt;</span><span class="w"> </span><span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</code></pre></div></td></tr></table></div></p>
+<h3 id="linspecteur-dobjet">L'inspecteur d'objet<a class="headerlink" href="#linspecteur-dobjet" title="Permanent link">⚓︎</a></h3>
+<p>L'inspecteur d'objet permet d'avoir accès à une console javascript, fort utile pour aider au déboggage de code.</p>
+<p>Celle-ci est disponible une fois l'inspecteur d'objet ouvert :
+<img alt="Inspecteur" src="../src/inspecteur.png" /></p>
+<div class="admonition info">
+<p class="admonition-title">Remarque</p>
+<p>Vous activerez l'onglet "journaux" pour avoir accès aux messages de la console.</p>
+</div>
+<div class="admonition question">
+<p class="admonition-title">Prise en main de la console <code>js</code>"</p>
+<p>Ouvrez la console javascript de votre navigateur, sur une page au choix.
+Tapez le code suivant :
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">function</span><span class="w"> </span><span class="nx">plop</span><span class="p">(){</span>
+<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Plop !&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+Exécutez la fonction plop :
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nx">plop</span><span class="p">();</span>
+</code></pre></div></td></tr></table></div>
+Que se passe-t-il ?</p>
+<p>Tapez maintenant le code suivant :
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">cible</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s2">&quot;h1&quot;</span><span class="p">);</span>
+<span class="nx">cible</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">&#39;click&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">plop</span><span class="p">);</span><span class="w">          </span>
+</code></pre></div></td></tr></table></div>
+Cherchez la première balise <code>h1</code> de la page et cliquez sur cet élément. Que se passe-t-il ?
+Tapez le code suivant :
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="w">    </span><span class="nx">cible</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">&#39;mouseover&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">plop</span><span class="p">);</span>
+</code></pre></div></td></tr></table></div>
+Comment faire pour déclencher l'écriture dans la console à partir de cet événement ?</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Utilisation de <code>console.log()</code></p>
+<p>Il est parfois difficile de voir comment s'exécute un code javscript. L'utilisation de <code>console.log(message);</code> dans votre code, avec comme message une chaîne de caractère explicative, est parfois un bon moyen de vérifier qu'un bloc de code est exécuté par javascript.</p>
+</div>
+<script>
+    //Affichage du bloc Document
+    let elt=document.querySelector("#document > p");
+    console.log(elt);
+    elt.addEventListener("click",function(e)
+    {
+    if (document.querySelector("#titre").style.display=="block")
+        {document.querySelector("#titre").style.display="none";}
+    else {document.querySelector("#titre").style.display="block";}
+    if (document.querySelector("#para").style.display=="block")
+        {document.querySelector("#para").style.display="none";}
+    else {document.querySelector("#para").style.display="block";}
+        if (document.querySelector("#div1").style.display=="block")
+        {document.querySelector("#div1").style.display="none";}
+    else {document.querySelector("#div1").style.display="block";}
+        if (document.querySelector("#div2").style.display=="block")
+        {document.querySelector("#div2").style.display="none";}
+    else {document.querySelector("#div2").style.display="block";}
+});
+    //Affichage du contenu du titre
+    let elt2=document.querySelector("#titre");
+    console.log(elt2);
+    elt2.addEventListener("click",function(e){
+    if (document.querySelector("#titreChild").style.display=="block")
+        {document.querySelector("#titreChild").style.display="none";}
+    else {document.querySelector("#titreChild").style.display="block";}})
+    //Affichage du contenu du paragrahe
+    let elt3=document.querySelector("#para");
+    console.log(elt3);
+    elt3.addEventListener("click",function(e){
+    if (document.querySelector("#paraChild").style.display=="block")
+        {document.querySelector("#paraChild").style.display="none";}
+    else {document.querySelector("#paraChild").style.display="block";}})
+    //Affichge du contenu de div1
+    let elt4=document.querySelector("#div1 > p");
+    console.log(elt4);
+    elt4.addEventListener("click",function(e){
+    if (document.querySelector("#para2").style.display=="block")
+        {document.querySelector("#para2").style.display="none";}
+    else {document.querySelector("#para2").style.display="block";}
+if (document.querySelector("#image").style.display=="block")
+        {document.querySelector("#image").style.display="none";}
+    else {document.querySelector("#image").style.display="block";}})
+    // Affichage du paragraphe de div 1
+    let elt5=document.querySelector("#para2");
+    console.log(elt5);
+    elt5.addEventListener("click",function(e){
+    if (document.querySelector("#para2Child").style.display=="block")
+        {document.querySelector("#para2Child").style.display="none";}
+    else {document.querySelector("#para2Child").style.display="block";}})
+    //Affichage de div2
+    let elt6=document.querySelector("#div2 > p");
+    console.log(elt6);
+    elt6.addEventListener("click",function(e){
+    if (document.querySelector("#liste").style.display=="block")
+        {document.querySelector("#liste").style.display="none";}
+    else {document.querySelector("#liste").style.display="block";}
+if (document.querySelector("#lien").style.display=="block")
+        {document.querySelector("#lien").style.display="none";}
+    else {document.querySelector("#lien").style.display="block";}})
+    //Affichage du contenu de la liste
+    let elt7=document.querySelector("#liste >p");
+    console.log(elt7);
+    elt7.addEventListener("click",function(e){
+    if (document.querySelector("#eltlist1").style.display=="block")
+        {document.querySelector("#eltlist1").style.display="none";}
+    else {document.querySelector("#eltlist1").style.display="block";}
+    if (document.querySelector("#eltlist2").style.display=="block")
+        {document.querySelector("#eltlist2").style.display="none";}
+    else {document.querySelector("#eltlist2").style.display="block";}})
+    let elt8=document.querySelector("#eltlist1");
+    console.log(elt8);
+    elt8.addEventListener("click",function(e){
+    if (document.querySelector("#Contenteltlist1").style.display=="block")
+        {document.querySelector("#Contenteltlist1").style.display="none";}
+    else {document.querySelector("#Contenteltlist1").style.display="block";}})
+    let elt9=document.querySelector("#eltlist2");
+    console.log(elt9);
+    elt9.addEventListener("click",function(e){
+    if (document.querySelector("#Contenteltlist2").style.display=="block")
+        {document.querySelector("#Contenteltlist2").style.display="none";}
+    else {document.querySelector("#Contenteltlist2").style.display="block";}})
+    // Affichage du contenu du lien
+    let elt10=document.querySelector("#lien");
+    console.log(elt10);
+    elt10.addEventListener("click",function(e){
+    if (document.querySelector("#lienContent").style.display=="block")
+        {document.querySelector("#lienContent").style.display="none";}
+    else {document.querySelector("#lienContent").style.display="block";}})
+   </script>
+<style>
+#animDOM{color: black;
+    font-family: verdana;
+    width : 70%}
+ /*style bloc 1er niveau*/
+ #document{
+    border : 1px solid black;
+    border-radius: 5px;
+    padding :1%;
+    background-color:  #f2f4f4 ;
+
+ }
+ /*Style des blocs de 2e niveau*/
+ #titre, #para, #div1, #div2{
+    margin-left: 30px;
+    border : 1px solid blue;
+    border-radius: 5px;
+    padding :1%;
+    margin : 1%;
+    background-color:  #aed6f1 ;}
+  /*Style des blocs de 3e niveau*/
+#titreChild, #paraChild, #para2, #image, #liste, #lien
+{   margin-left: 30px;
+    border : 1px solid red;
+    border-radius: 5px;
+    padding :1%;
+    margin : 1%;
+ background-color:   #fadbd8 ;}
+/* Style des blocs de 4E niveau*/
+#lienContent, #para2Child, #eltlist1, #eltlist2
+{   margin-left: 30px;
+    border : 1px solid green;
+    border-radius: 5px;
+    padding :1%;
+    margin : 1%;
+ background-color:   #a3e4d7  ;}
+/*style element 5e niveau*/
+ #Contenteltlist2, #Contenteltlist1
+{   margin-left: 30px;
+    border : 1px solid orange;
+    border-radius: 5px;
+    padding :1%;
+    margin : 1%;
+ background-color:  #fcf3cf  ;}
+ </style>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  Retour en haut de la page
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Créé par Muriel Bachelier 2021-2025
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.tabs", "navigation.expand", "navigation.top", "toc.integrate", "header.autohide"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.1e8ae164.min.js"></script>
+      
+        <script src="../../javascripts/extra.js"></script>
+      
+        <script src="../../javascripts/prism.js"></script>
+      
+        <script src="../../javascripts/config.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+        <script src="https://unpkg.com/mermaid@8.9.2/dist/mermaid.min.js"></script>
+      
+        <script src="../../javascripts/mermaid.js"></script>
+      
+    
+  </body>
+</html>
