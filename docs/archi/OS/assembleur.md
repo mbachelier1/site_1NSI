@@ -49,13 +49,13 @@ Il est relativement facile de distinguer les différentes parties du simulateur 
 - au centre, on trouve le microprocesseur
 - à gauche on trouve la zone d'édition ("Assembly Language"), c'est dans cette zone que nous allons saisir nos programmes en assembleur
 	
-!!! faq "A faire"
+!!! question "A faire"
 	![](../img/pgm1.PNG){align=left}
 	1.Saisir le programme suivant dans la partie d'édition
 
 <p>Pour démarrer le programme il suffit de cliquer sur SUBMIT puis RUN et le regarder travailler. On peut voir qu'à l'éxecution de ce programme, il charge bien la valeur 42 dans le registre R0 puis le stocke en mémoire à l'adresse 150.  </p>
 
-!!! caution "ATTENTION"
+!!! warning "ATTENTION"
 	Pour relancer la simulation, il est nécessaire d'appuyer sur le bouton "RESET" afin de remettre les registres R0 à R12 à 0, ainsi que le registre PC (il faut que l'unité de commande pointe de nouveau sur l'instruction située à l'adresse mémoire 000). La mémoire n'est pas modifiée par un appui sur le bouton "RESET", pour remettre la mémoire à 0, il faut cliquer sur le bouton "OPTIONS" et choisir "clr memory". Si vous remettez votre mémoire à 0, il faudra cliquer sur le bouton "ASSEMBLE" avant de pouvoir exécuter de nouveau votre programme.  
 
 On peut mettre des commentaires en ajoutant / à la fin de la ligne puis le commentaire : `MOV R0,#42 / ajoute 42 au registre R0`  
@@ -94,7 +94,7 @@ MOV R0, R3
 ```
 Place la valeur stockée dans le registre R3 dans le registre R0
 
-!!! faq "A faire"
+!!! question "A faire"
 	2.Modifiez le premier programme pour qu'à la fin de l'exécution on trouve le nombre 54 à l'adresse mémoire 50. On utilisera le registre R1 à la place du registre R0. Testez vos modifications en exécutant la simulation.   
 	3.Entrer la série d'instructions suivante et dire ce qu'elle fait.  
 	![question](../img/exo.PNG)
@@ -167,7 +167,7 @@ monLabel:
 !!! danger "ATTENTION"
 	La présence du "HALT" juste après la ligne "MOV R0,#14" est indispensable, car sinon, la ligne "MOV R0,#18" sera aussi exécutée (même si la valeur stockée dans le registre R4 est inférieure à 18).   
 
-!!! faq "A faire"
+!!! question "A faire"
 	4.Faites en sorte que dans la mémoire 100, il y ait le résultat de la somme de 42 et 54. 
 
 <p>On peut également faire des boucles en assembleur. Le programme ci-contre compare deux valeur et se "branche" sur une autre partie du programme selon le résultat de la comparaison. <code>BNE nonegal</code> va exécuter la partie du programme à partir du lable 'nonegal' si la comparaison n'est pas égale. En revanche, si c'est égal (BEQ : Branch if Equal) le programme continue au label correspondant, ici 'egal'. Les labels peuvent être choisis comme on veut.</p>
@@ -175,7 +175,7 @@ monLabel:
 ![boucle en assembleur](../img/boucle_assembleur.PNG)
 ![boucle assembleur](../img/boucle_assembleur.svg)
 
-!!! faq "A faire"
+!!! question "A faire"
 	5.Compléter le code assembleur pour qu'il traduise le programme python. Tester le...  
 	![if](../img/pgmif.PNG)
 	![if en assembleur](../img/ifassemb.PNG)

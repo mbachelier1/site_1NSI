@@ -19,8 +19,8 @@ nav:
 
   - 'Algorithmie':
     -  "Introduction à l'algorithmie" : 'algorithmie/intro_algo.md'
-    -  'Compléxité' : 'algorithmie/complexite.md' 
     -  'Algorithmes de tris' : 'algorithmie/tris.md'
+    -  'Compléxité' : 'algorithmie/complexite.md' 
     -  'K plus proches voisins' : 'algorithmie/knn.md'
     -  'Algorithme glouton' : 'algorithmie/glouton.md'
   - 'Réseaux et internet' : 
@@ -40,12 +40,12 @@ nav:
       - 'HTML' : 'IHM/html/html.md'
       - 'CSS' : 'IHM/html/css.md'    
     - 'Javascript' :       
-      - "Exercices d'application Javascript" : 'IHM/javascript/exo_js.md' 
-      - 'Programmation evenementielle' : 'IHM/javascript/programmation_evenementielle.md' 
+      - "Introduction au Javascrip" : 'IHM/javascript/introJS.md' 
+      - 'Programmer en Javascript' : 'IHM/javascript/programmerJS.md' 
       - 'Les formulaires' : 'IHM/javascript/formulaire.md'
     - 'Protocole HTTP et PHP' : 
       - "Protocole HTTP" : 'IHM/php/Protocole_HTTP.md'
-      - "TP PHP" : 'IHM/PHP/TP_php.md'
+
     - 'Robotique' : 
       - 'Robotique' : 'IHM/robotique/robotique.md' 
       - 'Projets': 'IHM/robotique/projets.md'
@@ -113,7 +113,8 @@ markdown_extensions:
 #      emoji_generator: !!python/name:material.extensions.emoji.to_svg
 #      emoji_index: !!python/name:material.extensions.emoji.twemoji
   - pymdownx.keys
-  - pymdownx.tabbed
+  - pymdownx.tabbed:
+      alternate_style: true 
   - pymdownx.betterem:
       smart_enable: all
   - pymdownx.emoji:
@@ -152,3 +153,4 @@ extra_javascript:
 extra_css:
   - stylesheets/extra.css
   - stylesheets/prism.css
+copyright: Créé par Muriel Bachelier 2021-2025

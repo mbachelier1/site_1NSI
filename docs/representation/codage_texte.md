@@ -1,5 +1,5 @@
-#Coder le texte
-##encodage du texte
+# Coder le texte
+## encodage du texte
 Chaque caractère est encoder en binaire selon la norme ASCII
 ![ascii](https://pixees.fr/informatiquelycee/n_site/img/ASCII.svg)
 
@@ -7,17 +7,17 @@ L'ascii permet de coder tous les caratères de base de la langue anglaise mais p
 Il exciste pour cela l'UNICODE qui permet sur 1 (UTF-8), 2 (UTF-16) ou 4 (UTF-32) octets de coder tous les caratères existants.  
 Cela dit l'unicode UTF-8 le plus utilisé a le même encodage que l'ascii.
 
-##En python
+## En python
 
-###Fonction `ord()`  
+### Fonction `ord()`  
 
 La fonction ord() renvoie le valeur représentant l'unicode d'un caractère spécifié. Si la longueur du chaîne est supérieure à un, une erreur « TypeError » sera déclenchée.
 
-###Fonction `chr()`  
+### Fonction `chr()`  
 Renvoie la chaîne représentant un caractère dont le code de caractère Unicode est le nombre entier i. Par exemple, `chr(97)` renvoie la chaîne de caractères 'a', tandis que chr(8364) renvoie '€'. Il s'agit de l'inverse de `ord()`.
 
 
-###Petit mémo utilse pour le TP
+### Petit mémo utilse pour le TP
 !!! note "mémo"
 	
 	`‘0xFE5’` : représentation en hexadécimal de la valeur FE5  

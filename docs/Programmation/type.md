@@ -1,5 +1,4 @@
-# Types construits
-# (chaines de caractères, listes, dictionnaires et tuples)
+# Types construits (chaines de caractères, listes, dictionnaires et tuples)
 
 ## Les listes
 
@@ -73,6 +72,23 @@ print(L)
 >>> L=[1, 'bon', 'chocolat', True, 24, 6.7, 345]
 ```
 
+### Parcourir une liste 
+Si on a besoin de chercher un élément dans une liste, il va falloir "visiter" les éléments de la liste un par un. Par exemple, on cherche le nombre maximum dans une liste d'entiers, on regarde les éléments un par un et on le mémorise s'il est plus grand que l'élément précédemment mémorisé.
+
+```python
+L=[5,8,10,3,5,17,4]
+maximum=0
+for i in range (0,len(L)):
+	if maximum<L[i]:
+		maximum=L[i]
+print(maximum)
+```
+!!! note Remarque :
+	On peut la parcourir à l'envers en remplaçant `(0,len(L))` par `(len(L)-1,-1,-1)`.
+
+
+
+
 !!! warning  "Plus difficile : Liste par commpréhension"
 	On peut créer une liste de manière succinte en une seule ligne, qui correspond en fait à la construction par boucle.
 	[element boucle condition]
@@ -83,7 +99,7 @@ print(L)
 	[1, 2, 3, 4]
 	```
 
-!!! important "Liste non exhaustive des méthodes de listes"
+!!! danger "Liste non exhaustive des méthodes de listes"
 
 	- `liste.append(truc)` : ajoute l’élément unique truc à la fin de la liste  
 	- `liste1.extend(liste2)` : rajoute en fin de liste1 la liste2. Equivaut à faire liste1 = liste1 + liste2   

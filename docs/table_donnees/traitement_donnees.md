@@ -7,7 +7,7 @@
 >Descripteur : champ prenant une certaine valeur (donnée) par ex Nom, Prenom, …  
 >Collection: ensemble de données partageant les mêmes descripteurs par ex contacts partagent tous les descripteurs nom et prenom.  
 
-##Caractéristiques des données
+## Caractéristiques des données
 Les données peuvent être de tout type : nombre, entier, chaine de caractère, booléen, …   
 <div id="center">
 		<img alt="table de données" src="img/table.png">
@@ -30,7 +30,7 @@ Elles permettent de faire des traitements statistiques et adapter les comporteme
 
 On crée un Dataframe à partir d’un tableau existant :
 
-!!! cite "Code"
+!!! info "Code"
 	```python
 	ar = [[1.1, 2, 3.3, 4], [2.7, 10, 5.4, 7], [5.3, 9, 1.5, 15]]
 	df = pd.DataFrame(ar, index = ['a1', 'a2', 'a3'], columns = ['A', 'B', 'C', 'D’])
@@ -39,7 +39,7 @@ On crée un Dataframe à partir d’un tableau existant :
 
 
 Ou à partir de rien 
-!!! cite "code"
+!!! info "code"
 	```python
 	df=pd.DataFrame([{'A': 1.1, 'B': 2, 'C': 3.3, 'D': 4},    
 	{'A': 2.7, 'B': 10, 'C': 5.4, 'D': 7},    
@@ -56,13 +56,13 @@ df = pandas.read_csv('myFile.csv', delimiter=",", encoding=’utf’)
 !!! note "remarque"
 	vérifier si le délimiteur est une virgule ou un point virgule. 
 
-###Affichage et tris
+### Affichage et tris
 Pour afficher des colonnes, on utilise :  
 ```python
 print(df[['A','B']])  ou print (df['A'])
 ```
 ![Affichage](img/tris.png){align=left}
-`head()`, `tail ()` : affichent les  premières ou dernières lignes (nombre de lignes en argument  par default)
+`head()`, `tail ()` : affichent les  premières ou dernières lignes (nombre de lignes en argument  par default)  
 `describe()`: infos statistiques sur le jeu de données Encore plus avec include='all' en paramètre.
 
 

@@ -43,7 +43,7 @@ Nous allons donc utiliser un algorithme “glouton” pour optimiser ce problèm
 
 > Définition : A chaque étape, on effectue le choix qui semble le meilleur, sans jamais remettre en question les choix déjà effectués.
 
-Pour le rendu de monnaie, c'est assez simple, il suffit de prendre à chaque étape la plus grande valeur de billet ou de pièce. Dans notre système monétaire, cet algorithme est pratiquement toujours la solution la plus optimisée mais nous allons verrons plus loin que ce n'est pas toujours le cas.  
+Pour le rendu de monnaie, c'est assez simple, il suffit de prendre à chaque étape la plus grande valeur de billet ou de pièce. Dans notre système monétaire, cet algorithme est pratiquement toujours la solution la plus optimisée mais nous verrons plus loin que ce n'est pas toujours le cas.  
 Voici l'algorithme proposé, il sera à implémenter plus tard.  
 La fonction `renduMonnaie()` prendra en argument la somme à rendre et la liste des pièces et billets à disposition. Cette fonction retournera la liste des pièces et billets à rendre  
 ```pseudocode
@@ -72,7 +72,7 @@ renvoie monnaie
 
 
 ### Implémentation
-!!! faq "A faire"
+!!! question "A faire"
 	Programmer le rendu de monnaie et vérifier le résultat pour les exemples 1 et 2.
 
 !!! note "Situation Canonique"
@@ -156,7 +156,8 @@ def sacGlouton(liste, maxSac) :
     ## A COMPLETER
     return objetsSac, masseTotale, valeurTotale
 
-assert(sacGlouton([['lingot', 50, 3], ['couronne', 80, 4], ['bracelet', 30, 2], ['collier', 20, 1], ['assiette', 5, 2], ['déchets', 1, 4]], 10) == ([['couronne', 80, 4], ['lingot', 50, 3], ['bracelet', 30, 2], ['collier', 20, 1]], 10)
+assert(sacGlouton([['lingot', 50, 3], ['couronne', 80, 4], ['bracelet', 30, 2], ['collier', 20, 1], ['assiette', 5, 2], ['déchets', 1, 4]], 10) == ([['couronne', 80, 4], ['lingot', 50, 3], ['bracelet', 30, 2], ['collier', 20, 1]], 10, 180
+    )
 ```
 
 Une version plus subtile vous permettra de tester différentes méthodes heuristiques pour optimiser votre choix. (soit par valeur, soit par masse ou rapport valeur/masse)  

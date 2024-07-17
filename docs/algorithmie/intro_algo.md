@@ -13,7 +13,7 @@
 Ceci est une liste d'étapes à réaliser dans l'ordre et en respectant les quantités afin de réussir sa recette.
 Les consignes sont précises et si une seule étape n'est pas réalisée comme demandé, le résultat ne sera pas celui attendu.
 
-!!! faq "Les labyrinthes"
+!!! question "Les labyrinthes"
 	Pour sortir d'un labyrinthe à coup sur, poser la main droite sur le mur et longer le mur sans jamais décoller la main. Lorsqu'il n'y a plus de mur, vous êtes sorti.  
 	Cet méthode permet-elle de sortir des labyrinthes proposés ?  
 	![labyrinthes](img/labyrinthes.png)  
@@ -32,7 +32,7 @@ Les consignes sont précises et si une seule étape n'est pas réalisée comme d
 
 ### Algorithmes de la vie quotidienne
 
-!!! faq "Ma journée"
+!!! question "Ma journée"
 	Mettre dans l'ordre les étapes à suivre pour aller au travail.  
 	<div>
 	<form name="f">
@@ -102,7 +102,7 @@ Les consignes sont précises et si une seule étape n'est pas réalisée comme d
     <div id="messageListe2"></div>
     <div id="correctionListe2" style="display:none;"> <p> Dans l'ordre, je me lève, je monte dans ma voiture je prends la 3e sortie au rond-point, je me gare je sors de ma voiture et le m'installe à mon poste de travail.</p></div>
 
-!!! faq " Créer un algorithme de calcul"
+!!! question " Créer un algorithme de calcul"
 	mettre dans l'ordre les étiquettes d'étapes de l'algorithme  
 	<div>
 	<form name="f2">
@@ -144,7 +144,7 @@ Les consignes sont précises et si une seule étape n'est pas réalisée comme d
     <div id="messageListe3"></div>
     <div id="correctionListe3" style="display:none;"> <p>Prendre R = 2 et le mattre au carré. Multiplier le tout par 3,14 puis aficher le résultat. </p></div>
 
-!!! faq "Que fait cet algorithme?"
+!!! question "Que fait cet algorithme?"
 	=== "Question"
 		Que fait cet algorithme?
 
@@ -177,7 +177,7 @@ Mais on peut aussi utiliser d'autres variables pour affecter une valeur à une a
 `c←b+a `   
 `fin`    
 
-!!! faq "Exécuter un algorithme"
+!!! question "Exécuter un algorithme"
 	![exercice algorithmes](img/exos_algo.png)  
 	A la fin de l'exécution de :
 	<form>l'algorithme 1, la variable A contient
@@ -225,7 +225,7 @@ Par exemple :
 ```
 
 ###Créer un algorithme
-!!! faq "remplir les champs avec les variables"
+!!! question "remplir les champs avec les variables"
 	Compléter l’algorithme ci-dessous pour qu'il calcule la moyenne de 4 nombres entrés par l'utilisateur.
 	Algo moyenne :
 	variables , nb1, nb2, nb3, nb4, s, m sont des nombres

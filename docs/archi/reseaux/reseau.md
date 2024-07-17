@@ -48,7 +48,7 @@ Toutes les machines appartenant au même réseau devront posséder la même adre
     === "exemple 2"
         la machine A a pour adresse IP 192.168.2.5 et la machine B a pour adresse IP 192.168.3.8. Les 3 premiers octets ne sont pas identiques ("192.168.2" pour A et "192.168.3" pour B), A et B n'ont pas la même adresse réseau ("192.168.2.0" pour A et "192.168.3.0" pour B). Ces 2 machines ne pourront donc pas communiquer ensemble
 
-!!! caution "Attention"
+!!! warning "Attention"
     
     Les adresses IP (a.b.c.d) n’ont forcément pas les parties a, b et c consacrées à l’identification du réseau et la partie d consacrées à l’identification des machines sur le réseau : on rajoute souvent à l'adresse IP un "/" suivit du nombre 8, 16 ou 24.
 
@@ -60,7 +60,7 @@ Vous avez sans doute déjà compris que le 8 signifie que les 8 premiers bits (l
 
 En fait, il est possible d'avoir autre chose que /8, /16 ou /24 (on peut par exemple trouver /10 ou /17...), mais ces cas font intervenir la notion de masque de sous-réseau qui n'est pas au programme de NSI. 
 
-!!! faq "Questions"
+!!! question "Questions"
     Vous répondrez aux questions dans le questionnaires pronote associé.  
     1. Déterminer l'adresse réseau  partir de l'Ip suivante 147.12.1.24/16.  
     2. Déterminer l'adresse réseau  partir de l'Ip suivante 192.168.2.45/24.  

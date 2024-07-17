@@ -13,7 +13,7 @@ Autre solution, que sont les 3 ou 5 plus proches voisins ?
 
 ![clémetine ou Orange?](img/clemOrange.png)
 
-!!! faq "Causalité ou corrélation?"
+!!! question "Causalité ou corrélation?"
 
 	La causalité entre deux données établit une relation de <input style="border : solid 1px; border-radius : 2px;" type="text" name="reponse" maxlenght="15" id="reponse1" autocomplete="off"> à <input style="border : solid 1px; border-radius : 2px;" type="text" name="reponse" maxlenght="15" id="reponse2" autocomplete="off">. Alors que la corrélation se contente de faire le <input style="border : solid 1px; border-radius : 2px;" type="text" name="reponse" maxlenght="15" id="reponse3" autocomplete="off">entre deux données.
 
@@ -23,7 +23,7 @@ Autre solution, que sont les 3 ou 5 plus proches voisins ?
 	<div id="correction1" style='display: none;'><p>La causalité entre deux données établit une relation de cause à effets. Alors que la corrélation se contente de faire le lien entre deux données.
 	</p></div>
 
-!!! faq "Apprentissage"
+!!! question "Apprentissage"
 	Dans quel ordre se fait l'apprentissage?
 	<div>
 		<form name="f">
@@ -72,7 +72,7 @@ Sur le document ci-dessous, en cliquant sur cercle (cercle centre-point) cherche
 <a href="https://www.geogebra.org/m/zhbhycsh" ><img src="img/geogebra_2.png"></a>
 
 
-!!! faq "Choix du nombre de voisins"
+!!! question "Choix du nombre de voisins"
 	<div>
 			<form name="f">
 				Si k = 1 ce papillon est :
@@ -113,7 +113,7 @@ Sur le document ci-dessous, en cliquant sur cercle (cercle centre-point) cherche
 		    	Si k=6 on a une égalité entre les mâles et les femmelles on ne peut pas conclure.</p></div>
 	</div>
 
-!!! faq "Nombre de voisins"
+!!! question "Nombre de voisins"
 	On attend ici une réponse en un mot uniquement.  
 	Pourquoi choisit on entre 1, 3, 5, ... pour le nombre de plus proches voisins ? Qu'est ce que ces valeurs ont de particulier ?  
 	Elles sont ...<form>
@@ -126,7 +126,7 @@ Sur le document ci-dessous, en cliquant sur cercle (cercle centre-point) cherche
 	</p></div>
 
 
-!!! faq "grand jeu de données"
+!!! question "grand jeu de données"
 	L'avantage d'utiliser un grand jeu de données est que la prédiction est plus <input style="border : solid 1px; border-radius : 2px;" type="text" name="reponse" maxlenght="15" id="reponse51" autocomplete="off"> mais que l'apprentissage est plus <input style="border : solid 1px; border-radius : 2px;" type="text" name="reponse" maxlenght="15" id="reponse52" autocomplete="off">.<br>
 	<input type='button' style="margin:5px; padding:5px;  background-color : lightblue; border : solid 2px blue; border-radius : 5px;" id="BoutonValider" onclick="reactionText5()" value="Vérifier"> <input type='button' style="display: none;" id="boutoncorrection5" onclick="affiche5()" value="Correction">
 	<div style="font-weight: bold;" id="messageText5"></div>
@@ -139,7 +139,7 @@ La métrique est la "distance" que l'on se fixe. Dans le cas précédent, la mé
 Dans l'exemple ci-dessous, on a classer des maisons, selon si les enfants sont scolarisés dans l'école bleue ou dans l'école verte. Une nouvelle maison a été construite.  
 ![ecole](img/ecole1.png)
 
-!!! faq "Choisir l'école"
+!!! question "Choisir l'école"
 	<div>
 				<form name="f">
 					Dans le cas ou la métrique est a distance à vol d'oiseau, en choisissant k =5, les enfants iront dans l'école 
@@ -217,7 +217,7 @@ Marche suivre :
 Détail des fonctions à écrire :[projet KPPV](img/projet KPPV.pdf)
 
 Codes à compléter :
-!!! important "knn.py"
+!!! tip "knn.py"
 	```python
 	from math import sqrt
 	def distance(freq1,freq2) :
@@ -279,7 +279,7 @@ Codes à compléter :
 
 	```
 
-!!! important "main.py"
+!!! tip "main.py"
 	```python
 	from knn import *
 	import matplotlib.pyplot as plt

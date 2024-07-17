@@ -145,7 +145,7 @@ Exemple : on veut écrire en gras, plus gros et en bleu le paragraphe :
 
 Voici un code qui va mettre une partie des liens en vert sur fond blanc lorsqu'ils sont inactifs, en blanc sur fond vert lorsqu'ils sont survolés par la souris, en noir sur fond blanc lorsqu'ils ont été visités.
 
-!!! cite "Codes"
+!!! info "Codes"
 		=== "Html"
 		```html
 		<a class="beau_lien" href="base1_style.html">Cliquer ici</a>

@@ -16,7 +16,7 @@ Pour ne pas répéter plusieurs fois la même série de calculs dans un programm
 	Une fois la fonction définie le prof n'a plus qu'à dire à certains élèves *courir_sur(100m,Juliette)* ou *courir_sur(200m,Arthur)* sans avoir à répéter les consignes.  
 	La valeur de distace et le nom de l'élève sont appelés `paramètre` ou `argument`de la fonction, et la valeur retournée (le temps) dépend à la fois du paramètre distance mais aussi de l'élève.
 
-!!! caution "Attention"
+!!! warning "Attention"
 	Si le professeur explique la fonction aux élèves mais que jamais il ne l'utilise, personne ne courra. Il faut `appeler`la fonction pour qu'elle s'éxécute.
 
 Une fonction en informatique est une portion de code réalisant un tâche bien précise et qui pourra être utilisée une ou plusieurs fois dans la suite du programme.
@@ -109,7 +109,7 @@ Une fonction qui ne renvoie pas de valeur est appelée **procédure** elle a une
 </iframe>
 La fonction `compteur()` sans argument s'éxécutera toujours de la même façon. 
 
-!!! caution "Affichage de la valeur"
+!!! warning "Affichage de la valeur"
 	Si on uilise l'instruction `print(compteur())` le programme retournera `None`. En effet, l'instruction `print` pour une fonction a pour effet d'afficher la valeur retournée par l'instruction `return`, or ici il n'y en a pas.
 
 ## Portée d'une variable

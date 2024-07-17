@@ -5,7 +5,7 @@ Nous allons nous intéresser aux interfaces Homme-Machine (IHM). Une IHM permet 
 
 ### Qu'est-ce qu'un robot ?
 
-!!! cite "D'après Wikipédia :"
+!!! quote "D'après Wikipédia :"
 	*« Un robot est un dispositif mécatronique (alliant mécanique, électronique et informatique) accomplissant automatiquement soit des tâches qui sont généralement dangereuses, pénibles, répétitives ou impossibles pour les humains, soit des tâches plus simples mais en les réalisant mieux que ce que ferait un être humain. »*
   
 Le mot robot a été utilisé pour la première fois par l'écrivain tchécoslovaque Karel Čapek dans sa pièce de théâtre "Rossum's Universal Robots" en 1920, il a pour origine le mot russe "rabota" qui signifie travail, corvée. La notion de robot a été ensuite développée par l'écrivain américano-russe Isaac Asimov dans son recueil de nouvelles "Les Robots" (1950).  

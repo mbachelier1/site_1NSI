@@ -1,8 +1,23 @@
-# Les Formulaires
-## Quelques éléments de formulaires
+# Créer un formulaire et récupérer les données
+
+## Ajouter un élément au DOM
+
+<iframe src="//video.toutatice.fr/video_priv/12995/116d0ebae718159b4ba0ab8c7758c3f8835e6611d3a35f9c9c6e31adb174b607/?is_iframe=true&size=240" width="640" height="360" style="padding: 0; margin: 0; border:0" allowfullscreen ></iframe>
+
+## Construire un formulaire
+<iframe src="//video.toutatice.fr/video_priv/12999/89ba09f9b0fdc5393d8e22f76d027477b6dc0c8719f4d5d14b4d6dd257d59d67/?is_iframe=true&size=240" width="640" height="360" style="padding: 0; margin: 0; border:0" allowfullscreen ></iframe>
+
+## Récupérer les données du formulaire
+<iframe src="//video.toutatice.fr/video_priv/13001/6b3469a9e2639fc6bf5edc485dd0ed3e94bc2b1226f4bdef9cea9f430c70e3f3/?is_iframe=true&size=240" width="640" height="360" style="padding: 0; margin: 0; border:0" allowfullscreen ></iframe>
+
+## Rendre la page dynamique
+<iframe src="//video.toutatice.fr/video_priv/13009/6f60c09c94597518a1f8f261d853f9f800eda07a23b025f194a2e16be72c7daa/?is_iframe=true&size=240" width="640" height="360" style="padding: 0; margin: 0; border:0" allowfullscreen ></iframe>
+
+## Les différents élements de formulaires
+!!! warning "Avant de commencer"
+	De la même façon que le nom de vos variables doivent être explicites, veillez à choisir des noms d'identifiants et de classe compréhensibles et cohérents. Par exemple, si vous créez une liste déroulante pour demander l'âge d'une personne, ne l'appelez pas "liste" ou "listeDéroulante" mais "age".
+
 ### Le bouton
-
-
 
 !!! example "Exemple"
 
@@ -12,45 +27,50 @@
 	</form>
 	<div id="casecouleur"> Un élément de formulaire fondamental : le bouton</div>
 
-!!! caution "Code"
+!!! success "Code"
 
 	=== "html"
 
+		Le `input` créé un bouton qui exécute la fonction JS `ActionDuBouton()` lorsque l'on clique dessus. On crée en dessous un bloc `div` contenant du texte.   
 		```html
 		<form>
-			<input type="button" value="tester"  onclick="testBidon()"> 
+			<input type="button" value="tester"  onclick="ActionDuBouton()">
 		</form>
 		<div id="casecouleur"> Texte à colorer</div>
 		```
 
 	=== "javascript"
 
+		Ici, on définit la fonction `ActionDuBouton()` qui change la couleur de fond (`backgroundColor`) du bloc dont l'`id` est `casecouleur`.
 		```JS
-		function testBidon(){
-    				document.getElementById("casecouleur").style.backgroundColor='aqua';
+		function ActionDuBouton(){
+    				document.querySelector("#casecouleur").style.backgroundColor='aqua';
     		}
 		```
 
 ### Boutons radio
-Il faut donner le même nom aux boutons radios mais des `id` différents
+
+!!! danger "Attention"
+	Il faut donner le même nom (`name`) aux boutons radios mais des `id` différents
+
 !!! example "Exemple"
 
 	<form>
-	1<input type="radio" name="testRad" value="1" id="radio1">
-	2<input type="radio" name="testRad" value="2" id="radio2">
-	3<input type="radio" name="testRad" value="3" id="radio3">
-	4<input type="radio" name="testRad" value="4" id="radio4">
-	<input type="button" style="margin:5px; padding:5px;  background-color : lightblue; border : solid 2px blue; border-radius : 5px;" value="tester" onclick="testRadio()">
+	    <label>1</label><input type="radio" name="testRad" value="1" id="radio1">
+		<label>2</label><input type="radio" name="testRad" value="2" id="radio2">
+		<label>3</label><input type="radio" name="testRad" value="3" id="radio3">
+		<label>4</label><input type="radio" name="testRad" value="4" id="radio4">
+		<input type="button" style="margin:5px; padding:5px;  background-color : lightblue; border : solid 2px blue; border-radius : 5px;" value="tester" onclick="testRadio()">
 	</form>
-	<div id="texteRadio" class="rajout"></div>
+		<div id="texteRadio" ></div>
 
-!!! caution "Code"
+!!! success "Code"
 
 	=== "html"
 		```html
 			<form>
-				  1 <input type="radio" name="testRad" value="1" id="radio1">
-				  2 <input type="radio" name="testRad" value="2" id="radio2">
+				   <label>1</label<input type="radio" name="testRad" value="1" id="radio1">
+				   <label>2</label<input type="radio" name="testRad" value="2" id="radio2">
 			 	 ...
 			 	 <div id="texteRadio"></div>
 				<input type="button" value="tester" onclick="testRadio()"> 
@@ -60,19 +80,20 @@ Il faut donner le même nom aux boutons radios mais des `id` différents
 	=== "javascript"
 		```js
 		function testRadio(){
-			var aecrire="Le bouton radio sélectionné est le "; 
-			if (document.getElementById('radio1').checked) aecrire+=1;
-			if (document.getElementById('radio2').checked) aecrire+=2;
-			if (document.getElementById('radio3').checked) aecrire+=3;
-			if (document.getElementById('radio4').checked) aecrire+=4;
-			document.getElementById('texteRadio').innerHTML=aecrire;
+			var TexteTexteAEcrire="Le bouton radio sélectionné est le "; 
+			if (document.querySelector('#radio1').checked) TexteTexteAEcrire+=1;
+			if (document.querySelector('#radio2').checked) TexteTexteAEcrire+=2;
+			if (document.querySelector('#radio3').checked) TexteTexteAEcrire+=3;
+			if (document.querySelector('#radio4').checked) TexteTexteAEcrire+=4;
+			document.querySelector('#texteRadio').textContent=TexteTexteAEcrire;
 			}
 		```
+On crée une variable `TexteTexteAEcrire` avec le début de la phrase et on la complète par le numéro en fonction du bouton sélectionné.  
+Le contenu de la variable `TexteTexteAEcrire` est affiché dans une balise `<div>` dont l'`id` est `texteRadio` initialement vide.
 
-Le contenu de la variable `contenu` est écrit dans une balise dont l'`id` est `texteRadio` initialement vide.
-
-!!! faq  "A faire"
+!!! question  "A faire"
 	Compléter et tester le code pour ajouter les deux boutons radio manquant.
+
 
 ### Cases à cocher
 
@@ -80,48 +101,53 @@ Le contenu de la variable `contenu` est écrit dans une balise dont l'`id` est `
 
 	<form>
 	<div id="casesACocher">
-		<input type="checkbox" name="testCase" value="Case 1" id="case1">Case 1   <br>  
-		<input type="checkbox" name="testCase" value="Case 2" id="case2"> Case 2  <br>  
-		<input type="checkbox" name="testCase" value="Case 3" id="case3">Case 3<br>
+		<input type="checkbox" name="testCase" value="Case 1" id="case1"><label>Case 1</label>  <br>  
+		<input type="checkbox" name="testCase" value="Case 2" id="case2"> <label>Case 2</label>  <br>  
+		<input type="checkbox" name="testCase" value="Case 3" id="case3"><label>Case 3</label><br>
 		<input type="button" style="margin:5px; padding:5px;  background-color : lightblue; border : solid 2px blue; border-radius : 5px;" value="tester" onclick="testCases()">
-	<div id="texteCases" class="rajout"></div>
+	<div id="texteCases" ></div>
 	</div>
 	</form>
 
 
-!!! caution "Code"
+!!! success "Code"
 
 	=== "html"
 		```html
 			<form>
 				<div id="casesACocher">
-					<input type="checkbox" name="testCase" value="Case 1" id="case1">Case 1   <br>  		  
+					<input type="checkbox" name="testCase" value="Case 1" id="case1"><label>Case 1</label>  <br>  		  
 					<input type="button" value="tester" onclick="...">
 					<div></div>
 				</div>
 			</form>
+			...
 		```
 
 
 	=== "javascript"
 		```js
 		function testCases(){
-			var aecrire="vous avez coché ";
-			if (document.getElementById('case1').checked) aecrire+=" la case 1, ";
-			if (document.getElementById('case2').checked) aecrire+=" la case 2, ";
-			if (document.getElementById('case3').checked) aecrire+=" la case 3, ";
-			document.getElementById('texteCases').innerHTML=aecrire;
+			var TexteAEcrire="vous avez coché ";
+			if (document.querySelector('#case1').checked) TexteAEcrire+=" la case 1, ";
+			if (document.querySelector('#case2').checked) TexteAEcrire+=" la case 2, ";
+			if (document.querySelector('#case3').checked) TexteAEcrire+=" la case 3, ";
+			document.querySelector('#texteCases').textContent=TexteAEcrire;
 			}
 		```
 
-!!! faq "A faire"
-	Compléter le code HTML pour ajouter les deux cases manquantes, le bouton de validation et le bloc pour récupérer le résultat. 
+!!! question "A faire"
+	Compléter le code HTML pour ajouter les deux cases manquantes, le bouton de validation et le bloc pour afficher le résultat dans un bloc en dessous du formulaire. 
 
- Remarque 1 : ici le choix a été de faire apparaître la légende (Case 1) après le bouton donc après la balise.  
- Remarque 2 : il faut donner le même nom aux cases à cocher mais des id différents.  s
-	
-### Sélection
+!!! note "Remarques"
 
+ 	=== "Remarque 1"  
+ 		Ici le choix a été de faire apparaître la légende (Case 1) après le bouton donc après la balise.  
+ 
+ 	=== "Remarque 2"
+ 		Il faut donner le même nom (`name`) aux cases à cocher mais des `id` différents.  
+
+### Liste déroulante
 
 !!! example "Exemple"
 
@@ -137,7 +163,9 @@ Le contenu de la variable `contenu` est écrit dans une balise dont l'`id` est `
 	</form>
 	<div id="texteMenu" class="rajout"></div>
 
-!!! caution "Code"
+on teste quel mot a été sélectionné `selected` ; on rajoute alors ce mot dans le texte (TexteAEcrire) à afficher dans le bloc d'identifiant "texteMenu".  
+
+!!! success "Code"
 
 	=== "html"
 		```html
@@ -148,25 +176,27 @@ Le contenu de la variable `contenu` est écrit dans une balise dont l'`id` est `
 				<option name="selection" value="mot 2" id="mot2"> mot 2 </option >
 			</select >
 		</form>
+		...
 		```
 
 	=== "javascript"
 		```js
 		function testMenu(){
-		var aecrire="vous avez sélectionné ";
-		if (document.getElementById('mot1').selected) aecrire+="le mot 1";
-		if (document.getElementById('mot2').selected) aecrire+="le mot 2";
-		document.getElementById('texteMenu').innerHTML=aecrire;
+		var TexteAEcrire="vous avez sélectionné ";
+		if (document.querySelector('#mot1').selected) TexteAEcrire+="le mot 1";
+		if (document.querySelector('#mot2').selected) ...;
+		...
 		}
 		```
 		
-!!! faq "A faire"
-	Récupérer et modifier le code pour créer votre propre liste déroulante et récupérer le résultat.
+!!! question "A faire"
+	Compléter le code HTML et le code JS pour créer votre propre liste déroulante et afficher le résultat.
 
-	
-Remarque 1 : ici le choix a été de faire apparaître une première légende vide (…) pour l'affichage par défaut (qui est la première balise `option`).  
-Remarque 2 : il faut donner le même nom aux balises `option` mais des id différents.	
-exemple :  on teste quel mot a été sélectionné `selected` ; on rajoute alors ce mot dans le texte (aecrire) à afficher dans le bloc d'identifiant "texteMenu".
+!!! note "Remarques"
+	- ici le choix a été de faire apparaître une première légende vide (…) pour l'affichage par défaut (qui est la première balise `option`).  
+	- il faut donner le même nom aux balises `option` mais des id différents.  
+
+
 	
 ### Récupération de texte 
 !!! example "Exemple"
@@ -177,140 +207,81 @@ exemple :  on teste quel mot a été sélectionné `selected` ; on rajoute alors
 	<input type="button" style="margin:5px; padding:5px;  background-color : lightblue; border : solid 2px blue; border-radius : 5px;" value="tester" onclick="testSaisie()">
     </div>
 	</form>
-	<div id="texteSaisie" class="rajout"></div>
+	<div id="texteSaisie" ></div>
 
-!!! caution "Code"
+ on récupère le texte entré `value` ; on rajoute alors ce texte dans le texte (TexteAEcrire) à afficher dans le bloc d'identifiant "texteSaisie".  
+
+!!! success "Code"
 
 	=== "html"
 		```html
 			<form>
 			Entrez votre texte : <input type="text" value="" id="saisie" >
 			</form>
+			<div id="texteSaisie" class="rajout" ></div>
 		```
 
 	=== "javascript"
 		```js
 		function testSaisie(){
-		var aecrire="vous avez écrit ";
-		aecrire+=document.getElementById('saisie').value;
-		document.getElementById('texteSaisie').innerHTML=aecrire;
+		...
+		TexteAEcrire+=document.querySelector('#saisie').value;
+		...
 		}
 		```
-		
+!!! question "A faire"
+	Compléter le code JS pour que le texte saisi par l'utilisateur s'affiche dans une phrase.
 
-Remarque : il existe d'autres balises permettant de récupérer un texte plus long.
-exemple : on récupère le texte entré `value` ; on rajoute alors ce texte dans le texte (aecrire) à afficher dans le bloc d'identifiant "texteSaisie".
+!!! note "Texte plus long"
+	On peut utiliser la balise `textArea` pour un texte plus long. 
+
+
+### Slide 
+On peut choisir une valeur avec un curseur.  
+
+!!! example "Exemple"
+
+	<form>
+	<div id="zoneTexte">
+	<input type="range" min="1" max="100" value="50" class="slider" id="curseur">
+	<input type="button" style="margin:5px; padding:5px;  background-color : lightblue; border : solid 2px blue; border-radius : 5px;" value="tester" onclick="testSlide()">
+    </div>
+	</form>
+	<div id="textSlide" ></div>
+  
+
+!!! success "Code"
+
+	=== "HTML"
+		```HTML
+		<form>
+		<div id="zoneTexte">
+		<input type="range" min="1" max="100" value="50" class="slider" id="curseur">
+		...
+	    </div>
+		</form>
+		...
+		```
+
+	=== "Javascript"
+		```JS
+		function testSlide(){
+	  		var TexteAEcrire=...
+	  		...
+	  		...
+			}
+		```
+
+!!! question "A faire"
+	Compléter le code HTML et le code JS pour que la valeur choisi sur le curseur s'affiche dans un bloc sous le formulaire.
+
+!!! question "Exercice complet"
+	Créer le formulaire de votre choix en utilisant plusiers des éléments proposés et un bouton de validation qui permet d'écrire une phrase contenant les éléments récupérés.  
+	Pour cet exercice, je vous déconseille fortement des aides en ligne si vous voulez etre capable de le refaire lors du devoir.  
+
+##
 
 ---
-### Remarques
-Le choix a été fait ici de focaliser sur la construction du formulaire pour récupérer des données et non pas sur la transmission de ces données. La transmission des données fera l'objet d'un cours ultérieur.  
-
-Seuls quelques éléments de formulaires et leur utilisation basique ont été présentés dans ce cours. Pour approfondir, il existe de nombreuses ressources en ligne. 
-
-!!! note "En voici quelques unes "
-
-	- les éléments de base pour bien concevoir son formulaire sur <a href="https://developer.mozilla.org/fr/docs/Web/Guide/HTML/Formulaires/Mon_premier_formulaire_HTML">developer.mozilla.org</a> (ne pas tenir compte de l'attribut <span class="methode">method</span> de la balise <span class="methode"> &lt; form &gt;</span> : cet attribut sera vu ultérieurement avec la notion de client-serveur)
-    - un memento des éléments de formulaire et de leurs attributs sur <a href="https://www.toutjavascript.com/savoir/savoir06_1.php3">toutjavascript.com</a>
-    - fonctionnalités avancées sur <a href="https://openclassrooms.com/fr/courses/1916641-dynamisez-vos-sites-web-avec-javascript/1919022-les-formulaires">Openclassroom</a>
-
-## Application
-
-Vous êtes en charge du site de commande pour la commercialisation d'un mini-drone.
-A vous de construire le formulaire sur la page de commande et de compléter la page d'accusé de réception accessible après validation du formulaire. Les données entrées dans le formulaire devront être récapituler en dessous lors de la validation de celui-ci.
-Pour plus de clareté vous essayerez de faire "disparaitre" le formulaire grâce à la propritété css "hidden".
-Vous créerez un formulaire de commande et en cliquant sur un bouton VALIDER, le script doit récuprer les données
-entrées par l'utilisateur puis écrire un paragraphe récapitulif en dessous du formulaire. Faites preuve de créativité.
-
-[commande.html](../src/commande.html)  
-[feuille de style](../src/style_achat.css)  
-![bourdon](../src/bourdon.jpg)  
-![guêpe](../src/guepe.jpg)  
-![mouche](../src/mouche.jpg)  
-![moustique](../src/moustique.jpg)  
-![pub](../src/pub.png)  
-
-
-!!! done "En bonus"
-
-	On pourra améliorer le programme en chargeant la validation du formulaire das une autre page `accuse.html`. pour cela il va falloir stocker les données et les récupérer dans l'autre page. On donne en exemple le passage d'une page à l'autre avec un élément de formulaire. Au clic sur le bouton ENREGISTRER, le récapitulatif est donné dans uen autre page.    
-	=== "Visuel formulaire"
-		<h1>Formulaire à remplir</h1>
-	    <form>
-	        Ton nom <input type="text" value="" id="nom">
-	        <input type="button" value="enregistrer" onclick="enregistrer()">
-	    </form>
-
-	=== "page1.html"
-		```html
-			<!DOCTYPE html>
-				<html>
-				<head>
-				    <meta charset='utf-8'>
-				    <title>page 1</title>
-				    <link rel='stylesheet' type='text/css' media='screen' href='style.css'>
-				    <script src="js.js"></script>
-				</head>
-				<body> 
-				    <h1>Formulaire à remplir</h1>
-				    <form>
-				        Ton nom <input type="text" value="" id="nom">
-				        <input type="button" value="enregistrer" onclick="enregistrer()">
-				    </form>
-				</body>
-				</html>
-		```
-
-	=== "page2.html"
-		```html
-			<!DOCTYPE html>
-				<html>
-				<head>
-				    <meta charset='utf-8'>
-				    <title>page 2</title>
-				    <link rel='stylesheet' type='text/css' media='screen' href='style.css'>
-				    <script src="js.js"></script>
-				</head>
-				<body onload="recuperer()"> <! -- chage la fonction recuperer() avant le corps du site-->
-				    <h1>Validation du formulaire</h1>
-				    <p> Voici les éléments du formulaire: <br>
-				        <span id="validation" ></span>
-				    </p>
-				</body>
-				</html>
-		```
-
-	=== "js.js"
-		```javascript
-			var texte="";
-		// la fonction d'enregistrement du formulaire, à compléter
-		function enregistrer()
-		    { var phraseNom="vous vous appelez";
-		    	phraseNom+=document.getElementById('nom').value;
-		    	texte+=phraseNom;
-		    	texte+="";
-		    // récupération des données des éléments du formulaire à compléter 
-		    // stockage en local des données dans la variable texte
-		    	sessionStorage.setItem('monObjet', JSON.stringify(texte));
-		     // changement automatique de page vers la page 2
-		   		document.location.href="page2.html";
-		    } 
-		function recuperer()
-		    {
-		        var obj = JSON.parse(sessionStorage.getItem('monObjet'));
-		        document.getElementById("validation").innerHTML=obj; 
-		    }
-		```
-
-
-
-
-!!! hint "navigation"
-
-    - <a href="https://openclassrooms.com/fr/courses/1916641-dynamisez-vos-sites-web-avec-javascript/1918968-les-evenements">openclassrooms.com</a>
-    - <a href="https://developer.mozilla.org/fr/docs/Apprendre/JavaScript/Building_blocks/Evènements">developer.mozilla.org</a>
-    - <a href="https://www.pierre-giraud.com/javascript-apprendre-coder-cours/addeventlistener-gestion-evenement/">Pierre Giraud</a>
-	- <a href="https://www.alsacreations.com/article/lire/578-La-gestion-des-evenements-en-JavaScript.html">alsacreations.com</a>
-
 <script>
 
 // pour enregistrer en local
@@ -322,49 +293,53 @@ var contenu="";
 }
     
 // la fonction du bouton de la première ligne du tableau
-    function testBidon()
-    {
-        document.getElementById("casecouleur").style.backgroundColor='aqua';
-    }
+		function ActionDuBouton()
+		{
+    				document.querySelector("#casecouleur").style.backgroundColor='aqua';
+    	}
 
 
 // la fonction qui écrit quel bouton radio a été sélectionné
-		function testRadio()
-		{
-			var aecrire="Le bouton radio sélectionné est le ";
-			if (document.getElementById('radio1').checked) aecrire+=1;
-			if (document.getElementById('radio2').checked) aecrire+=2;
-			if (document.getElementById('radio3').checked) aecrire+=3;
-			if (document.getElementById('radio4').checked) aecrire+=4;
-			document.getElementById('texteRadio').innerHTML=aecrire;
-		}
+		function testRadio(){
+			var TexteTexteAEcrire="Le bouton radio sélectionné est le "; 
+			if (document.querySelector('#radio1').checked) TexteTexteAEcrire+=1;
+			if (document.querySelector('#radio2').checked) TexteTexteAEcrire+=2;
+			if (document.querySelector('#radio3').checked) TexteTexteAEcrire+=3;
+			if (document.querySelector('#radio4').checked) TexteTexteAEcrire+=4;
+			document.querySelector('#texteRadio').textContent=TexteTexteAEcrire;
+			}
 		
 		// la fonction qui écrit quelle(s) case(s) a (ont) été sélectionnée(s)
-		function testCases()
-		{
-			var aecrire="vous avez coché ";
-			if (document.getElementById('case1').checked) aecrire+=" la case 1, ";
-			if (document.getElementById('case2').checked) aecrire+=" la case 2, ";
-			if (document.getElementById('case3').checked) aecrire+=" la case 3, ";
-			document.getElementById('texteCases').innerHTML=aecrire;
-		}
-		
+		function testCases(){
+			var TexteAEcrire="vous avez coché ";
+			if (document.querySelector('#case1').checked) TexteAEcrire+=" la case 1, ";
+			if (document.querySelector('#case2').checked) TexteAEcrire+=" la case 2, ";
+			if (document.querySelector('#case3').checked) TexteAEcrire+=" la case 3, ";
+			document.querySelector('#texteCases').textContent=TexteAEcrire;
+			}
 		// la fonction qui écrit quel mot a été sélectionné
-		function testMenu()
-		{
-			var aecrire="vous avez sélectionné ";
-			if (document.getElementById('mot1').selected) aecrire+="le mot 1";
-			if (document.getElementById('mot2').selected) aecrire+="le mot 2";
-			document.getElementById('texteMenu').innerHTML=aecrire;
+		function testMenu(){
+		var TexteAEcrire="vous avez sélectionné ";
+		if (document.querySelector('#mot1').selected) TexteAEcrire+="le mot 1";
+		if (document.querySelector('#mot2').selected) TexteAEcrire+="le mot 2";
+		document.querySelector('#texteMenu').textContent=TexteAEcrire;
 		}
 		
 		// la fonction qui réécrit le texte saisi
 		function testSaisie()
 		{
-			var aecrire="vous avez écrit ";
-			aecrire+=document.getElementById('saisie').value;
-			document.getElementById('texteSaisie').innerHTML=aecrire;
+		var TexteAEcrire="vous avez écrit ";
+		TexteAEcrire+=document.querySelector('#saisie').value;
+		document.querySelector('#texteSaisie').textContent=TexteAEcrire;
 		}
+		// La fonction qui donne la valeur du curseur
 
+		function testSlide()
+		{
+	  		var TexteAEcrire="Vous avez choisi la valeur ";
+	  		TexteAEcrire+=document.querySelector('#curseur').value;
+	  		document.querySelector('#textSlide').textContent=TexteAEcrire;
+		}
 </script>
 		
+

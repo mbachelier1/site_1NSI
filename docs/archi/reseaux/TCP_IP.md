@@ -182,7 +182,7 @@ Ce qu'il faut retenir c'est que lors de la transmission
 Il faut retenir que chaque couche dépaquète le paquet (ou trame) qui lui est adressé en enlevant l'en-tête correspondant 
 et passe le relais à la couche du dessus.  
 
-!!! faq "Questions"
+!!! question "Questions"
     5. Mettre dans l'ordre les opérations suivantes lors d'une requête à serveur web depuis un navigateur sur un ordinateur à la maison. Certaines étapes manquent (par exemple d'autres recherches dans les tables de routage), on les ignore pour simplifier. L'ordinateur obtient l'IP du serveur par le protocole DNS. 
 
         - Le serveur envoie la réponse à la requête. 

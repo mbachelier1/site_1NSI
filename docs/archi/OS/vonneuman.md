@@ -28,7 +28,7 @@ Claude Shannon (1916-2001) ingénieur américain en électricité et mathématic
 
 
 
-!!! important "Vocabulaire"
+!!! tip "Vocabulaire"
 
 	- le mot anglais "computer" vient du latin computare qui signifie compter.  
 	- le mot "informatique" a été créé en 1962 avec les mots information et automatique (par Philippe Dreyfus)  
@@ -38,7 +38,7 @@ Il y a 58 ans, le 16 avril 1955, le mot ordinateur était inventé par le profes
 Son origine est une demande d’IBM, qui voulait un nom français plus parlant que « calculateur » pour sa nouvelle machine électronique destinée au traitement de l'information (IBM 650) en évitant d'utiliser la tra-duction littérale du mot anglais computer (« calculateur » ou « calculatrice »), qui était à cette époque plutôt réservé aux machines scientifiques. 
 
 
-!!! cite "Voici la lettre envoyée par Jacques Perret à IBM, qui a officialisé le nom ordinateur."
+!!! quote "Voici la lettre envoyée par Jacques Perret à IBM, qui a officialisé le nom ordinateur."
 	Cher Monsieur,  
 	Que diriez-vous d’ordinateur? C’est un mot correctement formé, qui se trouve même dans le Littré comme adjectif désignant Dieu qui met de l’ordre dans le    monde. Un mot de ce genre a l’avantage de donner aisément un verbe ordiner, un nom d’action ordination. L’inconvénient est que ordina-tion désigne une cérémonie religieuse ; mais les deux champs de signification (religion et comp-tabilité) sont si éloignés et la cérémonie d’ordination connue, je crois, de si peu de personnes que l’inconvénient est peut-être mineur. D’ailleurs votre machine serait ordinateur (et non ordination) et ce mot est tout à fait sorti de l’usage théologique. Systémateur serait un néologisme, mais qui ne me paraît pas offensant ; il permet systématisé ; — mais système ne me semble guère utilisable — Combinateur a l’inconvénient du sens péjoratif de combine ; combiner est usuel donc peu ca-pable de devenir technique ; combination ne me paraît guère viable à cause de la proximité de combinaison. Mais les Allemands ont bien leurs combinats (sorte de trusts, je crois), si bien que le mot aurait peut-être des possibilités autres que celles qu’évoque combine.
 	Congesteur, digesteur évoquent trop congestion et digestion. Synthétiseur ne me paraît pas un mot assez neuf pour désigner un objet spécifique, déterminé comme votre machine.  
@@ -51,7 +51,7 @@ Son origine est une demande d’IBM, qui voulait un nom français plus parlant q
 
 
 
-!!! faq "questions"
+!!! question "questions"
     1.Un ordinateur bas de gamme, aujourd'hui, a une fréquence de processeur 2GHz.  
 	Combien d'opérations par seconde peut-il faire?  
 	2.Relever dans le texte le nom de trois machines programmables.  
@@ -67,7 +67,7 @@ L’architecture de von Neumann est un modèle structurel d’ordinateur dans le
   
 </br>
 </br>
-!!! summary "L’architecture de von Neumann décompose l’ordinateur en 4 parties distinctes : "
+!!! info "L’architecture de von Neumann décompose l’ordinateur en 4 parties distinctes : "
 	
 	- l’unité arithmétique et logique (UAL ou ALU en anglais) ou unité de traitement : son rôle est d’effectuer les opérations de base ;  	
 	- l’unité de contrôle ou de commande (control unit), chargée du « séquençage » des opérations ;  
@@ -85,7 +85,7 @@ L’architecture de von Neumann est un modèle structurel d’ordinateur dans le
 	- La première innovation de la machine de Von Neumann est la séparation nette entre l’unité de commande, qui organise le flot de séquencement des instructions, et l’unité arithmétique, chargée de l’exécution proprement dite de ces instructions.  
 	- La seconde innovation, la plus fondamentale, est l’idée du programme enregistré : les instructions, au lieu d’être codées sur un support externe (ruban, cartes, tableau de connexions), sont enregistrées dans la mémoire selon un codage conventionnel. Un emplacement de mémoire peut contenir indifféremment des instructions et des données, et une conséquence majeure est qu’un programme peut être traité comme une donnée par d’autres programmes. Cette idée, présente en germe dans la machine de Turing, trouvait ici sa concrétisation.  
 
-!!! faq "Questions"
+!!! question "Questions"
 	5.En faisant éventuellement une recherche complémentaire, comment étaient apportés le programme informatique avant sa présence dans l'unité de mémoire?   
 	6.Résumer en quelques lignes ce que fait le processeur?  
 	7.Quelle est la différence entre un processeur monoprocessus et multiprocessus?
@@ -116,7 +116,7 @@ La mémoire d'une machine permet de stocker les données. Elle est exprimée en 
 -	La "mémoire de masse" : Mémoire qui peut être lue et écrite par la machine. Sa grande capacité permet d'y enregistrer une grande quantité de données, C'est le cas des périphériques de stockage.
 -	La "mémoire cache", Mémoire qui a pour rôle d'accélérer l'accès aux informations de la mémoire vive. Elle contient des informations fréquemment utilisées par le processeur ou es prochaines dont il aura besoin. Elle a une capacité d'une dizaine de mégaoctets 
 
-!!! faq "questions"
+!!! question "questions"
 	8.Pour chaque type de mémoire, dire si elle est volatile ou permanente.  
 	9.Classer les mémoires citées de la plus rapide à la moins rapide.  
 	10. Donner des exemples de mémoires de masse.
@@ -128,7 +128,7 @@ En plus des ressousrces matérielles, le système doit interagir avec l'utilisat
 - Les périphériques de sortie servent à faire sortir les informations du système
 - Les périphériques d'entrée/sortie permettent aussi bien de lire et écrire des données
 
-!!! faq "questions"
+!!! question "questions"
 	11.Parmi la liste des périphériques cités dans le schéma des composants d'un ordinateur, classer les selon leur type (entree, sortie ou entrée/sortie).  
 	12.Ajoutez en un maximum d'autres de votre connaissance.    
 

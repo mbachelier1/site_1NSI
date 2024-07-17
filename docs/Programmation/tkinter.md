@@ -149,7 +149,7 @@ Prenez le temps d'essayer de bien comprendre ce programme.
 
 ### **Exercices** :
 Écrire une application qui dessine un damier (carrés 'navy' sur fond blanc), ainsi que des pions rouges qui apparaissent au hasard lorsque que l'on clique sur un bouton dans un premier temps, on se contentera du damier).  
-Le canevas devra avoir une dimension de 300*300. Les carrés devront avoir un côté égal à 30.
+Le canevas devra avoir une dimension de 300x300. Les carrés devront avoir un côté égal à 30.
 Les pions devront avoir un rayon égal à 10.
 
 Le programme comportera les fonctions suivantes :  
@@ -454,7 +454,7 @@ Voici une petite [démonstration](https://www.google.fr/logos/2010/pacman10-i.ht
 Au minimum vous devez obtenir ceci :
 ![pacMan](img/pacman.png)  
 
-??? caution "Conseils"
+??? warning "Conseils"
     Les fantômes peuvent être gérés par une liste.  
     Utiliser les morceaux de code vus en activité.  
     Attention aux nombreux codes que vous trouverez sur internet que vous ne sauriez ni expliquer ni utiliser (notamment ceux réalisés en programmation orienté objet).  
@@ -470,7 +470,7 @@ La fonction d'affichage peut se faire par défaut (comme sur votre smartphone) o
 Le [Le document de fonctionnement du répèrtoire téléphonique](img/Le_repertoire_telephonique.pdf) , [L'exemple sur les départements](img/dep.txt) , [Enregistrer un dictionnaire](img/enregistrer_dico.py), [récupérer un dictionnaire](img/recuperer_dico.py), [répertoire à compléter](img/repertoire_a_completer.py) ,
 Vous pouvez aller voir par [ici](https://portail-public.fr/ux-ergonomie/application-mobile/) pour tenir compte de l'ergonomie de votre interface.  
 
-!!! caution "conseil"
+!!! warning "conseil"
     Prévoir de faire une version qui fonctionne sans interface (l'interface sera plus facile à créer ensuite en appelant le fichier existant).
 
 ### **Motus**
@@ -494,5 +494,5 @@ Vous ne connaissez pas ?
 ![Motus](img/motus.png)  
 
 
-!!! caution "Conseil"
+!!! warning "Conseil"
     Prévoir de faire une version qui fonctionne sans interface (l'interface sera plus facile à créer ensuite en appelant le fichier existant).

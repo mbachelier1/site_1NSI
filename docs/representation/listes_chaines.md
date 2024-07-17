@@ -53,7 +53,7 @@ prenom='Jean'
 chaine = nom+prenom
 ```
 
-!!! caution "Attention"
+!!! warning "Attention"
 	 Les autres opérations mathématiques n'auront aucun effet sur une chaîne de carcatères.
 
 ## Les opérations sur les chaînes de caractères

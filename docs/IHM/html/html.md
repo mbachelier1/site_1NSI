@@ -34,7 +34,7 @@ Elle est délimitée par les balises `<head>` et` </head>`
 
 
 
-!!! important "Important"
+!!! success "Important"
     On a souvent des problèmes d'accents avec les pages WEB, les bases de données, … C'est pourquoi il faut prendre garde au mode d'encodage des caractères. Je vous recommande d'utiliser le jeu de caractères UTF-8. Mais attention, votre fichier doit lui aussi être encodé en UTF-8! Dans l’éditeur de texte dans l'onglet "encodage", choisissez "Encoder en UTF8 (sans BOM)".
 
 Puis vient le corps de la page " body " entre les balises `< body>` et `< /body>` C'est entre ces balises que se trouvent les éléments de votre page. 
@@ -47,7 +47,7 @@ Voici donc une première page web :
 Pour l’écrire on utilise un simple éditeur de texte (par exemple sublime text, ou notepad++ qui pratique une coloration syntaxique bien pratique.)
 Il est plus lisible pour la présentation, d'utiliser l'indentation comme en python. Ainsi on risque moins de se tromper dans les balises imbriquées.  
 
-!!! important "Fichier à créér"
+!!! success "Fichier à créér"
     ```html
     <!DOCTYPE html > 
 
@@ -165,7 +165,7 @@ On peut insérer un tableau par les balises. `<tr>` est la balise de ligne, `<td
         </tbody>
     </table>
     ```
-!!! caution "important"
+!!! warning "important"
     on peut fusionner des cellules notamment dans le `header` : 
     ```html
     <table>

@@ -1,7 +1,7 @@
 # Algorithmes de tris
 ## Dis moi comment tu tries...
 
-!!! faq "Trier un tableau"
+!!! question "Trier un tableau"
 	Trier le tableau donné dans l'ordre croissant et érire l'algorithme utilisé sur le tableau blanc.
 	![tableau](img/tableau1.PNG)
 	Une fois l'algorithme rédigé, l'essayer sur ces tableaux :
@@ -28,10 +28,10 @@ L'algorithme de tri par insertion :
 
 C’est le tri qu’on utilise quand on range des cartes : On parcourt la liste à trier du début à la fin. Au moment où l’on considère le ième élément,les i−1 premiers sont déjà triés, et on insère ce ième élément à la bonne place parmi les i−1 En pratique, on fait «remonter» ce ième élément en l’échangeant avec son prédécesseur tant qu’il est plus grand que lui.
 
-!!! faq "Question"
+!!! question "Question"
 	Un de ces tris correspond-il à celui que vous avez utilisé?
 
-!!! faq "Dérouler l'algorithme"
+!!! question "Dérouler l'algorithme"
 	En partant des tableaux ci-dessous, écrire la modification du tableau à chaque étape de chaque tri.  
 	Selection :`t = [5, 4, 3, 2, 1]`  
 	Insertion : `t = [12, 8, 23, 10, 15]`  

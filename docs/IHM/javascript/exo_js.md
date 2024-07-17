@@ -23,13 +23,13 @@ Voici un code `html` contenant du `javascript`.
 
 ```
 
-!!! faq "A faire"
+!!! question "A faire"
     **1.** Copier et tester ce code dans une page html que vous ouvrirez dans un navigateur.  
     **2.** Que fait la fonction `alert` ? 
 
 Pour faire afficher les messages dans la console (F12 puis console), on utilise la fonction `console.log(a)` pour afficher la valeur de a par exmple. Cela evite la fenêtre popUp pour des vérifications en cours de code.  
 
-!!! faq "A faire"  
+!!! question "A faire"  
     **3.** Modifier le code pour que le message s'affiche dans la console.  
 
 ##Variables et interaction utilisateur
@@ -80,7 +80,7 @@ console.log(c);
     La notion de porté de variable est valable aussi en Javascript. Pour déclarer une variable qui ne sera valable que dans un bloc ou une fonction on peut utiliser le mot-clé `let` au lieu de `var`. 
 
 
-!!! faq "A faire"
+!!! question "A faire"
     **4.** Ecrire une fonction qui calcule l'aire du disque dont le rayon est donné par l'utilisateur.
     ??? note "Une petite aide?"
           Il faudra commener par utiliser une fonction permettant de rentrer une valeur par l'utilisateur. Puis créer la fonction qui renvoie le calcul et enfin un affichage du résultat. (note : `Math.PI` permet d'obtenir la valeur de pi. ).
@@ -123,7 +123,7 @@ Voir aussi `do...while`.
 D'autres instructions [ici](https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Statements).  
 
 ###Applications
-!!! faq "A faire"
+!!! question "A faire"
     **5.** Ecrire un script en utilisant une boucle for qui demande à l'utilisateur le nombre de frères et soeurs qu'il possède. Puis le programme demande les prénoms de chacun.  
     **6.** Ecrire un script qui calcule l'altitude de chute d'un parachutiste à chaque seconde. On estime qu'il descend à une vitesse de 15m/s en partant de l'altitude de 1000m. On supposera qu'il s'arrete au sol.  
     **7.** Réaliser le script qui demande l'age de l'utilisateur et lui renvoie le commentaire correspondant.  
